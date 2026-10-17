@@ -1,8 +1,8 @@
 # Knowledge graph-constrained LLM agent for automated FE modeling of girder bridges: research materials
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23433649.svg)](https://doi.org/10.5281/zenodo.23433649)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23433648.svg)](https://doi.org/10.5281/zenodo.23433648)
 
-Archived version: Zenodo DOI 10.5281/zenodo.23433649 (v0.2.1-review); all versions: 10.5281/zenodo.23433648.
+Archived on Zenodo; DOI for all versions: 10.5281/zenodo.23433648 (resolves to the latest version). The version cited in the manuscript is v0.2.2-review; its version-specific DOI is listed on the Zenodo record.
 
 Research materials published on GitHub 2026-10-17: https://github.com/fzuKilo/bridgefe-kg-validation. Code: MIT; data and documentation: CC BY 4.0; design-code provision excerpts excluded (see LICENSES.md).
 
