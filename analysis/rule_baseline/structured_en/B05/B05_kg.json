@@ -1,0 +1,2590 @@
+{
+  "nodes": [
+    {
+      "id": "MR-01",
+      "layer": "rule",
+      "type": "ModelingRule",
+      "inputs": [],
+      "outputs": [
+        "structure.idealization"
+      ],
+      "title": "梁桥单梁（脊梁）理想化",
+      "text": "直线梁桥的整体计算采用二维单梁模型、线弹性分析，主梁采用弹性梁柱单元。",
+      "applicability": "True",
+      "formulas": {
+        "structure.idealization": "'spine_beam_2d'"
+      }
+    },
+    {
+      "id": "MR-05",
+      "layer": "rule",
+      "type": "ModelingRule",
+      "inputs": [
+        "models_pier_columns",
+        "n_spans"
+      ],
+      "outputs": [
+        "structure.system"
+      ],
+      "title": "结构体系",
+      "text": "单跨为简支体系；先简支后连续结构按成桥连续体系计算，不模拟施工阶段体系转换；含桥墩的现浇连续梁按支承于桥墩的连续梁计算。models_pier_columns 指实例中给出了墩柱几何、需模拟墩柱；(models_pier_columns is true only when pier column geometry is given; support lines merely named \"Pier\" without column data are bearings on rigid supports, so the system is \"continuous\") 中间支承线仅称为“桥墩”而描述未给墩柱数据时不模拟墩柱（墩顶按支座支承），体系为 continuous。",
+      "applicability": "True",
+      "formulas": {
+        "structure.system": "'simply_supported' if n_spans == 1 else ('continuous_on_piers' if models_pier_columns else 'continuous')"
+      }
+    },
+    {
+      "id": "MR-02",
+      "layer": "rule",
+      "type": "ModelingRule",
+      "inputs": [
+        "A_single",
+        "I_single",
+        "n_girders",
+        "precast",
+        "sec_A",
+        "sec_I"
+      ],
+      "outputs": [
+        "girder.single.A",
+        "girder.single.I",
+        "girder.A",
+        "girder.I"
+      ],
+      "title": "主梁截面特性",
+      "text": "截面特性由截面几何（外轮廓减内孔）精确积分计算；多片预制梁合并为单梁时，A、I 取单片中梁跨中截面乘以片数，湿接缝与横隔板不计。",
+      "applicability": "True",
+      "formulas": {
+        "girder.single.A": "sec_A",
+        "girder.single.I": "sec_I",
+        "girder.A": "A_single * n_girders if precast else sec_A",
+        "girder.I": "I_single * n_girders if precast else sec_I"
+      },
+      "supports": [
+        "girder.w"
+      ]
+    },
+    {
+      "id": "MR-00",
+      "layer": "rule",
+      "type": "ModelingRule",
+      "inputs": [
+        "override"
+      ],
+      "outputs": [
+        "girder.Ec",
+        "girder.gamma"
+      ],
+      "title": "输入优先",
+      "text": "题目明确给定的参数（实测弹性模量、业主指定重度、厂家剪变模量等）优先于规范默认值。",
+      "applicability": "has_override",
+      "formulas": {
+        "girder.Ec": "override",
+        "girder.gamma": "override"
+      }
+    },
+    {
+      "id": "MR-07",
+      "layer": "rule",
+      "type": "ModelingRule",
+      "inputs": [
+        "A",
+        "gamma",
+        "w"
+      ],
+      "outputs": [
+        "girder.w",
+        "girder.m"
+      ],
+      "title": "恒载与质量",
+      "text": "恒载只计主梁自重 w = γA；质量取 m = w/g，采用一致质量矩阵。",
+      "applicability": "True",
+      "formulas": {
+        "girder.w": "gamma * A",
+        "girder.m": "w / 9.81"
+      }
+    },
+    {
+      "id": "MR-04",
+      "layer": "rule",
+      "type": "ModelingRule",
+      "inputs": [
+        "bearing_type",
+        "count"
+      ],
+      "outputs": [
+        "support.{k}.bearing"
+      ],
+      "title": "支座数量与并联",
+      "text": "同一支承线上的支座并联、刚度相加；预制梁支座数 = 每梁端支座数 × 主梁片数，现浇箱梁取每条支承线支座数。",
+      "applicability": "True",
+      "formulas": {
+        "support.{k}.bearing": "{'type': bearing_type, 'count': count}"
+      },
+      "supports": [
+        "support.{k}.Kv",
+        "support.{k}.Kh"
+      ]
+    },
+    {
+      "id": "MR-03",
+      "layer": "rule",
+      "type": "ModelingRule",
+      "inputs": [
+        "sliding"
+      ],
+      "outputs": [
+        "support.{k}.dofs",
+        "support.{k}.Kh"
+      ],
+      "title": "板式橡胶支座的模拟",
+      "text": "板式橡胶支座以零长度弹簧模拟：竖向刚度 Kv；普通板式支座纵向取剪切刚度 Kh，四氟滑板支座纵向自由（Kh = 0）；转动自由。支座置于主梁轴线标高。",
+      "applicability": "family == 'laminated_elastomeric'",
+      "formulas": {
+        "support.{k}.dofs": "{'vertical': 'spring', 'longitudinal': 'free' if sliding else 'spring', 'rotation': 'free'}",
+        "support.{k}.Kh": "0.0"
+      },
+      "formula_applicability": {
+        "support.{k}.Kh": "sliding"
+      }
+    },
+    {
+      "id": "MR-08",
+      "layer": "rule",
+      "type": "ModelingRule",
+      "inputs": [
+        "fixed"
+      ],
+      "outputs": [
+        "support.{k}.dofs"
+      ],
+      "title": "球形支座的模拟",
+      "text": "球形支座按竖向刚性支承模拟，转动自由；固定型（GD）及横桥向单向活动型（DX）纵向约束，纵向活动型纵向自由。",
+      "applicability": "family == 'spherical'",
+      "formulas": {
+        "support.{k}.dofs": "{'vertical': 'rigid', 'longitudinal': 'fixed' if fixed else 'free', 'rotation': 'free'}"
+      }
+    },
+    {
+      "id": "MR-06",
+      "layer": "rule",
+      "type": "ModelingRule",
+      "inputs": [
+        "D",
+        "H",
+        "n_col"
+      ],
+      "outputs": [
+        "pier.{k}.length",
+        "pier.{k}.A",
+        "pier.{k}.I"
+      ],
+      "title": "桥墩的模拟",
+      "text": "桥墩按弹性梁柱单元模拟，墩底固结；双柱墩合并为单柱，A、I 取各柱之和；墩身质量计入。",
+      "applicability": "has_pier",
+      "formulas": {
+        "pier.{k}.length": "H",
+        "pier.{k}.A": "n_col * pi * D**2 / 4",
+        "pier.{k}.I": "n_col * pi * D**4 / 64"
+      }
+    },
+    {
+      "id": "LL-01",
+      "layer": "rule",
+      "type": "ModelingRule",
+      "inputs": [],
+      "outputs": [],
+      "title": "车道荷载布置",
+      "text": "qk 满布于同号影响线区段；Pk 置于影响线最不利纵坐标处，按其所在跨计算跨径取值；效应乘以 (1+μ)、设计车道数与横向车道布载系数。",
+      "applicability": "True",
+      "formulas": {},
+      "supports": [
+        "lane.qk",
+        "lane.Pk.{j}",
+        "lane.n_lanes",
+        "lane.xi"
+      ]
+    },
+    {
+      "id": "LL-02",
+      "layer": "rule",
+      "type": "ModelingRule",
+      "inputs": [],
+      "outputs": [],
+      "title": "冲击系数所用基频",
+      "text": "冲击系数按 JTG D60-2015 第 4.3.2 条由结构基频计算，基频取有限元模态分析的一阶竖向弯曲频率。",
+      "applicability": "has_f1",
+      "formulas": {},
+      "supports": [
+        "lane.mu"
+      ]
+    },
+    {
+      "id": "JTG3362-3.1.5",
+      "layer": "code",
+      "type": "CodeClause",
+      "inputs": [
+        "EC_TABLE",
+        "grade"
+      ],
+      "outputs": [
+        "girder.Ec",
+        "pier.{k}.Ec"
+      ],
+      "clause": "JTG 3362-2018 3.1.5 表 3.1.5",
+      "title": "混凝土弹性模量",
+      "concept": "concrete",
+      "applicability": "grade in EC_TABLE and not has_override",
+      "formulas": {
+        "girder.Ec": "EC_TABLE[grade]",
+        "pier.{k}.Ec": "EC_TABLE[grade]"
+      },
+      "tables": {
+        "EC_TABLE": {
+          "C25": 28000.0,
+          "C30": 30000.0,
+          "C35": 31500.0,
+          "C40": 32500.0,
+          "C45": 33500.0,
+          "C50": 34500.0,
+          "C55": 35500.0,
+          "C60": 36000.0,
+          "C65": 36500.0,
+          "C70": 37000.0,
+          "C75": 37500.0,
+          "C80": 38000.0
+        }
+      }
+    },
+    {
+      "id": "concept:concrete",
+      "layer": "rule",
+      "type": "ComponentConcept",
+      "name": "concrete"
+    },
+    {
+      "id": "JTGD60-4.2.1",
+      "layer": "code",
+      "type": "CodeClause",
+      "inputs": [],
+      "outputs": [
+        "girder.gamma"
+      ],
+      "clause": "JTG D60-2015 4.2.1 表 4.2.1",
+      "title": "材料重度",
+      "concept": "concrete",
+      "applicability": "material == 'prestressed_concrete' and not has_override",
+      "formulas": {
+        "girder.gamma": "26.0"
+      },
+      "supports": [
+        "girder.w"
+      ],
+      "note": "钢筋混凝土、预应力混凝土 25.0~26.0 kN/m3，预应力混凝土取上限 26.0"
+    },
+    {
+      "id": "JTG3362-8.7-S",
+      "layer": "code",
+      "type": "CodeClause",
+      "inputs": [
+        "a",
+        "b",
+        "t1"
+      ],
+      "outputs": [
+        "support.{k}.S"
+      ],
+      "clause": "JTG 3362-2018 8.7",
+      "title": "板式橡胶支座形状系数",
+      "concept": "bearing",
+      "applicability": "family == 'laminated_elastomeric'",
+      "formulas": {
+        "support.{k}.S": "a * b / (2 * t1 * (a + b))"
+      },
+      "supports": [
+        "support.{k}.Kv"
+      ]
+    },
+    {
+      "id": "concept:bearing",
+      "layer": "rule",
+      "type": "ComponentConcept",
+      "name": "bearing"
+    },
+    {
+      "id": "JTG3362-8.7-Kv",
+      "layer": "code",
+      "type": "CodeClause",
+      "inputs": [
+        "Eb",
+        "Ge",
+        "a",
+        "b",
+        "count",
+        "t1",
+        "te"
+      ],
+      "outputs": [
+        "support.{k}.Kv"
+      ],
+      "clause": "JTG 3362-2018 8.7",
+      "title": "板式橡胶支座竖向刚度",
+      "concept": "bearing",
+      "applicability": "family == 'laminated_elastomeric'",
+      "intermediates": [
+        [
+          "S",
+          "a * b / (2 * t1 * (a + b))"
+        ],
+        [
+          "Ee",
+          "5.4 * Ge * S**2"
+        ]
+      ],
+      "formulas": {
+        "support.{k}.Kv": "count * a * b / (te * (1 / Ee + 1 / Eb)) * 1000"
+      },
+      "note": "Ee = 5.4 Ge S^2，Eb = 2000 MPa；Kv 单位 kN/m（a、b、te 以 m 计，模量以 MPa 计）"
+    },
+    {
+      "id": "JTG3362-8.7-Kh",
+      "layer": "code",
+      "type": "CodeClause",
+      "inputs": [
+        "Ge",
+        "a",
+        "b",
+        "count",
+        "te"
+      ],
+      "outputs": [
+        "support.{k}.Kh"
+      ],
+      "clause": "JTG 3362-2018 8.7",
+      "title": "板式橡胶支座剪切刚度",
+      "concept": "bearing",
+      "applicability": "family == 'laminated_elastomeric' and not sliding",
+      "formulas": {
+        "support.{k}.Kh": "count * Ge * a * b / te * 1000"
+      }
+    },
+    {
+      "id": "JTG3362-8.7-Ge",
+      "layer": "code",
+      "type": "CodeClause",
+      "inputs": [],
+      "outputs": [],
+      "clause": "JTG 3362-2018 8.7",
+      "title": "橡胶剪变模量标准值",
+      "concept": "bearing",
+      "applicability": "family == 'laminated_elastomeric' and not has_Ge_override",
+      "formulas": {},
+      "value": {
+        "Ge": 1.0
+      },
+      "supports": [
+        "support.{k}.Kv",
+        "support.{k}.Kh"
+      ]
+    },
+    {
+      "id": "JTT854",
+      "layer": "code",
+      "type": "CodeClause",
+      "inputs": [],
+      "outputs": [],
+      "clause": "JT/T 854-2013",
+      "title": "公路桥梁球形支座",
+      "concept": "bearing",
+      "applicability": "family == 'spherical'",
+      "formulas": {},
+      "note": "GD 固定、DX 单向活动、SX 双向活动；竖向压缩变形小，可按刚性支承",
+      "supports": [
+        "support.{k}.bearing",
+        "support.{k}.dofs"
+      ]
+    },
+    {
+      "id": "JTGD60-4.3.1-lanes",
+      "layer": "code",
+      "type": "CodeClause",
+      "inputs": [
+        "W",
+        "two_way"
+      ],
+      "outputs": [
+        "lane.n_lanes"
+      ],
+      "clause": "JTG D60-2015 4.3.1 表 4.3.1-4",
+      "title": "设计车道数",
+      "concept": "lane",
+      "applicability": "W >= 6.0 if two_way else True",
+      "formulas": {
+        "lane.n_lanes": "(2 if W < 14 else 4 if W < 21 else 6 if W < 28 else 8) if two_way else (1 if W < 7 else 2 if W < 10.5 else 3 if W < 14 else 4 if W < 17.5 else 5 if W < 21 else 6 if W < 24.5 else 7 if W < 28 else 8)"
+      }
+    },
+    {
+      "id": "concept:lane",
+      "layer": "rule",
+      "type": "ComponentConcept",
+      "name": "lane"
+    },
+    {
+      "id": "JTGD60-4.3.1-xi",
+      "layer": "code",
+      "type": "CodeClause",
+      "inputs": [
+        "XI_TABLE",
+        "n_lanes"
+      ],
+      "outputs": [
+        "lane.xi"
+      ],
+      "clause": "JTG D60-2015 4.3.1 表 4.3.1-5",
+      "title": "横向车道布载系数",
+      "concept": "lane",
+      "applicability": "n_lanes in XI_TABLE",
+      "formulas": {
+        "lane.xi": "XI_TABLE[n_lanes]"
+      },
+      "tables": {
+        "XI_TABLE": {
+          "1": 1.2,
+          "2": 1.0,
+          "3": 0.78,
+          "4": 0.67,
+          "5": 0.6,
+          "6": 0.55,
+          "7": 0.52,
+          "8": 0.5
+        }
+      }
+    },
+    {
+      "id": "JTGD60-4.3.1-qk",
+      "layer": "code",
+      "type": "CodeClause",
+      "inputs": [
+        "load_class"
+      ],
+      "outputs": [
+        "lane.qk"
+      ],
+      "clause": "JTG D60-2015 4.3.1",
+      "title": "车道荷载均布荷载标准值",
+      "concept": "lane",
+      "applicability": "load_class in ('I', 'II')",
+      "formulas": {
+        "lane.qk": "10.5 * (1.0 if load_class == 'I' else 0.75)"
+      }
+    },
+    {
+      "id": "JTGD60-4.3.1-Pk",
+      "layer": "code",
+      "type": "CodeClause",
+      "inputs": [
+        "L0",
+        "load_class"
+      ],
+      "outputs": [
+        "lane.Pk.{j}"
+      ],
+      "clause": "JTG D60-2015 4.3.1",
+      "title": "车道荷载集中荷载标准值",
+      "concept": "lane",
+      "applicability": "load_class in ('I', 'II') and L0 > 0",
+      "formulas": {
+        "lane.Pk.{j}": "(270 if L0 <= 5 else 360 if L0 >= 50 else 2 * (L0 + 130)) * (1.0 if load_class == 'I' else 0.75)"
+      }
+    },
+    {
+      "id": "JTGD60-4.3.2",
+      "layer": "code",
+      "type": "CodeClause",
+      "inputs": [
+        "f1"
+      ],
+      "outputs": [
+        "lane.mu"
+      ],
+      "clause": "JTG D60-2015 4.3.2",
+      "title": "汽车荷载冲击系数",
+      "concept": "lane",
+      "applicability": "has_f1",
+      "formulas": {
+        "lane.mu": "0.05 if f1 < 1.5 else 0.45 if f1 > 14 else 0.1767 * log(f1) - 0.0157"
+      }
+    },
+    {
+      "id": "C-01",
+      "layer": "constraint",
+      "type": "Constraint",
+      "kind": "instance",
+      "text": "支承线数 = 跨数 + 1，跨径均为正值"
+    },
+    {
+      "id": "C-02",
+      "layer": "constraint",
+      "type": "Constraint",
+      "kind": "instance",
+      "text": "每条支承线必须有支座，支座参数完整（板式橡胶支座需平面尺寸与橡胶层）"
+    },
+    {
+      "id": "C-03",
+      "layer": "constraint",
+      "type": "Constraint",
+      "kind": "instance",
+      "text": "主梁类型、片数、混凝土与截面几何必须完整"
+    },
+    {
+      "id": "C-04",
+      "layer": "constraint",
+      "type": "Constraint",
+      "kind": "instance",
+      "text": "含桥墩的结构，每个中间支承线必须有桥墩（墩高、柱径、柱数、混凝土）"
+    },
+    {
+      "id": "C-05",
+      "layer": "constraint",
+      "type": "Constraint",
+      "kind": "instance",
+      "text": "设计标准必须给出荷载等级、行车道宽、行车方向与设计车道数，且车道数与行车道宽相符"
+    },
+    {
+      "id": "C-06",
+      "layer": "constraint",
+      "type": "Constraint",
+      "kind": "instance",
+      "text": "至少一条支承线纵向约束（固定支座），否则结构纵向可变"
+    },
+    {
+      "id": "C-07",
+      "layer": "constraint",
+      "type": "Constraint",
+      "kind": "instance",
+      "text": "支座数量合理：预制梁每个梁端 1~2 个，现浇箱梁每条支承线 1~6 个"
+    },
+    {
+      "id": "C-08",
+      "layer": "constraint",
+      "type": "Constraint",
+      "kind": "instance",
+      "text": "截面几何自洽：各板件尺寸不超过所属轮廓，内孔与翼缘尺寸为正，板厚之和小于梁高"
+    },
+    {
+      "id": "C-10",
+      "layer": "constraint",
+      "type": "Constraint",
+      "kind": "decision",
+      "text": "支座约束自由度须与该支承线已接受的支座类型一致"
+    },
+    {
+      "id": "C-11",
+      "layer": "constraint",
+      "type": "Constraint",
+      "kind": "decision",
+      "text": "纵向自由的支承线 Kh 必须为 0；纵向为弹簧的支承线 Kh 必须为正"
+    },
+    {
+      "id": "C-12",
+      "layer": "constraint",
+      "type": "Constraint",
+      "kind": "decision",
+      "text": "自重 w 须等于已接受的重度与截面面积之积"
+    },
+    {
+      "id": "C-13",
+      "layer": "constraint",
+      "type": "Constraint",
+      "kind": "decision",
+      "text": "决策所指构件必须存在于实例层（支承线号、桥墩号、跨号）"
+    },
+    {
+      "id": "C-14",
+      "layer": "constraint",
+      "type": "Constraint",
+      "kind": "decision",
+      "text": "前置决策须先被接受（如 Kv 依赖支座类型与数量）"
+    },
+    {
+      "id": "C-15",
+      "layer": "constraint",
+      "type": "Constraint",
+      "kind": "decision",
+      "text": "全部支承线的约束自由度确定后，至少一条纵向约束"
+    },
+    {
+      "id": "L1-1",
+      "layer": "constraint",
+      "type": "Constraint",
+      "kind": "model",
+      "text": "无孤立节点、无重复单元，主梁节点连通"
+    },
+    {
+      "id": "L1-2",
+      "layer": "constraint",
+      "type": "Constraint",
+      "kind": "model",
+      "text": "主梁竖向支承不少于两处，纵向至少一处约束"
+    },
+    {
+      "id": "L2-1",
+      "layer": "constraint",
+      "type": "Constraint",
+      "kind": "model",
+      "text": "模型中每个构件的参数与其溯源决策一致，且按规则层 / 规范层公式复算成立"
+    },
+    {
+      "id": "L2-2",
+      "layer": "constraint",
+      "type": "Constraint",
+      "kind": "model",
+      "text": "每跨均有车道荷载 Pk，冲击系数与模型一阶竖向频率一致"
+    },
+    {
+      "id": "L3-1",
+      "layer": "constraint",
+      "type": "Constraint",
+      "kind": "model",
+      "text": "自重下支座反力之和等于总自重"
+    },
+    {
+      "id": "L3-2",
+      "layer": "constraint",
+      "type": "Constraint",
+      "kind": "model",
+      "text": "总自重等于重度 × 截面面积 × 桥长（工程量）"
+    },
+    {
+      "id": "L3-3",
+      "layer": "constraint",
+      "type": "Constraint",
+      "kind": "model",
+      "text": "一阶竖向频率位于跨径对应的经验范围内"
+    },
+    {
+      "id": "T-bridge",
+      "layer": "rule",
+      "type": "DecisionTemplate",
+      "component": "Bridge",
+      "slots": [
+        [
+          "structure.idealization",
+          "True"
+        ],
+        [
+          "structure.system",
+          "True"
+        ],
+        [
+          "girder.single.A",
+          "precast"
+        ],
+        [
+          "girder.single.I",
+          "precast"
+        ],
+        [
+          "girder.A",
+          "True"
+        ],
+        [
+          "girder.I",
+          "True"
+        ],
+        [
+          "girder.Ec",
+          "True"
+        ],
+        [
+          "girder.gamma",
+          "True"
+        ],
+        [
+          "girder.w",
+          "True"
+        ],
+        [
+          "girder.m",
+          "True"
+        ],
+        [
+          "lane.n_lanes",
+          "True"
+        ],
+        [
+          "lane.xi",
+          "True"
+        ],
+        [
+          "lane.qk",
+          "True"
+        ],
+        [
+          "lane.mu",
+          "True"
+        ]
+      ]
+    },
+    {
+      "id": "T-span",
+      "layer": "rule",
+      "type": "DecisionTemplate",
+      "component": "Span",
+      "slots": [
+        [
+          "lane.Pk.{j}",
+          "True"
+        ]
+      ]
+    },
+    {
+      "id": "T-support",
+      "layer": "rule",
+      "type": "DecisionTemplate",
+      "component": "Support",
+      "slots": [
+        [
+          "support.{k}.bearing",
+          "True"
+        ],
+        [
+          "support.{k}.dofs",
+          "True"
+        ],
+        [
+          "support.{k}.S",
+          "family == 'laminated_elastomeric'"
+        ],
+        [
+          "support.{k}.Kv",
+          "family == 'laminated_elastomeric'"
+        ],
+        [
+          "support.{k}.Kh",
+          "family == 'laminated_elastomeric'"
+        ]
+      ]
+    },
+    {
+      "id": "T-pier",
+      "layer": "rule",
+      "type": "DecisionTemplate",
+      "component": "Pier",
+      "slots": [
+        [
+          "pier.{k}.length",
+          "True"
+        ],
+        [
+          "pier.{k}.A",
+          "True"
+        ],
+        [
+          "pier.{k}.I",
+          "True"
+        ],
+        [
+          "pier.{k}.Ec",
+          "True"
+        ]
+      ]
+    },
+    {
+      "id": "slot:structure.idealization",
+      "layer": "rule",
+      "type": "DecisionSlot",
+      "pattern": "structure.idealization",
+      "category": "modeling_rule",
+      "unit": "-",
+      "prerequisites": []
+    },
+    {
+      "id": "slot:structure.system",
+      "layer": "rule",
+      "type": "DecisionSlot",
+      "pattern": "structure.system",
+      "category": "modeling_rule",
+      "unit": "-",
+      "prerequisites": []
+    },
+    {
+      "id": "slot:girder.single.A",
+      "layer": "rule",
+      "type": "DecisionSlot",
+      "pattern": "girder.single.A",
+      "category": "modeling_rule",
+      "unit": "m^2",
+      "prerequisites": []
+    },
+    {
+      "id": "slot:girder.single.I",
+      "layer": "rule",
+      "type": "DecisionSlot",
+      "pattern": "girder.single.I",
+      "category": "modeling_rule",
+      "unit": "m^4",
+      "prerequisites": []
+    },
+    {
+      "id": "slot:girder.A",
+      "layer": "rule",
+      "type": "DecisionSlot",
+      "pattern": "girder.A",
+      "category": "modeling_rule",
+      "unit": "m^2",
+      "prerequisites": []
+    },
+    {
+      "id": "slot:girder.I",
+      "layer": "rule",
+      "type": "DecisionSlot",
+      "pattern": "girder.I",
+      "category": "modeling_rule",
+      "unit": "m^4",
+      "prerequisites": []
+    },
+    {
+      "id": "slot:girder.Ec",
+      "layer": "rule",
+      "type": "DecisionSlot",
+      "pattern": "girder.Ec",
+      "category": "code_parameter",
+      "unit": "MPa",
+      "prerequisites": []
+    },
+    {
+      "id": "slot:girder.gamma",
+      "layer": "rule",
+      "type": "DecisionSlot",
+      "pattern": "girder.gamma",
+      "category": "code_parameter",
+      "unit": "kN/m^3",
+      "prerequisites": []
+    },
+    {
+      "id": "slot:girder.w",
+      "layer": "rule",
+      "type": "DecisionSlot",
+      "pattern": "girder.w",
+      "category": "code_parameter",
+      "unit": "kN/m",
+      "prerequisites": [
+        "girder.gamma",
+        "girder.A"
+      ]
+    },
+    {
+      "id": "slot:girder.m",
+      "layer": "rule",
+      "type": "DecisionSlot",
+      "pattern": "girder.m",
+      "category": "modeling_rule",
+      "unit": "t/m",
+      "prerequisites": [
+        "girder.w"
+      ]
+    },
+    {
+      "id": "slot:support.{k}.bearing",
+      "layer": "rule",
+      "type": "DecisionSlot",
+      "pattern": "support.{k}.bearing",
+      "category": "topology",
+      "unit": "-",
+      "prerequisites": []
+    },
+    {
+      "id": "slot:support.{k}.dofs",
+      "layer": "rule",
+      "type": "DecisionSlot",
+      "pattern": "support.{k}.dofs",
+      "category": "modeling_rule",
+      "unit": "-",
+      "prerequisites": [
+        "support.{k}.bearing"
+      ]
+    },
+    {
+      "id": "slot:support.{k}.S",
+      "layer": "rule",
+      "type": "DecisionSlot",
+      "pattern": "support.{k}.S",
+      "category": "code_parameter",
+      "unit": "-",
+      "prerequisites": [
+        "support.{k}.bearing"
+      ]
+    },
+    {
+      "id": "slot:support.{k}.Kv",
+      "layer": "rule",
+      "type": "DecisionSlot",
+      "pattern": "support.{k}.Kv",
+      "category": "code_parameter",
+      "unit": "kN/m",
+      "prerequisites": [
+        "support.{k}.bearing"
+      ]
+    },
+    {
+      "id": "slot:support.{k}.Kh",
+      "layer": "rule",
+      "type": "DecisionSlot",
+      "pattern": "support.{k}.Kh",
+      "category": "code_parameter",
+      "unit": "kN/m",
+      "prerequisites": [
+        "support.{k}.bearing",
+        "support.{k}.dofs"
+      ]
+    },
+    {
+      "id": "slot:pier.{k}.length",
+      "layer": "rule",
+      "type": "DecisionSlot",
+      "pattern": "pier.{k}.length",
+      "category": "topology",
+      "unit": "m",
+      "prerequisites": []
+    },
+    {
+      "id": "slot:pier.{k}.A",
+      "layer": "rule",
+      "type": "DecisionSlot",
+      "pattern": "pier.{k}.A",
+      "category": "modeling_rule",
+      "unit": "m^2",
+      "prerequisites": []
+    },
+    {
+      "id": "slot:pier.{k}.I",
+      "layer": "rule",
+      "type": "DecisionSlot",
+      "pattern": "pier.{k}.I",
+      "category": "modeling_rule",
+      "unit": "m^4",
+      "prerequisites": []
+    },
+    {
+      "id": "slot:pier.{k}.Ec",
+      "layer": "rule",
+      "type": "DecisionSlot",
+      "pattern": "pier.{k}.Ec",
+      "category": "code_parameter",
+      "unit": "MPa",
+      "prerequisites": []
+    },
+    {
+      "id": "slot:lane.n_lanes",
+      "layer": "rule",
+      "type": "DecisionSlot",
+      "pattern": "lane.n_lanes",
+      "category": "code_parameter",
+      "unit": "-",
+      "prerequisites": []
+    },
+    {
+      "id": "slot:lane.xi",
+      "layer": "rule",
+      "type": "DecisionSlot",
+      "pattern": "lane.xi",
+      "category": "code_parameter",
+      "unit": "-",
+      "prerequisites": [
+        "lane.n_lanes"
+      ]
+    },
+    {
+      "id": "slot:lane.qk",
+      "layer": "rule",
+      "type": "DecisionSlot",
+      "pattern": "lane.qk",
+      "category": "code_parameter",
+      "unit": "kN/m",
+      "prerequisites": []
+    },
+    {
+      "id": "slot:lane.Pk.{j}",
+      "layer": "rule",
+      "type": "DecisionSlot",
+      "pattern": "lane.Pk.{j}",
+      "category": "code_parameter",
+      "unit": "kN",
+      "prerequisites": []
+    },
+    {
+      "id": "slot:lane.mu",
+      "layer": "rule",
+      "type": "DecisionSlot",
+      "pattern": "lane.mu",
+      "category": "code_parameter",
+      "unit": "-",
+      "prerequisites": []
+    },
+    {
+      "id": "inst:bridge",
+      "layer": "instance",
+      "type": "Bridge",
+      "structure_type": "precast_continuous"
+    },
+    {
+      "id": "inst:deck",
+      "layer": "instance",
+      "type": "Deck",
+      "deck_width_m": 16,
+      "carriageway_width_m": 15,
+      "traffic": "one_way",
+      "design_lanes": 4,
+      "load_class": "I"
+    },
+    {
+      "id": "inst:girder",
+      "layer": "instance",
+      "type": "GirderSystem",
+      "section": {
+        "h": 1.4,
+        "b_top": 2.4,
+        "t_tip": 0.18,
+        "haunch_rise": 0.062,
+        "haunch_len": 0.201,
+        "b_bottom": 1,
+        "t_bottom": 0.18,
+        "t_top": 0.18,
+        "t_web": 0.2,
+        "web_slope": 3.5,
+        "chamfer_w": 0.15,
+        "chamfer_h": 0.07
+      },
+      "material": "prestressed_concrete",
+      "E_override_MPa": null,
+      "gamma_override_kNm3": null,
+      "concrete": "C50",
+      "girder_type": "small_box",
+      "count_per_span": 5
+    },
+    {
+      "id": "inst:support:0",
+      "layer": "instance",
+      "type": "SupportLine",
+      "index": 0,
+      "kind": "abutment"
+    },
+    {
+      "id": "inst:bearing:0",
+      "layer": "instance",
+      "type": "BearingGroup",
+      "support": 0,
+      "family": "laminated_elastomeric",
+      "sliding": true,
+      "fixed": false,
+      "per_girder_end": 2,
+      "per_line": null,
+      "a_mm": 300,
+      "b_mm": 350,
+      "t1_mm": 8,
+      "n_layers": 4,
+      "Ge_MPa": null,
+      "model": null
+    },
+    {
+      "id": "inst:support:1",
+      "layer": "instance",
+      "type": "SupportLine",
+      "index": 1,
+      "kind": "pier"
+    },
+    {
+      "id": "inst:bearing:1",
+      "layer": "instance",
+      "type": "BearingGroup",
+      "support": 1,
+      "family": "laminated_elastomeric",
+      "sliding": true,
+      "fixed": false,
+      "per_girder_end": 2,
+      "per_line": null,
+      "a_mm": 300,
+      "b_mm": 350,
+      "t1_mm": 8,
+      "n_layers": 4,
+      "Ge_MPa": null,
+      "model": null
+    },
+    {
+      "id": "inst:support:2",
+      "layer": "instance",
+      "type": "SupportLine",
+      "index": 2,
+      "kind": "pier"
+    },
+    {
+      "id": "inst:bearing:2",
+      "layer": "instance",
+      "type": "BearingGroup",
+      "support": 2,
+      "family": "laminated_elastomeric",
+      "sliding": false,
+      "fixed": true,
+      "per_girder_end": 2,
+      "per_line": null,
+      "a_mm": 300,
+      "b_mm": 350,
+      "t1_mm": 8,
+      "n_layers": 4,
+      "Ge_MPa": null,
+      "model": null
+    },
+    {
+      "id": "inst:support:3",
+      "layer": "instance",
+      "type": "SupportLine",
+      "index": 3,
+      "kind": "pier"
+    },
+    {
+      "id": "inst:bearing:3",
+      "layer": "instance",
+      "type": "BearingGroup",
+      "support": 3,
+      "family": "laminated_elastomeric",
+      "sliding": true,
+      "fixed": false,
+      "per_girder_end": 2,
+      "per_line": null,
+      "a_mm": 300,
+      "b_mm": 350,
+      "t1_mm": 8,
+      "n_layers": 4,
+      "Ge_MPa": null,
+      "model": null
+    },
+    {
+      "id": "inst:support:4",
+      "layer": "instance",
+      "type": "SupportLine",
+      "index": 4,
+      "kind": "abutment"
+    },
+    {
+      "id": "inst:bearing:4",
+      "layer": "instance",
+      "type": "BearingGroup",
+      "support": 4,
+      "family": "laminated_elastomeric",
+      "sliding": true,
+      "fixed": false,
+      "per_girder_end": 2,
+      "per_line": null,
+      "a_mm": 300,
+      "b_mm": 350,
+      "t1_mm": 8,
+      "n_layers": 4,
+      "Ge_MPa": null,
+      "model": null
+    },
+    {
+      "id": "inst:span:1",
+      "layer": "instance",
+      "type": "Span",
+      "index": 1,
+      "length": 25
+    },
+    {
+      "id": "inst:span:2",
+      "layer": "instance",
+      "type": "Span",
+      "index": 2,
+      "length": 25
+    },
+    {
+      "id": "inst:span:3",
+      "layer": "instance",
+      "type": "Span",
+      "index": 3,
+      "length": 25
+    },
+    {
+      "id": "inst:span:4",
+      "layer": "instance",
+      "type": "Span",
+      "index": 4,
+      "length": 25
+    },
+    {
+      "id": "dec:structure.idealization",
+      "layer": "decision",
+      "type": "Decision",
+      "slot": "structure.idealization",
+      "value": "spine_beam_2d",
+      "unit": "-",
+      "evidence": [
+        "MR-01"
+      ]
+    },
+    {
+      "id": "dec:structure.system",
+      "layer": "decision",
+      "type": "Decision",
+      "slot": "structure.system",
+      "value": "continuous",
+      "unit": "-",
+      "evidence": [
+        "MR-05"
+      ]
+    },
+    {
+      "id": "dec:girder.single.A",
+      "layer": "decision",
+      "type": "Decision",
+      "slot": "girder.single.A",
+      "value": 1.060520857142857,
+      "unit": "m^2",
+      "evidence": [
+        "MR-02"
+      ]
+    },
+    {
+      "id": "dec:girder.single.I",
+      "layer": "decision",
+      "type": "Decision",
+      "slot": "girder.single.I",
+      "value": 0.25165870662960277,
+      "unit": "m^4",
+      "evidence": [
+        "MR-02"
+      ]
+    },
+    {
+      "id": "dec:girder.A",
+      "layer": "decision",
+      "type": "Decision",
+      "slot": "girder.A",
+      "value": 5.302604285714285,
+      "unit": "m^2",
+      "evidence": [
+        "MR-02"
+      ]
+    },
+    {
+      "id": "dec:girder.I",
+      "layer": "decision",
+      "type": "Decision",
+      "slot": "girder.I",
+      "value": 1.2582935331480138,
+      "unit": "m^4",
+      "evidence": [
+        "MR-02"
+      ]
+    },
+    {
+      "id": "dec:girder.Ec",
+      "layer": "decision",
+      "type": "Decision",
+      "slot": "girder.Ec",
+      "value": 34500.0,
+      "unit": "MPa",
+      "evidence": [
+        "JTG3362-3.1.5"
+      ]
+    },
+    {
+      "id": "dec:girder.gamma",
+      "layer": "decision",
+      "type": "Decision",
+      "slot": "girder.gamma",
+      "value": 26.0,
+      "unit": "kN/m^3",
+      "evidence": [
+        "JTGD60-4.2.1"
+      ]
+    },
+    {
+      "id": "dec:girder.w",
+      "layer": "decision",
+      "type": "Decision",
+      "slot": "girder.w",
+      "value": 137.8677114285714,
+      "unit": "kN/m",
+      "evidence": [
+        "MR-07"
+      ]
+    },
+    {
+      "id": "dec:girder.m",
+      "layer": "decision",
+      "type": "Decision",
+      "slot": "girder.m",
+      "value": 14.05379321392165,
+      "unit": "t/m",
+      "evidence": [
+        "MR-07"
+      ]
+    },
+    {
+      "id": "dec:lane.n_lanes",
+      "layer": "decision",
+      "type": "Decision",
+      "slot": "lane.n_lanes",
+      "value": 4,
+      "unit": "-",
+      "evidence": [
+        "JTGD60-4.3.1-lanes"
+      ]
+    },
+    {
+      "id": "dec:lane.xi",
+      "layer": "decision",
+      "type": "Decision",
+      "slot": "lane.xi",
+      "value": 0.67,
+      "unit": "-",
+      "evidence": [
+        "JTGD60-4.3.1-xi"
+      ]
+    },
+    {
+      "id": "dec:lane.qk",
+      "layer": "decision",
+      "type": "Decision",
+      "slot": "lane.qk",
+      "value": 10.5,
+      "unit": "kN/m",
+      "evidence": [
+        "JTGD60-4.3.1-qk"
+      ]
+    },
+    {
+      "id": "dec:lane.Pk.1",
+      "layer": "decision",
+      "type": "Decision",
+      "slot": "lane.Pk.1",
+      "value": 310.0,
+      "unit": "kN",
+      "evidence": [
+        "JTGD60-4.3.1-Pk"
+      ]
+    },
+    {
+      "id": "dec:lane.Pk.2",
+      "layer": "decision",
+      "type": "Decision",
+      "slot": "lane.Pk.2",
+      "value": 310.0,
+      "unit": "kN",
+      "evidence": [
+        "JTGD60-4.3.1-Pk"
+      ]
+    },
+    {
+      "id": "dec:lane.Pk.3",
+      "layer": "decision",
+      "type": "Decision",
+      "slot": "lane.Pk.3",
+      "value": 310.0,
+      "unit": "kN",
+      "evidence": [
+        "JTGD60-4.3.1-Pk"
+      ]
+    },
+    {
+      "id": "dec:lane.Pk.4",
+      "layer": "decision",
+      "type": "Decision",
+      "slot": "lane.Pk.4",
+      "value": 310.0,
+      "unit": "kN",
+      "evidence": [
+        "JTGD60-4.3.1-Pk"
+      ]
+    },
+    {
+      "id": "dec:support.0.bearing",
+      "layer": "decision",
+      "type": "Decision",
+      "slot": "support.0.bearing",
+      "value": {
+        "type": "ptfe_sliding",
+        "count": 10
+      },
+      "unit": "-",
+      "evidence": [
+        "MR-04"
+      ]
+    },
+    {
+      "id": "dec:support.0.dofs",
+      "layer": "decision",
+      "type": "Decision",
+      "slot": "support.0.dofs",
+      "value": {
+        "vertical": "spring",
+        "longitudinal": "free",
+        "rotation": "free"
+      },
+      "unit": "-",
+      "evidence": [
+        "MR-03"
+      ]
+    },
+    {
+      "id": "dec:support.0.S",
+      "layer": "decision",
+      "type": "Decision",
+      "slot": "support.0.S",
+      "value": 10.096153846153847,
+      "unit": "-",
+      "evidence": [
+        "JTG3362-8.7-S"
+      ]
+    },
+    {
+      "id": "dec:support.0.Kv",
+      "layer": "decision",
+      "type": "Decision",
+      "slot": "support.0.Kv",
+      "value": 14163181.29089558,
+      "unit": "kN/m",
+      "evidence": [
+        "JTG3362-8.7-Kv"
+      ]
+    },
+    {
+      "id": "dec:support.0.Kh",
+      "layer": "decision",
+      "type": "Decision",
+      "slot": "support.0.Kh",
+      "value": 0.0,
+      "unit": "kN/m",
+      "evidence": [
+        "MR-03"
+      ]
+    },
+    {
+      "id": "dec:support.1.bearing",
+      "layer": "decision",
+      "type": "Decision",
+      "slot": "support.1.bearing",
+      "value": {
+        "type": "ptfe_sliding",
+        "count": 10
+      },
+      "unit": "-",
+      "evidence": [
+        "MR-04"
+      ]
+    },
+    {
+      "id": "dec:support.1.dofs",
+      "layer": "decision",
+      "type": "Decision",
+      "slot": "support.1.dofs",
+      "value": {
+        "vertical": "spring",
+        "longitudinal": "free",
+        "rotation": "free"
+      },
+      "unit": "-",
+      "evidence": [
+        "MR-03"
+      ]
+    },
+    {
+      "id": "dec:support.1.S",
+      "layer": "decision",
+      "type": "Decision",
+      "slot": "support.1.S",
+      "value": 10.096153846153847,
+      "unit": "-",
+      "evidence": [
+        "JTG3362-8.7-S"
+      ]
+    },
+    {
+      "id": "dec:support.1.Kv",
+      "layer": "decision",
+      "type": "Decision",
+      "slot": "support.1.Kv",
+      "value": 14163181.29089558,
+      "unit": "kN/m",
+      "evidence": [
+        "JTG3362-8.7-Kv"
+      ]
+    },
+    {
+      "id": "dec:support.1.Kh",
+      "layer": "decision",
+      "type": "Decision",
+      "slot": "support.1.Kh",
+      "value": 0.0,
+      "unit": "kN/m",
+      "evidence": [
+        "MR-03"
+      ]
+    },
+    {
+      "id": "dec:support.2.bearing",
+      "layer": "decision",
+      "type": "Decision",
+      "slot": "support.2.bearing",
+      "value": {
+        "type": "plain_elastomeric",
+        "count": 10
+      },
+      "unit": "-",
+      "evidence": [
+        "MR-04"
+      ]
+    },
+    {
+      "id": "dec:support.2.dofs",
+      "layer": "decision",
+      "type": "Decision",
+      "slot": "support.2.dofs",
+      "value": {
+        "vertical": "spring",
+        "longitudinal": "spring",
+        "rotation": "free"
+      },
+      "unit": "-",
+      "evidence": [
+        "MR-03"
+      ]
+    },
+    {
+      "id": "dec:support.2.S",
+      "layer": "decision",
+      "type": "Decision",
+      "slot": "support.2.S",
+      "value": 10.096153846153847,
+      "unit": "-",
+      "evidence": [
+        "JTG3362-8.7-S"
+      ]
+    },
+    {
+      "id": "dec:support.2.Kv",
+      "layer": "decision",
+      "type": "Decision",
+      "slot": "support.2.Kv",
+      "value": 14163181.29089558,
+      "unit": "kN/m",
+      "evidence": [
+        "JTG3362-8.7-Kv"
+      ]
+    },
+    {
+      "id": "dec:support.2.Kh",
+      "layer": "decision",
+      "type": "Decision",
+      "slot": "support.2.Kh",
+      "value": 32812.49999999999,
+      "unit": "kN/m",
+      "evidence": [
+        "JTG3362-8.7-Kh"
+      ]
+    },
+    {
+      "id": "dec:support.3.bearing",
+      "layer": "decision",
+      "type": "Decision",
+      "slot": "support.3.bearing",
+      "value": {
+        "type": "ptfe_sliding",
+        "count": 10
+      },
+      "unit": "-",
+      "evidence": [
+        "MR-04"
+      ]
+    },
+    {
+      "id": "dec:support.3.dofs",
+      "layer": "decision",
+      "type": "Decision",
+      "slot": "support.3.dofs",
+      "value": {
+        "vertical": "spring",
+        "longitudinal": "free",
+        "rotation": "free"
+      },
+      "unit": "-",
+      "evidence": [
+        "MR-03"
+      ]
+    },
+    {
+      "id": "dec:support.3.S",
+      "layer": "decision",
+      "type": "Decision",
+      "slot": "support.3.S",
+      "value": 10.096153846153847,
+      "unit": "-",
+      "evidence": [
+        "JTG3362-8.7-S"
+      ]
+    },
+    {
+      "id": "dec:support.3.Kv",
+      "layer": "decision",
+      "type": "Decision",
+      "slot": "support.3.Kv",
+      "value": 14163181.29089558,
+      "unit": "kN/m",
+      "evidence": [
+        "JTG3362-8.7-Kv"
+      ]
+    },
+    {
+      "id": "dec:support.3.Kh",
+      "layer": "decision",
+      "type": "Decision",
+      "slot": "support.3.Kh",
+      "value": 0.0,
+      "unit": "kN/m",
+      "evidence": [
+        "MR-03"
+      ]
+    },
+    {
+      "id": "dec:support.4.bearing",
+      "layer": "decision",
+      "type": "Decision",
+      "slot": "support.4.bearing",
+      "value": {
+        "type": "ptfe_sliding",
+        "count": 10
+      },
+      "unit": "-",
+      "evidence": [
+        "MR-04"
+      ]
+    },
+    {
+      "id": "dec:support.4.dofs",
+      "layer": "decision",
+      "type": "Decision",
+      "slot": "support.4.dofs",
+      "value": {
+        "vertical": "spring",
+        "longitudinal": "free",
+        "rotation": "free"
+      },
+      "unit": "-",
+      "evidence": [
+        "MR-03"
+      ]
+    },
+    {
+      "id": "dec:support.4.S",
+      "layer": "decision",
+      "type": "Decision",
+      "slot": "support.4.S",
+      "value": 10.096153846153847,
+      "unit": "-",
+      "evidence": [
+        "JTG3362-8.7-S"
+      ]
+    },
+    {
+      "id": "dec:support.4.Kv",
+      "layer": "decision",
+      "type": "Decision",
+      "slot": "support.4.Kv",
+      "value": 14163181.29089558,
+      "unit": "kN/m",
+      "evidence": [
+        "JTG3362-8.7-Kv"
+      ]
+    },
+    {
+      "id": "dec:support.4.Kh",
+      "layer": "decision",
+      "type": "Decision",
+      "slot": "support.4.Kh",
+      "value": 0.0,
+      "unit": "kN/m",
+      "evidence": [
+        "MR-03"
+      ]
+    },
+    {
+      "id": "dec:lane.mu",
+      "layer": "decision",
+      "type": "Decision",
+      "slot": "lane.mu",
+      "value": 0.24661599379374066,
+      "unit": "-",
+      "evidence": [
+        "JTGD60-4.3.2"
+      ]
+    }
+  ],
+  "edges": [
+    [
+      "JTG3362-3.1.5",
+      "ACTS_ON",
+      "concept:concrete"
+    ],
+    [
+      "JTGD60-4.2.1",
+      "ACTS_ON",
+      "concept:concrete"
+    ],
+    [
+      "JTG3362-8.7-S",
+      "ACTS_ON",
+      "concept:bearing"
+    ],
+    [
+      "JTG3362-8.7-Kv",
+      "ACTS_ON",
+      "concept:bearing"
+    ],
+    [
+      "JTG3362-8.7-Kh",
+      "ACTS_ON",
+      "concept:bearing"
+    ],
+    [
+      "JTG3362-8.7-Ge",
+      "ACTS_ON",
+      "concept:bearing"
+    ],
+    [
+      "JTT854",
+      "ACTS_ON",
+      "concept:bearing"
+    ],
+    [
+      "JTGD60-4.3.1-lanes",
+      "ACTS_ON",
+      "concept:lane"
+    ],
+    [
+      "JTGD60-4.3.1-xi",
+      "ACTS_ON",
+      "concept:lane"
+    ],
+    [
+      "JTGD60-4.3.1-qk",
+      "ACTS_ON",
+      "concept:lane"
+    ],
+    [
+      "JTGD60-4.3.1-Pk",
+      "ACTS_ON",
+      "concept:lane"
+    ],
+    [
+      "JTGD60-4.3.2",
+      "ACTS_ON",
+      "concept:lane"
+    ],
+    [
+      "MR-01",
+      "GOVERNS",
+      "slot:structure.idealization"
+    ],
+    [
+      "MR-05",
+      "GOVERNS",
+      "slot:structure.system"
+    ],
+    [
+      "MR-02",
+      "GOVERNS",
+      "slot:girder.single.A"
+    ],
+    [
+      "MR-02",
+      "GOVERNS",
+      "slot:girder.single.I"
+    ],
+    [
+      "MR-02",
+      "GOVERNS",
+      "slot:girder.A"
+    ],
+    [
+      "MR-02",
+      "GOVERNS",
+      "slot:girder.I"
+    ],
+    [
+      "MR-02",
+      "SUPPORTS",
+      "slot:girder.w"
+    ],
+    [
+      "MR-00",
+      "GOVERNS",
+      "slot:girder.Ec"
+    ],
+    [
+      "MR-00",
+      "GOVERNS",
+      "slot:girder.gamma"
+    ],
+    [
+      "MR-07",
+      "GOVERNS",
+      "slot:girder.w"
+    ],
+    [
+      "MR-07",
+      "GOVERNS",
+      "slot:girder.m"
+    ],
+    [
+      "MR-04",
+      "GOVERNS",
+      "slot:support.{k}.bearing"
+    ],
+    [
+      "MR-04",
+      "SUPPORTS",
+      "slot:support.{k}.Kv"
+    ],
+    [
+      "MR-04",
+      "SUPPORTS",
+      "slot:support.{k}.Kh"
+    ],
+    [
+      "MR-03",
+      "GOVERNS",
+      "slot:support.{k}.dofs"
+    ],
+    [
+      "MR-03",
+      "GOVERNS",
+      "slot:support.{k}.Kh"
+    ],
+    [
+      "MR-08",
+      "GOVERNS",
+      "slot:support.{k}.dofs"
+    ],
+    [
+      "MR-06",
+      "GOVERNS",
+      "slot:pier.{k}.length"
+    ],
+    [
+      "MR-06",
+      "GOVERNS",
+      "slot:pier.{k}.A"
+    ],
+    [
+      "MR-06",
+      "GOVERNS",
+      "slot:pier.{k}.I"
+    ],
+    [
+      "LL-01",
+      "SUPPORTS",
+      "slot:lane.qk"
+    ],
+    [
+      "LL-01",
+      "SUPPORTS",
+      "slot:lane.Pk.{j}"
+    ],
+    [
+      "LL-01",
+      "SUPPORTS",
+      "slot:lane.n_lanes"
+    ],
+    [
+      "LL-01",
+      "SUPPORTS",
+      "slot:lane.xi"
+    ],
+    [
+      "LL-02",
+      "SUPPORTS",
+      "slot:lane.mu"
+    ],
+    [
+      "JTG3362-3.1.5",
+      "GOVERNS",
+      "slot:girder.Ec"
+    ],
+    [
+      "JTG3362-3.1.5",
+      "GOVERNS",
+      "slot:pier.{k}.Ec"
+    ],
+    [
+      "JTGD60-4.2.1",
+      "GOVERNS",
+      "slot:girder.gamma"
+    ],
+    [
+      "JTGD60-4.2.1",
+      "SUPPORTS",
+      "slot:girder.w"
+    ],
+    [
+      "JTG3362-8.7-S",
+      "GOVERNS",
+      "slot:support.{k}.S"
+    ],
+    [
+      "JTG3362-8.7-S",
+      "SUPPORTS",
+      "slot:support.{k}.Kv"
+    ],
+    [
+      "JTG3362-8.7-Kv",
+      "GOVERNS",
+      "slot:support.{k}.Kv"
+    ],
+    [
+      "JTG3362-8.7-Kh",
+      "GOVERNS",
+      "slot:support.{k}.Kh"
+    ],
+    [
+      "JTG3362-8.7-Ge",
+      "SUPPORTS",
+      "slot:support.{k}.Kv"
+    ],
+    [
+      "JTG3362-8.7-Ge",
+      "SUPPORTS",
+      "slot:support.{k}.Kh"
+    ],
+    [
+      "JTT854",
+      "SUPPORTS",
+      "slot:support.{k}.bearing"
+    ],
+    [
+      "JTT854",
+      "SUPPORTS",
+      "slot:support.{k}.dofs"
+    ],
+    [
+      "JTGD60-4.3.1-lanes",
+      "GOVERNS",
+      "slot:lane.n_lanes"
+    ],
+    [
+      "JTGD60-4.3.1-xi",
+      "GOVERNS",
+      "slot:lane.xi"
+    ],
+    [
+      "JTGD60-4.3.1-qk",
+      "GOVERNS",
+      "slot:lane.qk"
+    ],
+    [
+      "JTGD60-4.3.1-Pk",
+      "GOVERNS",
+      "slot:lane.Pk.{j}"
+    ],
+    [
+      "JTGD60-4.3.2",
+      "GOVERNS",
+      "slot:lane.mu"
+    ],
+    [
+      "inst:bridge",
+      "HAS",
+      "inst:deck"
+    ],
+    [
+      "inst:bridge",
+      "HAS",
+      "inst:girder"
+    ],
+    [
+      "inst:bridge",
+      "HAS",
+      "inst:support:0"
+    ],
+    [
+      "inst:bearing:0",
+      "AT",
+      "inst:support:0"
+    ],
+    [
+      "inst:bearing:0",
+      "SUPPORTS",
+      "inst:girder"
+    ],
+    [
+      "inst:bridge",
+      "HAS",
+      "inst:support:1"
+    ],
+    [
+      "inst:bearing:1",
+      "AT",
+      "inst:support:1"
+    ],
+    [
+      "inst:bearing:1",
+      "SUPPORTS",
+      "inst:girder"
+    ],
+    [
+      "inst:bridge",
+      "HAS",
+      "inst:support:2"
+    ],
+    [
+      "inst:bearing:2",
+      "AT",
+      "inst:support:2"
+    ],
+    [
+      "inst:bearing:2",
+      "SUPPORTS",
+      "inst:girder"
+    ],
+    [
+      "inst:bridge",
+      "HAS",
+      "inst:support:3"
+    ],
+    [
+      "inst:bearing:3",
+      "AT",
+      "inst:support:3"
+    ],
+    [
+      "inst:bearing:3",
+      "SUPPORTS",
+      "inst:girder"
+    ],
+    [
+      "inst:bridge",
+      "HAS",
+      "inst:support:4"
+    ],
+    [
+      "inst:bearing:4",
+      "AT",
+      "inst:support:4"
+    ],
+    [
+      "inst:bearing:4",
+      "SUPPORTS",
+      "inst:girder"
+    ],
+    [
+      "inst:bridge",
+      "HAS",
+      "inst:span:1"
+    ],
+    [
+      "inst:span:1",
+      "BETWEEN",
+      "inst:support:0"
+    ],
+    [
+      "inst:span:1",
+      "BETWEEN",
+      "inst:support:1"
+    ],
+    [
+      "inst:girder",
+      "SPANS",
+      "inst:span:1"
+    ],
+    [
+      "inst:bridge",
+      "HAS",
+      "inst:span:2"
+    ],
+    [
+      "inst:span:2",
+      "BETWEEN",
+      "inst:support:1"
+    ],
+    [
+      "inst:span:2",
+      "BETWEEN",
+      "inst:support:2"
+    ],
+    [
+      "inst:girder",
+      "SPANS",
+      "inst:span:2"
+    ],
+    [
+      "inst:bridge",
+      "HAS",
+      "inst:span:3"
+    ],
+    [
+      "inst:span:3",
+      "BETWEEN",
+      "inst:support:2"
+    ],
+    [
+      "inst:span:3",
+      "BETWEEN",
+      "inst:support:3"
+    ],
+    [
+      "inst:girder",
+      "SPANS",
+      "inst:span:3"
+    ],
+    [
+      "inst:bridge",
+      "HAS",
+      "inst:span:4"
+    ],
+    [
+      "inst:span:4",
+      "BETWEEN",
+      "inst:support:3"
+    ],
+    [
+      "inst:span:4",
+      "BETWEEN",
+      "inst:support:4"
+    ],
+    [
+      "inst:girder",
+      "SPANS",
+      "inst:span:4"
+    ],
+    [
+      "dec:structure.idealization",
+      "BASED_ON",
+      "MR-01"
+    ],
+    [
+      "dec:structure.idealization",
+      "CONCERNS",
+      "inst:girder"
+    ],
+    [
+      "dec:structure.system",
+      "BASED_ON",
+      "MR-05"
+    ],
+    [
+      "dec:structure.system",
+      "CONCERNS",
+      "inst:girder"
+    ],
+    [
+      "dec:girder.single.A",
+      "BASED_ON",
+      "MR-02"
+    ],
+    [
+      "dec:girder.single.A",
+      "CONCERNS",
+      "inst:girder"
+    ],
+    [
+      "dec:girder.single.I",
+      "BASED_ON",
+      "MR-02"
+    ],
+    [
+      "dec:girder.single.I",
+      "CONCERNS",
+      "inst:girder"
+    ],
+    [
+      "dec:girder.A",
+      "BASED_ON",
+      "MR-02"
+    ],
+    [
+      "dec:girder.A",
+      "CONCERNS",
+      "inst:girder"
+    ],
+    [
+      "dec:girder.I",
+      "BASED_ON",
+      "MR-02"
+    ],
+    [
+      "dec:girder.I",
+      "CONCERNS",
+      "inst:girder"
+    ],
+    [
+      "dec:girder.Ec",
+      "BASED_ON",
+      "JTG3362-3.1.5"
+    ],
+    [
+      "dec:girder.Ec",
+      "CONCERNS",
+      "inst:girder"
+    ],
+    [
+      "dec:girder.gamma",
+      "BASED_ON",
+      "JTGD60-4.2.1"
+    ],
+    [
+      "dec:girder.gamma",
+      "CONCERNS",
+      "inst:girder"
+    ],
+    [
+      "dec:girder.w",
+      "BASED_ON",
+      "MR-07"
+    ],
+    [
+      "dec:girder.w",
+      "CONCERNS",
+      "inst:girder"
+    ],
+    [
+      "dec:girder.m",
+      "BASED_ON",
+      "MR-07"
+    ],
+    [
+      "dec:girder.m",
+      "CONCERNS",
+      "inst:girder"
+    ],
+    [
+      "dec:lane.n_lanes",
+      "BASED_ON",
+      "JTGD60-4.3.1-lanes"
+    ],
+    [
+      "dec:lane.n_lanes",
+      "CONCERNS",
+      "inst:deck"
+    ],
+    [
+      "dec:lane.xi",
+      "BASED_ON",
+      "JTGD60-4.3.1-xi"
+    ],
+    [
+      "dec:lane.xi",
+      "CONCERNS",
+      "inst:deck"
+    ],
+    [
+      "dec:lane.qk",
+      "BASED_ON",
+      "JTGD60-4.3.1-qk"
+    ],
+    [
+      "dec:lane.qk",
+      "CONCERNS",
+      "inst:deck"
+    ],
+    [
+      "dec:lane.Pk.1",
+      "BASED_ON",
+      "JTGD60-4.3.1-Pk"
+    ],
+    [
+      "dec:lane.Pk.1",
+      "CONCERNS",
+      "inst:span:1"
+    ],
+    [
+      "dec:lane.Pk.2",
+      "BASED_ON",
+      "JTGD60-4.3.1-Pk"
+    ],
+    [
+      "dec:lane.Pk.2",
+      "CONCERNS",
+      "inst:span:2"
+    ],
+    [
+      "dec:lane.Pk.3",
+      "BASED_ON",
+      "JTGD60-4.3.1-Pk"
+    ],
+    [
+      "dec:lane.Pk.3",
+      "CONCERNS",
+      "inst:span:3"
+    ],
+    [
+      "dec:lane.Pk.4",
+      "BASED_ON",
+      "JTGD60-4.3.1-Pk"
+    ],
+    [
+      "dec:lane.Pk.4",
+      "CONCERNS",
+      "inst:span:4"
+    ],
+    [
+      "dec:support.0.bearing",
+      "BASED_ON",
+      "MR-04"
+    ],
+    [
+      "dec:support.0.bearing",
+      "CONCERNS",
+      "inst:bearing:0"
+    ],
+    [
+      "dec:support.0.dofs",
+      "BASED_ON",
+      "MR-03"
+    ],
+    [
+      "dec:support.0.dofs",
+      "CONCERNS",
+      "inst:bearing:0"
+    ],
+    [
+      "dec:support.0.S",
+      "BASED_ON",
+      "JTG3362-8.7-S"
+    ],
+    [
+      "dec:support.0.S",
+      "CONCERNS",
+      "inst:bearing:0"
+    ],
+    [
+      "dec:support.0.Kv",
+      "BASED_ON",
+      "JTG3362-8.7-Kv"
+    ],
+    [
+      "dec:support.0.Kv",
+      "CONCERNS",
+      "inst:bearing:0"
+    ],
+    [
+      "dec:support.0.Kh",
+      "BASED_ON",
+      "MR-03"
+    ],
+    [
+      "dec:support.0.Kh",
+      "CONCERNS",
+      "inst:bearing:0"
+    ],
+    [
+      "dec:support.1.bearing",
+      "BASED_ON",
+      "MR-04"
+    ],
+    [
+      "dec:support.1.bearing",
+      "CONCERNS",
+      "inst:bearing:1"
+    ],
+    [
+      "dec:support.1.dofs",
+      "BASED_ON",
+      "MR-03"
+    ],
+    [
+      "dec:support.1.dofs",
+      "CONCERNS",
+      "inst:bearing:1"
+    ],
+    [
+      "dec:support.1.S",
+      "BASED_ON",
+      "JTG3362-8.7-S"
+    ],
+    [
+      "dec:support.1.S",
+      "CONCERNS",
+      "inst:bearing:1"
+    ],
+    [
+      "dec:support.1.Kv",
+      "BASED_ON",
+      "JTG3362-8.7-Kv"
+    ],
+    [
+      "dec:support.1.Kv",
+      "CONCERNS",
+      "inst:bearing:1"
+    ],
+    [
+      "dec:support.1.Kh",
+      "BASED_ON",
+      "MR-03"
+    ],
+    [
+      "dec:support.1.Kh",
+      "CONCERNS",
+      "inst:bearing:1"
+    ],
+    [
+      "dec:support.2.bearing",
+      "BASED_ON",
+      "MR-04"
+    ],
+    [
+      "dec:support.2.bearing",
+      "CONCERNS",
+      "inst:bearing:2"
+    ],
+    [
+      "dec:support.2.dofs",
+      "BASED_ON",
+      "MR-03"
+    ],
+    [
+      "dec:support.2.dofs",
+      "CONCERNS",
+      "inst:bearing:2"
+    ],
+    [
+      "dec:support.2.S",
+      "BASED_ON",
+      "JTG3362-8.7-S"
+    ],
+    [
+      "dec:support.2.S",
+      "CONCERNS",
+      "inst:bearing:2"
+    ],
+    [
+      "dec:support.2.Kv",
+      "BASED_ON",
+      "JTG3362-8.7-Kv"
+    ],
+    [
+      "dec:support.2.Kv",
+      "CONCERNS",
+      "inst:bearing:2"
+    ],
+    [
+      "dec:support.2.Kh",
+      "BASED_ON",
+      "JTG3362-8.7-Kh"
+    ],
+    [
+      "dec:support.2.Kh",
+      "CONCERNS",
+      "inst:bearing:2"
+    ],
+    [
+      "dec:support.3.bearing",
+      "BASED_ON",
+      "MR-04"
+    ],
+    [
+      "dec:support.3.bearing",
+      "CONCERNS",
+      "inst:bearing:3"
+    ],
+    [
+      "dec:support.3.dofs",
+      "BASED_ON",
+      "MR-03"
+    ],
+    [
+      "dec:support.3.dofs",
+      "CONCERNS",
+      "inst:bearing:3"
+    ],
+    [
+      "dec:support.3.S",
+      "BASED_ON",
+      "JTG3362-8.7-S"
+    ],
+    [
+      "dec:support.3.S",
+      "CONCERNS",
+      "inst:bearing:3"
+    ],
+    [
+      "dec:support.3.Kv",
+      "BASED_ON",
+      "JTG3362-8.7-Kv"
+    ],
+    [
+      "dec:support.3.Kv",
+      "CONCERNS",
+      "inst:bearing:3"
+    ],
+    [
+      "dec:support.3.Kh",
+      "BASED_ON",
+      "MR-03"
+    ],
+    [
+      "dec:support.3.Kh",
+      "CONCERNS",
+      "inst:bearing:3"
+    ],
+    [
+      "dec:support.4.bearing",
+      "BASED_ON",
+      "MR-04"
+    ],
+    [
+      "dec:support.4.bearing",
+      "CONCERNS",
+      "inst:bearing:4"
+    ],
+    [
+      "dec:support.4.dofs",
+      "BASED_ON",
+      "MR-03"
+    ],
+    [
+      "dec:support.4.dofs",
+      "CONCERNS",
+      "inst:bearing:4"
+    ],
+    [
+      "dec:support.4.S",
+      "BASED_ON",
+      "JTG3362-8.7-S"
+    ],
+    [
+      "dec:support.4.S",
+      "CONCERNS",
+      "inst:bearing:4"
+    ],
+    [
+      "dec:support.4.Kv",
+      "BASED_ON",
+      "JTG3362-8.7-Kv"
+    ],
+    [
+      "dec:support.4.Kv",
+      "CONCERNS",
+      "inst:bearing:4"
+    ],
+    [
+      "dec:support.4.Kh",
+      "BASED_ON",
+      "MR-03"
+    ],
+    [
+      "dec:support.4.Kh",
+      "CONCERNS",
+      "inst:bearing:4"
+    ],
+    [
+      "dec:lane.mu",
+      "BASED_ON",
+      "JTGD60-4.3.2"
+    ],
+    [
+      "dec:lane.mu",
+      "CONCERNS",
+      "inst:deck"
+    ]
+  ]
+}
