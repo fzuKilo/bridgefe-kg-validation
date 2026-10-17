@@ -2,7 +2,7 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23433648.svg)](https://doi.org/10.5281/zenodo.23433648)
 
-Archived on Zenodo; DOI for all versions: 10.5281/zenodo.23433648 (resolves to the latest version). The version cited in the manuscript is v0.2.2-review; its version-specific DOI is listed on the Zenodo record.
+Archived on Zenodo; DOI for all versions: 10.5281/zenodo.23433648 (resolves to the latest version). The version cited in the manuscript is v0.2.3-review; its version-specific DOI is listed on the Zenodo record.
 
 Research materials published on GitHub 2026-10-17: https://github.com/fzuKilo/bridgefe-kg-validation. Code: MIT; data and documentation: CC BY 4.0; design-code provision excerpts excluded (see LICENSES.md).
 
@@ -57,3 +57,14 @@ All bootstrap resampling in the analysis scripts uses the seed 20261016 (`kgfem/
 ## Backbone model
 
 All configurations of the main, ablation, error-injection, robustness, and scalability experiments use DeepSeek-V4-Flash (API model `deepseek-flash`); the agent configurations C2–C5 run in non-thinking mode, and the single-call baselines C0/C1 run with thinking enabled. The backbone comparison uses gpt-6-luna.
+
+## Offline re-validation under the stricter validator
+
+`analysis/strict_revalidation.py` re-submits the final accepted decisions of all 90 C5 runs (3414 decisions, recorded values, units and evidence, final instances) to the evaluated validator (control) and to the stricter variant, without LLM calls:
+
+```
+python analysis/strict_revalidation.py evaluated OUT
+python analysis/strict_revalidation.py strict OUT
+```
+
+Results are in `review_evidence/strict_revalidation/`: the evaluated validator re-accepts all decisions; the stricter variant accepts 3312 and rejects 102 (37 runs), all for the granularity of supporting input citations. No decision value changes.

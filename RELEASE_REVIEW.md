@@ -1,6 +1,6 @@
 # Status update 2026-10-17
 
-Published at https://github.com/fzuKilo/bridgefe-kg-validation (v0.2.2-review). Code is licensed under MIT and data/documentation under CC BY 4.0; design-code provision excerpts and standard-drawing-derived content are excluded (LICENSES.md). The checklist below records preparation history.
+Published at https://github.com/fzuKilo/bridgefe-kg-validation (v0.2.3-review). Code is licensed under MIT and data/documentation under CC BY 4.0; design-code provision excerpts and standard-drawing-derived content are excluded (LICENSES.md). The checklist below records preparation history.
 
 # 发布前检查
 
