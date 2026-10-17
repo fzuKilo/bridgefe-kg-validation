@@ -2,7 +2,7 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23433648.svg)](https://doi.org/10.5281/zenodo.23433648)
 
-Archived on Zenodo; DOI for all versions: 10.5281/zenodo.23433648 (resolves to the latest version). The version cited in the manuscript is v0.2.3-review; its version-specific DOI is listed on the Zenodo record.
+Archived on Zenodo; DOI for all versions: 10.5281/zenodo.23433648 (resolves to the latest version). The version cited in the manuscript is v0.2.4-review; its version-specific DOI is listed on the Zenodo record.
 
 Research materials published on GitHub 2026-10-17: https://github.com/fzuKilo/bridgefe-kg-validation. Code: MIT; data and documentation: CC BY 4.0; design-code provision excerpts excluded (see LICENSES.md).
 
@@ -68,3 +68,7 @@ python analysis/strict_revalidation.py strict OUT
 ```
 
 Results are in `review_evidence/strict_revalidation/`: the evaluated validator re-accepts all decisions; the stricter variant accepts 3312 and rejects 102 (37 runs), all for the granularity of supporting input citations. No decision value changes.
+
+## Run dates
+
+`review_evidence/run_timestamps.json` lists the file modification times (UTC+8) of all original session records. All experiments ran on 27-28 September 2026. These are file timestamps, not service-side request records.

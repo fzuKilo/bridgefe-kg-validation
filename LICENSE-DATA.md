@@ -6,6 +6,6 @@ The data and documentation in this repository (see LICENSES.md for the exact sco
 
 Full legal code: https://creativecommons.org/licenses/by/4.0/legalcode
 
-Suggested attribution: Luo, J., Liu, N., Chen, Y., Huang, L. (2026). Knowledge graph-constrained large language model agent for automated finite element modeling of girder bridges: research materials (v0.2.3-review). https://github.com/fzuKilo/bridgefe-kg-validation
+Suggested attribution: Luo, J., Liu, N., Chen, Y., Huang, L. (2026). Knowledge graph-constrained large language model agent for automated finite element modeling of girder bridges: research materials (v0.2.4-review). https://github.com/fzuKilo/bridgefe-kg-validation
 
 Design-code provision excerpts and material derived from third-party standard drawings are excluded from this license; see LICENSES.md.
