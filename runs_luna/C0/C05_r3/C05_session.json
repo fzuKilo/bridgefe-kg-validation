@@ -1,0 +1,35 @@
+{
+ "metrics": {
+  "proposals": 0,
+  "slots_proposed": 0,
+  "first_proposal_violation_rate": null,
+  "violations_by_check": {},
+  "instance_rounds": 0,
+  "repair_rounds": 0,
+  "model_passed": false,
+  "elapsed_s": 128.64
+ },
+ "decisions": {},
+ "facts": {},
+ "instance": {},
+ "results": null,
+ "last_check": null,
+ "role_log": [
+  {
+   "role": "direct_script",
+   "usage": {
+    "turns": 1,
+    "prompt_tokens": 4319,
+    "output_tokens": 4842,
+    "cache_hit_tokens": 2816,
+    "reasoning_tokens": 930,
+    "finish_reason": "stop",
+    "stream": true
+   },
+   "returncode": 1,
+   "stderr": "Traceback (most recent call last):\n  File \"${PROJECT_ROOT}/runs_luna/C0/C05_r3/C05_direct.py\", line 155, in <module>\n    support_reactions = [float(self_weight_reactions[2 * node]) for node in support_nodes]\n                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^\nIndexError: index 138 is out of bounds for axis 0 with size 122\n",
+   "elapsed_s": 128.6
+  }
+ ],
+ "log": []
+}

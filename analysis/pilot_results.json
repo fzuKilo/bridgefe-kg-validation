@@ -1,0 +1,614 @@
+[
+  {
+    "problem": "C01",
+    "rep": 1,
+    "source": "runs_ablation_multi/A6/C01_r1/C01_session.json",
+    "source_sha256": "39271160df7e6b5f31401cbbd7ea24d0bd5acd4d1ff668a6f2f03280d7f44d7b",
+    "initial_sha256": "f2b4f36a48019ba8dacd7ac34317df69ba09b04d25af0fb167f910438a1ae29d",
+    "stored_initial_sha256": "f2b4f36a48019ba8dacd7ac34317df69ba09b04d25af0fb167f910438a1ae29d",
+    "first_write_ok_historical": true,
+    "historical_write_calls": 1,
+    "historical_final_differs_from_first_args": false,
+    "historical_correct": true,
+    "D_status": "model_passed",
+    "D_correct": true,
+    "D_evaluation": {
+      "id": "C01",
+      "executed": true,
+      "decisions_correct": 43,
+      "decisions_total": 43,
+      "decision_accuracy_by_category": {
+        "modeling_rule": 1.0,
+        "code_parameter": 1.0,
+        "topology": 1.0
+      },
+      "responses": {
+        "self_weight_support_reactions_kN": true,
+        "self_weight_midspan_moments_kNm": true,
+        "lane_max_positive_moment_kNm": true,
+        "lane_max_negative_moment_kNm": true,
+        "first_vertical_frequency_Hz": true
+      },
+      "correct": true,
+      "wrong_decisions": [],
+      "metrics": {
+        "proposals": 43,
+        "slots_proposed": 43,
+        "first_proposal_violation_rate": 0.0,
+        "violations_by_check": {},
+        "instance_rounds": 1,
+        "repair_rounds": 0,
+        "model_passed": true,
+        "elapsed_s": 2.77
+      }
+    },
+    "failure": null,
+    "D_seconds": 2.7687747569999885,
+    "D_model_calls": 0,
+    "D_input_tokens": 0,
+    "D_output_tokens": 0,
+    "D_tool_calls": 48,
+    "rule_trace": [
+      {
+        "slot": "structure.idealization",
+        "rule": "MR-01",
+        "tied_candidates": [
+          "MR-01"
+        ],
+        "accepted": true
+      },
+      {
+        "slot": "structure.system",
+        "rule": "MR-05",
+        "tied_candidates": [
+          "MR-05"
+        ],
+        "accepted": true
+      },
+      {
+        "slot": "girder.A",
+        "rule": "MR-02",
+        "tied_candidates": [
+          "MR-02"
+        ],
+        "accepted": true
+      },
+      {
+        "slot": "girder.I",
+        "rule": "MR-02",
+        "tied_candidates": [
+          "MR-02"
+        ],
+        "accepted": true
+      },
+      {
+        "slot": "girder.Ec",
+        "rule": "JTG3362-3.1.5",
+        "tied_candidates": [
+          "JTG3362-3.1.5"
+        ],
+        "accepted": true
+      },
+      {
+        "slot": "girder.gamma",
+        "rule": "JTGD60-4.2.1",
+        "tied_candidates": [
+          "JTGD60-4.2.1"
+        ],
+        "accepted": true
+      },
+      {
+        "slot": "girder.w",
+        "rule": "MR-07",
+        "tied_candidates": [
+          "MR-07"
+        ],
+        "accepted": true
+      },
+      {
+        "slot": "girder.m",
+        "rule": "MR-07",
+        "tied_candidates": [
+          "MR-07"
+        ],
+        "accepted": true
+      },
+      {
+        "slot": "lane.n_lanes",
+        "rule": "JTGD60-4.3.1-lanes",
+        "tied_candidates": [
+          "JTGD60-4.3.1-lanes"
+        ],
+        "accepted": true
+      },
+      {
+        "slot": "lane.xi",
+        "rule": "JTGD60-4.3.1-xi",
+        "tied_candidates": [
+          "JTGD60-4.3.1-xi"
+        ],
+        "accepted": true
+      },
+      {
+        "slot": "lane.qk",
+        "rule": "JTGD60-4.3.1-qk",
+        "tied_candidates": [
+          "JTGD60-4.3.1-qk"
+        ],
+        "accepted": true
+      },
+      {
+        "slot": "lane.Pk.1",
+        "rule": "JTGD60-4.3.1-Pk",
+        "tied_candidates": [
+          "JTGD60-4.3.1-Pk"
+        ],
+        "accepted": true
+      },
+      {
+        "slot": "lane.Pk.2",
+        "rule": "JTGD60-4.3.1-Pk",
+        "tied_candidates": [
+          "JTGD60-4.3.1-Pk"
+        ],
+        "accepted": true
+      },
+      {
+        "slot": "lane.Pk.3",
+        "rule": "JTGD60-4.3.1-Pk",
+        "tied_candidates": [
+          "JTGD60-4.3.1-Pk"
+        ],
+        "accepted": true
+      },
+      {
+        "slot": "support.0.bearing",
+        "rule": "MR-04",
+        "tied_candidates": [
+          "MR-04"
+        ],
+        "accepted": true
+      },
+      {
+        "slot": "support.0.dofs",
+        "rule": "MR-03",
+        "tied_candidates": [
+          "MR-03"
+        ],
+        "accepted": true
+      },
+      {
+        "slot": "support.0.S",
+        "rule": "JTG3362-8.7-S",
+        "tied_candidates": [
+          "JTG3362-8.7-S"
+        ],
+        "accepted": true
+      },
+      {
+        "slot": "support.0.Kv",
+        "rule": "JTG3362-8.7-Kv",
+        "tied_candidates": [
+          "JTG3362-8.7-Kv"
+        ],
+        "accepted": true
+      },
+      {
+        "slot": "support.0.Kh",
+        "rule": "MR-03",
+        "tied_candidates": [
+          "MR-03"
+        ],
+        "accepted": true
+      },
+      {
+        "slot": "support.1.bearing",
+        "rule": "MR-04",
+        "tied_candidates": [
+          "MR-04"
+        ],
+        "accepted": true
+      },
+      {
+        "slot": "support.1.dofs",
+        "rule": "MR-03",
+        "tied_candidates": [
+          "MR-03"
+        ],
+        "accepted": true
+      },
+      {
+        "slot": "support.1.S",
+        "rule": "JTG3362-8.7-S",
+        "tied_candidates": [
+          "JTG3362-8.7-S"
+        ],
+        "accepted": true
+      },
+      {
+        "slot": "support.1.Kv",
+        "rule": "JTG3362-8.7-Kv",
+        "tied_candidates": [
+          "JTG3362-8.7-Kv"
+        ],
+        "accepted": true
+      },
+      {
+        "slot": "support.1.Kh",
+        "rule": "MR-03",
+        "tied_candidates": [
+          "MR-03"
+        ],
+        "accepted": true
+      },
+      {
+        "slot": "support.2.bearing",
+        "rule": "MR-04",
+        "tied_candidates": [
+          "MR-04"
+        ],
+        "accepted": true
+      },
+      {
+        "slot": "support.2.dofs",
+        "rule": "MR-03",
+        "tied_candidates": [
+          "MR-03"
+        ],
+        "accepted": true
+      },
+      {
+        "slot": "support.2.S",
+        "rule": "JTG3362-8.7-S",
+        "tied_candidates": [
+          "JTG3362-8.7-S"
+        ],
+        "accepted": true
+      },
+      {
+        "slot": "support.2.Kv",
+        "rule": "JTG3362-8.7-Kv",
+        "tied_candidates": [
+          "JTG3362-8.7-Kv"
+        ],
+        "accepted": true
+      },
+      {
+        "slot": "support.2.Kh",
+        "rule": "JTG3362-8.7-Kh",
+        "tied_candidates": [
+          "JTG3362-8.7-Kh"
+        ],
+        "accepted": true
+      },
+      {
+        "slot": "support.3.bearing",
+        "rule": "MR-04",
+        "tied_candidates": [
+          "MR-04"
+        ],
+        "accepted": true
+      },
+      {
+        "slot": "support.3.dofs",
+        "rule": "MR-03",
+        "tied_candidates": [
+          "MR-03"
+        ],
+        "accepted": true
+      },
+      {
+        "slot": "support.3.S",
+        "rule": "JTG3362-8.7-S",
+        "tied_candidates": [
+          "JTG3362-8.7-S"
+        ],
+        "accepted": true
+      },
+      {
+        "slot": "support.3.Kv",
+        "rule": "JTG3362-8.7-Kv",
+        "tied_candidates": [
+          "JTG3362-8.7-Kv"
+        ],
+        "accepted": true
+      },
+      {
+        "slot": "support.3.Kh",
+        "rule": "MR-03",
+        "tied_candidates": [
+          "MR-03"
+        ],
+        "accepted": true
+      },
+      {
+        "slot": "pier.1.length",
+        "rule": "MR-06",
+        "tied_candidates": [
+          "MR-06"
+        ],
+        "accepted": true
+      },
+      {
+        "slot": "pier.1.A",
+        "rule": "MR-06",
+        "tied_candidates": [
+          "MR-06"
+        ],
+        "accepted": true
+      },
+      {
+        "slot": "pier.1.I",
+        "rule": "MR-06",
+        "tied_candidates": [
+          "MR-06"
+        ],
+        "accepted": true
+      },
+      {
+        "slot": "pier.1.Ec",
+        "rule": "JTG3362-3.1.5",
+        "tied_candidates": [
+          "JTG3362-3.1.5"
+        ],
+        "accepted": true
+      },
+      {
+        "slot": "pier.2.length",
+        "rule": "MR-06",
+        "tied_candidates": [
+          "MR-06"
+        ],
+        "accepted": true
+      },
+      {
+        "slot": "pier.2.A",
+        "rule": "MR-06",
+        "tied_candidates": [
+          "MR-06"
+        ],
+        "accepted": true
+      },
+      {
+        "slot": "pier.2.I",
+        "rule": "MR-06",
+        "tied_candidates": [
+          "MR-06"
+        ],
+        "accepted": true
+      },
+      {
+        "slot": "pier.2.Ec",
+        "rule": "JTG3362-3.1.5",
+        "tied_candidates": [
+          "JTG3362-3.1.5"
+        ],
+        "accepted": true
+      },
+      {
+        "slot": "lane.mu",
+        "rule": "JTGD60-4.3.2",
+        "tied_candidates": [
+          "JTGD60-4.3.2"
+        ],
+        "accepted": true
+      }
+    ],
+    "historical_usage": {
+      "turns": 24,
+      "prompt_tokens": 445872,
+      "output_tokens": 13284,
+      "cache_hit_tokens": 423040,
+      "ended": "handoff"
+    },
+    "historical_wall_s": 51.4,
+    "comparison_note": "Historical L allows input correction; D locks first instance. Not a symmetric newly randomized decision-stage contrast."
+  },
+  {
+    "problem": "A01",
+    "rep": 1,
+    "source": "runs_ablation_multi/A6/A01_r1/A01_session.json",
+    "source_sha256": "e150ebe677e2a47642a51900ca0e48a00a179b4bc54f138a4ac736dabc30103c",
+    "initial_sha256": "111a25d413ea6b1c113787047ffafea60f13569206403ac672c2ea361d6b2eee",
+    "stored_initial_sha256": "111a25d413ea6b1c113787047ffafea60f13569206403ac672c2ea361d6b2eee",
+    "first_write_ok_historical": false,
+    "historical_write_calls": 2,
+    "historical_final_differs_from_first_args": true,
+    "historical_correct": true,
+    "D_status": "invalid_initial_instance",
+    "D_correct": false,
+    "D_evaluation": {
+      "id": "A01",
+      "executed": false,
+      "decisions_correct": 0,
+      "decisions_total": 25,
+      "decision_accuracy_by_category": {
+        "modeling_rule": 0.0,
+        "code_parameter": 0.0,
+        "topology": 0.0
+      },
+      "responses": {},
+      "correct": false,
+      "wrong_decisions": [
+        {
+          "slot": "structure.idealization",
+          "reference": "spine_beam_2d",
+          "method": null
+        },
+        {
+          "slot": "structure.system",
+          "reference": "simply_supported",
+          "method": null
+        },
+        {
+          "slot": "girder.single.A",
+          "reference": 0.8620000000000001,
+          "method": null
+        },
+        {
+          "slot": "girder.single.I",
+          "reference": 0.44499810458881117,
+          "method": null
+        },
+        {
+          "slot": "girder.A",
+          "reference": 4.3100000000000005,
+          "method": null
+        },
+        {
+          "slot": "girder.I",
+          "reference": 2.224990522944056,
+          "method": null
+        },
+        {
+          "slot": "girder.Ec",
+          "reference": 32500.0,
+          "method": null
+        },
+        {
+          "slot": "girder.gamma",
+          "reference": 26.0,
+          "method": null
+        },
+        {
+          "slot": "girder.w",
+          "reference": 112.06000000000002,
+          "method": null
+        },
+        {
+          "slot": "girder.m",
+          "reference": 11.423037716615699,
+          "method": null
+        },
+        {
+          "slot": "support.0.bearing",
+          "reference": {
+            "type": "plain_elastomeric",
+            "count": 5
+          },
+          "method": null
+        },
+        {
+          "slot": "support.0.dofs",
+          "reference": {
+            "vertical": "spring",
+            "longitudinal": "spring",
+            "rotation": "free"
+          },
+          "method": null
+        },
+        {
+          "slot": "support.0.S",
+          "reference": 10.714285714285714,
+          "method": null
+        },
+        {
+          "slot": "support.0.Kv",
+          "reference": 7098344.693281402,
+          "method": null
+        },
+        {
+          "slot": "support.0.Kh",
+          "reference": 15000.0,
+          "method": null
+        },
+        {
+          "slot": "support.1.bearing",
+          "reference": {
+            "type": "plain_elastomeric",
+            "count": 5
+          },
+          "method": null
+        },
+        {
+          "slot": "support.1.dofs",
+          "reference": {
+            "vertical": "spring",
+            "longitudinal": "spring",
+            "rotation": "free"
+          },
+          "method": null
+        },
+        {
+          "slot": "support.1.S",
+          "reference": 10.714285714285714,
+          "method": null
+        },
+        {
+          "slot": "support.1.Kv",
+          "reference": 7098344.693281402,
+          "method": null
+        },
+        {
+          "slot": "support.1.Kh",
+          "reference": 15000.0,
+          "method": null
+        },
+        {
+          "slot": "lane.n_lanes",
+          "reference": 3,
+          "method": null
+        },
+        {
+          "slot": "lane.xi",
+          "reference": 0.78,
+          "method": null
+        },
+        {
+          "slot": "lane.qk",
+          "reference": 10.5,
+          "method": null
+        },
+        {
+          "slot": "lane.Pk.1",
+          "reference": 320.0,
+          "method": null
+        },
+        {
+          "slot": "lane.mu",
+          "reference": 0.24443868556232184,
+          "method": null
+        }
+      ],
+      "metrics": {
+        "proposals": 0,
+        "slots_proposed": 0,
+        "first_proposal_violation_rate": null,
+        "violations_by_check": {},
+        "instance_rounds": 1,
+        "repair_rounds": 0,
+        "model_passed": false,
+        "elapsed_s": 0.0
+      }
+    },
+    "failure": {
+      "ok": false,
+      "issues": [
+        {
+          "constraint": "C-07",
+          "message": "支承线 0 每个梁端 5 个支座不合理（预制梁每端通常 1~2 个），请核对描述：per_girder_end 是每片梁每端的支座数，不是主梁片数"
+        },
+        {
+          "constraint": "C-07",
+          "message": "支承线 1 每个梁端 5 个支座不合理（预制梁每端通常 1~2 个），请核对描述：per_girder_end 是每片梁每端的支座数，不是主梁片数"
+        }
+      ],
+      "round": 1
+    },
+    "D_seconds": 0.0003200259999971422,
+    "D_model_calls": 0,
+    "D_input_tokens": 0,
+    "D_output_tokens": 0,
+    "D_tool_calls": 1,
+    "rule_trace": [],
+    "historical_usage": {
+      "turns": 26,
+      "prompt_tokens": 278852,
+      "output_tokens": 6191,
+      "cache_hit_tokens": 266880,
+      "ended": "handoff"
+    },
+    "historical_wall_s": 35.9,
+    "comparison_note": "Historical L allows input correction; D locks first instance. Not a symmetric newly randomized decision-stage contrast."
+  }
+]

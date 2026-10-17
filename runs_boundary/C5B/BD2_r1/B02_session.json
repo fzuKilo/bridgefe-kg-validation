@@ -1,0 +1,35 @@
+{
+ "metrics": {
+  "proposals": 0,
+  "slots_proposed": 0,
+  "first_proposal_violation_rate": null,
+  "violations_by_check": {},
+  "instance_rounds": 0,
+  "repair_rounds": 0,
+  "model_passed": false,
+  "elapsed_s": 9.62
+ },
+ "decisions": {},
+ "facts": {},
+ "instance": {},
+ "results": null,
+ "defect": {
+  "defect_type": "contradictory",
+  "message": "The span arrangement is self-contradictory: the description states \"[Span arrangement] One continuous unit of three spans, 25 + 30 + 30 + 25 m (centre-to-centre of bearings)\", i.e. it declares three spans but gives four span lengths (25, 30, 30, 25 m). This conflicts with the boundary description, which lists exactly four support lines (Abutment 0, Pier 1, Pier 2, Abutment 3) and therefore only three spans between supports. It is impossible to determine which three of the four given values (25+30+30+25) are the real bearing-centre-line spans, so the span set to model cannot be established."
+ },
+ "last_check": null,
+ "role_log": [],
+ "log": [
+  {
+   "t": 9.622,
+   "tool": "report_input_defect",
+   "args": {
+    "defect_type": "contradictory",
+    "message": "The span arrangement is self-contradictory: the description states \"[Span arrangement] One continuous unit of three spans, 25 + 30 + 30 + 25 m (centre-to-centre of bearings)\", i.e. it declares three spans but gives four span lengths (25, 30, 30, 25 m). This conflicts with the boundary description, which lists exactly four support lines (Abutment 0, Pier 1, Pier 2, Abutment 3) and therefore only three spans between supports. It is impossible to determine which three of the four given values (25+30+30+25) are the real bearing-centre-line spans, so the span set to model cannot be established."
+   },
+   "result": {
+    "ok": true
+   }
+  }
+ ]
+}

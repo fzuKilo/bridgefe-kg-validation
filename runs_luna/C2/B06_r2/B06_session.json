@@ -1,0 +1,1824 @@
+{
+ "metrics": {
+  "proposals": 43,
+  "slots_proposed": 43,
+  "first_proposal_violation_rate": 0.0,
+  "violations_by_check": {},
+  "instance_rounds": 1,
+  "repair_rounds": 0,
+  "model_passed": true,
+  "elapsed_s": 571.72
+ },
+ "decisions": {
+  "structure.idealization": {
+   "id": "dec:structure.idealization",
+   "slot": "structure.idealization",
+   "value": "spine_beam_2d",
+   "unit": "-",
+   "evidence": [
+    "MR-01: straight girder bridges use a two-dimensional spine beam model"
+   ]
+  },
+  "structure.system": {
+   "id": "dec:structure.system",
+   "slot": "structure.system",
+   "value": "continuous",
+   "unit": "-",
+   "evidence": [
+    "MR-05: precast girders made continuous after erection are analyzed as the continuous completed system"
+   ]
+  },
+  "girder.single.A": {
+   "id": "dec:girder.single.A",
+   "slot": "girder.single.A",
+   "value": 1.022,
+   "unit": "m^2",
+   "evidence": [
+    "MR-02: section geometry integration",
+    "computed T-girder section area"
+   ]
+  },
+  "girder.single.I": {
+   "id": "dec:girder.single.I",
+   "slot": "girder.single.I",
+   "value": 0.8565544933,
+   "unit": "m^4",
+   "evidence": [
+    "MR-02: section geometry integration",
+    "computed T-girder second moment of area"
+   ]
+  },
+  "girder.A": {
+   "id": "dec:girder.A",
+   "slot": "girder.A",
+   "value": 6.132,
+   "unit": "m^2",
+   "evidence": [
+    "MR-02: precast combined section A = single girder area × 6 girders"
+   ]
+  },
+  "girder.I": {
+   "id": "dec:girder.I",
+   "slot": "girder.I",
+   "value": 5.13932696,
+   "unit": "m^4",
+   "evidence": [
+    "MR-02: precast combined section I = single girder I × 6 girders"
+   ]
+  },
+  "girder.Ec": {
+   "id": "dec:girder.Ec",
+   "slot": "girder.Ec",
+   "value": 34500.0,
+   "unit": "MPa",
+   "evidence": [
+    "JTG3362-3.1.5: C50 concrete modulus table"
+   ]
+  },
+  "girder.gamma": {
+   "id": "dec:girder.gamma",
+   "slot": "girder.gamma",
+   "value": 26.0,
+   "unit": "kN/m^3",
+   "evidence": [
+    "JTGD60-4.2.1: prestressed concrete unit weight, upper limit"
+   ]
+  },
+  "girder.w": {
+   "id": "dec:girder.w",
+   "slot": "girder.w",
+   "value": 159.432,
+   "unit": "kN/m",
+   "evidence": [
+    "MR-07: main girder self-weight per metre is gamma × combined area"
+   ]
+  },
+  "girder.m": {
+   "id": "dec:girder.m",
+   "slot": "girder.m",
+   "value": 16.24831804,
+   "unit": "t/m",
+   "evidence": [
+    "MR-07: consistent mass m = self-weight / 9.81"
+   ]
+  },
+  "support.0.bearing": {
+   "id": "dec:support.0.bearing",
+   "slot": "support.0.bearing",
+   "value": {
+    "type": "plain_elastomeric",
+    "count": 6
+   },
+   "unit": "-",
+   "evidence": [
+    "MR-04: one bearing per girder end, six precast girders"
+   ]
+  },
+  "support.0.dofs": {
+   "id": "dec:support.0.dofs",
+   "slot": "support.0.dofs",
+   "value": {
+    "vertical": "spring",
+    "longitudinal": "free",
+    "rotation": "free"
+   },
+   "unit": "-",
+   "evidence": [
+    "MR-03: PTFE sliding laminated elastomeric bearing is free longitudinally; vertical spring and free rotation"
+   ]
+  },
+  "support.0.S": {
+   "id": "dec:support.0.S",
+   "slot": "support.0.S",
+   "value": 5.2941176471,
+   "unit": "-",
+   "evidence": [
+    "JTG3362-8.7-S: S = a*b/(2*t1*(a+b)), a=0.4 m, b=0.45 m, t1=0.008 m"
+   ]
+  },
+  "support.0.Kv": {
+   "id": "dec:support.0.Kv",
+   "slot": "support.0.Kv",
+   "value": 1465312.5,
+   "unit": "kN/m",
+   "evidence": [
+    "JTG3362-8.7-Kv: Ee=5.4*Ge*S^2, Eb=2000 MPa, te=6*0.008 m; summed for six bearings"
+   ]
+  },
+  "support.0.Kh": {
+   "id": "dec:support.0.Kh",
+   "slot": "support.0.Kh",
+   "value": 0.0,
+   "unit": "kN/m",
+   "evidence": [
+    "MR-03: sliding PTFE bearings have zero longitudinal shear stiffness"
+   ]
+  },
+  "support.1.bearing": {
+   "id": "dec:support.1.bearing",
+   "slot": "support.1.bearing",
+   "value": {
+    "type": "plain_elastomeric",
+    "count": 6
+   },
+   "unit": "-",
+   "evidence": [
+    "MR-04: six precast girder end bearings on this support line"
+   ]
+  },
+  "support.1.dofs": {
+   "id": "dec:support.1.dofs",
+   "slot": "support.1.dofs",
+   "value": {
+    "vertical": "spring",
+    "longitudinal": "free",
+    "rotation": "free"
+   },
+   "unit": "-",
+   "evidence": [
+    "MR-03: PTFE sliding bearing boundary conditions"
+   ]
+  },
+  "support.1.S": {
+   "id": "dec:support.1.S",
+   "slot": "support.1.S",
+   "value": 5.2941176471,
+   "unit": "-",
+   "evidence": [
+    "JTG3362-8.7-S: 0.4*0.45/(2*0.008*(0.4+0.45))"
+   ]
+  },
+  "support.1.Kv": {
+   "id": "dec:support.1.Kv",
+   "slot": "support.1.Kv",
+   "value": 1465312.5,
+   "unit": "kN/m",
+   "evidence": [
+    "JTG3362-8.7-Kv: Ee=5.4*Ge*S^2 with standard Ge=1 MPa; six bearings in parallel"
+   ]
+  },
+  "support.1.Kh": {
+   "id": "dec:support.1.Kh",
+   "slot": "support.1.Kh",
+   "value": 0.0,
+   "unit": "kN/m",
+   "evidence": [
+    "MR-03: sliding PTFE bearing longitudinal stiffness is zero"
+   ]
+  },
+  "support.2.bearing": {
+   "id": "dec:support.2.bearing",
+   "slot": "support.2.bearing",
+   "value": {
+    "type": "plain_elastomeric",
+    "count": 6
+   },
+   "unit": "-",
+   "evidence": [
+    "MR-04: six precast girder end bearings on this support line"
+   ]
+  },
+  "support.2.dofs": {
+   "id": "dec:support.2.dofs",
+   "slot": "support.2.dofs",
+   "value": {
+    "vertical": "spring",
+    "longitudinal": "spring",
+    "rotation": "free"
+   },
+   "unit": "-",
+   "evidence": [
+    "MR-03: plain laminated elastomeric bearings restrain longitudinal motion through shear stiffness; rotation free"
+   ]
+  },
+  "support.2.S": {
+   "id": "dec:support.2.S",
+   "slot": "support.2.S",
+   "value": 5.2941176471,
+   "unit": "-",
+   "evidence": [
+    "JTG3362-8.7-S: shape factor from stated bearing plan dimensions and rubber layer thickness"
+   ]
+  },
+  "support.2.Kv": {
+   "id": "dec:support.2.Kv",
+   "slot": "support.2.Kv",
+   "value": 1465312.5,
+   "unit": "kN/m",
+   "evidence": [
+    "JTG3362-8.7-Kv: vertical stiffness for six parallel bearings, standard Ge=1 MPa"
+   ]
+  },
+  "support.2.Kh": {
+   "id": "dec:support.2.Kh",
+   "slot": "support.2.Kh",
+   "value": 135000.0,
+   "unit": "kN/m",
+   "evidence": [
+    "JTG3362-8.7-Kh: six*Ge*a*b/te*1000; Ge=1 MPa, a=0.4 m, b=0.45 m, te=0.048 m"
+   ]
+  },
+  "support.3.bearing": {
+   "id": "dec:support.3.bearing",
+   "slot": "support.3.bearing",
+   "value": {
+    "type": "plain_elastomeric",
+    "count": 6
+   },
+   "unit": "-",
+   "evidence": [
+    "MR-04: six precast girder end bearings on this support line"
+   ]
+  },
+  "support.3.dofs": {
+   "id": "dec:support.3.dofs",
+   "slot": "support.3.dofs",
+   "value": {
+    "vertical": "spring",
+    "longitudinal": "free",
+    "rotation": "free"
+   },
+   "unit": "-",
+   "evidence": [
+    "MR-03: PTFE sliding bearing boundary conditions"
+   ]
+  },
+  "support.3.S": {
+   "id": "dec:support.3.S",
+   "slot": "support.3.S",
+   "value": 5.2941176471,
+   "unit": "-",
+   "evidence": [
+    "JTG3362-8.7-S: 0.4*0.45/(2*0.008*(0.4+0.45))"
+   ]
+  },
+  "support.3.Kv": {
+   "id": "dec:support.3.Kv",
+   "slot": "support.3.Kv",
+   "value": 1465312.5,
+   "unit": "kN/m",
+   "evidence": [
+    "JTG3362-8.7-Kv: six parallel bearings with standard rubber shear modulus"
+   ]
+  },
+  "support.3.Kh": {
+   "id": "dec:support.3.Kh",
+   "slot": "support.3.Kh",
+   "value": 0.0,
+   "unit": "kN/m",
+   "evidence": [
+    "MR-03: sliding PTFE bearing has zero longitudinal stiffness"
+   ]
+  },
+  "support.4.bearing": {
+   "id": "dec:support.4.bearing",
+   "slot": "support.4.bearing",
+   "value": {
+    "type": "plain_elastomeric",
+    "count": 6
+   },
+   "unit": "-",
+   "evidence": [
+    "MR-04: six precast girder end bearings on this support line"
+   ]
+  },
+  "support.4.dofs": {
+   "id": "dec:support.4.dofs",
+   "slot": "support.4.dofs",
+   "value": {
+    "vertical": "spring",
+    "longitudinal": "free",
+    "rotation": "free"
+   },
+   "unit": "-",
+   "evidence": [
+    "MR-03: PTFE sliding bearing boundary conditions"
+   ]
+  },
+  "support.4.S": {
+   "id": "dec:support.4.S",
+   "slot": "support.4.S",
+   "value": 5.2941176471,
+   "unit": "-",
+   "evidence": [
+    "JTG3362-8.7-S: shape factor from 0.4 m × 0.45 m plan and 0.008 m layer"
+   ]
+  },
+  "support.4.Kv": {
+   "id": "dec:support.4.Kv",
+   "slot": "support.4.Kv",
+   "value": 1465312.5,
+   "unit": "kN/m",
+   "evidence": [
+    "JTG3362-8.7-Kv: six bearings in parallel, standard Ge=1 MPa"
+   ]
+  },
+  "support.4.Kh": {
+   "id": "dec:support.4.Kh",
+   "slot": "support.4.Kh",
+   "value": 0.0,
+   "unit": "kN/m",
+   "evidence": [
+    "MR-03: sliding PTFE bearings have zero longitudinal stiffness"
+   ]
+  },
+  "lane.n_lanes": {
+   "id": "dec:lane.n_lanes",
+   "slot": "lane.n_lanes",
+   "value": 4,
+   "unit": "-",
+   "evidence": [
+    "JTGD60-4.3.1-lanes: stated one-way carriageway width 15 m gives four design lanes"
+   ]
+  },
+  "lane.xi": {
+   "id": "dec:lane.xi",
+   "slot": "lane.xi",
+   "value": 0.67,
+   "unit": "-",
+   "evidence": [
+    "JTGD60-4.3.1-xi: four design lanes use transverse reduction factor 0.67"
+   ]
+  },
+  "lane.qk": {
+   "id": "dec:lane.qk",
+   "slot": "lane.qk",
+   "value": 10.5,
+   "unit": "kN/m",
+   "evidence": [
+    "JTGD60-4.3.1-qk: Class I lane uniform load is 10.5 kN/m"
+   ]
+  },
+  "lane.Pk.1": {
+   "id": "dec:lane.Pk.1",
+   "slot": "lane.Pk.1",
+   "value": 340.0,
+   "unit": "kN",
+   "evidence": [
+    "JTGD60-4.3.1-Pk: span length 40 m gives 2*(40+130)=340 kN for Class I"
+   ]
+  },
+  "lane.Pk.2": {
+   "id": "dec:lane.Pk.2",
+   "slot": "lane.Pk.2",
+   "value": 340.0,
+   "unit": "kN",
+   "evidence": [
+    "JTGD60-4.3.1-Pk: span length 40 m gives 340 kN for Class I"
+   ]
+  },
+  "lane.Pk.3": {
+   "id": "dec:lane.Pk.3",
+   "slot": "lane.Pk.3",
+   "value": 340.0,
+   "unit": "kN",
+   "evidence": [
+    "JTGD60-4.3.1-Pk: span length 40 m gives 340 kN for Class I"
+   ]
+  },
+  "lane.Pk.4": {
+   "id": "dec:lane.Pk.4",
+   "slot": "lane.Pk.4",
+   "value": 340.0,
+   "unit": "kN",
+   "evidence": [
+    "JTGD60-4.3.1-Pk: span length 40 m gives 340 kN for Class I"
+   ]
+  },
+  "lane.mu": {
+   "id": "dec:lane.mu",
+   "slot": "lane.mu",
+   "value": 0.189909,
+   "unit": "-",
+   "evidence": [
+    "JTGD60-4.3.2: for 1.5 <= f1 <= 14 Hz, mu=0.1767*ln(f1)-0.0157",
+    "Modal analysis fact f1=3.2119646330554477 Hz"
+   ]
+  }
+ },
+ "facts": {
+  "f1": 3.2119646330554477
+ },
+ "instance": {
+  "supports": [
+   {
+    "index": 0,
+    "kind": "abutment",
+    "bearing": {
+     "family": "laminated_elastomeric",
+     "sliding": true,
+     "fixed": false,
+     "per_girder_end": 1,
+     "per_line": null,
+     "a_mm": 400,
+     "b_mm": 450,
+     "t1_mm": 8,
+     "n_layers": 6,
+     "Ge_MPa": null,
+     "model": null
+    },
+    "pier": null
+   },
+   {
+    "index": 1,
+    "kind": "pier",
+    "bearing": {
+     "family": "laminated_elastomeric",
+     "sliding": true,
+     "fixed": false,
+     "per_girder_end": 1,
+     "per_line": null,
+     "a_mm": 400,
+     "b_mm": 450,
+     "t1_mm": 8,
+     "n_layers": 6,
+     "Ge_MPa": null,
+     "model": null
+    },
+    "pier": null
+   },
+   {
+    "index": 2,
+    "kind": "pier",
+    "bearing": {
+     "family": "laminated_elastomeric",
+     "sliding": false,
+     "fixed": true,
+     "per_girder_end": 1,
+     "per_line": null,
+     "a_mm": 400,
+     "b_mm": 450,
+     "t1_mm": 8,
+     "n_layers": 6,
+     "Ge_MPa": null,
+     "model": null
+    },
+    "pier": null
+   },
+   {
+    "index": 3,
+    "kind": "pier",
+    "bearing": {
+     "family": "laminated_elastomeric",
+     "sliding": true,
+     "fixed": false,
+     "per_girder_end": 1,
+     "per_line": null,
+     "a_mm": 400,
+     "b_mm": 450,
+     "t1_mm": 8,
+     "n_layers": 6,
+     "Ge_MPa": null,
+     "model": null
+    },
+    "pier": null
+   },
+   {
+    "index": 4,
+    "kind": "abutment",
+    "bearing": {
+     "family": "laminated_elastomeric",
+     "sliding": true,
+     "fixed": false,
+     "per_girder_end": 1,
+     "per_line": null,
+     "a_mm": 400,
+     "b_mm": 450,
+     "t1_mm": 8,
+     "n_layers": 6,
+     "Ge_MPa": null,
+     "model": null
+    },
+    "pier": null
+   }
+  ],
+  "structure_type": "precast_continuous",
+  "spans_m": [
+   40,
+   40,
+   40,
+   40
+  ],
+  "deck": {
+   "deck_width_m": 16,
+   "carriageway_width_m": 15,
+   "traffic": "one_way",
+   "design_lanes": 4,
+   "load_class": "I"
+  },
+  "girder": {
+   "type": "t_girder",
+   "count_per_span": 6,
+   "concrete": "C50",
+   "material": "prestressed_concrete",
+   "E_override_MPa": null,
+   "gamma_override_kNm3": null,
+   "section": {
+    "h": 2.5,
+    "b_flange": 1.8,
+    "t_tip": 0.18,
+    "t_root": 0.27,
+    "flat_len": 0.2,
+    "t_web": 0.2,
+    "b_bulb": 0.6,
+    "bulb_h": 0.35,
+    "bulb_trans": 0.2
+   }
+  },
+  "dead_load": "girder_self_weight_only"
+ },
+ "results": {
+  "ok": true,
+  "vertical_frequencies_Hz": [
+   3.2119646330554477,
+   3.580601929830617,
+   4.442477818157619
+  ],
+  "self_weight_support_reactions_kN": [
+   2526.573926865419,
+   7228.314455707991,
+   5999.343234854258,
+   7228.314455706867,
+   2526.5739268643515
+  ],
+  "self_weight_midspan_moments_kNm": [
+   18645.078537309844,
+   9183.124726090315,
+   9183.12472609234,
+   18645.078537296024
+  ],
+  "self_weight_support_moments_kNm": [
+   -26482.642925383287,
+   -18923.907622444294,
+   -26482.64292537555
+  ],
+  "lane_moments_by_section": [
+   {
+    "section": "span",
+    "index": 1,
+    "M_kNm": 14052.576787146298
+   },
+   {
+    "section": "span",
+    "index": 2,
+    "M_kNm": 11915.86969556769
+   },
+   {
+    "section": "span",
+    "index": 3,
+    "M_kNm": 11915.869695566984
+   },
+   {
+    "section": "span",
+    "index": 4,
+    "M_kNm": 14052.576787137219
+   },
+   {
+    "section": "support",
+    "index": 1,
+    "M_kNm": -10396.072714835384
+   },
+   {
+    "section": "support",
+    "index": 2,
+    "M_kNm": -9049.430009251288
+   },
+   {
+    "section": "support",
+    "index": 3,
+    "M_kNm": -10396.072714831365
+   }
+  ],
+  "lane_max_positive_moment_kNm": 14052.576787146298,
+  "lane_max_negative_moment_kNm": -10396.072714835384
+ },
+ "last_check": [],
+ "role_log": [
+  {
+   "role": "self_check",
+   "usage": {
+    "turns": 1,
+    "prompt_tokens": 8687,
+    "output_tokens": 1235,
+    "cache_hit_tokens": 2816,
+    "reasoning_tokens": 1186,
+    "finish_reason": "stop",
+    "stream": true
+   },
+   "corrections": {}
+  }
+ ],
+ "log": [
+  {
+   "t": 108.365,
+   "tool": "write_instance",
+   "args": {
+    "structure_type": "precast_continuous",
+    "spans_m": [
+     40,
+     40,
+     40,
+     40
+    ],
+    "deck": {
+     "deck_width_m": 16,
+     "carriageway_width_m": 15,
+     "traffic": "one_way",
+     "design_lanes": 4,
+     "load_class": "I"
+    },
+    "girder": {
+     "type": "t_girder",
+     "count_per_span": 6,
+     "concrete": "C50",
+     "material": "prestressed_concrete",
+     "E_override_MPa": null,
+     "gamma_override_kNm3": null,
+     "section": {
+      "h": 2.5,
+      "b_flange": 1.8,
+      "t_tip": 0.18,
+      "t_root": 0.27,
+      "flat_len": 0.2,
+      "t_web": 0.2,
+      "b_bulb": 0.6,
+      "bulb_h": 0.35,
+      "bulb_trans": 0.2
+     }
+    },
+    "supports": [
+     {
+      "index": 0,
+      "kind": "abutment",
+      "bearing": {
+       "family": "laminated_elastomeric",
+       "sliding": true,
+       "fixed": false,
+       "per_girder_end": 1,
+       "per_line": null,
+       "a_mm": 400,
+       "b_mm": 450,
+       "t1_mm": 8,
+       "n_layers": 6,
+       "Ge_MPa": null,
+       "model": null
+      },
+      "pier": null
+     },
+     {
+      "index": 1,
+      "kind": "pier",
+      "bearing": {
+       "family": "laminated_elastomeric",
+       "sliding": true,
+       "fixed": false,
+       "per_girder_end": 1,
+       "per_line": null,
+       "a_mm": 400,
+       "b_mm": 450,
+       "t1_mm": 8,
+       "n_layers": 6,
+       "Ge_MPa": null,
+       "model": null
+      },
+      "pier": null
+     },
+     {
+      "index": 2,
+      "kind": "pier",
+      "bearing": {
+       "family": "laminated_elastomeric",
+       "sliding": false,
+       "fixed": true,
+       "per_girder_end": 1,
+       "per_line": null,
+       "a_mm": 400,
+       "b_mm": 450,
+       "t1_mm": 8,
+       "n_layers": 6,
+       "Ge_MPa": null,
+       "model": null
+      },
+      "pier": null
+     },
+     {
+      "index": 3,
+      "kind": "pier",
+      "bearing": {
+       "family": "laminated_elastomeric",
+       "sliding": true,
+       "fixed": false,
+       "per_girder_end": 1,
+       "per_line": null,
+       "a_mm": 400,
+       "b_mm": 450,
+       "t1_mm": 8,
+       "n_layers": 6,
+       "Ge_MPa": null,
+       "model": null
+      },
+      "pier": null
+     },
+     {
+      "index": 4,
+      "kind": "abutment",
+      "bearing": {
+       "family": "laminated_elastomeric",
+       "sliding": true,
+       "fixed": false,
+       "per_girder_end": 1,
+       "per_line": null,
+       "a_mm": 400,
+       "b_mm": 450,
+       "t1_mm": 8,
+       "n_layers": 6,
+       "Ge_MPa": null,
+       "model": null
+      },
+      "pier": null
+     }
+    ],
+    "dead_load": "girder_self_weight_only"
+   },
+   "result": {
+    "ok": true,
+    "issues": [],
+    "round": 1
+   }
+  },
+  {
+   "t": 133.104,
+   "tool": "declare_decisions",
+   "args": {
+    "slots": [
+     "structure.idealization",
+     "structure.system",
+     "girder.single.A",
+     "girder.single.I",
+     "girder.A",
+     "girder.I",
+     "girder.Ec",
+     "girder.gamma",
+     "girder.w",
+     "girder.m",
+     "support.0.bearing",
+     "support.0.dofs",
+     "support.0.S",
+     "support.0.Kv",
+     "support.0.Kh",
+     "support.1.bearing",
+     "support.1.dofs",
+     "support.1.S",
+     "support.1.Kv",
+     "support.1.Kh",
+     "support.2.bearing",
+     "support.2.dofs",
+     "support.2.S",
+     "support.2.Kv",
+     "support.2.Kh",
+     "support.3.bearing",
+     "support.3.dofs",
+     "support.3.S",
+     "support.3.Kv",
+     "support.3.Kh",
+     "support.4.bearing",
+     "support.4.dofs",
+     "support.4.S",
+     "support.4.Kv",
+     "support.4.Kh",
+     "lane.n_lanes",
+     "lane.xi",
+     "lane.qk",
+     "lane.Pk.1",
+     "lane.Pk.2",
+     "lane.Pk.3",
+     "lane.Pk.4"
+    ],
+    "replace": true
+   },
+   "result": {
+    "complete": false,
+    "declared_so_far": 42,
+    "missing": [
+     "lane.mu"
+    ],
+    "not_required_ignored": [],
+    "note": "declarations accumulate across calls; declare the missing slots next",
+    "constraint": "C-13/T-templates"
+   }
+  },
+  {
+   "t": 149.514,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "structure.idealization",
+    "value": "spine_beam_2d",
+    "unit": "-",
+    "evidence": [
+     "MR-01: straight girder bridges use a two-dimensional spine beam model"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "structure.idealization",
+    "decision_id": "dec:structure.idealization"
+   }
+  },
+  {
+   "t": 153.954,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "structure.system",
+    "value": "continuous",
+    "unit": "-",
+    "evidence": [
+     "MR-05: precast girders made continuous after erection are analyzed as the continuous completed system"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "structure.system",
+    "decision_id": "dec:structure.system"
+   }
+  },
+  {
+   "t": 159.115,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "girder.single.A",
+    "value": 1.022,
+    "unit": "m^2",
+    "evidence": [
+     "MR-02: section geometry integration",
+     "computed T-girder section area"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "girder.single.A",
+    "decision_id": "dec:girder.single.A"
+   }
+  },
+  {
+   "t": 164.484,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "girder.single.I",
+    "value": 0.8565544933,
+    "unit": "m^4",
+    "evidence": [
+     "MR-02: section geometry integration",
+     "computed T-girder second moment of area"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "girder.single.I",
+    "decision_id": "dec:girder.single.I"
+   }
+  },
+  {
+   "t": 169.439,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "girder.A",
+    "value": 6.132,
+    "unit": "m^2",
+    "evidence": [
+     "MR-02: precast combined section A = single girder area × 6 girders"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "girder.A",
+    "decision_id": "dec:girder.A"
+   }
+  },
+  {
+   "t": 175.473,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "girder.I",
+    "value": 5.13932696,
+    "unit": "m^4",
+    "evidence": [
+     "MR-02: precast combined section I = single girder I × 6 girders"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "girder.I",
+    "decision_id": "dec:girder.I"
+   }
+  },
+  {
+   "t": 179.998,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "girder.Ec",
+    "value": 34500.0,
+    "unit": "MPa",
+    "evidence": [
+     "JTG3362-3.1.5: C50 concrete modulus table"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "girder.Ec",
+    "decision_id": "dec:girder.Ec"
+   }
+  },
+  {
+   "t": 184.048,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "girder.gamma",
+    "value": 26.0,
+    "unit": "kN/m^3",
+    "evidence": [
+     "JTGD60-4.2.1: prestressed concrete unit weight, upper limit"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "girder.gamma",
+    "decision_id": "dec:girder.gamma"
+   }
+  },
+  {
+   "t": 189.84,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "girder.w",
+    "value": 159.432,
+    "unit": "kN/m",
+    "evidence": [
+     "MR-07: main girder self-weight per metre is gamma × combined area"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "girder.w",
+    "decision_id": "dec:girder.w"
+   }
+  },
+  {
+   "t": 194.935,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "girder.m",
+    "value": 16.24831804,
+    "unit": "t/m",
+    "evidence": [
+     "MR-07: consistent mass m = self-weight / 9.81"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "girder.m",
+    "decision_id": "dec:girder.m"
+   }
+  },
+  {
+   "t": 203.314,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.0.bearing",
+    "value": {
+     "type": "plain_elastomeric",
+     "count": 6
+    },
+    "unit": "-",
+    "evidence": [
+     "MR-04: one bearing per girder end, six precast girders"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.0.bearing",
+    "decision_id": "dec:support.0.bearing"
+   }
+  },
+  {
+   "t": 208.702,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.0.dofs",
+    "value": {
+     "vertical": "spring",
+     "longitudinal": "free",
+     "rotation": "free"
+    },
+    "unit": "-",
+    "evidence": [
+     "MR-03: PTFE sliding laminated elastomeric bearing is free longitudinally; vertical spring and free rotation"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.0.dofs",
+    "decision_id": "dec:support.0.dofs"
+   }
+  },
+  {
+   "t": 214.129,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.0.S",
+    "value": 5.2941176471,
+    "unit": "-",
+    "evidence": [
+     "JTG3362-8.7-S: S = a*b/(2*t1*(a+b)), a=0.4 m, b=0.45 m, t1=0.008 m"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.0.S",
+    "decision_id": "dec:support.0.S"
+   }
+  },
+  {
+   "t": 222.046,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.0.Kv",
+    "value": 1465312.5,
+    "unit": "kN/m",
+    "evidence": [
+     "JTG3362-8.7-Kv: Ee=5.4*Ge*S^2, Eb=2000 MPa, te=6*0.008 m; summed for six bearings"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.0.Kv",
+    "decision_id": "dec:support.0.Kv"
+   }
+  },
+  {
+   "t": 225.654,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.0.Kh",
+    "value": 0.0,
+    "unit": "kN/m",
+    "evidence": [
+     "MR-03: sliding PTFE bearings have zero longitudinal shear stiffness"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.0.Kh",
+    "decision_id": "dec:support.0.Kh"
+   }
+  },
+  {
+   "t": 234.899,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.1.bearing",
+    "value": {
+     "type": "plain_elastomeric",
+     "count": 6
+    },
+    "unit": "-",
+    "evidence": [
+     "MR-04: six precast girder end bearings on this support line"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.1.bearing",
+    "decision_id": "dec:support.1.bearing"
+   }
+  },
+  {
+   "t": 242.128,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.1.dofs",
+    "value": {
+     "vertical": "spring",
+     "longitudinal": "free",
+     "rotation": "free"
+    },
+    "unit": "-",
+    "evidence": [
+     "MR-03: PTFE sliding bearing boundary conditions"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.1.dofs",
+    "decision_id": "dec:support.1.dofs"
+   }
+  },
+  {
+   "t": 254.115,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.1.S",
+    "value": 5.2941176471,
+    "unit": "-",
+    "evidence": [
+     "JTG3362-8.7-S: 0.4*0.45/(2*0.008*(0.4+0.45))"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.1.S",
+    "decision_id": "dec:support.1.S"
+   }
+  },
+  {
+   "t": 264.827,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.1.Kv",
+    "value": 1465312.5,
+    "unit": "kN/m",
+    "evidence": [
+     "JTG3362-8.7-Kv: Ee=5.4*Ge*S^2 with standard Ge=1 MPa; six bearings in parallel"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.1.Kv",
+    "decision_id": "dec:support.1.Kv"
+   }
+  },
+  {
+   "t": 273.305,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.1.Kh",
+    "value": 0.0,
+    "unit": "kN/m",
+    "evidence": [
+     "MR-03: sliding PTFE bearing longitudinal stiffness is zero"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.1.Kh",
+    "decision_id": "dec:support.1.Kh"
+   }
+  },
+  {
+   "t": 277.786,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.2.bearing",
+    "value": {
+     "type": "plain_elastomeric",
+     "count": 6
+    },
+    "unit": "-",
+    "evidence": [
+     "MR-04: six precast girder end bearings on this support line"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.2.bearing",
+    "decision_id": "dec:support.2.bearing"
+   }
+  },
+  {
+   "t": 292.415,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.2.dofs",
+    "value": {
+     "vertical": "spring",
+     "longitudinal": "spring",
+     "rotation": "free"
+    },
+    "unit": "-",
+    "evidence": [
+     "MR-03: plain laminated elastomeric bearings restrain longitudinal motion through shear stiffness; rotation free"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.2.dofs",
+    "decision_id": "dec:support.2.dofs"
+   }
+  },
+  {
+   "t": 297.685,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.2.S",
+    "value": 5.2941176471,
+    "unit": "-",
+    "evidence": [
+     "JTG3362-8.7-S: shape factor from stated bearing plan dimensions and rubber layer thickness"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.2.S",
+    "decision_id": "dec:support.2.S"
+   }
+  },
+  {
+   "t": 303.644,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.2.Kv",
+    "value": 1465312.5,
+    "unit": "kN/m",
+    "evidence": [
+     "JTG3362-8.7-Kv: vertical stiffness for six parallel bearings, standard Ge=1 MPa"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.2.Kv",
+    "decision_id": "dec:support.2.Kv"
+   }
+  },
+  {
+   "t": 309.115,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.2.Kh",
+    "value": 135000.0,
+    "unit": "kN/m",
+    "evidence": [
+     "JTG3362-8.7-Kh: six*Ge*a*b/te*1000; Ge=1 MPa, a=0.4 m, b=0.45 m, te=0.048 m"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.2.Kh",
+    "decision_id": "dec:support.2.Kh"
+   }
+  },
+  {
+   "t": 317.387,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.3.bearing",
+    "value": {
+     "type": "plain_elastomeric",
+     "count": 6
+    },
+    "unit": "-",
+    "evidence": [
+     "MR-04: six precast girder end bearings on this support line"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.3.bearing",
+    "decision_id": "dec:support.3.bearing"
+   }
+  },
+  {
+   "t": 329.937,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.3.dofs",
+    "value": {
+     "vertical": "spring",
+     "longitudinal": "free",
+     "rotation": "free"
+    },
+    "unit": "-",
+    "evidence": [
+     "MR-03: PTFE sliding bearing boundary conditions"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.3.dofs",
+    "decision_id": "dec:support.3.dofs"
+   }
+  },
+  {
+   "t": 337.86,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.3.S",
+    "value": 5.2941176471,
+    "unit": "-",
+    "evidence": [
+     "JTG3362-8.7-S: 0.4*0.45/(2*0.008*(0.4+0.45))"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.3.S",
+    "decision_id": "dec:support.3.S"
+   }
+  },
+  {
+   "t": 342.841,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.3.Kv",
+    "value": 1465312.5,
+    "unit": "kN/m",
+    "evidence": [
+     "JTG3362-8.7-Kv: six parallel bearings with standard rubber shear modulus"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.3.Kv",
+    "decision_id": "dec:support.3.Kv"
+   }
+  },
+  {
+   "t": 346.711,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.3.Kh",
+    "value": 0.0,
+    "unit": "kN/m",
+    "evidence": [
+     "MR-03: sliding PTFE bearing has zero longitudinal stiffness"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.3.Kh",
+    "decision_id": "dec:support.3.Kh"
+   }
+  },
+  {
+   "t": 354.151,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.4.bearing",
+    "value": {
+     "type": "plain_elastomeric",
+     "count": 6
+    },
+    "unit": "-",
+    "evidence": [
+     "MR-04: six precast girder end bearings on this support line"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.4.bearing",
+    "decision_id": "dec:support.4.bearing"
+   }
+  },
+  {
+   "t": 359.883,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.4.dofs",
+    "value": {
+     "vertical": "spring",
+     "longitudinal": "free",
+     "rotation": "free"
+    },
+    "unit": "-",
+    "evidence": [
+     "MR-03: PTFE sliding bearing boundary conditions"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.4.dofs",
+    "decision_id": "dec:support.4.dofs"
+   }
+  },
+  {
+   "t": 365.792,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.4.S",
+    "value": 5.2941176471,
+    "unit": "-",
+    "evidence": [
+     "JTG3362-8.7-S: shape factor from 0.4 m × 0.45 m plan and 0.008 m layer"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.4.S",
+    "decision_id": "dec:support.4.S"
+   }
+  },
+  {
+   "t": 370.924,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.4.Kv",
+    "value": 1465312.5,
+    "unit": "kN/m",
+    "evidence": [
+     "JTG3362-8.7-Kv: six bearings in parallel, standard Ge=1 MPa"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.4.Kv",
+    "decision_id": "dec:support.4.Kv"
+   }
+  },
+  {
+   "t": 378.202,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.4.Kh",
+    "value": 0.0,
+    "unit": "kN/m",
+    "evidence": [
+     "MR-03: sliding PTFE bearings have zero longitudinal stiffness"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.4.Kh",
+    "decision_id": "dec:support.4.Kh"
+   }
+  },
+  {
+   "t": 382.313,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "lane.n_lanes",
+    "value": 4,
+    "unit": "-",
+    "evidence": [
+     "JTGD60-4.3.1-lanes: stated one-way carriageway width 15 m gives four design lanes"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "lane.n_lanes",
+    "decision_id": "dec:lane.n_lanes"
+   }
+  },
+  {
+   "t": 388.396,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "lane.xi",
+    "value": 0.67,
+    "unit": "-",
+    "evidence": [
+     "JTGD60-4.3.1-xi: four design lanes use transverse reduction factor 0.67"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "lane.xi",
+    "decision_id": "dec:lane.xi"
+   }
+  },
+  {
+   "t": 392.965,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "lane.qk",
+    "value": 10.5,
+    "unit": "kN/m",
+    "evidence": [
+     "JTGD60-4.3.1-qk: Class I lane uniform load is 10.5 kN/m"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "lane.qk",
+    "decision_id": "dec:lane.qk"
+   }
+  },
+  {
+   "t": 485.954,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "lane.Pk.1",
+    "value": 340.0,
+    "unit": "kN",
+    "evidence": [
+     "JTGD60-4.3.1-Pk: span length 40 m gives 2*(40+130)=340 kN for Class I"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "lane.Pk.1",
+    "decision_id": "dec:lane.Pk.1"
+   }
+  },
+  {
+   "t": 493.234,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "lane.Pk.2",
+    "value": 340.0,
+    "unit": "kN",
+    "evidence": [
+     "JTGD60-4.3.1-Pk: span length 40 m gives 340 kN for Class I"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "lane.Pk.2",
+    "decision_id": "dec:lane.Pk.2"
+   }
+  },
+  {
+   "t": 498.605,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "lane.Pk.3",
+    "value": 340.0,
+    "unit": "kN",
+    "evidence": [
+     "JTGD60-4.3.1-Pk: span length 40 m gives 340 kN for Class I"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "lane.Pk.3",
+    "decision_id": "dec:lane.Pk.3"
+   }
+  },
+  {
+   "t": 507.03,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "lane.Pk.4",
+    "value": 340.0,
+    "unit": "kN",
+    "evidence": [
+     "JTGD60-4.3.1-Pk: span length 40 m gives 340 kN for Class I"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "lane.Pk.4",
+    "decision_id": "dec:lane.Pk.4"
+   }
+  },
+  {
+   "t": 514.905,
+   "tool": "declare_decisions",
+   "args": {
+    "slots": [
+     "lane.mu"
+    ],
+    "replace": false
+   },
+   "result": {
+    "complete": true,
+    "declared_so_far": 43,
+    "missing": [],
+    "not_required_ignored": [],
+    "note": "declarations accumulate across calls; declare the missing slots next",
+    "constraint": "C-13/T-templates"
+   }
+  },
+  {
+   "t": 521.197,
+   "tool": "run_modal_analysis",
+   "args": {},
+   "result": {
+    "ok": true,
+    "vertical_frequencies_Hz": [
+     3.2119646330554477,
+     3.580601929830617,
+     4.442477818157619
+    ],
+    "fact": {
+     "f1": 3.2119646330554477
+    }
+   }
+  },
+  {
+   "t": 527.764,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "lane.mu",
+    "value": 0.189909,
+    "unit": "-",
+    "evidence": [
+     "JTGD60-4.3.2: for 1.5 <= f1 <= 14 Hz, mu=0.1767*ln(f1)-0.0157",
+     "Modal analysis fact f1=3.2119646330554477 Hz"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "lane.mu",
+    "decision_id": "dec:lane.mu"
+   }
+  },
+  {
+   "t": 534.409,
+   "tool": "generate_model",
+   "args": {},
+   "result": {
+    "ok": true,
+    "script": "${PROJECT_ROOT}/runs_luna/C2/B06_r2/B06_model.py",
+    "results": {
+     "ok": true,
+     "vertical_frequencies_Hz": [
+      3.2119646330554477,
+      3.580601929830617,
+      4.442477818157619
+     ],
+     "self_weight_support_reactions_kN": [
+      2526.573926865419,
+      7228.314455707991,
+      5999.343234854258,
+      7228.314455706867,
+      2526.5739268643515
+     ],
+     "self_weight_midspan_moments_kNm": [
+      18645.078537309844,
+      9183.124726090315,
+      9183.12472609234,
+      18645.078537296024
+     ],
+     "self_weight_support_moments_kNm": [
+      -26482.642925383287,
+      -18923.907622444294,
+      -26482.64292537555
+     ],
+     "lane_moments_by_section": [
+      {
+       "section": "span",
+       "index": 1,
+       "M_kNm": 14052.576787146298
+      },
+      {
+       "section": "span",
+       "index": 2,
+       "M_kNm": 11915.86969556769
+      },
+      {
+       "section": "span",
+       "index": 3,
+       "M_kNm": 11915.869695566984
+      },
+      {
+       "section": "span",
+       "index": 4,
+       "M_kNm": 14052.576787137219
+      },
+      {
+       "section": "support",
+       "index": 1,
+       "M_kNm": -10396.072714835384
+      },
+      {
+       "section": "support",
+       "index": 2,
+       "M_kNm": -9049.430009251288
+      },
+      {
+       "section": "support",
+       "index": 3,
+       "M_kNm": -10396.072714831365
+      }
+     ],
+     "lane_max_positive_moment_kNm": 14052.576787146298,
+     "lane_max_negative_moment_kNm": -10396.072714835384
+    }
+   }
+  },
+  {
+   "t": 543.525,
+   "tool": "finish",
+   "args": {
+    "summary": "Built and analyzed the four-span, 40 m each, continuous precast T-girder bridge model. The six-girder spine uses integrated per-girder section properties (A=1.022 m², I=0.85655 m⁴), C50 concrete, and girder self-weight only. Modal analysis gave f1=3.212 Hz and JTG D60-2015 impact factor μ=0.1899. OpenSeesPy generation and model checks succeeded; maximum lane-load moments were +14,052.6 kN·m and −10,396.1 kN·m."
+   },
+   "result": {
+    "ok": true
+   }
+  }
+ ]
+}

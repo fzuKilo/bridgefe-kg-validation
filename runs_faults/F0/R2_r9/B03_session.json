@@ -1,0 +1,715 @@
+{
+ "metrics": {
+  "proposals": 38,
+  "slots_proposed": 37,
+  "first_proposal_violation_rate": 0.0,
+  "violations_by_check": {},
+  "instance_rounds": 1,
+  "repair_rounds": 1,
+  "model_passed": true,
+  "elapsed_s": 13.66
+ },
+ "decisions": {
+  "structure.idealization": {
+   "id": "dec:structure.idealization",
+   "slot": "structure.idealization",
+   "value": "spine_beam_2d",
+   "unit": "-",
+   "evidence": [
+    "MR-01"
+   ]
+  },
+  "structure.system": {
+   "id": "dec:structure.system",
+   "slot": "structure.system",
+   "value": "continuous",
+   "unit": "-",
+   "evidence": [
+    "MR-05"
+   ]
+  },
+  "girder.single.A": {
+   "id": "dec:girder.single.A",
+   "slot": "girder.single.A",
+   "value": 1.060520857142857,
+   "unit": "m^2",
+   "evidence": [
+    "MR-02"
+   ]
+  },
+  "girder.single.I": {
+   "id": "dec:girder.single.I",
+   "slot": "girder.single.I",
+   "value": 0.25165870662960277,
+   "unit": "m^4",
+   "evidence": [
+    "MR-02"
+   ]
+  },
+  "girder.A": {
+   "id": "dec:girder.A",
+   "slot": "girder.A",
+   "value": 4.242083428571428,
+   "unit": "m^2",
+   "evidence": [
+    "MR-02"
+   ]
+  },
+  "girder.I": {
+   "id": "dec:girder.I",
+   "slot": "girder.I",
+   "value": 1.006634826518411,
+   "unit": "m^4",
+   "evidence": [
+    "MR-02"
+   ]
+  },
+  "girder.Ec": {
+   "id": "dec:girder.Ec",
+   "slot": "girder.Ec",
+   "value": 34500.0,
+   "unit": "MPa",
+   "evidence": [
+    "JTG3362-3.1.5"
+   ]
+  },
+  "girder.gamma": {
+   "id": "dec:girder.gamma",
+   "slot": "girder.gamma",
+   "value": 26.0,
+   "unit": "kN/m^3",
+   "evidence": [
+    "JTGD60-4.2.1"
+   ]
+  },
+  "girder.w": {
+   "id": "dec:girder.w",
+   "slot": "girder.w",
+   "value": 110.29416914285713,
+   "unit": "kN/m",
+   "evidence": [
+    "MR-07"
+   ]
+  },
+  "girder.m": {
+   "id": "dec:girder.m",
+   "slot": "girder.m",
+   "value": 11.243034571137322,
+   "unit": "t/m",
+   "evidence": [
+    "MR-07"
+   ]
+  },
+  "lane.n_lanes": {
+   "id": "dec:lane.n_lanes",
+   "slot": "lane.n_lanes",
+   "value": 3,
+   "unit": "-",
+   "evidence": [
+    "JTGD60-4.3.1-lanes"
+   ]
+  },
+  "lane.xi": {
+   "id": "dec:lane.xi",
+   "slot": "lane.xi",
+   "value": 0.78,
+   "unit": "-",
+   "evidence": [
+    "JTGD60-4.3.1-xi"
+   ]
+  },
+  "lane.qk": {
+   "id": "dec:lane.qk",
+   "slot": "lane.qk",
+   "value": 10.5,
+   "unit": "kN/m",
+   "evidence": [
+    "JTGD60-4.3.1-qk"
+   ]
+  },
+  "lane.Pk.1": {
+   "id": "dec:lane.Pk.1",
+   "slot": "lane.Pk.1",
+   "value": 300.0,
+   "unit": "kN",
+   "evidence": [
+    "JTGD60-4.3.1-Pk"
+   ]
+  },
+  "lane.Pk.2": {
+   "id": "dec:lane.Pk.2",
+   "slot": "lane.Pk.2",
+   "value": 310.0,
+   "unit": "kN",
+   "evidence": [
+    "JTGD60-4.3.1-Pk"
+   ]
+  },
+  "lane.Pk.3": {
+   "id": "dec:lane.Pk.3",
+   "slot": "lane.Pk.3",
+   "value": 300.0,
+   "unit": "kN",
+   "evidence": [
+    "JTGD60-4.3.1-Pk"
+   ]
+  },
+  "support.0.bearing": {
+   "id": "dec:support.0.bearing",
+   "slot": "support.0.bearing",
+   "value": {
+    "type": "ptfe_sliding",
+    "count": 8
+   },
+   "unit": "-",
+   "evidence": [
+    "MR-04"
+   ]
+  },
+  "support.0.dofs": {
+   "id": "dec:support.0.dofs",
+   "slot": "support.0.dofs",
+   "value": {
+    "vertical": "spring",
+    "longitudinal": "free",
+    "rotation": "free"
+   },
+   "unit": "-",
+   "evidence": [
+    "MR-03"
+   ]
+  },
+  "support.0.S": {
+   "id": "dec:support.0.S",
+   "slot": "support.0.S",
+   "value": 10.096153846153847,
+   "unit": "-",
+   "evidence": [
+    "JTG3362-8.7-S"
+   ]
+  },
+  "support.0.Kv": {
+   "id": "dec:support.0.Kv",
+   "slot": "support.0.Kv",
+   "value": 11330545.032716466,
+   "unit": "kN/m",
+   "evidence": [
+    "JTG3362-8.7-Kv"
+   ]
+  },
+  "support.0.Kh": {
+   "id": "dec:support.0.Kh",
+   "slot": "support.0.Kh",
+   "value": 0.0,
+   "unit": "kN/m",
+   "evidence": [
+    "MR-03"
+   ]
+  },
+  "support.1.bearing": {
+   "id": "dec:support.1.bearing",
+   "slot": "support.1.bearing",
+   "value": {
+    "type": "plain_elastomeric",
+    "count": 8
+   },
+   "unit": "-",
+   "evidence": [
+    "MR-04"
+   ]
+  },
+  "support.1.dofs": {
+   "id": "dec:support.1.dofs",
+   "slot": "support.1.dofs",
+   "value": {
+    "vertical": "spring",
+    "longitudinal": "spring",
+    "rotation": "free"
+   },
+   "unit": "-",
+   "evidence": [
+    "MR-03",
+    "INPUT:supports[1].bearing.fixed",
+    "inst:bearing:1"
+   ]
+  },
+  "support.1.S": {
+   "id": "dec:support.1.S",
+   "slot": "support.1.S",
+   "value": 10.096153846153847,
+   "unit": "-",
+   "evidence": [
+    "JTG3362-8.7-S"
+   ]
+  },
+  "support.1.Kv": {
+   "id": "dec:support.1.Kv",
+   "slot": "support.1.Kv",
+   "value": 11330545.032716466,
+   "unit": "kN/m",
+   "evidence": [
+    "JTG3362-8.7-Kv"
+   ]
+  },
+  "support.1.Kh": {
+   "id": "dec:support.1.Kh",
+   "slot": "support.1.Kh",
+   "value": 26250.0,
+   "unit": "kN/m",
+   "evidence": [
+    "JTG3362-8.7-Kh"
+   ]
+  },
+  "support.2.bearing": {
+   "id": "dec:support.2.bearing",
+   "slot": "support.2.bearing",
+   "value": {
+    "type": "ptfe_sliding",
+    "count": 8
+   },
+   "unit": "-",
+   "evidence": [
+    "MR-04"
+   ]
+  },
+  "support.2.dofs": {
+   "id": "dec:support.2.dofs",
+   "slot": "support.2.dofs",
+   "value": {
+    "vertical": "spring",
+    "longitudinal": "free",
+    "rotation": "free"
+   },
+   "unit": "-",
+   "evidence": [
+    "MR-03"
+   ]
+  },
+  "support.2.S": {
+   "id": "dec:support.2.S",
+   "slot": "support.2.S",
+   "value": 10.096153846153847,
+   "unit": "-",
+   "evidence": [
+    "JTG3362-8.7-S"
+   ]
+  },
+  "support.2.Kv": {
+   "id": "dec:support.2.Kv",
+   "slot": "support.2.Kv",
+   "value": 11330545.032716466,
+   "unit": "kN/m",
+   "evidence": [
+    "JTG3362-8.7-Kv"
+   ]
+  },
+  "support.2.Kh": {
+   "id": "dec:support.2.Kh",
+   "slot": "support.2.Kh",
+   "value": 0.0,
+   "unit": "kN/m",
+   "evidence": [
+    "MR-03"
+   ]
+  },
+  "support.3.bearing": {
+   "id": "dec:support.3.bearing",
+   "slot": "support.3.bearing",
+   "value": {
+    "type": "ptfe_sliding",
+    "count": 8
+   },
+   "unit": "-",
+   "evidence": [
+    "MR-04"
+   ]
+  },
+  "support.3.dofs": {
+   "id": "dec:support.3.dofs",
+   "slot": "support.3.dofs",
+   "value": {
+    "vertical": "spring",
+    "longitudinal": "free",
+    "rotation": "free"
+   },
+   "unit": "-",
+   "evidence": [
+    "MR-03"
+   ]
+  },
+  "support.3.S": {
+   "id": "dec:support.3.S",
+   "slot": "support.3.S",
+   "value": 10.096153846153847,
+   "unit": "-",
+   "evidence": [
+    "JTG3362-8.7-S"
+   ]
+  },
+  "support.3.Kv": {
+   "id": "dec:support.3.Kv",
+   "slot": "support.3.Kv",
+   "value": 11330545.032716466,
+   "unit": "kN/m",
+   "evidence": [
+    "JTG3362-8.7-Kv"
+   ]
+  },
+  "support.3.Kh": {
+   "id": "dec:support.3.Kh",
+   "slot": "support.3.Kh",
+   "value": 0.0,
+   "unit": "kN/m",
+   "evidence": [
+    "MR-03"
+   ]
+  },
+  "lane.mu": {
+   "id": "dec:lane.mu",
+   "slot": "lane.mu",
+   "value": 0.28787186344750126,
+   "unit": "-",
+   "evidence": [
+    "JTGD60-4.3.2"
+   ]
+  }
+ },
+ "facts": {
+  "f1": 5.573410420044705
+ },
+ "instance": {
+  "supports": [
+   {
+    "index": 0,
+    "kind": "abutment",
+    "pier": null,
+    "bearing": {
+     "family": "laminated_elastomeric",
+     "sliding": true,
+     "fixed": false,
+     "per_girder_end": 2,
+     "per_line": null,
+     "a_mm": 300.0,
+     "b_mm": 350.0,
+     "n_layers": 4,
+     "t1_mm": 8.0,
+     "Ge_MPa": null
+    }
+   },
+   {
+    "index": 1,
+    "kind": "pier",
+    "pier": null,
+    "bearing": {
+     "family": "laminated_elastomeric",
+     "sliding": false,
+     "fixed": true,
+     "per_girder_end": 2,
+     "per_line": null,
+     "a_mm": 300.0,
+     "b_mm": 350.0,
+     "n_layers": 4,
+     "t1_mm": 8.0,
+     "Ge_MPa": null
+    }
+   },
+   {
+    "index": 2,
+    "kind": "pier",
+    "pier": null,
+    "bearing": {
+     "family": "laminated_elastomeric",
+     "sliding": true,
+     "fixed": false,
+     "per_girder_end": 2,
+     "per_line": null,
+     "a_mm": 300.0,
+     "b_mm": 350.0,
+     "n_layers": 4,
+     "t1_mm": 8.0,
+     "Ge_MPa": null
+    }
+   },
+   {
+    "index": 3,
+    "kind": "abutment",
+    "pier": null,
+    "bearing": {
+     "family": "laminated_elastomeric",
+     "sliding": true,
+     "fixed": false,
+     "per_girder_end": 2,
+     "per_line": null,
+     "a_mm": 300.0,
+     "b_mm": 350.0,
+     "n_layers": 4,
+     "t1_mm": 8.0,
+     "Ge_MPa": null
+    }
+   }
+  ],
+  "dead_load": "girder_self_weight_only",
+  "structure_type": "precast_continuous",
+  "spans_m": [
+   20.0,
+   25.0,
+   20.0
+  ],
+  "girder": {
+   "material": "prestressed_concrete",
+   "E_override_MPa": null,
+   "gamma_override_kNm3": null,
+   "concrete": "C50",
+   "type": "small_box",
+   "section": {
+    "h": 1.4,
+    "b_top": 2.4,
+    "t_tip": 0.18,
+    "haunch_rise": 0.062,
+    "haunch_len": 0.201,
+    "b_bottom": 1.0,
+    "t_bottom": 0.18,
+    "t_top": 0.18,
+    "t_web": 0.2,
+    "web_slope": 3.5,
+    "chamfer_w": 0.15,
+    "chamfer_h": 0.07
+   },
+   "count_per_span": 4
+  },
+  "deck": {
+   "deck_width_m": 12.5,
+   "carriageway_width_m": 11.5,
+   "traffic": "one_way",
+   "design_lanes": 3,
+   "load_class": "I"
+  }
+ },
+ "results": {
+  "ok": true,
+  "vertical_frequencies_Hz": [
+   5.573410420044705,
+   8.425793776607811,
+   10.185842256711245
+  ],
+  "self_weight_support_reactions_kN": [
+   820.4904849351511,
+   2764.0700122076078,
+   2764.070012207497,
+   820.490484935159
+  ],
+  "self_weight_midspan_moments_kNm": [
+   2690.1963922090363,
+   2967.7078344188667,
+   2690.1963922093646
+  ],
+  "self_weight_support_moments_kNm": [
+   -5649.024129866544,
+   -5649.024129866462
+  ],
+  "lane_moments_by_section": [
+   {
+    "section": "span",
+    "index": 1,
+    "M_kNm": 5016.893109458984
+   },
+   {
+    "section": "span",
+    "index": 2,
+    "M_kNm": 5341.458120190774
+   },
+   {
+    "section": "span",
+    "index": 3,
+    "M_kNm": 5016.893109459526
+   },
+   {
+    "section": "support",
+    "index": 1,
+    "M_kNm": -3864.0328998871387
+   },
+   {
+    "section": "support",
+    "index": 2,
+    "M_kNm": -3864.032899886589
+   }
+  ],
+  "lane_max_positive_moment_kNm": 5341.458120190774,
+  "lane_max_negative_moment_kNm": -3864.0328998871387
+ },
+ "last_check": [],
+ "role_log": [],
+ "log": [
+  {
+   "t": 0.161,
+   "tool": "generate_model",
+   "args": {},
+   "result": {
+    "ok": false,
+    "stage": "execution",
+    "error": "ProfileSPDLinDirectSolver::solve() -  aii < 0 (i, aii): (180, 0)\nWARNING BandGenLinLapackSolver::solve() -factorization failed, matrix singular U(i,i) = 0, i= 180\nWARNING Linear::solveCurrentStep() -the LinearSOE failed in solve()\nStaticAnalysis::analyze() - the Algorithm failed at step: 0 with domain at load factor 1\nOpenSees > analyze failed, returned: -3 error flag\nTraceback (most recent call last):\n  File \"${PROJECT_ROOT}/runs_faults/F0/R2_r9/B03_model.py\", line 152, in <module>\n    static(lambda: ops.eleLoad('-ele', *[e['id'] for e in GIRDER], '-type', '-beamUniform', -w))\n  File \"${PROJECT_ROOT}/runs_faults/F0/R2_r9/B03_model.py\", line 53, in static\n    raise RuntimeError('static analysis failed')\nRuntimeError: static analysis failed\n",
+    "repair_round": 1,
+    "failed_checks": [
+     {
+      "constraint": "model_checks",
+      "text": "",
+      "message": "the model failed its checks",
+      "suspect_decisions": []
+     }
+    ]
+   }
+  },
+  {
+   "t": 6.539,
+   "tool": "execute_formula",
+   "args": {
+    "node_id": "MR-03",
+    "slot": "support.1.dofs"
+   },
+   "result": {
+    "value": {
+     "vertical": "spring",
+     "longitudinal": "spring",
+     "rotation": "free"
+    },
+    "inputs": {
+     "sliding": false
+    },
+    "applicable_to_this_bridge": true,
+    "applicability": "family == 'laminated_elastomeric'"
+   }
+  },
+  {
+   "t": 7.731,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.1.dofs",
+    "value": {
+     "vertical": "spring",
+     "longitudinal": "spring",
+     "rotation": "free"
+    },
+    "unit": "-",
+    "evidence": [
+     "MR-03",
+     "INPUT:supports[1].bearing.fixed",
+     "inst:bearing:1"
+    ],
+    "rationale": "Pier 1 has plain laminated elastomeric (fixed) bearings. MR-03: non-sliding elastomeric bearings take longitudinal shear stiffness Kh (not free). Declaring them longitudinal-free removed the only longitudinal restraint and produced a singular matrix.",
+    "attempt": 2
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.1.dofs",
+    "decision_id": "dec:support.1.dofs"
+   }
+  },
+  {
+   "t": 8.872,
+   "tool": "execute_formula",
+   "args": {
+    "node_id": "JTG3362-8.7-Kh",
+    "slot": "support.1.Kh"
+   },
+   "result": {
+    "value": 26250.0,
+    "inputs": {
+     "Ge": 1.0,
+     "a": 0.3,
+     "b": 0.35,
+     "count": 8,
+     "te": 0.032
+    },
+    "applicable_to_this_bridge": true,
+    "applicability": "family == 'laminated_elastomeric' and not sliding"
+   }
+  },
+  {
+   "t": 9.902,
+   "tool": "run_modal_analysis",
+   "args": {},
+   "result": {
+    "ok": true,
+    "vertical_frequencies_Hz": [
+     5.573410420044705,
+     8.425793776607811,
+     10.185842256711245
+    ],
+    "fact": {
+     "f1": 5.573410420044705
+    }
+   }
+  },
+  {
+   "t": 10.854,
+   "tool": "generate_model",
+   "args": {},
+   "result": {
+    "ok": true,
+    "script": "${PROJECT_ROOT}/runs_faults/F0/R2_r9/B03_model.py",
+    "results": {
+     "ok": true,
+     "vertical_frequencies_Hz": [
+      5.573410420044705,
+      8.425793776607811,
+      10.185842256711245
+     ],
+     "self_weight_support_reactions_kN": [
+      820.4904849351511,
+      2764.0700122076078,
+      2764.070012207497,
+      820.490484935159
+     ],
+     "self_weight_midspan_moments_kNm": [
+      2690.1963922090363,
+      2967.7078344188667,
+      2690.1963922093646
+     ],
+     "self_weight_support_moments_kNm": [
+      -5649.024129866544,
+      -5649.024129866462
+     ],
+     "lane_moments_by_section": [
+      {
+       "section": "span",
+       "index": 1,
+       "M_kNm": 5016.893109458984
+      },
+      {
+       "section": "span",
+       "index": 2,
+       "M_kNm": 5341.458120190774
+      },
+      {
+       "section": "span",
+       "index": 3,
+       "M_kNm": 5016.893109459526
+      },
+      {
+       "section": "support",
+       "index": 1,
+       "M_kNm": -3864.0328998871387
+      },
+      {
+       "section": "support",
+       "index": 2,
+       "M_kNm": -3864.032899886589
+      }
+     ],
+     "lane_max_positive_moment_kNm": 5341.458120190774,
+     "lane_max_negative_moment_kNm": -3864.0328998871387
+    }
+   }
+  },
+  {
+   "t": 13.663,
+   "tool": "finish",
+   "args": {
+    "summary": "Repaired and regenerated successfully.\n\nRoot cause: The accepted decision support.1.dofs was set to {\"vertical\":\"spring\",\"longitudinal\":\"free\",\"rotation\":\"free\"} although Pier 1 carries plain laminated elastomeric (fixed) bearings (inst:bearing:1: sliding=false, fixed=true). Per MR-03, non-sliding elastomeric bearings must take a longitudinal shear spring (Kh), not be longitudinally free. With support 1 also \"free\", every support line was longitudinally unrestrained, giving rigid-body longitudinal translation and a singular stiffness matrix (the reported singular DOF 180 / aii<0 static solve failure).\n\nFix: Re-proposed support.1.dofs = {\"vertical\":\"spring\",\"longitudinal\":\"spring\",\"rotation\":\"free\"} (evidence MR-03, INPUT:supports[1].bearing.fixed, inst:bearing:1). support.1.Kh remains the code value 26250 kN/m (JTG 3362-2018 8.7: count·Ge·a·b/te). Supports 0/2/3 (PTFE sliding) correctly stay longitudinal free with Kh = 0.\n\nModel: spine-beam 2D, continuous 3-span (20+25+20 m), 4 precast prestressed small-box girders/span, C50, girder self-weight only.\n\nKey results (after repair):\n- Vertical frequencies: 5.573, 8.426, 10.186 Hz (f1 = 5.573 Hz), impact factor mu = 0.288 (JTGD60-4.3.2).\n- Self-weight support reactions: 820.5 / 2764.1 / 2764.1 / 820.5 kN.\n- Max live-load (Class I) positive moment 5341.5 kN·m (span 2); max negative moment -3864.0 kN·m at interior supports.\n\ngenerate_model now passes its L1/L2/L3 checks; no unresolved issues."
+   },
+   "result": {
+    "ok": true
+   }
+  }
+ ]
+}

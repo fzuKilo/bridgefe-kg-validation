@@ -1,0 +1,35 @@
+{
+ "metrics": {
+  "proposals": 0,
+  "slots_proposed": 0,
+  "first_proposal_violation_rate": null,
+  "violations_by_check": {},
+  "instance_rounds": 0,
+  "repair_rounds": 0,
+  "model_passed": false,
+  "elapsed_s": 72.57
+ },
+ "decisions": {},
+ "facts": {},
+ "instance": {},
+ "results": null,
+ "last_check": null,
+ "role_log": [
+  {
+   "role": "direct_script",
+   "usage": {
+    "turns": 1,
+    "prompt_tokens": 4218,
+    "output_tokens": 3022,
+    "cache_hit_tokens": 0,
+    "reasoning_tokens": 708,
+    "finish_reason": "stop",
+    "stream": true
+   },
+   "returncode": 1,
+   "stderr": "WARNING - the 'fullGenLapack' eigen solver is VERY SLOW. Consider using the default eigen solver.Traceback (most recent call last):\n  File \"${PROJECT_ROOT}/runs_luna/C0/A03_r2/A03_direct.py\", line 216, in <module>\n    positive_lane_moment = lane_moment(SPAN / 2.0)\n                           ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"${PROJECT_ROOT}/runs_luna/C0/A03_r2/A03_direct.py\", line 187, in lane_moment\n    uniform_effect = q_total * np.trapz(np.maximum(ordinates, 0.0), dx=dx)\n                               ^^^^^^^^\n  File \"${PROJECT_ROOT}/.venv/lib/python3.12/site-packages/numpy/__init__.py\", line 769, in __getattr__\n    raise AttributeError(f\"module {__name__!r} has no attribute {attr!r}\")\nAttributeError: module 'numpy' has no attribute 'trapz'. Did you mean: 'trace'?\n",
+   "elapsed_s": 72.6
+  }
+ ],
+ "log": []
+}

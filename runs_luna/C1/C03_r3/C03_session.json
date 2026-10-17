@@ -1,0 +1,253 @@
+{
+ "metrics": {
+  "proposals": 0,
+  "slots_proposed": 0,
+  "first_proposal_violation_rate": null,
+  "violations_by_check": {},
+  "instance_rounds": 0,
+  "repair_rounds": 0,
+  "model_passed": false,
+  "elapsed_s": 64.9
+ },
+ "decisions": {
+  "structure.idealization": {
+   "id": "dec:structure.idealization",
+   "slot": "structure.idealization",
+   "value": "spine_beam_2d",
+   "unit": null,
+   "evidence": []
+  },
+  "structure.system": {
+   "id": "dec:structure.system",
+   "slot": "structure.system",
+   "value": "continuous_on_piers",
+   "unit": null,
+   "evidence": []
+  },
+  "girder.A": {
+   "id": "dec:girder.A",
+   "slot": "girder.A",
+   "value": 7.985,
+   "unit": null,
+   "evidence": []
+  },
+  "girder.I": {
+   "id": "dec:girder.I",
+   "slot": "girder.I",
+   "value": 4.75,
+   "unit": null,
+   "evidence": []
+  },
+  "girder.Ec": {
+   "id": "dec:girder.Ec",
+   "slot": "girder.Ec",
+   "value": 34500.0,
+   "unit": null,
+   "evidence": []
+  },
+  "girder.gamma": {
+   "id": "dec:girder.gamma",
+   "slot": "girder.gamma",
+   "value": 26.5,
+   "unit": null,
+   "evidence": []
+  },
+  "girder.w": {
+   "id": "dec:girder.w",
+   "slot": "girder.w",
+   "value": 211.6025,
+   "unit": null,
+   "evidence": []
+  },
+  "girder.m": {
+   "id": "dec:girder.m",
+   "slot": "girder.m",
+   "value": 21.5713,
+   "unit": null,
+   "evidence": []
+  },
+  "support.0.bearing": {
+   "id": "dec:support.0.bearing",
+   "slot": "support.0.bearing",
+   "value": {
+    "type": "ptfe_sliding",
+    "count": 2
+   },
+   "unit": null,
+   "evidence": []
+  },
+  "support.0.dofs": {
+   "id": "dec:support.0.dofs",
+   "slot": "support.0.dofs",
+   "value": {
+    "vertical": "spring",
+    "longitudinal": "free",
+    "rotation": "free"
+   },
+   "unit": null,
+   "evidence": []
+  },
+  "support.0.S": {
+   "id": "dec:support.0.S",
+   "slot": "support.0.S",
+   "value": 10.0,
+   "unit": null,
+   "evidence": []
+  },
+  "support.0.Kv": {
+   "id": "dec:support.0.Kv",
+   "slot": "support.0.Kv",
+   "value": 2930400.0,
+   "unit": null,
+   "evidence": []
+  },
+  "support.0.Kh": {
+   "id": "dec:support.0.Kh",
+   "slot": "support.0.Kh",
+   "value": 18182.0,
+   "unit": null,
+   "evidence": []
+  }
+ },
+ "facts": {},
+ "instance": {
+  "supports": [
+   {
+    "index": 0,
+    "kind": "abutment",
+    "bearing": {
+     "family": "laminated_elastomeric",
+     "sliding": true,
+     "fixed": false,
+     "per_girder_end": null,
+     "per_line": 2,
+     "a_mm": 400,
+     "b_mm": 500,
+     "t1_mm": 11,
+     "n_layers": 5,
+     "Ge_MPa": null,
+     "model": null
+    },
+    "pier": null
+   },
+   {
+    "index": 1,
+    "kind": "pier",
+    "bearing": {
+     "family": "laminated_elastomeric",
+     "sliding": true,
+     "fixed": false,
+     "per_girder_end": null,
+     "per_line": 2,
+     "a_mm": 550,
+     "b_mm": 650,
+     "t1_mm": 11,
+     "n_layers": 6,
+     "Ge_MPa": null,
+     "model": null
+    },
+    "pier": {
+     "height_m": 14,
+     "diameter_m": 1.6,
+     "n_columns": 2,
+     "concrete": "C40"
+    }
+   },
+   {
+    "index": 2,
+    "kind": "pier",
+    "bearing": {
+     "family": "laminated_elastomeric",
+     "sliding": false,
+     "fixed": true,
+     "per_girder_end": null,
+     "per_line": 2,
+     "a_mm": 600,
+     "b_mm": 700,
+     "t1_mm": 11,
+     "n_layers": 7,
+     "Ge_MPa": null,
+     "model": null
+    },
+    "pier": {
+     "height_m": 6,
+     "diameter_m": 1.6,
+     "n_columns": 2,
+     "concrete": "C40"
+    }
+   },
+   {
+    "index": 3,
+    "kind": "abutment",
+    "bearing": {
+     "family": "laminated_elastomeric",
+     "sliding": true,
+     "fixed": false,
+     "per_girder_end": null,
+     "per_line": 2,
+     "a_mm": 400,
+     "b_mm": 500,
+     "t1_mm": 11,
+     "n_layers": 5,
+     "Ge_MPa": null,
+     "model": null
+    },
+    "pier": null
+   }
+  ],
+  "structure_type": "cast_in_place_continuous",
+  "spans_m": [
+   32,
+   40,
+   32
+  ],
+  "deck": {
+   "deck_width_m": 16,
+   "carriageway_width_m": 15,
+   "traffic": "one_way",
+   "design_lanes": 4,
+   "load_class": "I"
+  },
+  "girder": {
+   "type": "cast_box",
+   "count_per_span": 1,
+   "concrete": "C50",
+   "material": "prestressed_concrete",
+   "E_override_MPa": null,
+   "gamma_override_kNm3": 26.5,
+   "section": {
+    "cell_count": 1,
+    "depth_m": 2,
+    "top_slab_width_m": 16,
+    "top_slab_thickness_m": 0.25,
+    "bottom_slab_width_m": 9,
+    "bottom_slab_thickness_m": 0.22,
+    "web_count": 2,
+    "web_thickness_m": 0.5,
+    "cantilever_each_m": 3.5,
+    "cantilever_thickness_root_m": 0.5,
+    "cantilever_thickness_tip_m": 0.2
+   }
+  },
+  "dead_load": "girder_self_weight_only"
+ },
+ "results": null,
+ "last_check": null,
+ "role_log": [
+  {
+   "role": "direct_decisions",
+   "usage": {
+    "turns": 1,
+    "prompt_tokens": 4994,
+    "output_tokens": 2235,
+    "cache_hit_tokens": 2816,
+    "reasoning_tokens": 1158,
+    "finish_reason": "stop",
+    "stream": true
+   },
+   "note": " KeyError: 'support.1.dofs'",
+   "elapsed_s": 64.9
+  }
+ ],
+ "log": []
+}

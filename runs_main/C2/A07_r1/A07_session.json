@@ -1,0 +1,848 @@
+{
+ "metrics": {
+  "proposals": 19,
+  "slots_proposed": 19,
+  "first_proposal_violation_rate": 0.0,
+  "violations_by_check": {},
+  "instance_rounds": 1,
+  "repair_rounds": 0,
+  "model_passed": true,
+  "elapsed_s": 19.81
+ },
+ "decisions": {
+  "structure.idealization": {
+   "id": "dec:structure.idealization",
+   "slot": "structure.idealization",
+   "value": "spine_beam_2d",
+   "unit": "-",
+   "evidence": [
+    "MR-01"
+   ]
+  },
+  "structure.system": {
+   "id": "dec:structure.system",
+   "slot": "structure.system",
+   "value": "simply_supported",
+   "unit": "-",
+   "evidence": [
+    "MR-05"
+   ]
+  },
+  "girder.single.A": {
+   "id": "dec:girder.single.A",
+   "slot": "girder.single.A",
+   "value": 1.022,
+   "unit": "m^2",
+   "evidence": [
+    "MR-02"
+   ]
+  },
+  "girder.single.I": {
+   "id": "dec:girder.single.I",
+   "slot": "girder.single.I",
+   "value": 0.8565544933028928,
+   "unit": "m^4",
+   "evidence": [
+    "MR-02"
+   ]
+  },
+  "girder.A": {
+   "id": "dec:girder.A",
+   "slot": "girder.A",
+   "value": 4.088,
+   "unit": "m^2",
+   "evidence": [
+    "MR-02"
+   ]
+  },
+  "girder.I": {
+   "id": "dec:girder.I",
+   "slot": "girder.I",
+   "value": 3.426217973211571,
+   "unit": "m^4",
+   "evidence": [
+    "MR-02"
+   ]
+  },
+  "girder.Ec": {
+   "id": "dec:girder.Ec",
+   "slot": "girder.Ec",
+   "value": 35500.0,
+   "unit": "MPa",
+   "evidence": [
+    "JTG3362-3.1.5"
+   ]
+  },
+  "girder.gamma": {
+   "id": "dec:girder.gamma",
+   "slot": "girder.gamma",
+   "value": 26.0,
+   "unit": "kN/m^3",
+   "evidence": [
+    "JTGD60-4.2.1"
+   ]
+  },
+  "girder.w": {
+   "id": "dec:girder.w",
+   "slot": "girder.w",
+   "value": 106.288,
+   "unit": "kN/m",
+   "evidence": [
+    "MR-07"
+   ]
+  },
+  "girder.m": {
+   "id": "dec:girder.m",
+   "slot": "girder.m",
+   "value": 10.834658511722733,
+   "unit": "t/m",
+   "evidence": [
+    "MR-07"
+   ]
+  },
+  "support.0.bearing": {
+   "id": "dec:support.0.bearing",
+   "slot": "support.0.bearing",
+   "value": {
+    "type": "spherical_sliding",
+    "count": 4
+   },
+   "unit": "-",
+   "evidence": [
+    "MR-04",
+    "MR-08",
+    "JTT854"
+   ]
+  },
+  "support.0.dofs": {
+   "id": "dec:support.0.dofs",
+   "slot": "support.0.dofs",
+   "value": {
+    "vertical": "rigid",
+    "longitudinal": "free",
+    "rotation": "free"
+   },
+   "unit": "-",
+   "evidence": [
+    "MR-08"
+   ]
+  },
+  "support.1.bearing": {
+   "id": "dec:support.1.bearing",
+   "slot": "support.1.bearing",
+   "value": {
+    "type": "spherical_fixed",
+    "count": 4
+   },
+   "unit": "-",
+   "evidence": [
+    "MR-04",
+    "MR-08",
+    "JTT854"
+   ]
+  },
+  "support.1.dofs": {
+   "id": "dec:support.1.dofs",
+   "slot": "support.1.dofs",
+   "value": {
+    "vertical": "rigid",
+    "longitudinal": "fixed",
+    "rotation": "free"
+   },
+   "unit": "-",
+   "evidence": [
+    "MR-08"
+   ]
+  },
+  "lane.n_lanes": {
+   "id": "dec:lane.n_lanes",
+   "slot": "lane.n_lanes",
+   "value": 2,
+   "unit": "-",
+   "evidence": [
+    "JTGD60-4.3.1-lanes"
+   ]
+  },
+  "lane.xi": {
+   "id": "dec:lane.xi",
+   "slot": "lane.xi",
+   "value": 1.0,
+   "unit": "-",
+   "evidence": [
+    "JTGD60-4.3.1-xi"
+   ]
+  },
+  "lane.qk": {
+   "id": "dec:lane.qk",
+   "slot": "lane.qk",
+   "value": 10.5,
+   "unit": "kN/m",
+   "evidence": [
+    "JTGD60-4.3.1-qk"
+   ]
+  },
+  "lane.Pk.1": {
+   "id": "dec:lane.Pk.1",
+   "slot": "lane.Pk.1",
+   "value": 340.0,
+   "unit": "kN",
+   "evidence": [
+    "JTGD60-4.3.1-Pk"
+   ]
+  },
+  "lane.mu": {
+   "id": "dec:lane.mu",
+   "slot": "lane.mu",
+   "value": 0.19421328883541483,
+   "unit": "-",
+   "evidence": [
+    "JTGD60-4.3.2",
+    "LL-02"
+   ]
+  }
+ },
+ "facts": {
+  "f1": 3.289380662756845
+ },
+ "instance": {
+  "supports": [
+   {
+    "index": 0,
+    "kind": "abutment",
+    "bearing": {
+     "family": "spherical",
+     "sliding": true,
+     "fixed": false,
+     "per_girder_end": 1,
+     "model": "GQZ2000"
+    }
+   },
+   {
+    "index": 1,
+    "kind": "abutment",
+    "bearing": {
+     "family": "spherical",
+     "sliding": false,
+     "fixed": true,
+     "per_girder_end": 1,
+     "model": "GQZ2000"
+    }
+   }
+  ],
+  "structure_type": "simply_supported",
+  "spans_m": [
+   40
+  ],
+  "deck": {
+   "deck_width_m": 10.0,
+   "carriageway_width_m": 9.0,
+   "traffic": "two_way",
+   "design_lanes": 2,
+   "load_class": "I"
+  },
+  "girder": {
+   "type": "t_girder",
+   "count_per_span": 4,
+   "concrete": "C55",
+   "material": "prestressed_concrete",
+   "E_override_MPa": null,
+   "gamma_override_kNm3": null,
+   "section": {
+    "h": 2.5,
+    "b_flange": 1.8,
+    "t_tip": 0.18,
+    "t_root": 0.27,
+    "flat_len": 0.2,
+    "t_web": 0.2,
+    "b_bulb": 0.6,
+    "bulb_h": 0.35,
+    "bulb_trans": 0.2
+   }
+  },
+  "dead_load": "girder_self_weight_only"
+ },
+ "results": {
+  "ok": true,
+  "vertical_frequencies_Hz": [
+   3.289380662756845,
+   13.157605846208215,
+   29.605420880823893
+  ],
+  "self_weight_support_reactions_kN": [
+   2125.7599999996837,
+   2125.7599999996837
+  ],
+  "self_weight_midspan_moments_kNm": [
+   21257.59999998971
+  ],
+  "self_weight_support_moments_kNm": [],
+  "lane_moments_by_section": [
+   {
+    "section": "span",
+    "index": 1,
+    "M_kNm": 13136.346177183792
+   }
+  ],
+  "lane_max_positive_moment_kNm": 13136.346177183792,
+  "lane_max_negative_moment_kNm": null
+ },
+ "last_check": [],
+ "role_log": [
+  {
+   "role": "self_check",
+   "usage": {
+    "turns": 1,
+    "prompt_tokens": 4237,
+    "output_tokens": 368,
+    "cache_hit_tokens": 3200,
+    "reasoning_chars": 0,
+    "finish_reason": "stop"
+   },
+   "corrections": {}
+  }
+ ],
+ "log": [
+  {
+   "t": 2.77,
+   "tool": "write_instance",
+   "args": {
+    "structure_type": "simply_supported",
+    "spans_m": [
+     40
+    ],
+    "deck": {
+     "deck_width_m": 10.0,
+     "carriageway_width_m": 9.0,
+     "traffic": "two_way",
+     "design_lanes": 2,
+     "load_class": "I"
+    },
+    "girder": {
+     "type": "t_girder",
+     "count_per_span": 4,
+     "concrete": "C55",
+     "material": "prestressed_concrete",
+     "E_override_MPa": null,
+     "gamma_override_kNm3": null,
+     "section": {
+      "h": 2.5,
+      "b_flange": 1.8,
+      "t_tip": 0.18,
+      "t_root": 0.27,
+      "flat_len": 0.2,
+      "t_web": 0.2,
+      "b_bulb": 0.6,
+      "bulb_h": 0.35,
+      "bulb_trans": 0.2
+     }
+    },
+    "supports": [
+     {
+      "index": 0,
+      "kind": "abutment",
+      "bearing": {
+       "family": "spherical",
+       "sliding": true,
+       "fixed": false,
+       "per_girder_end": 1,
+       "model": "GQZ2000"
+      }
+     },
+     {
+      "index": 1,
+      "kind": "abutment",
+      "bearing": {
+       "family": "spherical",
+       "sliding": false,
+       "fixed": true,
+       "per_girder_end": 1,
+       "model": "GQZ2000"
+      }
+     }
+    ],
+    "dead_load": "girder_self_weight_only"
+   },
+   "result": {
+    "ok": true,
+    "issues": [],
+    "round": 1
+   }
+  },
+  {
+   "t": 4.884,
+   "tool": "declare_decisions",
+   "args": {
+    "slots": [
+     "structure.idealization",
+     "structure.system",
+     "girder.single.A",
+     "girder.single.I",
+     "girder.A",
+     "girder.I",
+     "girder.Ec",
+     "girder.gamma",
+     "girder.w",
+     "girder.m",
+     "support.0.bearing",
+     "support.0.dofs",
+     "support.1.bearing",
+     "support.1.dofs",
+     "lane.n_lanes",
+     "lane.xi",
+     "lane.qk",
+     "lane.Pk.1",
+     "lane.mu"
+    ],
+    "replace": false
+   },
+   "result": {
+    "complete": true,
+    "declared_so_far": 19,
+    "missing": [],
+    "not_required_ignored": [],
+    "note": "declarations accumulate across calls; declare the missing slots next",
+    "constraint": "C-13/T-templates"
+   }
+  },
+  {
+   "t": 8.783,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "structure.idealization",
+    "value": "spine_beam_2d",
+    "unit": "-",
+    "evidence": [
+     "MR-01"
+    ],
+    "rationale": "Straight girder bridge modeled as 2D spine beam, linear elastic.",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "structure.idealization",
+    "decision_id": "dec:structure.idealization"
+   }
+  },
+  {
+   "t": 8.783,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "structure.system",
+    "value": "simply_supported",
+    "unit": "-",
+    "evidence": [
+     "MR-05"
+    ],
+    "rationale": "Single span => simply supported system.",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "structure.system",
+    "decision_id": "dec:structure.system"
+   }
+  },
+  {
+   "t": 8.783,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "girder.single.A",
+    "value": 1.022,
+    "unit": "m^2",
+    "evidence": [
+     "MR-02"
+    ],
+    "rationale": "Section integration of middle T-girder.",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "girder.single.A",
+    "decision_id": "dec:girder.single.A"
+   }
+  },
+  {
+   "t": 8.783,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "girder.single.I",
+    "value": 0.8565544933028928,
+    "unit": "m^4",
+    "evidence": [
+     "MR-02"
+    ],
+    "rationale": "Section integration of middle T-girder.",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "girder.single.I",
+    "decision_id": "dec:girder.single.I"
+   }
+  },
+  {
+   "t": 8.783,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "girder.A",
+    "value": 4.088,
+    "unit": "m^2",
+    "evidence": [
+     "MR-02"
+    ],
+    "rationale": "A_single * n_girders = 1.022 * 4 (precast).",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "girder.A",
+    "decision_id": "dec:girder.A"
+   }
+  },
+  {
+   "t": 8.783,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "girder.I",
+    "value": 3.426217973211571,
+    "unit": "m^4",
+    "evidence": [
+     "MR-02"
+    ],
+    "rationale": "I_single * n_girders = 0.8565544933028928 * 4.",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "girder.I",
+    "decision_id": "dec:girder.I"
+   }
+  },
+  {
+   "t": 8.783,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "girder.Ec",
+    "value": 35500.0,
+    "unit": "MPa",
+    "evidence": [
+     "JTG3362-3.1.5"
+    ],
+    "rationale": "C55 concrete from EC_TABLE, no override.",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "girder.Ec",
+    "decision_id": "dec:girder.Ec"
+   }
+  },
+  {
+   "t": 8.783,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "girder.gamma",
+    "value": 26.0,
+    "unit": "kN/m^3",
+    "evidence": [
+     "JTGD60-4.2.1"
+    ],
+    "rationale": "Prestressed concrete unit weight, upper bound 26.0.",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "girder.gamma",
+    "decision_id": "dec:girder.gamma"
+   }
+  },
+  {
+   "t": 8.783,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "girder.w",
+    "value": 106.288,
+    "unit": "kN/m",
+    "evidence": [
+     "MR-07"
+    ],
+    "rationale": "w = gamma * A = 26.0 * 4.088.",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "girder.w",
+    "decision_id": "dec:girder.w"
+   }
+  },
+  {
+   "t": 8.783,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "girder.m",
+    "value": 10.834658511722733,
+    "unit": "t/m",
+    "evidence": [
+     "MR-07"
+    ],
+    "rationale": "m = w / 9.81 = 106.288 / 9.81.",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "girder.m",
+    "decision_id": "dec:girder.m"
+   }
+  },
+  {
+   "t": 12.241,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.0.bearing",
+    "value": {
+     "type": "spherical_sliding",
+     "count": 4
+    },
+    "unit": "-",
+    "evidence": [
+     "MR-04",
+     "MR-08",
+     "JTT854"
+    ],
+    "rationale": "Abutment 0: spherical sliding bearings, one per girder end (4 girders).",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.0.bearing",
+    "decision_id": "dec:support.0.bearing"
+   }
+  },
+  {
+   "t": 12.241,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.0.dofs",
+    "value": {
+     "vertical": "rigid",
+     "longitudinal": "free",
+     "rotation": "free"
+    },
+    "unit": "-",
+    "evidence": [
+     "MR-08"
+    ],
+    "rationale": "Spherical sliding: rigid vertical, longitudinal free, rotation free.",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.0.dofs",
+    "decision_id": "dec:support.0.dofs"
+   }
+  },
+  {
+   "t": 12.242,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.1.bearing",
+    "value": {
+     "type": "spherical_fixed",
+     "count": 4
+    },
+    "unit": "-",
+    "evidence": [
+     "MR-04",
+     "MR-08",
+     "JTT854"
+    ],
+    "rationale": "Abutment 1: spherical fixed bearings, one per girder end (4 girders).",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.1.bearing",
+    "decision_id": "dec:support.1.bearing"
+   }
+  },
+  {
+   "t": 12.242,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.1.dofs",
+    "value": {
+     "vertical": "rigid",
+     "longitudinal": "fixed",
+     "rotation": "free"
+    },
+    "unit": "-",
+    "evidence": [
+     "MR-08"
+    ],
+    "rationale": "Spherical fixed: rigid vertical, longitudinal fixed, rotation free.",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.1.dofs",
+    "decision_id": "dec:support.1.dofs"
+   }
+  },
+  {
+   "t": 12.242,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "lane.n_lanes",
+    "value": 2,
+    "unit": "-",
+    "evidence": [
+     "JTGD60-4.3.1-lanes"
+    ],
+    "rationale": "Two-way, W=9 <14 => 2 lanes.",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "lane.n_lanes",
+    "decision_id": "dec:lane.n_lanes"
+   }
+  },
+  {
+   "t": 12.242,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "lane.xi",
+    "value": 1.0,
+    "unit": "-",
+    "evidence": [
+     "JTGD60-4.3.1-xi"
+    ],
+    "rationale": "n_lanes=2 => xi=1.0.",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "lane.xi",
+    "decision_id": "dec:lane.xi"
+   }
+  },
+  {
+   "t": 12.242,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "lane.qk",
+    "value": 10.5,
+    "unit": "kN/m",
+    "evidence": [
+     "JTGD60-4.3.1-qk"
+    ],
+    "rationale": "Class I => 10.5 kN/m.",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "lane.qk",
+    "decision_id": "dec:lane.qk"
+   }
+  },
+  {
+   "t": 12.242,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "lane.Pk.1",
+    "value": 340.0,
+    "unit": "kN",
+    "evidence": [
+     "JTGD60-4.3.1-Pk"
+    ],
+    "rationale": "L0=40 => 2*(40+130)=340 kN.",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "lane.Pk.1",
+    "decision_id": "dec:lane.Pk.1"
+   }
+  },
+  {
+   "t": 13.352,
+   "tool": "run_modal_analysis",
+   "args": {},
+   "result": {
+    "ok": true,
+    "vertical_frequencies_Hz": [
+     3.289380662756845,
+     13.157605846208215,
+     29.605420880823893
+    ],
+    "fact": {
+     "f1": 3.289380662756845
+    }
+   }
+  },
+  {
+   "t": 14.513,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "lane.mu",
+    "value": 0.19421328883541483,
+    "unit": "-",
+    "evidence": [
+     "JTGD60-4.3.2",
+     "LL-02"
+    ],
+    "rationale": "f1=3.289 Hz between 1.5 and 14 => mu = 0.1767*ln(3.289) - 0.0157 = 0.1942.",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "lane.mu",
+    "decision_id": "dec:lane.mu"
+   }
+  },
+  {
+   "t": 15.484,
+   "tool": "generate_model",
+   "args": {},
+   "result": {
+    "ok": true,
+    "script": "${PROJECT_ROOT}/runs_main/C2/A07_r1/A07_model.py",
+    "results": {
+     "ok": true,
+     "vertical_frequencies_Hz": [
+      3.289380662756845,
+      13.157605846208215,
+      29.605420880823893
+     ],
+     "self_weight_support_reactions_kN": [
+      2125.7599999996837,
+      2125.7599999996837
+     ],
+     "self_weight_midspan_moments_kNm": [
+      21257.59999998971
+     ],
+     "self_weight_support_moments_kNm": [],
+     "lane_moments_by_section": [
+      {
+       "section": "span",
+       "index": 1,
+       "M_kNm": 13136.346177183792
+      }
+     ],
+     "lane_max_positive_moment_kNm": 13136.346177183792,
+     "lane_max_negative_moment_kNm": null
+    }
+   }
+  },
+  {
+   "t": 17.834,
+   "tool": "finish",
+   "args": {
+    "summary": "Modeled a 40 m single simply-supported precast prestressed T-girder bridge (4 girders) as a 2D spine beam (MR-01, MR-05). Girder section properties from midspan middle-girder integration (A=1.022 m², I=0.8566 m⁴), combined ×4 for the 4-girder spine (A=4.088 m², I=3.426 m⁴), C55 concrete Ec=35500 MPa, γ=26 kN/m³ => w=106.29 kN/m, m=10.835 t/m (MR-02, MR-07, JTG3362-3.1.5, JTGD60-4.2.1). Supports: spherical GQZ2000 bearings, 4 per line (one per girder end); abutment 0 longitudinally free (sliding SX/DX), abutment 1 longitudinally fixed (GD) — both rigid vertical, rotation free (MR-04, MR-08, JTT854). Modal analysis gives f1=3.289 Hz, so impact factor μ=0.194 (JTG D60-4.3.2). Class I lane load: qk=10.5 kN/m, Pk=340 kN, n_lanes=2, ξ=1.0 (JTG D60-4.3.1). Self-weight reactions 2125.76 kN per abutment; lane max positive moment 13136 kN·m. OpenSeesPy script executed with all L1–L3 checks passing."
+   },
+   "result": {
+    "ok": true
+   }
+  }
+ ]
+}

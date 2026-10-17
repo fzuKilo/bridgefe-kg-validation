@@ -1,0 +1,1193 @@
+{
+ "metrics": {
+  "proposals": 27,
+  "slots_proposed": 25,
+  "first_proposal_violation_rate": 0.08,
+  "violations_by_check": {
+   "value": 2
+  },
+  "instance_rounds": 1,
+  "repair_rounds": 0,
+  "model_passed": true,
+  "elapsed_s": 26.57
+ },
+ "decisions": {
+  "structure.idealization": {
+   "id": "dec:structure.idealization",
+   "slot": "structure.idealization",
+   "value": "spine_beam_2d",
+   "unit": "-",
+   "evidence": [
+    "MR-01"
+   ]
+  },
+  "structure.system": {
+   "id": "dec:structure.system",
+   "slot": "structure.system",
+   "value": "simply_supported",
+   "unit": "-",
+   "evidence": [
+    "MR-05"
+   ]
+  },
+  "girder.single.A": {
+   "id": "dec:girder.single.A",
+   "slot": "girder.single.A",
+   "value": 1.13892875,
+   "unit": "m^2",
+   "evidence": [
+    "MR-02"
+   ]
+  },
+  "girder.single.I": {
+   "id": "dec:girder.single.I",
+   "slot": "girder.single.I",
+   "value": 0.3549168491421879,
+   "unit": "m^4",
+   "evidence": [
+    "MR-02"
+   ]
+  },
+  "girder.A": {
+   "id": "dec:girder.A",
+   "slot": "girder.A",
+   "value": 3.41678625,
+   "unit": "m^2",
+   "evidence": [
+    "MR-02",
+    "INPUT:girder.count_per_span"
+   ]
+  },
+  "girder.I": {
+   "id": "dec:girder.I",
+   "slot": "girder.I",
+   "value": 1.0647505474265637,
+   "unit": "m^4",
+   "evidence": [
+    "MR-02",
+    "INPUT:girder.count_per_span"
+   ]
+  },
+  "girder.Ec": {
+   "id": "dec:girder.Ec",
+   "slot": "girder.Ec",
+   "value": 32500.0,
+   "unit": "MPa",
+   "evidence": [
+    "JTG3362-3.1.5"
+   ]
+  },
+  "girder.gamma": {
+   "id": "dec:girder.gamma",
+   "slot": "girder.gamma",
+   "value": 26.0,
+   "unit": "kN/m^3",
+   "evidence": [
+    "JTGD60-4.2.1"
+   ]
+  },
+  "girder.w": {
+   "id": "dec:girder.w",
+   "slot": "girder.w",
+   "value": 88.8364425,
+   "unit": "kN/m",
+   "evidence": [
+    "MR-07"
+   ]
+  },
+  "girder.m": {
+   "id": "dec:girder.m",
+   "slot": "girder.m",
+   "value": 9.05570300764526,
+   "unit": "t/m",
+   "evidence": [
+    "MR-07"
+   ]
+  },
+  "support.0.bearing": {
+   "id": "dec:support.0.bearing",
+   "slot": "support.0.bearing",
+   "value": {
+    "type": "plain_elastomeric",
+    "count": 6
+   },
+   "unit": "-",
+   "evidence": [
+    "MR-04",
+    "INPUT:supports[0].bearing.per_girder_end",
+    "INPUT:girder.count_per_span"
+   ]
+  },
+  "support.0.dofs": {
+   "id": "dec:support.0.dofs",
+   "slot": "support.0.dofs",
+   "value": {
+    "vertical": "spring",
+    "longitudinal": "spring",
+    "rotation": "free"
+   },
+   "unit": "-",
+   "evidence": [
+    "MR-03"
+   ]
+  },
+  "support.1.bearing": {
+   "id": "dec:support.1.bearing",
+   "slot": "support.1.bearing",
+   "value": {
+    "type": "plain_elastomeric",
+    "count": 6
+   },
+   "unit": "-",
+   "evidence": [
+    "MR-04",
+    "INPUT:supports[1].bearing.per_girder_end",
+    "INPUT:girder.count_per_span"
+   ]
+  },
+  "support.1.dofs": {
+   "id": "dec:support.1.dofs",
+   "slot": "support.1.dofs",
+   "value": {
+    "vertical": "spring",
+    "longitudinal": "spring",
+    "rotation": "free"
+   },
+   "unit": "-",
+   "evidence": [
+    "MR-03"
+   ]
+  },
+  "support.0.S": {
+   "id": "dec:support.0.S",
+   "slot": "support.0.S",
+   "value": 10.714285714285714,
+   "unit": "-",
+   "evidence": [
+    "JTG3362-8.7-S"
+   ]
+  },
+  "support.1.S": {
+   "id": "dec:support.1.S",
+   "slot": "support.1.S",
+   "value": 10.714285714285714,
+   "unit": "-",
+   "evidence": [
+    "JTG3362-8.7-S"
+   ]
+  },
+  "support.0.Kv": {
+   "id": "dec:support.0.Kv",
+   "slot": "support.0.Kv",
+   "value": 8518013.631937683,
+   "unit": "kN/m",
+   "evidence": [
+    "JTG3362-8.7-Kv"
+   ]
+  },
+  "support.0.Kh": {
+   "id": "dec:support.0.Kh",
+   "slot": "support.0.Kh",
+   "value": 18000.0,
+   "unit": "kN/m",
+   "evidence": [
+    "JTG3362-8.7-Kh"
+   ]
+  },
+  "support.1.Kv": {
+   "id": "dec:support.1.Kv",
+   "slot": "support.1.Kv",
+   "value": 8518013.631937683,
+   "unit": "kN/m",
+   "evidence": [
+    "JTG3362-8.7-Kv"
+   ]
+  },
+  "support.1.Kh": {
+   "id": "dec:support.1.Kh",
+   "slot": "support.1.Kh",
+   "value": 18000.0,
+   "unit": "kN/m",
+   "evidence": [
+    "JTG3362-8.7-Kh"
+   ]
+  },
+  "lane.n_lanes": {
+   "id": "dec:lane.n_lanes",
+   "slot": "lane.n_lanes",
+   "value": 2,
+   "unit": "-",
+   "evidence": [
+    "JTGD60-4.3.1-lanes",
+    "INPUT:deck.carriageway_width_m"
+   ]
+  },
+  "lane.xi": {
+   "id": "dec:lane.xi",
+   "slot": "lane.xi",
+   "value": 1.0,
+   "unit": "-",
+   "evidence": [
+    "JTGD60-4.3.1-xi"
+   ]
+  },
+  "lane.qk": {
+   "id": "dec:lane.qk",
+   "slot": "lane.qk",
+   "value": 7.875,
+   "unit": "kN/m",
+   "evidence": [
+    "JTGD60-4.3.1-qk"
+   ]
+  },
+  "lane.Pk.1": {
+   "id": "dec:lane.Pk.1",
+   "slot": "lane.Pk.1",
+   "value": 240.0,
+   "unit": "kN",
+   "evidence": [
+    "JTGD60-4.3.1-Pk",
+    "INPUT:spans_m[0]"
+   ]
+  },
+  "lane.mu": {
+   "id": "dec:lane.mu",
+   "slot": "lane.mu",
+   "value": 0.20062873143935175,
+   "unit": "-",
+   "evidence": [
+    "JTGD60-4.3.2",
+    "fact:f1"
+   ]
+  }
+ },
+ "facts": {
+  "f1": 3.401686230590496
+ },
+ "instance": {
+  "supports": [
+   {
+    "index": 0,
+    "kind": "abutment",
+    "bearing": {
+     "family": "laminated_elastomeric",
+     "sliding": false,
+     "fixed": false,
+     "per_girder_end": 2,
+     "a_mm": 300,
+     "b_mm": 400,
+     "t1_mm": 8,
+     "n_layers": 5
+    }
+   },
+   {
+    "index": 1,
+    "kind": "abutment",
+    "bearing": {
+     "family": "laminated_elastomeric",
+     "sliding": false,
+     "fixed": false,
+     "per_girder_end": 2,
+     "a_mm": 300,
+     "b_mm": 400,
+     "t1_mm": 8,
+     "n_layers": 5
+    }
+   }
+  ],
+  "structure_type": "simply_supported",
+  "spans_m": [
+   30
+  ],
+  "deck": {
+   "deck_width_m": 10,
+   "carriageway_width_m": 9,
+   "traffic": "two_way",
+   "design_lanes": 2,
+   "load_class": "II"
+  },
+  "girder": {
+   "type": "small_box",
+   "count_per_span": 3,
+   "concrete": "C40",
+   "material": "prestressed_concrete",
+   "E_override_MPa": null,
+   "gamma_override_kNm3": null,
+   "section": {
+    "h": 1.6,
+    "b_top": 2.4,
+    "t_tip": 0.18,
+    "haunch_len": 0.192,
+    "haunch_rise": 0.063,
+    "b_bottom": 1.0,
+    "t_bottom": 0.18,
+    "t_top": 0.18,
+    "t_web": 0.2,
+    "web_slope": 4,
+    "chamfer_w": 0.15,
+    "chamfer_h": 0.07
+   }
+  },
+  "dead_load": "girder_self_weight_only"
+ },
+ "results": {
+  "ok": true,
+  "vertical_frequencies_Hz": [
+   3.401686230590496,
+   13.485496569401402,
+   29.87557854984448
+  ],
+  "self_weight_support_reactions_kN": [
+   1332.5466374995033,
+   1332.5466374996597
+  ],
+  "self_weight_midspan_moments_kNm": [
+   9994.09978124682
+  ],
+  "self_weight_support_moments_kNm": [],
+  "lane_moments_by_section": [
+   {
+    "section": "span",
+    "index": 1,
+    "M_kNm": 6449.627466699153
+   }
+  ],
+  "lane_max_positive_moment_kNm": 6449.627466699153,
+  "lane_max_negative_moment_kNm": null
+ },
+ "last_check": [],
+ "role_log": [],
+ "log": [
+  {
+   "t": 3.278,
+   "tool": "write_instance",
+   "args": {
+    "structure_type": "simply_supported",
+    "spans_m": [
+     30
+    ],
+    "deck": {
+     "deck_width_m": 10,
+     "carriageway_width_m": 9,
+     "traffic": "two_way",
+     "design_lanes": 2,
+     "load_class": "II"
+    },
+    "girder": {
+     "type": "small_box",
+     "count_per_span": 3,
+     "concrete": "C40",
+     "material": "prestressed_concrete",
+     "E_override_MPa": null,
+     "gamma_override_kNm3": null,
+     "section": {
+      "h": 1.6,
+      "b_top": 2.4,
+      "t_tip": 0.18,
+      "haunch_len": 0.192,
+      "haunch_rise": 0.063,
+      "b_bottom": 1.0,
+      "t_bottom": 0.18,
+      "t_top": 0.18,
+      "t_web": 0.2,
+      "web_slope": 4,
+      "chamfer_w": 0.15,
+      "chamfer_h": 0.07
+     }
+    },
+    "supports": [
+     {
+      "index": 0,
+      "kind": "abutment",
+      "bearing": {
+       "family": "laminated_elastomeric",
+       "sliding": false,
+       "fixed": false,
+       "per_girder_end": 2,
+       "a_mm": 300,
+       "b_mm": 400,
+       "t1_mm": 8,
+       "n_layers": 5
+      }
+     },
+     {
+      "index": 1,
+      "kind": "abutment",
+      "bearing": {
+       "family": "laminated_elastomeric",
+       "sliding": false,
+       "fixed": false,
+       "per_girder_end": 2,
+       "a_mm": 300,
+       "b_mm": 400,
+       "t1_mm": 8,
+       "n_layers": 5
+      }
+     }
+    ],
+    "dead_load": "girder_self_weight_only"
+   },
+   "result": {
+    "ok": true,
+    "issues": [],
+    "round": 1
+   }
+  },
+  {
+   "t": 9.198,
+   "tool": "declare_decisions",
+   "args": {
+    "slots": [
+     "structure.idealization",
+     "structure.system",
+     "girder.single.A",
+     "girder.single.I",
+     "girder.A",
+     "girder.I",
+     "girder.Ec",
+     "girder.gamma",
+     "girder.w",
+     "girder.m",
+     "support.0.bearing",
+     "support.0.dofs",
+     "support.0.S",
+     "support.0.Kv",
+     "support.0.Kh",
+     "support.1.bearing",
+     "support.1.dofs",
+     "support.1.S",
+     "support.1.Kv",
+     "support.1.Kh",
+     "lane.n_lanes",
+     "lane.xi",
+     "lane.qk",
+     "lane.Pk.1",
+     "lane.mu"
+    ],
+    "replace": false
+   },
+   "result": {
+    "complete": true,
+    "declared_so_far": 25,
+    "missing": [],
+    "not_required_ignored": [],
+    "note": "declarations accumulate across calls; declare the missing slots next",
+    "constraint": "C-13/T-templates"
+   }
+  },
+  {
+   "t": 12.385,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "structure.idealization",
+    "value": "spine_beam_2d",
+    "unit": "-",
+    "evidence": [
+     "MR-01"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "structure.idealization",
+    "decision_id": "dec:structure.idealization"
+   }
+  },
+  {
+   "t": 12.385,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "structure.system",
+    "value": "simply_supported",
+    "unit": "-",
+    "evidence": [
+     "MR-05"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "structure.system",
+    "decision_id": "dec:structure.system"
+   }
+  },
+  {
+   "t": 12.385,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "girder.single.A",
+    "value": 1.13892875,
+    "unit": "m^2",
+    "evidence": [
+     "MR-02"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "girder.single.A",
+    "decision_id": "dec:girder.single.A"
+   }
+  },
+  {
+   "t": 12.385,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "girder.single.I",
+    "value": 0.3549168491421879,
+    "unit": "m^4",
+    "evidence": [
+     "MR-02"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "girder.single.I",
+    "decision_id": "dec:girder.single.I"
+   }
+  },
+  {
+   "t": 12.385,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "girder.A",
+    "value": 3.41678625,
+    "unit": "m^2",
+    "evidence": [
+     "MR-02",
+     "INPUT:girder.count_per_span"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "girder.A",
+    "decision_id": "dec:girder.A"
+   }
+  },
+  {
+   "t": 12.386,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "girder.I",
+    "value": 1.0647505474265637,
+    "unit": "m^4",
+    "evidence": [
+     "MR-02",
+     "INPUT:girder.count_per_span"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "girder.I",
+    "decision_id": "dec:girder.I"
+   }
+  },
+  {
+   "t": 12.386,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "girder.Ec",
+    "value": 32500.0,
+    "unit": "MPa",
+    "evidence": [
+     "JTG3362-3.1.5"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "girder.Ec",
+    "decision_id": "dec:girder.Ec"
+   }
+  },
+  {
+   "t": 12.386,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "girder.gamma",
+    "value": 26.0,
+    "unit": "kN/m^3",
+    "evidence": [
+     "JTGD60-4.2.1"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "girder.gamma",
+    "decision_id": "dec:girder.gamma"
+   }
+  },
+  {
+   "t": 12.386,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "girder.w",
+    "value": 88.8364425,
+    "unit": "kN/m",
+    "evidence": [
+     "MR-07"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "girder.w",
+    "decision_id": "dec:girder.w"
+   }
+  },
+  {
+   "t": 12.386,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "girder.m",
+    "value": 9.05570300764526,
+    "unit": "t/m",
+    "evidence": [
+     "MR-07"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "girder.m",
+    "decision_id": "dec:girder.m"
+   }
+  },
+  {
+   "t": 14.737,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.0.bearing",
+    "value": {
+     "type": "plain_elastomeric",
+     "count": 6
+    },
+    "unit": "-",
+    "evidence": [
+     "MR-04",
+     "INPUT:supports[0].bearing.per_girder_end",
+     "INPUT:girder.count_per_span"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.0.bearing",
+    "decision_id": "dec:support.0.bearing"
+   }
+  },
+  {
+   "t": 14.738,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.0.dofs",
+    "value": {
+     "vertical": "spring",
+     "longitudinal": "spring",
+     "rotation": "free"
+    },
+    "unit": "-",
+    "evidence": [
+     "MR-03"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.0.dofs",
+    "decision_id": "dec:support.0.dofs"
+   }
+  },
+  {
+   "t": 14.738,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.0.S",
+    "value": 0.1,
+    "unit": "-",
+    "evidence": [
+     "JTG3362-8.7-S"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": false,
+    "slot": "support.0.S",
+    "category": "code_parameter",
+    "expected_unit": "-",
+    "candidate_evidence": [
+     {
+      "id": "JTG3362-8.7-S",
+      "title": "板式橡胶支座形状系数",
+      "clause": "JTG 3362-2018 8.7",
+      "applicability": "family == 'laminated_elastomeric'",
+      "formula": {
+       "support.{k}.S": "a * b / (2 * t1 * (a + b))"
+      }
+     }
+    ],
+    "formula_result": 10.714285714285714,
+    "formula_source": "JTG3362-8.7-S",
+    "formula_inputs": {
+     "a": 0.3,
+     "b": 0.4,
+     "t1": 0.008
+    },
+    "hint": "若公式结果与你对描述的理解不符，先核对 formula_inputs 中取自实例层的数据；实例层写错时用 write_instance 修正，不要照搬公式结果",
+    "violations": [
+     {
+      "check": "value",
+      "constraint": "JTG3362-8.7-S",
+      "message": "按 JTG3362-8.7-S 计算得 10.714285714285714，所提为 0.1"
+     }
+    ],
+    "failed_checks": [
+     "value"
+    ]
+   }
+  },
+  {
+   "t": 14.738,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.1.bearing",
+    "value": {
+     "type": "plain_elastomeric",
+     "count": 6
+    },
+    "unit": "-",
+    "evidence": [
+     "MR-04",
+     "INPUT:supports[1].bearing.per_girder_end",
+     "INPUT:girder.count_per_span"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.1.bearing",
+    "decision_id": "dec:support.1.bearing"
+   }
+  },
+  {
+   "t": 14.738,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.1.dofs",
+    "value": {
+     "vertical": "spring",
+     "longitudinal": "spring",
+     "rotation": "free"
+    },
+    "unit": "-",
+    "evidence": [
+     "MR-03"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.1.dofs",
+    "decision_id": "dec:support.1.dofs"
+   }
+  },
+  {
+   "t": 14.738,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.1.S",
+    "value": 0.1,
+    "unit": "-",
+    "evidence": [
+     "JTG3362-8.7-S"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": false,
+    "slot": "support.1.S",
+    "category": "code_parameter",
+    "expected_unit": "-",
+    "candidate_evidence": [
+     {
+      "id": "JTG3362-8.7-S",
+      "title": "板式橡胶支座形状系数",
+      "clause": "JTG 3362-2018 8.7",
+      "applicability": "family == 'laminated_elastomeric'",
+      "formula": {
+       "support.{k}.S": "a * b / (2 * t1 * (a + b))"
+      }
+     }
+    ],
+    "formula_result": 10.714285714285714,
+    "formula_source": "JTG3362-8.7-S",
+    "formula_inputs": {
+     "a": 0.3,
+     "b": 0.4,
+     "t1": 0.008
+    },
+    "hint": "若公式结果与你对描述的理解不符，先核对 formula_inputs 中取自实例层的数据；实例层写错时用 write_instance 修正，不要照搬公式结果",
+    "violations": [
+     {
+      "check": "value",
+      "constraint": "JTG3362-8.7-S",
+      "message": "按 JTG3362-8.7-S 计算得 10.714285714285714，所提为 0.1"
+     }
+    ],
+    "failed_checks": [
+     "value"
+    ]
+   }
+  },
+  {
+   "t": 16.608,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.0.S",
+    "value": 10.714285714285714,
+    "unit": "-",
+    "evidence": [
+     "JTG3362-8.7-S"
+    ],
+    "rationale": "",
+    "attempt": 2
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.0.S",
+    "decision_id": "dec:support.0.S"
+   }
+  },
+  {
+   "t": 16.609,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.1.S",
+    "value": 10.714285714285714,
+    "unit": "-",
+    "evidence": [
+     "JTG3362-8.7-S"
+    ],
+    "rationale": "",
+    "attempt": 2
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.1.S",
+    "decision_id": "dec:support.1.S"
+   }
+  },
+  {
+   "t": 16.609,
+   "tool": "execute_formula",
+   "args": {
+    "node_id": "JTG3362-8.7-Kv",
+    "slot": "support.0.Kv"
+   },
+   "result": {
+    "value": 8518013.631937683,
+    "inputs": {
+     "Eb": 2000.0,
+     "Ge": 1.0,
+     "a": 0.3,
+     "b": 0.4,
+     "count": 6,
+     "t1": 0.008,
+     "te": 0.04
+    },
+    "applicable_to_this_bridge": true,
+    "applicability": "family == 'laminated_elastomeric'"
+   }
+  },
+  {
+   "t": 16.609,
+   "tool": "execute_formula",
+   "args": {
+    "node_id": "JTG3362-8.7-Kh",
+    "slot": "support.0.Kh"
+   },
+   "result": {
+    "value": 18000.0,
+    "inputs": {
+     "Ge": 1.0,
+     "a": 0.3,
+     "b": 0.4,
+     "count": 6,
+     "te": 0.04
+    },
+    "applicable_to_this_bridge": true,
+    "applicability": "family == 'laminated_elastomeric' and not sliding"
+   }
+  },
+  {
+   "t": 19.546,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.0.Kv",
+    "value": 8518013.631937683,
+    "unit": "kN/m",
+    "evidence": [
+     "JTG3362-8.7-Kv"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.0.Kv",
+    "decision_id": "dec:support.0.Kv"
+   }
+  },
+  {
+   "t": 19.547,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.0.Kh",
+    "value": 18000.0,
+    "unit": "kN/m",
+    "evidence": [
+     "JTG3362-8.7-Kh"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.0.Kh",
+    "decision_id": "dec:support.0.Kh"
+   }
+  },
+  {
+   "t": 19.547,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.1.Kv",
+    "value": 8518013.631937683,
+    "unit": "kN/m",
+    "evidence": [
+     "JTG3362-8.7-Kv"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.1.Kv",
+    "decision_id": "dec:support.1.Kv"
+   }
+  },
+  {
+   "t": 19.547,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.1.Kh",
+    "value": 18000.0,
+    "unit": "kN/m",
+    "evidence": [
+     "JTG3362-8.7-Kh"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.1.Kh",
+    "decision_id": "dec:support.1.Kh"
+   }
+  },
+  {
+   "t": 19.548,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "lane.n_lanes",
+    "value": 2,
+    "unit": "-",
+    "evidence": [
+     "JTGD60-4.3.1-lanes",
+     "INPUT:deck.carriageway_width_m"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "lane.n_lanes",
+    "decision_id": "dec:lane.n_lanes"
+   }
+  },
+  {
+   "t": 19.548,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "lane.xi",
+    "value": 1.0,
+    "unit": "-",
+    "evidence": [
+     "JTGD60-4.3.1-xi"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "lane.xi",
+    "decision_id": "dec:lane.xi"
+   }
+  },
+  {
+   "t": 19.548,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "lane.qk",
+    "value": 7.875,
+    "unit": "kN/m",
+    "evidence": [
+     "JTGD60-4.3.1-qk"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "lane.qk",
+    "decision_id": "dec:lane.qk"
+   }
+  },
+  {
+   "t": 19.548,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "lane.Pk.1",
+    "value": 240.0,
+    "unit": "kN",
+    "evidence": [
+     "JTGD60-4.3.1-Pk",
+     "INPUT:spans_m[0]"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "lane.Pk.1",
+    "decision_id": "dec:lane.Pk.1"
+   }
+  },
+  {
+   "t": 20.647,
+   "tool": "run_modal_analysis",
+   "args": {},
+   "result": {
+    "ok": true,
+    "vertical_frequencies_Hz": [
+     3.401686230590496,
+     13.485496569401402,
+     29.87557854984448
+    ],
+    "fact": {
+     "f1": 3.401686230590496
+    }
+   }
+  },
+  {
+   "t": 21.508,
+   "tool": "execute_formula",
+   "args": {
+    "node_id": "JTGD60-4.3.2",
+    "slot": "lane.mu"
+   },
+   "result": {
+    "value": 0.20062873143935175,
+    "inputs": {
+     "f1": 3.401686230590496
+    },
+    "applicable_to_this_bridge": true,
+    "applicability": "has_f1"
+   }
+  },
+  {
+   "t": 22.714,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "lane.mu",
+    "value": 0.20062873143935175,
+    "unit": "-",
+    "evidence": [
+     "JTGD60-4.3.2",
+     "fact:f1"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "lane.mu",
+    "decision_id": "dec:lane.mu"
+   }
+  },
+  {
+   "t": 23.824,
+   "tool": "generate_model",
+   "args": {},
+   "result": {
+    "ok": true,
+    "script": "${PROJECT_ROOT}/runs_ablation_single/A3/A08_r1/A08_model.py",
+    "results": {
+     "ok": true,
+     "vertical_frequencies_Hz": [
+      3.401686230590496,
+      13.485496569401402,
+      29.87557854984448
+     ],
+     "self_weight_support_reactions_kN": [
+      1332.5466374995033,
+      1332.5466374996597
+     ],
+     "self_weight_midspan_moments_kNm": [
+      9994.09978124682
+     ],
+     "self_weight_support_moments_kNm": [],
+     "lane_moments_by_section": [
+      {
+       "section": "span",
+       "index": 1,
+       "M_kNm": 6449.627466699153
+      }
+     ],
+     "lane_max_positive_moment_kNm": 6449.627466699153,
+     "lane_max_negative_moment_kNm": null
+    }
+   }
+  },
+  {
+   "t": 26.568,
+   "tool": "finish",
+   "args": {
+    "summary": "Model built and verified successfully (all L1 topology, L2 code and L3 mechanics checks pass).\n\n**Structure**: Single simply-supported span, 30 m bearing-centre-to-centre; spine-beam 2D idealization; simply_supported system.\n\n**Girders**: 3 precast prestressed small-box girders per span, C40. Single mid-girder section integrated: A = 1.1389 m², I = 0.35492 m⁴ (yc = 0.964 m); combined 3-girder spine: A = 3.41679 m², I = 1.06475 m⁴. Ec = 32 500 MPa (JTG 3362-2018 3.1.5), γ = 26.0 kN/m³ (JTG D60-2015 4.2.1). Self-weight only: w = 88.836 kN/m, m = 9.0557 t/m.\n\n**Bearings**: Two abutments, plain laminated elastomeric, 2 per girder end × 3 girders = 6 per line. 300×400 mm, t1 = 8 mm, 5 layers (te = 40 mm), Ge default 1.0 MPa. Shape factor S = 10.714; Kv = 8.518×10⁶ kN/m (longitudinal spring), Kh = 18 000 kN/m; rotation free.\n\n**Live load**: Highway Class II, two-way, carriageway 9 m → n_lanes = 2, ξ = 1.0, qk = 7.875 kN/m, Pk(span 1) = 240 kN. Modal analysis gives f1 = 3.402 Hz, so μ = 0.1767·ln(f1) − 0.0157 = 0.2006 (JTG D60-2015 4.3.2).\n\n**Key results**: Vertical frequencies 3.402 / 13.485 / 29.876 Hz; self-weight support reactions 1332.5 kN each; self-weight midspan moment 9994.1 kN·m; Class II lane-load max positive moment 6449.6 kN·m.\n\nNo unresolved issues."
+   },
+   "result": {
+    "ok": true
+   }
+  }
+ ]
+}

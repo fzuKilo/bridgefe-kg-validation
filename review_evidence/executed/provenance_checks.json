@@ -1,0 +1,962 @@
+{
+  "correct": {
+    "accepted": true,
+    "slot": "support.2.Kh",
+    "decision_id": "dec:support.2.Kh"
+  },
+  "wrong_support": {
+    "accepted": false,
+    "slot": "support.2.Kh",
+    "category": "code_parameter",
+    "expected_unit": "kN/m",
+    "candidate_evidence": [
+      {
+        "id": "MR-03",
+        "title": "板式橡胶支座的模拟",
+        "applicability": "family == 'laminated_elastomeric'",
+        "text": "板式橡胶支座以零长度弹簧模拟：竖向刚度 Kv；普通板式支座纵向取剪切刚度 Kh，四氟滑板支座纵向自由（Kh = 0）；转动自由。支座置于主梁轴线标高。",
+        "formula": {
+          "support.{k}.dofs": "{'vertical': 'spring', 'longitudinal': 'free' if sliding else 'spring', 'rotation': 'free'}",
+          "support.{k}.Kh": "0.0"
+        }
+      },
+      {
+        "id": "JTG3362-8.7-Kh",
+        "title": "板式橡胶支座剪切刚度",
+        "clause": "JTG 3362-2018 8.7",
+        "applicability": "family == 'laminated_elastomeric' and not sliding",
+        "formula": {
+          "support.{k}.Kh": "count * Ge * a * b / te * 1000"
+        }
+      }
+    ],
+    "formula_source": "JTG3362-8.7-Kh",
+    "valid_evidence": {
+      "primary_applicable": [
+        "JTG3362-8.7-Kh"
+      ],
+      "supporting": [
+        "MR-04"
+      ],
+      "input_paths": [
+        "INPUT:supports[2].bearing.family",
+        "INPUT:supports[2].bearing.sliding",
+        "INPUT:supports[2].bearing.fixed",
+        "INPUT:supports[2].bearing.per_line",
+        "INPUT:supports[2].bearing.a_mm",
+        "INPUT:supports[2].bearing.b_mm",
+        "INPUT:supports[2].bearing.n_layers",
+        "INPUT:supports[2].bearing.t1_mm",
+        "INPUT:supports[2].bearing.Ge_MPa",
+        "INPUT:girder.count_per_span"
+      ],
+      "instance_nodes": [
+        "inst:bearing:2"
+      ],
+      "rule": "至少引用一条主依据（题目给定覆盖值时引用 MR-00 与对应 INPUT 路径）；其余为可选辅助依据，须写成此处列出的形式"
+    },
+    "formula_result": 13090.909090909092,
+    "formula_inputs": {
+      "Ge": 1.2,
+      "a": 0.6,
+      "b": 0.7,
+      "count": 2,
+      "te": 0.077
+    },
+    "hint": "若公式结果与你对描述的理解不符，先核对 formula_inputs 中取自实例层的数据；实例层写错时用 write_instance 修正，不要照搬公式结果",
+    "violations": [
+      {
+        "check": "applicability",
+        "constraint": "I2",
+        "message": "输入字段不属于当前决策上下文：INPUT:supports[1].bearing.Ge_MPa"
+      },
+      {
+        "check": "applicability",
+        "constraint": "MR-00",
+        "message": "题目给定了支座剪变模量 Ge，应按该值计算并引用 MR-00 或 INPUT:路径"
+      }
+    ],
+    "failed_checks": [
+      "applicability"
+    ]
+  },
+  "missing_override": {
+    "accepted": false,
+    "slot": "support.2.Kh",
+    "category": "code_parameter",
+    "expected_unit": "kN/m",
+    "candidate_evidence": [
+      {
+        "id": "MR-03",
+        "title": "板式橡胶支座的模拟",
+        "applicability": "family == 'laminated_elastomeric'",
+        "text": "板式橡胶支座以零长度弹簧模拟：竖向刚度 Kv；普通板式支座纵向取剪切刚度 Kh，四氟滑板支座纵向自由（Kh = 0）；转动自由。支座置于主梁轴线标高。",
+        "formula": {
+          "support.{k}.dofs": "{'vertical': 'spring', 'longitudinal': 'free' if sliding else 'spring', 'rotation': 'free'}",
+          "support.{k}.Kh": "0.0"
+        }
+      },
+      {
+        "id": "JTG3362-8.7-Kh",
+        "title": "板式橡胶支座剪切刚度",
+        "clause": "JTG 3362-2018 8.7",
+        "applicability": "family == 'laminated_elastomeric' and not sliding",
+        "formula": {
+          "support.{k}.Kh": "count * Ge * a * b / te * 1000"
+        }
+      }
+    ],
+    "formula_source": "JTG3362-8.7-Kh",
+    "valid_evidence": {
+      "primary_applicable": [
+        "JTG3362-8.7-Kh"
+      ],
+      "supporting": [
+        "MR-04"
+      ],
+      "input_paths": [
+        "INPUT:supports[2].bearing.family",
+        "INPUT:supports[2].bearing.sliding",
+        "INPUT:supports[2].bearing.fixed",
+        "INPUT:supports[2].bearing.per_line",
+        "INPUT:supports[2].bearing.a_mm",
+        "INPUT:supports[2].bearing.b_mm",
+        "INPUT:supports[2].bearing.n_layers",
+        "INPUT:supports[2].bearing.t1_mm",
+        "INPUT:supports[2].bearing.Ge_MPa",
+        "INPUT:girder.count_per_span"
+      ],
+      "instance_nodes": [
+        "inst:bearing:2"
+      ],
+      "rule": "至少引用一条主依据（题目给定覆盖值时引用 MR-00 与对应 INPUT 路径）；其余为可选辅助依据，须写成此处列出的形式"
+    },
+    "formula_result": 13090.909090909092,
+    "formula_inputs": {
+      "Ge": 1.2,
+      "a": 0.6,
+      "b": 0.7,
+      "count": 2,
+      "te": 0.077
+    },
+    "hint": "若公式结果与你对描述的理解不符，先核对 formula_inputs 中取自实例层的数据；实例层写错时用 write_instance 修正，不要照搬公式结果",
+    "violations": [
+      {
+        "check": "applicability",
+        "constraint": "MR-00",
+        "message": "题目给定了支座剪变模量 Ge，应按该值计算并引用 MR-00 或 INPUT:路径"
+      }
+    ],
+    "failed_checks": [
+      "applicability"
+    ]
+  },
+  "missing_formula": {
+    "accepted": false,
+    "slot": "support.2.Kh",
+    "category": "code_parameter",
+    "expected_unit": "kN/m",
+    "candidate_evidence": [
+      {
+        "id": "MR-03",
+        "title": "板式橡胶支座的模拟",
+        "applicability": "family == 'laminated_elastomeric'",
+        "text": "板式橡胶支座以零长度弹簧模拟：竖向刚度 Kv；普通板式支座纵向取剪切刚度 Kh，四氟滑板支座纵向自由（Kh = 0）；转动自由。支座置于主梁轴线标高。",
+        "formula": {
+          "support.{k}.dofs": "{'vertical': 'spring', 'longitudinal': 'free' if sliding else 'spring', 'rotation': 'free'}",
+          "support.{k}.Kh": "0.0"
+        }
+      },
+      {
+        "id": "JTG3362-8.7-Kh",
+        "title": "板式橡胶支座剪切刚度",
+        "clause": "JTG 3362-2018 8.7",
+        "applicability": "family == 'laminated_elastomeric' and not sliding",
+        "formula": {
+          "support.{k}.Kh": "count * Ge * a * b / te * 1000"
+        }
+      }
+    ],
+    "formula_source": "JTG3362-8.7-Kh",
+    "valid_evidence": {
+      "primary_applicable": [
+        "JTG3362-8.7-Kh"
+      ],
+      "supporting": [
+        "MR-04"
+      ],
+      "input_paths": [
+        "INPUT:supports[2].bearing.family",
+        "INPUT:supports[2].bearing.sliding",
+        "INPUT:supports[2].bearing.fixed",
+        "INPUT:supports[2].bearing.per_line",
+        "INPUT:supports[2].bearing.a_mm",
+        "INPUT:supports[2].bearing.b_mm",
+        "INPUT:supports[2].bearing.n_layers",
+        "INPUT:supports[2].bearing.t1_mm",
+        "INPUT:supports[2].bearing.Ge_MPa",
+        "INPUT:girder.count_per_span"
+      ],
+      "instance_nodes": [
+        "inst:bearing:2"
+      ],
+      "rule": "至少引用一条主依据（题目给定覆盖值时引用 MR-00 与对应 INPUT 路径）；其余为可选辅助依据，须写成此处列出的形式"
+    },
+    "formula_result": 13090.909090909092,
+    "formula_inputs": {
+      "Ge": 1.2,
+      "a": 0.6,
+      "b": 0.7,
+      "count": 2,
+      "te": 0.077
+    },
+    "hint": "若公式结果与你对描述的理解不符，先核对 formula_inputs 中取自实例层的数据；实例层写错时用 write_instance 修正，不要照搬公式结果",
+    "violations": [
+      {
+        "check": "applicability",
+        "constraint": "I2",
+        "message": "须引用实际控制计算来源：JTG3362-8.7-Kh"
+      },
+      {
+        "check": "applicability",
+        "constraint": "I2",
+        "message": "未引用对本桥适用的主依据，应引用：['JTG3362-8.7-Kh']"
+      }
+    ],
+    "failed_checks": [
+      "applicability"
+    ]
+  },
+  "whole_override_valid": {
+    "accepted": true,
+    "slot": "girder.Ec",
+    "decision_id": "dec:girder.Ec"
+  },
+  "whole_override_missing_field": {
+    "accepted": false,
+    "slot": "girder.Ec",
+    "category": "code_parameter",
+    "expected_unit": "MPa",
+    "candidate_evidence": [
+      {
+        "id": "MR-00",
+        "title": "输入优先",
+        "applicability": "has_override",
+        "text": "题目明确给定的参数（实测弹性模量、业主指定重度、厂家剪变模量等）优先于规范默认值。",
+        "formula": {
+          "girder.Ec": "override",
+          "girder.gamma": "override"
+        }
+      },
+      {
+        "id": "JTG3362-3.1.5",
+        "title": "混凝土弹性模量",
+        "clause": "JTG 3362-2018 3.1.5 表 3.1.5",
+        "applicability": "grade in EC_TABLE and not has_override",
+        "formula": {
+          "girder.Ec": "EC_TABLE[grade]",
+          "pier.{k}.Ec": "EC_TABLE[grade]"
+        }
+      }
+    ],
+    "formula_source": "MR-00",
+    "valid_evidence": {
+      "primary_applicable": [
+        "MR-00"
+      ],
+      "supporting": [],
+      "input_paths": [
+        "INPUT:girder.material",
+        "INPUT:girder.E_override_MPa",
+        "INPUT:girder.concrete",
+        "INPUT:girder.type",
+        "INPUT:girder.section",
+        "INPUT:girder.count_per_span"
+      ],
+      "instance_nodes": [
+        "inst:girder"
+      ],
+      "rule": "至少引用一条主依据（题目给定覆盖值时引用 MR-00 与对应 INPUT 路径）；其余为可选辅助依据，须写成此处列出的形式"
+    },
+    "formula_result": 31000,
+    "formula_inputs": {
+      "override": 31000
+    },
+    "hint": "若公式结果与你对描述的理解不符，先核对 formula_inputs 中取自实例层的数据；实例层写错时用 write_instance 修正，不要照搬公式结果",
+    "violations": [
+      {
+        "check": "applicability",
+        "constraint": "MR-00",
+        "message": "题目给定了该参数，应以输入值为准，引用 MR-00 及对应的 INPUT:路径"
+      }
+    ],
+    "failed_checks": [
+      "applicability"
+    ]
+  },
+  "whole_override_wrong_field": {
+    "accepted": false,
+    "slot": "girder.Ec",
+    "category": "code_parameter",
+    "expected_unit": "MPa",
+    "candidate_evidence": [
+      {
+        "id": "MR-00",
+        "title": "输入优先",
+        "applicability": "has_override",
+        "text": "题目明确给定的参数（实测弹性模量、业主指定重度、厂家剪变模量等）优先于规范默认值。",
+        "formula": {
+          "girder.Ec": "override",
+          "girder.gamma": "override"
+        }
+      },
+      {
+        "id": "JTG3362-3.1.5",
+        "title": "混凝土弹性模量",
+        "clause": "JTG 3362-2018 3.1.5 表 3.1.5",
+        "applicability": "grade in EC_TABLE and not has_override",
+        "formula": {
+          "girder.Ec": "EC_TABLE[grade]",
+          "pier.{k}.Ec": "EC_TABLE[grade]"
+        }
+      }
+    ],
+    "formula_source": "MR-00",
+    "valid_evidence": {
+      "primary_applicable": [
+        "MR-00"
+      ],
+      "supporting": [],
+      "input_paths": [
+        "INPUT:girder.material",
+        "INPUT:girder.E_override_MPa",
+        "INPUT:girder.concrete",
+        "INPUT:girder.type",
+        "INPUT:girder.section",
+        "INPUT:girder.count_per_span"
+      ],
+      "instance_nodes": [
+        "inst:girder"
+      ],
+      "rule": "至少引用一条主依据（题目给定覆盖值时引用 MR-00 与对应 INPUT 路径）；其余为可选辅助依据，须写成此处列出的形式"
+    },
+    "formula_result": 31000,
+    "formula_inputs": {
+      "override": 31000
+    },
+    "hint": "若公式结果与你对描述的理解不符，先核对 formula_inputs 中取自实例层的数据；实例层写错时用 write_instance 修正，不要照搬公式结果",
+    "violations": [
+      {
+        "check": "applicability",
+        "constraint": "MR-00",
+        "message": "题目给定了该参数，应以输入值为准，引用 MR-00 及对应的 INPUT:路径"
+      }
+    ],
+    "failed_checks": [
+      "applicability"
+    ]
+  },
+  "no_applicable_rule": {
+    "accepted": false,
+    "slot": "support.2.Kh",
+    "category": "code_parameter",
+    "expected_unit": "kN/m",
+    "candidate_evidence": [
+      {
+        "id": "MR-03",
+        "title": "板式橡胶支座的模拟",
+        "applicability": "family == 'laminated_elastomeric'",
+        "text": "板式橡胶支座以零长度弹簧模拟：竖向刚度 Kv；普通板式支座纵向取剪切刚度 Kh，四氟滑板支座纵向自由（Kh = 0）；转动自由。支座置于主梁轴线标高。",
+        "formula": {
+          "support.{k}.dofs": "{'vertical': 'spring', 'longitudinal': 'free' if sliding else 'spring', 'rotation': 'free'}",
+          "support.{k}.Kh": "0.0"
+        }
+      },
+      {
+        "id": "JTG3362-8.7-Kh",
+        "title": "板式橡胶支座剪切刚度",
+        "clause": "JTG 3362-2018 8.7",
+        "applicability": "family == 'laminated_elastomeric' and not sliding",
+        "formula": {
+          "support.{k}.Kh": "count * Ge * a * b / te * 1000"
+        }
+      }
+    ],
+    "valid_evidence": {
+      "primary_applicable": [],
+      "supporting": [
+        "MR-04"
+      ],
+      "input_paths": [
+        "INPUT:supports[2].bearing.family",
+        "INPUT:supports[2].bearing.sliding",
+        "INPUT:supports[2].bearing.fixed",
+        "INPUT:supports[2].bearing.per_line",
+        "INPUT:supports[2].bearing.a_mm",
+        "INPUT:supports[2].bearing.b_mm",
+        "INPUT:supports[2].bearing.n_layers",
+        "INPUT:supports[2].bearing.t1_mm",
+        "INPUT:supports[2].bearing.Ge_MPa",
+        "INPUT:girder.count_per_span"
+      ],
+      "instance_nodes": [
+        "inst:bearing:2"
+      ],
+      "rule": "至少引用一条主依据（题目给定覆盖值时引用 MR-00 与对应 INPUT 路径）；其余为可选辅助依据，须写成此处列出的形式"
+    },
+    "violations": [
+      {
+        "check": "applicability",
+        "constraint": "I2",
+        "message": "无法唯一选择控制来源：图谱中没有对本桥适用的规则或条文约束该决策"
+      },
+      {
+        "check": "applicability",
+        "constraint": "JTG3362-8.7-Kh",
+        "message": "JTG3362-8.7-Kh 的适用条件对本桥不成立：family == 'laminated_elastomeric' and not sliding"
+      },
+      {
+        "check": "value",
+        "constraint": "I2",
+        "message": "无法复算：图谱中没有对本桥适用的规则或条文约束该决策"
+      }
+    ],
+    "failed_checks": [
+      "applicability",
+      "value"
+    ]
+  },
+  "conflict": "同优先级主依据冲突：JTG3362-8.7-Kh, JTG3362-8.7-Kh-conflict",
+  "withdrawn": {
+    "ok": true,
+    "issues": [],
+    "round": 2,
+    "invalidated_decisions": [
+      "support.2.Kv",
+      "support.2.Kh",
+      "lane.mu"
+    ]
+  },
+  "formula_record": {
+    "id": "dec:support.2.Kh",
+    "slot": "support.2.Kh",
+    "value": 13090.909090909092,
+    "unit": "kN/m",
+    "evidence": [
+      "JTG3362-8.7-Kh",
+      "INPUT:supports[2].bearing.Ge_MPa"
+    ],
+    "active": true,
+    "provenance_verified": true,
+    "formula_source": "JTG3362-8.7-Kh",
+    "formula_inputs": {
+      "Ge": 1.2,
+      "a": 0.6,
+      "b": 0.7,
+      "count": 2,
+      "te": 0.077
+    },
+    "input_citations": [
+      "INPUT:supports[2].bearing.Ge_MPa"
+    ],
+    "instance_snapshot": "7e021a6b6c0885b43031429be690149981e3c04959373d6f685468973a8895a9"
+  },
+  "checks_passed": true,
+  "benchmark_checks": [
+    {
+      "problem": "A01",
+      "generated": true,
+      "reference_correct": true,
+      "metrics": {
+        "proposals": 25,
+        "slots_proposed": 25,
+        "first_proposal_violation_rate": 0.0,
+        "violations_by_check": {},
+        "instance_rounds": 1,
+        "repair_rounds": 0,
+        "model_passed": true,
+        "elapsed_s": 0.21
+      }
+    },
+    {
+      "problem": "A02",
+      "generated": true,
+      "reference_correct": true,
+      "metrics": {
+        "proposals": 25,
+        "slots_proposed": 25,
+        "first_proposal_violation_rate": 0.0,
+        "violations_by_check": {},
+        "instance_rounds": 1,
+        "repair_rounds": 0,
+        "model_passed": true,
+        "elapsed_s": 0.23
+      }
+    },
+    {
+      "problem": "A03",
+      "generated": true,
+      "reference_correct": true,
+      "metrics": {
+        "proposals": 25,
+        "slots_proposed": 25,
+        "first_proposal_violation_rate": 0.0,
+        "violations_by_check": {},
+        "instance_rounds": 1,
+        "repair_rounds": 0,
+        "model_passed": true,
+        "elapsed_s": 0.21
+      }
+    },
+    {
+      "problem": "A04",
+      "generated": true,
+      "reference_correct": true,
+      "metrics": {
+        "proposals": 25,
+        "slots_proposed": 25,
+        "first_proposal_violation_rate": 0.0,
+        "violations_by_check": {},
+        "instance_rounds": 1,
+        "repair_rounds": 0,
+        "model_passed": true,
+        "elapsed_s": 0.19
+      }
+    },
+    {
+      "problem": "A05",
+      "generated": true,
+      "reference_correct": true,
+      "metrics": {
+        "proposals": 25,
+        "slots_proposed": 25,
+        "first_proposal_violation_rate": 0.0,
+        "violations_by_check": {},
+        "instance_rounds": 1,
+        "repair_rounds": 0,
+        "model_passed": true,
+        "elapsed_s": 0.2
+      }
+    },
+    {
+      "problem": "A06",
+      "generated": true,
+      "reference_correct": true,
+      "metrics": {
+        "proposals": 19,
+        "slots_proposed": 19,
+        "first_proposal_violation_rate": 0.0,
+        "violations_by_check": {},
+        "instance_rounds": 1,
+        "repair_rounds": 0,
+        "model_passed": true,
+        "elapsed_s": 0.21
+      }
+    },
+    {
+      "problem": "A07",
+      "generated": true,
+      "reference_correct": true,
+      "metrics": {
+        "proposals": 19,
+        "slots_proposed": 19,
+        "first_proposal_violation_rate": 0.0,
+        "violations_by_check": {},
+        "instance_rounds": 1,
+        "repair_rounds": 0,
+        "model_passed": true,
+        "elapsed_s": 0.23
+      }
+    },
+    {
+      "problem": "A08",
+      "generated": true,
+      "reference_correct": true,
+      "metrics": {
+        "proposals": 25,
+        "slots_proposed": 25,
+        "first_proposal_violation_rate": 0.0,
+        "violations_by_check": {},
+        "instance_rounds": 1,
+        "repair_rounds": 0,
+        "model_passed": true,
+        "elapsed_s": 0.2
+      }
+    },
+    {
+      "problem": "A09",
+      "generated": true,
+      "reference_correct": true,
+      "metrics": {
+        "proposals": 25,
+        "slots_proposed": 25,
+        "first_proposal_violation_rate": 0.0,
+        "violations_by_check": {},
+        "instance_rounds": 1,
+        "repair_rounds": 0,
+        "model_passed": true,
+        "elapsed_s": 0.23
+      }
+    },
+    {
+      "problem": "A10",
+      "generated": true,
+      "reference_correct": true,
+      "metrics": {
+        "proposals": 25,
+        "slots_proposed": 25,
+        "first_proposal_violation_rate": 0.0,
+        "violations_by_check": {},
+        "instance_rounds": 1,
+        "repair_rounds": 0,
+        "model_passed": true,
+        "elapsed_s": 0.2
+      }
+    },
+    {
+      "problem": "B01",
+      "generated": true,
+      "reference_correct": true,
+      "metrics": {
+        "proposals": 37,
+        "slots_proposed": 37,
+        "first_proposal_violation_rate": 0.0,
+        "violations_by_check": {},
+        "instance_rounds": 1,
+        "repair_rounds": 0,
+        "model_passed": true,
+        "elapsed_s": 0.27
+      }
+    },
+    {
+      "problem": "B02",
+      "generated": true,
+      "reference_correct": true,
+      "metrics": {
+        "proposals": 37,
+        "slots_proposed": 37,
+        "first_proposal_violation_rate": 0.0,
+        "violations_by_check": {},
+        "instance_rounds": 1,
+        "repair_rounds": 0,
+        "model_passed": true,
+        "elapsed_s": 0.31
+      }
+    },
+    {
+      "problem": "B03",
+      "generated": true,
+      "reference_correct": true,
+      "metrics": {
+        "proposals": 37,
+        "slots_proposed": 37,
+        "first_proposal_violation_rate": 0.0,
+        "violations_by_check": {},
+        "instance_rounds": 1,
+        "repair_rounds": 0,
+        "model_passed": true,
+        "elapsed_s": 0.29
+      }
+    },
+    {
+      "problem": "B04",
+      "generated": true,
+      "reference_correct": true,
+      "metrics": {
+        "proposals": 43,
+        "slots_proposed": 43,
+        "first_proposal_violation_rate": 0.0,
+        "violations_by_check": {},
+        "instance_rounds": 1,
+        "repair_rounds": 0,
+        "model_passed": true,
+        "elapsed_s": 0.35
+      }
+    },
+    {
+      "problem": "B05",
+      "generated": true,
+      "reference_correct": true,
+      "metrics": {
+        "proposals": 43,
+        "slots_proposed": 43,
+        "first_proposal_violation_rate": 0.0,
+        "violations_by_check": {},
+        "instance_rounds": 1,
+        "repair_rounds": 0,
+        "model_passed": true,
+        "elapsed_s": 0.4
+      }
+    },
+    {
+      "problem": "B06",
+      "generated": true,
+      "reference_correct": true,
+      "metrics": {
+        "proposals": 43,
+        "slots_proposed": 43,
+        "first_proposal_violation_rate": 0.0,
+        "violations_by_check": {},
+        "instance_rounds": 1,
+        "repair_rounds": 0,
+        "model_passed": true,
+        "elapsed_s": 0.37
+      }
+    },
+    {
+      "problem": "B07",
+      "generated": true,
+      "reference_correct": true,
+      "metrics": {
+        "proposals": 43,
+        "slots_proposed": 43,
+        "first_proposal_violation_rate": 0.0,
+        "violations_by_check": {},
+        "instance_rounds": 1,
+        "repair_rounds": 0,
+        "model_passed": true,
+        "elapsed_s": 0.34
+      }
+    },
+    {
+      "problem": "B08",
+      "generated": true,
+      "reference_correct": true,
+      "metrics": {
+        "proposals": 49,
+        "slots_proposed": 49,
+        "first_proposal_violation_rate": 0.0,
+        "violations_by_check": {},
+        "instance_rounds": 1,
+        "repair_rounds": 0,
+        "model_passed": true,
+        "elapsed_s": 0.41
+      }
+    },
+    {
+      "problem": "B09",
+      "generated": true,
+      "reference_correct": true,
+      "metrics": {
+        "proposals": 49,
+        "slots_proposed": 49,
+        "first_proposal_violation_rate": 0.0,
+        "violations_by_check": {},
+        "instance_rounds": 1,
+        "repair_rounds": 0,
+        "model_passed": true,
+        "elapsed_s": 0.39
+      }
+    },
+    {
+      "problem": "B10",
+      "generated": true,
+      "reference_correct": true,
+      "metrics": {
+        "proposals": 49,
+        "slots_proposed": 49,
+        "first_proposal_violation_rate": 0.0,
+        "violations_by_check": {},
+        "instance_rounds": 1,
+        "repair_rounds": 0,
+        "model_passed": true,
+        "elapsed_s": 0.4
+      }
+    },
+    {
+      "problem": "C01",
+      "generated": true,
+      "reference_correct": true,
+      "metrics": {
+        "proposals": 43,
+        "slots_proposed": 43,
+        "first_proposal_violation_rate": 0.0,
+        "violations_by_check": {},
+        "instance_rounds": 1,
+        "repair_rounds": 0,
+        "model_passed": true,
+        "elapsed_s": 0.35
+      }
+    },
+    {
+      "problem": "C02",
+      "generated": true,
+      "reference_correct": true,
+      "metrics": {
+        "proposals": 43,
+        "slots_proposed": 43,
+        "first_proposal_violation_rate": 0.0,
+        "violations_by_check": {},
+        "instance_rounds": 1,
+        "repair_rounds": 0,
+        "model_passed": true,
+        "elapsed_s": 0.31
+      }
+    },
+    {
+      "problem": "C03",
+      "generated": true,
+      "reference_correct": true,
+      "metrics": {
+        "proposals": 43,
+        "slots_proposed": 43,
+        "first_proposal_violation_rate": 0.0,
+        "violations_by_check": {},
+        "instance_rounds": 1,
+        "repair_rounds": 0,
+        "model_passed": true,
+        "elapsed_s": 0.3
+      }
+    },
+    {
+      "problem": "C04",
+      "generated": true,
+      "reference_correct": true,
+      "metrics": {
+        "proposals": 43,
+        "slots_proposed": 43,
+        "first_proposal_violation_rate": 0.0,
+        "violations_by_check": {},
+        "instance_rounds": 1,
+        "repair_rounds": 0,
+        "model_passed": true,
+        "elapsed_s": 0.29
+      }
+    },
+    {
+      "problem": "C05",
+      "generated": true,
+      "reference_correct": true,
+      "metrics": {
+        "proposals": 43,
+        "slots_proposed": 43,
+        "first_proposal_violation_rate": 0.0,
+        "violations_by_check": {},
+        "instance_rounds": 1,
+        "repair_rounds": 0,
+        "model_passed": true,
+        "elapsed_s": 0.3
+      }
+    },
+    {
+      "problem": "C06",
+      "generated": true,
+      "reference_correct": true,
+      "metrics": {
+        "proposals": 53,
+        "slots_proposed": 53,
+        "first_proposal_violation_rate": 0.0,
+        "violations_by_check": {},
+        "instance_rounds": 1,
+        "repair_rounds": 0,
+        "model_passed": true,
+        "elapsed_s": 0.37
+      }
+    },
+    {
+      "problem": "C07",
+      "generated": true,
+      "reference_correct": true,
+      "metrics": {
+        "proposals": 53,
+        "slots_proposed": 53,
+        "first_proposal_violation_rate": 0.0,
+        "violations_by_check": {},
+        "instance_rounds": 1,
+        "repair_rounds": 0,
+        "model_passed": true,
+        "elapsed_s": 0.37
+      }
+    },
+    {
+      "problem": "C08",
+      "generated": true,
+      "reference_correct": true,
+      "metrics": {
+        "proposals": 53,
+        "slots_proposed": 53,
+        "first_proposal_violation_rate": 0.0,
+        "violations_by_check": {},
+        "instance_rounds": 1,
+        "repair_rounds": 0,
+        "model_passed": true,
+        "elapsed_s": 0.37
+      }
+    },
+    {
+      "problem": "C09",
+      "generated": true,
+      "reference_correct": true,
+      "metrics": {
+        "proposals": 43,
+        "slots_proposed": 43,
+        "first_proposal_violation_rate": 0.0,
+        "violations_by_check": {},
+        "instance_rounds": 1,
+        "repair_rounds": 0,
+        "model_passed": true,
+        "elapsed_s": 0.31
+      }
+    },
+    {
+      "problem": "C10",
+      "generated": true,
+      "reference_correct": true,
+      "metrics": {
+        "proposals": 53,
+        "slots_proposed": 53,
+        "first_proposal_violation_rate": 0.0,
+        "violations_by_check": {},
+        "instance_rounds": 1,
+        "repair_rounds": 0,
+        "model_passed": true,
+        "elapsed_s": 0.35
+      }
+    },
+    {
+      "problem": "S01",
+      "generated": true,
+      "reference_correct": true,
+      "metrics": {
+        "proposals": 55,
+        "slots_proposed": 55,
+        "first_proposal_violation_rate": 0.0,
+        "violations_by_check": {},
+        "instance_rounds": 1,
+        "repair_rounds": 0,
+        "model_passed": true,
+        "elapsed_s": 0.51
+      }
+    },
+    {
+      "problem": "S02",
+      "generated": true,
+      "reference_correct": true,
+      "metrics": {
+        "proposals": 67,
+        "slots_proposed": 67,
+        "first_proposal_violation_rate": 0.0,
+        "violations_by_check": {},
+        "instance_rounds": 1,
+        "repair_rounds": 0,
+        "model_passed": true,
+        "elapsed_s": 0.73
+      }
+    },
+    {
+      "problem": "S03",
+      "generated": true,
+      "reference_correct": true,
+      "metrics": {
+        "proposals": 79,
+        "slots_proposed": 79,
+        "first_proposal_violation_rate": 0.0,
+        "violations_by_check": {},
+        "instance_rounds": 1,
+        "repair_rounds": 0,
+        "model_passed": true,
+        "elapsed_s": 0.99
+      }
+    }
+  ]
+}

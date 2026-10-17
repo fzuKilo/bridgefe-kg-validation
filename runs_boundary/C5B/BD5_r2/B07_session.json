@@ -1,0 +1,35 @@
+{
+ "metrics": {
+  "proposals": 0,
+  "slots_proposed": 0,
+  "first_proposal_violation_rate": null,
+  "violations_by_check": {},
+  "instance_rounds": 0,
+  "repair_rounds": 0,
+  "model_passed": false,
+  "elapsed_s": 6.38
+ },
+ "decisions": {},
+ "facts": {},
+ "instance": {},
+ "results": null,
+ "defect": {
+  "defect_type": "out_of_scope",
+  "message": "The description specifies \"Steel plate girders acting compositely with a 0.25 m cast-in-place deck slab ... steel girder depth 1.4 m, top flange 400 mm x 25 mm, bottom flange 500 mm x 30 mm, web 1345 mm x 16 mm, steel Q345\". The knowledge graph covers only concrete girder types (small_box, t_girder, cast_box) and concrete girder rules: its section schemas have no steel plate-girder fields, girder.A/girder.I rules (MR-02) assume concrete section integration, and girder.Ec (JTG3362-3.1.5) draws from a concrete grade table. Queries for \"steel\", \"steel plate girder\" and \"plate\" return no matching rules or clauses. A steel plate girder with a composite concrete deck therefore lies outside the scope of the knowledge graph and cannot be modeled with its rules and clauses."
+ },
+ "last_check": null,
+ "role_log": [],
+ "log": [
+  {
+   "t": 6.379,
+   "tool": "report_input_defect",
+   "args": {
+    "defect_type": "out_of_scope",
+    "message": "The description specifies \"Steel plate girders acting compositely with a 0.25 m cast-in-place deck slab ... steel girder depth 1.4 m, top flange 400 mm x 25 mm, bottom flange 500 mm x 30 mm, web 1345 mm x 16 mm, steel Q345\". The knowledge graph covers only concrete girder types (small_box, t_girder, cast_box) and concrete girder rules: its section schemas have no steel plate-girder fields, girder.A/girder.I rules (MR-02) assume concrete section integration, and girder.Ec (JTG3362-3.1.5) draws from a concrete grade table. Queries for \"steel\", \"steel plate girder\" and \"plate\" return no matching rules or clauses. A steel plate girder with a composite concrete deck therefore lies outside the scope of the knowledge graph and cannot be modeled with its rules and clauses."
+   },
+   "result": {
+    "ok": true
+   }
+  }
+ ]
+}

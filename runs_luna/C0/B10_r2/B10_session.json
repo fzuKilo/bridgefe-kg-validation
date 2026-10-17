@@ -1,0 +1,35 @@
+{
+ "metrics": {
+  "proposals": 0,
+  "slots_proposed": 0,
+  "first_proposal_violation_rate": null,
+  "violations_by_check": {},
+  "instance_rounds": 0,
+  "repair_rounds": 0,
+  "model_passed": false,
+  "elapsed_s": 106.9
+ },
+ "decisions": {},
+ "facts": {},
+ "instance": {},
+ "results": null,
+ "last_check": null,
+ "role_log": [
+  {
+   "role": "direct_script",
+   "usage": {
+    "turns": 1,
+    "prompt_tokens": 4261,
+    "output_tokens": 4607,
+    "cache_hit_tokens": 0,
+    "reasoning_tokens": 1474,
+    "finish_reason": "stop",
+    "stream": true
+   },
+   "returncode": 1,
+   "stderr": " eigenvalue 2 is numerically undetermined or infinite\nFullGenEigenSolver::solve() - the eigenvalue 3 is numerically undetermined or infinite\nFullGenEigenSolver::solve() - the eigenvalue 4 is numerically undetermined or infinite\nFullGenEigenSolver::solve() - the eigenvalue 5 is numerically undetermined or infinite\nFullGenEigenSolver::solve() - the eigenvalue 6 is numerically undetermined or infinite\nFullGenEigenSolver::solve() - the eigenvalue 7 is numerically undetermined or infinite\nFullGenEigenSolver::solve() - the eigenvalue 8 is numerically undetermined or infinite\nFullGenEigenSolver::solve() - the eigenvalue 9 is numerically undetermined or infinite\nFullGenEigenSolver::solve() - the eigenvalue 10 is numerically undetermined or infinite\nFullGenEigenSolver::solve() - the eigenvalue 11 is numerically undetermined or infinite\nFullGenEigenSolver::solve() - the eigenvalue 12 is numerically undetermined or infinite\nMapOfTaggedObjects::addComponent - not adding as one with similar tag exists, tag: 1\nERROR could not add timeseries to domain.\nTraceback (most recent call last):\n  File \"${PROJECT_ROOT}/runs_luna/C0/B10_r2/B10_direct.py\", line 271, in <module>\n    design_load_moment(\"midspan\", i) for i in range(len(spans))\n    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"${PROJECT_ROOT}/runs_luna/C0/B10_r2/B10_direct.py\", line 246, in design_load_moment\n    influence[j] = unit_response_at_target(j + 1, target_kind, target_index)\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"${PROJECT_ROOT}/runs_luna/C0/B10_r2/B10_direct.py\", line 226, in unit_response_at_target\n    _, force_results = solve_loads({node_id: 1.0})\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"${PROJECT_ROOT}/runs_luna/C0/B10_r2/B10_direct.py\", line 147, in solve_loads\n    ops.timeSeries(\"Linear\", 1)\nopensees.OpenSeesError: See stderr output\n",
+   "elapsed_s": 106.9
+  }
+ ],
+ "log": []
+}

@@ -1,0 +1,618 @@
+{
+  "id": "B01",
+  "tier": "B",
+  "structure": "precast_continuous",
+  "review_status": "decision-level answers reviewed by two bridge engineers",
+  "input": {
+    "structured_en": "[Span arrangement] One continuous unit of three spans, 30 + 30 + 30 m (centre-to-centre of bearings), precast girders simply supported during erection and made continuous afterwards; deck width 12.5 m.\n[Section and material] Precast prestressed small box girders, 4 per span; middle-girder section at midspan: depth 1.6 m; top width 2.40 m; flange 0.18 m thick at the tip, thickening by 6.3 cm over a 19.2 cm long haunch next to the web; bottom slab 1.00 m wide and 0.18 m thick; top slab 0.18 m thick; webs 0.20 m thick (measured horizontally) with outer faces inclined at 1:4; 15 cm x 7 cm chamfers at the upper corners of the cell; girder concrete C50. Consider the self-weight of the main girders only (no wet joints, diaphragms, pavement or barriers).\n[Bearings and boundary] Abutment 0, Pier 1 and Abutment 3: PTFE sliding laminated elastomeric bearings, two under each girder end; effective plan size 300 mm x 400 mm, five internal rubber layers 8 mm thick. Pier 2: plain laminated elastomeric bearings (fixed), two under each girder end; effective plan size 300 mm x 400 mm, five internal rubber layers 8 mm thick.\n[Design standard] Highway Class I loading (JTG D60-2015); one-way traffic, carriageway width 11.5 m, three design lanes.",
+    "structured_zh": "【跨径布置】一联三跨，跨径 30 + 30 + 30 m（支座中心线间距），先简支后连续；桥面全宽 12.5 m。\n【截面与材料】预制预应力混凝土小箱梁，每跨 4 片；中梁跨中截面：梁高 1.6 m；顶宽 2.40 m；翼缘端部厚 0.18 m，近腹板处经 19.2 cm 长加腋增厚 6.3 cm；底板宽 1.00 m、厚 0.18 m；顶板厚 0.18 m；腹板水平厚 0.20 m，外侧坡度 1:4；箱内顶角设 15 cm × 7 cm 倒角；主梁混凝土 C50。只计主梁自重（不计湿接缝、横隔板、铺装与护栏）。\n【支座与边界】0 号台、1 号墩、3 号台：四氟滑板式板式橡胶支座，每个梁端 2 个；有效平面尺寸 300 mm × 400 mm，中间橡胶层 5 层、每层厚 8 mm。2 号墩：普通板式橡胶支座（固定），每个梁端 2 个；有效平面尺寸 300 mm × 400 mm，中间橡胶层 5 层、每层厚 8 mm。\n【设计标准】公路-I 级（JTG D60-2015）；单向行驶，行车道宽 11.5 m，设计车道数 3。"
+  },
+  "parameters": {
+    "id": "B01",
+    "tier": "B",
+    "structure": "precast_continuous",
+    "spans": [
+      30.0,
+      30.0,
+      30.0
+    ],
+    "girder": {
+      "type": "small_box",
+      "span_class": 30,
+      "n": 4,
+      "concrete": "C50"
+    },
+    "deck": {
+      "direction": "one_way",
+      "carriageway_width": 11.5,
+      "deck_width": 12.5,
+      "n_lanes": 3,
+      "load_class": "I"
+    },
+    "bearings": [
+      {
+        "kind": "sliding",
+        "a": 0.3,
+        "b": 0.4,
+        "t1": 0.008,
+        "n_layers": 5,
+        "per_girder": 2,
+        "Ge": null
+      },
+      {
+        "kind": "sliding",
+        "a": 0.3,
+        "b": 0.4,
+        "t1": 0.008,
+        "n_layers": 5,
+        "per_girder": 2,
+        "Ge": null
+      },
+      {
+        "kind": "elastomeric",
+        "a": 0.3,
+        "b": 0.4,
+        "t1": 0.008,
+        "n_layers": 5,
+        "per_girder": 2,
+        "Ge": null
+      },
+      {
+        "kind": "sliding",
+        "a": 0.3,
+        "b": 0.4,
+        "t1": 0.008,
+        "n_layers": 5,
+        "per_girder": 2,
+        "Ge": null
+      }
+    ],
+    "piers": null,
+    "overrides": {}
+  },
+  "reference_decisions": [
+    {
+      "id": "D01",
+      "category": "modeling_rule",
+      "item": "structural idealization",
+      "value": "2D spine beam, linear elastic; girder = elasticBeamColumn",
+      "unit": "",
+      "evidence": "MR-01",
+      "note": "",
+      "slot": "structure.idealization",
+      "canonical": "spine_beam_2d"
+    },
+    {
+      "id": "D02",
+      "category": "modeling_rule",
+      "item": "structural system",
+      "value": "3-span continuous beam (completed system after continuity); construction-stage system change not modeled",
+      "unit": "",
+      "evidence": "MR-05",
+      "note": "",
+      "slot": "structure.system",
+      "canonical": "continuous"
+    },
+    {
+      "id": "D03",
+      "category": "modeling_rule",
+      "item": "single girder section A",
+      "value": 1.1389287499999998,
+      "unit": "m^2",
+      "evidence": "MR-02",
+      "note": "from given middle-girder dimensions",
+      "slot": "girder.single.A",
+      "canonical": 1.1389287499999998
+    },
+    {
+      "id": "D04",
+      "category": "modeling_rule",
+      "item": "single girder section I",
+      "value": 0.3549168491421879,
+      "unit": "m^4",
+      "evidence": "MR-02",
+      "note": "",
+      "slot": "girder.single.I",
+      "canonical": 0.3549168491421879
+    },
+    {
+      "id": "D05",
+      "category": "modeling_rule",
+      "item": "spine-beam section A (n girders)",
+      "value": 4.555714999999999,
+      "unit": "m^2",
+      "evidence": "MR-02",
+      "note": "4 girders; wet joints and diaphragms neglected",
+      "slot": "girder.A",
+      "canonical": 4.555714999999999
+    },
+    {
+      "id": "D06",
+      "category": "modeling_rule",
+      "item": "spine-beam section I (n girders)",
+      "value": 1.4196673965687516,
+      "unit": "m^4",
+      "evidence": "MR-02",
+      "note": "",
+      "slot": "girder.I",
+      "canonical": 1.4196673965687516
+    },
+    {
+      "id": "D07",
+      "category": "code_parameter",
+      "item": "girder elastic modulus Ec",
+      "value": 34500.0,
+      "unit": "MPa",
+      "evidence": "JTG3362-3.1.5",
+      "note": "C50",
+      "slot": "girder.Ec",
+      "canonical": 34500.0
+    },
+    {
+      "id": "D08",
+      "category": "code_parameter",
+      "item": "unit weight of girder concrete",
+      "value": 26.0,
+      "unit": "kN/m^3",
+      "evidence": "JTGD60-4.2.1",
+      "note": "prestressed concrete, upper value of 25.0-26.0",
+      "slot": "girder.gamma",
+      "canonical": 26.0
+    },
+    {
+      "id": "D09",
+      "category": "code_parameter",
+      "item": "girder self-weight w",
+      "value": 118.44858999999998,
+      "unit": "kN/m",
+      "evidence": "MR-07",
+      "note": "",
+      "slot": "girder.w",
+      "canonical": 118.44858999999998
+    },
+    {
+      "id": "D10",
+      "category": "modeling_rule",
+      "item": "girder mass per length",
+      "value": 12.074270132517837,
+      "unit": "t/m",
+      "evidence": "MR-07",
+      "note": "consistent mass; girder self-weight only",
+      "slot": "girder.m",
+      "canonical": 12.074270132517837
+    },
+    {
+      "id": "D11",
+      "category": "topology",
+      "item": "Abutment 0: bearing type and number",
+      "value": "PTFE sliding elastomeric, 8 bearings",
+      "unit": "",
+      "evidence": "INPUT, MR-04",
+      "note": "",
+      "slot": "support.0.bearing",
+      "canonical": {
+        "type": "ptfe_sliding",
+        "count": 8
+      }
+    },
+    {
+      "id": "D12",
+      "category": "modeling_rule",
+      "item": "Abutment 0: restrained DOFs",
+      "value": "vertical spring; longitudinal free; rotation free",
+      "unit": "",
+      "evidence": "MR-03",
+      "note": "",
+      "slot": "support.0.dofs",
+      "canonical": {
+        "vertical": "spring",
+        "longitudinal": "free",
+        "rotation": "free"
+      }
+    },
+    {
+      "id": "D13",
+      "category": "code_parameter",
+      "item": "Abutment 0: shape factor S",
+      "value": 10.714285714285714,
+      "unit": "-",
+      "evidence": "JTG3362-8.7-Ee",
+      "note": "",
+      "slot": "support.0.S",
+      "canonical": 10.714285714285714
+    },
+    {
+      "id": "D14",
+      "category": "code_parameter",
+      "item": "Abutment 0: vertical stiffness Kv (all bearings)",
+      "value": 11357351.509250242,
+      "unit": "kN/m",
+      "evidence": "JTG3362-8.7-Ee, JTG3362-8.7-Ge",
+      "note": "single bearing 1.41967e+06 kN/m, Ee = 619.9 MPa",
+      "slot": "support.0.Kv",
+      "canonical": 11357351.509250242
+    },
+    {
+      "id": "D15",
+      "category": "code_parameter",
+      "item": "Abutment 0: longitudinal stiffness Kh (all bearings)",
+      "value": 0.0,
+      "unit": "kN/m",
+      "evidence": "MR-03",
+      "note": "sliding surface, no longitudinal restraint",
+      "slot": "support.0.Kh",
+      "canonical": 0.0
+    },
+    {
+      "id": "D16",
+      "category": "topology",
+      "item": "Pier 1: bearing type and number",
+      "value": "PTFE sliding elastomeric, 8 bearings",
+      "unit": "",
+      "evidence": "INPUT, MR-04",
+      "note": "",
+      "slot": "support.1.bearing",
+      "canonical": {
+        "type": "ptfe_sliding",
+        "count": 8
+      }
+    },
+    {
+      "id": "D17",
+      "category": "modeling_rule",
+      "item": "Pier 1: restrained DOFs",
+      "value": "vertical spring; longitudinal free; rotation free",
+      "unit": "",
+      "evidence": "MR-03",
+      "note": "",
+      "slot": "support.1.dofs",
+      "canonical": {
+        "vertical": "spring",
+        "longitudinal": "free",
+        "rotation": "free"
+      }
+    },
+    {
+      "id": "D18",
+      "category": "code_parameter",
+      "item": "Pier 1: shape factor S",
+      "value": 10.714285714285714,
+      "unit": "-",
+      "evidence": "JTG3362-8.7-Ee",
+      "note": "",
+      "slot": "support.1.S",
+      "canonical": 10.714285714285714
+    },
+    {
+      "id": "D19",
+      "category": "code_parameter",
+      "item": "Pier 1: vertical stiffness Kv (all bearings)",
+      "value": 11357351.509250242,
+      "unit": "kN/m",
+      "evidence": "JTG3362-8.7-Ee, JTG3362-8.7-Ge",
+      "note": "single bearing 1.41967e+06 kN/m, Ee = 619.9 MPa",
+      "slot": "support.1.Kv",
+      "canonical": 11357351.509250242
+    },
+    {
+      "id": "D20",
+      "category": "code_parameter",
+      "item": "Pier 1: longitudinal stiffness Kh (all bearings)",
+      "value": 0.0,
+      "unit": "kN/m",
+      "evidence": "MR-03",
+      "note": "sliding surface, no longitudinal restraint",
+      "slot": "support.1.Kh",
+      "canonical": 0.0
+    },
+    {
+      "id": "D21",
+      "category": "topology",
+      "item": "Pier 2: bearing type and number",
+      "value": "plain laminated elastomeric, 8 bearings",
+      "unit": "",
+      "evidence": "INPUT, MR-04",
+      "note": "",
+      "slot": "support.2.bearing",
+      "canonical": {
+        "type": "plain_elastomeric",
+        "count": 8
+      }
+    },
+    {
+      "id": "D22",
+      "category": "modeling_rule",
+      "item": "Pier 2: restrained DOFs",
+      "value": "vertical spring; longitudinal spring; rotation free",
+      "unit": "",
+      "evidence": "MR-03",
+      "note": "",
+      "slot": "support.2.dofs",
+      "canonical": {
+        "vertical": "spring",
+        "longitudinal": "spring",
+        "rotation": "free"
+      }
+    },
+    {
+      "id": "D23",
+      "category": "code_parameter",
+      "item": "Pier 2: shape factor S",
+      "value": 10.714285714285714,
+      "unit": "-",
+      "evidence": "JTG3362-8.7-Ee",
+      "note": "",
+      "slot": "support.2.S",
+      "canonical": 10.714285714285714
+    },
+    {
+      "id": "D24",
+      "category": "code_parameter",
+      "item": "Pier 2: vertical stiffness Kv (all bearings)",
+      "value": 11357351.509250242,
+      "unit": "kN/m",
+      "evidence": "JTG3362-8.7-Ee, JTG3362-8.7-Ge",
+      "note": "single bearing 1.41967e+06 kN/m, Ee = 619.9 MPa",
+      "slot": "support.2.Kv",
+      "canonical": 11357351.509250242
+    },
+    {
+      "id": "D25",
+      "category": "code_parameter",
+      "item": "Pier 2: longitudinal stiffness Kh (all bearings)",
+      "value": 24000.0,
+      "unit": "kN/m",
+      "evidence": "JTG3362-8.7-Ee, JTG3362-8.7-Ge",
+      "note": "single bearing 3000 kN/m",
+      "slot": "support.2.Kh",
+      "canonical": 24000.0
+    },
+    {
+      "id": "D26",
+      "category": "topology",
+      "item": "Abutment 3: bearing type and number",
+      "value": "PTFE sliding elastomeric, 8 bearings",
+      "unit": "",
+      "evidence": "INPUT, MR-04",
+      "note": "",
+      "slot": "support.3.bearing",
+      "canonical": {
+        "type": "ptfe_sliding",
+        "count": 8
+      }
+    },
+    {
+      "id": "D27",
+      "category": "modeling_rule",
+      "item": "Abutment 3: restrained DOFs",
+      "value": "vertical spring; longitudinal free; rotation free",
+      "unit": "",
+      "evidence": "MR-03",
+      "note": "",
+      "slot": "support.3.dofs",
+      "canonical": {
+        "vertical": "spring",
+        "longitudinal": "free",
+        "rotation": "free"
+      }
+    },
+    {
+      "id": "D28",
+      "category": "code_parameter",
+      "item": "Abutment 3: shape factor S",
+      "value": 10.714285714285714,
+      "unit": "-",
+      "evidence": "JTG3362-8.7-Ee",
+      "note": "",
+      "slot": "support.3.S",
+      "canonical": 10.714285714285714
+    },
+    {
+      "id": "D29",
+      "category": "code_parameter",
+      "item": "Abutment 3: vertical stiffness Kv (all bearings)",
+      "value": 11357351.509250242,
+      "unit": "kN/m",
+      "evidence": "JTG3362-8.7-Ee, JTG3362-8.7-Ge",
+      "note": "single bearing 1.41967e+06 kN/m, Ee = 619.9 MPa",
+      "slot": "support.3.Kv",
+      "canonical": 11357351.509250242
+    },
+    {
+      "id": "D30",
+      "category": "code_parameter",
+      "item": "Abutment 3: longitudinal stiffness Kh (all bearings)",
+      "value": 0.0,
+      "unit": "kN/m",
+      "evidence": "MR-03",
+      "note": "sliding surface, no longitudinal restraint",
+      "slot": "support.3.Kh",
+      "canonical": 0.0
+    },
+    {
+      "id": "D31",
+      "category": "code_parameter",
+      "item": "number of design lanes",
+      "value": 3,
+      "unit": "-",
+      "evidence": "JTGD60-4.3.1-lanes",
+      "note": "one-way, carriageway 11.5 m",
+      "slot": "lane.n_lanes",
+      "canonical": 3
+    },
+    {
+      "id": "D32",
+      "category": "code_parameter",
+      "item": "transverse lane reduction factor",
+      "value": 0.78,
+      "unit": "-",
+      "evidence": "JTGD60-4.3.1-xi",
+      "note": "",
+      "slot": "lane.xi",
+      "canonical": 0.78
+    },
+    {
+      "id": "D33",
+      "category": "code_parameter",
+      "item": "lane load qk",
+      "value": 10.5,
+      "unit": "kN/m",
+      "evidence": "JTGD60-4.3.1-lane",
+      "note": "Highway Class I",
+      "slot": "lane.qk",
+      "canonical": 10.5
+    },
+    {
+      "id": "D34",
+      "category": "code_parameter",
+      "item": "lane load Pk (span 1, L0 = 30 m)",
+      "value": 320.0,
+      "unit": "kN",
+      "evidence": "JTGD60-4.3.1-lane",
+      "note": "LL-01",
+      "slot": "lane.Pk.1",
+      "canonical": 320.0
+    },
+    {
+      "id": "D35",
+      "category": "code_parameter",
+      "item": "lane load Pk (span 2, L0 = 30 m)",
+      "value": 320.0,
+      "unit": "kN",
+      "evidence": "JTGD60-4.3.1-lane",
+      "note": "LL-01",
+      "slot": "lane.Pk.2",
+      "canonical": 320.0
+    },
+    {
+      "id": "D36",
+      "category": "code_parameter",
+      "item": "lane load Pk (span 3, L0 = 30 m)",
+      "value": 320.0,
+      "unit": "kN",
+      "evidence": "JTGD60-4.3.1-lane",
+      "note": "LL-01",
+      "slot": "lane.Pk.3",
+      "canonical": 320.0
+    },
+    {
+      "id": "D37",
+      "category": "code_parameter",
+      "item": "impact factor mu",
+      "value": 0.20624291590177374,
+      "unit": "-",
+      "evidence": "JTGD60-4.3.2, LL-02",
+      "note": "f1 = 3.5115 Hz; mu = 0.1767 ln f1 - 0.0157",
+      "slot": "lane.mu",
+      "canonical": 0.20624291590177374
+    }
+  ],
+  "reference_responses": {
+    "source": "independent OpenSeesPy reference model",
+    "tolerance": 0.001,
+    "self_weight_support_reactions_kN": [
+      1421.859652371188,
+      3908.3268976286827,
+      3908.326897629364,
+      1421.8596523712376
+    ],
+    "self_weight_midspan_moments_kNm": [
+      8002.428410564814,
+      2679.390446129754,
+      8002.428410567188
+    ],
+    "self_weight_support_moments_kNm": [
+      -10646.07592886925,
+      -10646.075928871307
+    ],
+    "vertical_frequencies_Hz": [
+      3.511501299465111,
+      4.47341883813846,
+      6.466498494911043
+    ],
+    "first_vertical_frequency_Hz": 3.511501299465111,
+    "impact_factor_mu": 0.20624291590177374,
+    "lane_moments_by_section": [
+      {
+        "section": "span",
+        "index": 1,
+        "x_m": 15.0,
+        "M_lane_kNm": 8092.0894673004,
+        "Pk_position_m": 15.0
+      },
+      {
+        "section": "span",
+        "index": 2,
+        "x_m": 45.0,
+        "M_lane_kNm": 6748.94792813842,
+        "Pk_position_m": 45.0
+      },
+      {
+        "section": "span",
+        "index": 3,
+        "x_m": 75.0,
+        "M_lane_kNm": 8092.089467302368,
+        "Pk_position_m": 75.0
+      },
+      {
+        "section": "support",
+        "index": 1,
+        "x_m": 30.0,
+        "M_lane_kNm": -5870.116759258028,
+        "Pk_position_m": 17.293524924418247
+      },
+      {
+        "section": "support",
+        "index": 2,
+        "x_m": 60.0,
+        "M_lane_kNm": -5870.116759259023,
+        "Pk_position_m": 72.70647507558333
+      }
+    ],
+    "lane_max_positive_moment_kNm": 8092.089467302368,
+    "lane_max_positive_moment_location": "span 3 midspan",
+    "lane_max_negative_moment_kNm": -5870.116759259023,
+    "lane_max_negative_moment_location": "support 2"
+  },
+  "reference_model_spec": {
+    "spans": [
+      30.0,
+      30.0,
+      30.0
+    ],
+    "girder": {
+      "E": 34500000000.0,
+      "A": 4.555714999999999,
+      "I": 1.4196673965687516,
+      "w": 118448.58999999998,
+      "m": 12074.270132517837
+    },
+    "supports": [
+      {
+        "Kv": 11357351509.250242,
+        "Kh": 0.0,
+        "pier": null
+      },
+      {
+        "Kv": 11357351509.250242,
+        "Kh": 0.0,
+        "pier": null
+      },
+      {
+        "Kv": 11357351509.250242,
+        "Kh": 24000000.0,
+        "pier": null
+      },
+      {
+        "Kv": 11357351509.250242,
+        "Kh": 0.0,
+        "pier": null
+      }
+    ],
+    "lane": {
+      "load_class": "I",
+      "n_lanes": 3,
+      "xi": 0.78
+    }
+  }
+}

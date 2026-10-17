@@ -1,0 +1,1520 @@
+{
+ "metrics": {
+  "proposals": 23,
+  "slots_proposed": 19,
+  "first_proposal_violation_rate": 0.10526315789473684,
+  "violations_by_check": {
+   "evidence": 3,
+   "applicability": 2
+  },
+  "instance_rounds": 1,
+  "repair_rounds": 0,
+  "model_passed": true,
+  "elapsed_s": 840.88
+ },
+ "decisions": {
+  "structure.idealization": {
+   "id": "dec:structure.idealization",
+   "slot": "structure.idealization",
+   "value": "spine_beam_2d",
+   "unit": "-",
+   "evidence": [
+    "MR-01"
+   ]
+  },
+  "structure.system": {
+   "id": "dec:structure.system",
+   "slot": "structure.system",
+   "value": "simply_supported",
+   "unit": "-",
+   "evidence": [
+    "MR-05"
+   ]
+  },
+  "girder.single.A": {
+   "id": "dec:girder.single.A",
+   "slot": "girder.single.A",
+   "value": 1.022,
+   "unit": "m^2",
+   "evidence": [
+    "MR-02"
+   ]
+  },
+  "girder.single.I": {
+   "id": "dec:girder.single.I",
+   "slot": "girder.single.I",
+   "value": 0.8565544933,
+   "unit": "m^4",
+   "evidence": [
+    "MR-02"
+   ]
+  },
+  "girder.A": {
+   "id": "dec:girder.A",
+   "slot": "girder.A",
+   "value": 4.088,
+   "unit": "m^2",
+   "evidence": [
+    "MR-02",
+    "dec:girder.single.A"
+   ]
+  },
+  "girder.I": {
+   "id": "dec:girder.I",
+   "slot": "girder.I",
+   "value": 3.4262179732,
+   "unit": "m^4",
+   "evidence": [
+    "MR-02",
+    "dec:girder.single.I"
+   ]
+  },
+  "girder.Ec": {
+   "id": "dec:girder.Ec",
+   "slot": "girder.Ec",
+   "value": 34500.0,
+   "unit": "MPa",
+   "evidence": [
+    "JTG3362-3.1.5"
+   ]
+  },
+  "girder.gamma": {
+   "id": "dec:girder.gamma",
+   "slot": "girder.gamma",
+   "value": 26.0,
+   "unit": "kN/m^3",
+   "evidence": [
+    "JTGD60-4.2.1"
+   ]
+  },
+  "girder.w": {
+   "id": "dec:girder.w",
+   "slot": "girder.w",
+   "value": 106.288,
+   "unit": "kN/m",
+   "evidence": [
+    "MR-07",
+    "MR-02",
+    "JTGD60-4.2.1"
+   ]
+  },
+  "girder.m": {
+   "id": "dec:girder.m",
+   "slot": "girder.m",
+   "value": 10.8346585117,
+   "unit": "t/m",
+   "evidence": [
+    "MR-07"
+   ]
+  },
+  "support.0.bearing": {
+   "id": "dec:support.0.bearing",
+   "slot": "support.0.bearing",
+   "value": {
+    "type": "spherical_sliding",
+    "count": 4
+   },
+   "unit": "-",
+   "evidence": [
+    "MR-04",
+    "inst:bearing:0"
+   ]
+  },
+  "support.0.dofs": {
+   "id": "dec:support.0.dofs",
+   "slot": "support.0.dofs",
+   "value": {
+    "vertical": "rigid",
+    "longitudinal": "free",
+    "rotation": "free"
+   },
+   "unit": "-",
+   "evidence": [
+    "MR-08",
+    "inst:bearing:0"
+   ]
+  },
+  "support.1.bearing": {
+   "id": "dec:support.1.bearing",
+   "slot": "support.1.bearing",
+   "value": {
+    "type": "spherical_fixed",
+    "count": 4
+   },
+   "unit": "-",
+   "evidence": [
+    "MR-04",
+    "inst:bearing:1"
+   ]
+  },
+  "support.1.dofs": {
+   "id": "dec:support.1.dofs",
+   "slot": "support.1.dofs",
+   "value": {
+    "vertical": "rigid",
+    "longitudinal": "fixed",
+    "rotation": "free"
+   },
+   "unit": "-",
+   "evidence": [
+    "MR-08",
+    "inst:bearing:1"
+   ]
+  },
+  "lane.n_lanes": {
+   "id": "dec:lane.n_lanes",
+   "slot": "lane.n_lanes",
+   "value": 2,
+   "unit": "-",
+   "evidence": [
+    "JTGD60-4.3.1-lanes"
+   ]
+  },
+  "lane.xi": {
+   "id": "dec:lane.xi",
+   "slot": "lane.xi",
+   "value": 1.0,
+   "unit": "-",
+   "evidence": [
+    "JTGD60-4.3.1-xi",
+    "dec:lane.n_lanes"
+   ]
+  },
+  "lane.qk": {
+   "id": "dec:lane.qk",
+   "slot": "lane.qk",
+   "value": 10.5,
+   "unit": "kN/m",
+   "evidence": [
+    "JTGD60-4.3.1-qk"
+   ]
+  },
+  "lane.Pk.1": {
+   "id": "dec:lane.Pk.1",
+   "slot": "lane.Pk.1",
+   "value": 340.0,
+   "unit": "kN",
+   "evidence": [
+    "JTGD60-4.3.1-Pk"
+   ]
+  },
+  "lane.mu": {
+   "id": "dec:lane.mu",
+   "slot": "lane.mu",
+   "value": 0.1921721086,
+   "unit": "-",
+   "evidence": [
+    "JTGD60-4.3.2",
+    "fact:f1"
+   ]
+  }
+ },
+ "facts": {
+  "f1": 3.242720417150247
+ },
+ "instance": {
+  "supports": [
+   {
+    "index": 0,
+    "kind": "abutment",
+    "bearing": {
+     "family": "spherical",
+     "sliding": true,
+     "fixed": false,
+     "per_girder_end": 1,
+     "per_line": null,
+     "a_mm": null,
+     "b_mm": null,
+     "t1_mm": null,
+     "n_layers": null,
+     "Ge_MPa": null,
+     "model": "GQZ2000"
+    },
+    "pier": null
+   },
+   {
+    "index": 1,
+    "kind": "abutment",
+    "bearing": {
+     "family": "spherical",
+     "sliding": false,
+     "fixed": true,
+     "per_girder_end": 1,
+     "per_line": null,
+     "a_mm": null,
+     "b_mm": null,
+     "t1_mm": null,
+     "n_layers": null,
+     "Ge_MPa": null,
+     "model": "GQZ2000"
+    },
+    "pier": null
+   }
+  ],
+  "structure_type": "simply_supported",
+  "spans_m": [
+   40
+  ],
+  "deck": {
+   "deck_width_m": 10,
+   "carriageway_width_m": 9,
+   "traffic": "two_way",
+   "design_lanes": 2,
+   "load_class": "I"
+  },
+  "girder": {
+   "type": "t_girder",
+   "count_per_span": 4,
+   "concrete": "C50",
+   "material": "prestressed_concrete",
+   "E_override_MPa": null,
+   "gamma_override_kNm3": null,
+   "section": {
+    "h": 2.5,
+    "b_flange": 1.8,
+    "t_tip": 0.18,
+    "t_root": 0.27,
+    "flat_len": 0.2,
+    "t_web": 0.2,
+    "b_bulb": 0.6,
+    "bulb_h": 0.35,
+    "bulb_trans": 0.2
+   }
+  },
+  "dead_load": "girder_self_weight_only"
+ },
+ "results": {
+  "ok": true,
+  "vertical_frequencies_Hz": [
+   3.242720417150247,
+   12.97096368365569,
+   29.185464557381692
+  ],
+  "self_weight_support_reactions_kN": [
+   2125.7600000007656,
+   2125.7600000008424
+  ],
+  "self_weight_midspan_moments_kNm": [
+   21257.600000017457
+  ],
+  "self_weight_support_moments_kNm": [],
+  "lane_moments_by_section": [
+   {
+    "section": "span",
+    "index": 1,
+    "M_kNm": 13113.893194609454
+   }
+  ],
+  "lane_max_positive_moment_kNm": 13113.893194609454,
+  "lane_max_negative_moment_kNm": null
+ },
+ "last_check": [],
+ "role_log": [],
+ "log": [
+  {
+   "t": 21.278,
+   "tool": "write_instance",
+   "args": {
+    "structure_type": "simply_supported",
+    "spans_m": [
+     40
+    ],
+    "deck": {
+     "deck_width_m": 10,
+     "carriageway_width_m": 9,
+     "traffic": "two_way",
+     "design_lanes": 2,
+     "load_class": "I"
+    },
+    "girder": {
+     "type": "t_girder",
+     "count_per_span": 4,
+     "concrete": "C50",
+     "material": "prestressed_concrete",
+     "E_override_MPa": null,
+     "gamma_override_kNm3": null,
+     "section": {
+      "h": 2.5,
+      "b_flange": 1.8,
+      "t_tip": 0.18,
+      "t_root": 0.27,
+      "flat_len": 0.2,
+      "t_web": 0.2,
+      "b_bulb": 0.6,
+      "bulb_h": 0.35,
+      "bulb_trans": 0.2
+     }
+    },
+    "supports": [
+     {
+      "index": 0,
+      "kind": "abutment",
+      "bearing": {
+       "family": "spherical",
+       "sliding": true,
+       "fixed": false,
+       "per_girder_end": 1,
+       "per_line": null,
+       "a_mm": null,
+       "b_mm": null,
+       "t1_mm": null,
+       "n_layers": null,
+       "Ge_MPa": null,
+       "model": "GQZ2000"
+      },
+      "pier": null
+     },
+     {
+      "index": 1,
+      "kind": "abutment",
+      "bearing": {
+       "family": "spherical",
+       "sliding": false,
+       "fixed": true,
+       "per_girder_end": 1,
+       "per_line": null,
+       "a_mm": null,
+       "b_mm": null,
+       "t1_mm": null,
+       "n_layers": null,
+       "Ge_MPa": null,
+       "model": "GQZ2000"
+      },
+      "pier": null
+     }
+    ],
+    "dead_load": "girder_self_weight_only"
+   },
+   "result": {
+    "ok": true,
+    "issues": [],
+    "round": 1
+   }
+  },
+  {
+   "t": 56.648,
+   "tool": "declare_decisions",
+   "args": {
+    "slots": [
+     "structure.idealization",
+     "structure.system",
+     "girder.A",
+     "girder.I",
+     "girder.Ec",
+     "girder.gamma",
+     "girder.w",
+     "girder.m",
+     "support.0.bearing",
+     "support.0.dofs",
+     "support.1.bearing",
+     "support.1.dofs",
+     "lane.n_lanes",
+     "lane.xi",
+     "lane.qk",
+     "lane.Pk.1",
+     "lane.mu"
+    ],
+    "replace": true
+   },
+   "result": {
+    "complete": false,
+    "declared_so_far": 17,
+    "missing": [
+     "girder.single.A",
+     "girder.single.I"
+    ],
+    "not_required_ignored": [],
+    "note": "declarations accumulate across calls; declare the missing slots next",
+    "constraint": "C-13/T-templates"
+   }
+  },
+  {
+   "t": 65.677,
+   "tool": "declare_decisions",
+   "args": {
+    "slots": [
+     "girder.single.A",
+     "girder.single.I"
+    ],
+    "replace": false
+   },
+   "result": {
+    "complete": true,
+    "declared_so_far": 19,
+    "missing": [],
+    "not_required_ignored": [],
+    "note": "declarations accumulate across calls; declare the missing slots next",
+    "constraint": "C-13/T-templates"
+   }
+  },
+  {
+   "t": 254.039,
+   "tool": "execute_formula",
+   "args": {
+    "node_id": "MR-01",
+    "slot": "structure.idealization"
+   },
+   "result": {
+    "value": "spine_beam_2d",
+    "inputs": {},
+    "applicable_to_this_bridge": true,
+    "applicability": "True"
+   }
+  },
+  {
+   "t": 260.73,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "structure.idealization",
+    "value": "spine_beam_2d",
+    "unit": "-",
+    "evidence": [
+     "MR-01"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "structure.idealization",
+    "decision_id": "dec:structure.idealization"
+   }
+  },
+  {
+   "t": 266.689,
+   "tool": "execute_formula",
+   "args": {
+    "node_id": "MR-05",
+    "slot": "structure.system"
+   },
+   "result": {
+    "value": "simply_supported",
+    "inputs": {
+     "models_pier_columns": false,
+     "n_spans": 1
+    },
+    "applicable_to_this_bridge": true,
+    "applicability": "True"
+   }
+  },
+  {
+   "t": 285.38,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "structure.system",
+    "value": "simply_supported",
+    "unit": "-",
+    "evidence": [
+     "MR-05"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "structure.system",
+    "decision_id": "dec:structure.system"
+   }
+  },
+  {
+   "t": 289.381,
+   "tool": "execute_formula",
+   "args": {
+    "node_id": "MR-02",
+    "slot": "girder.single.A"
+   },
+   "result": {
+    "value": 1.0219999999999998,
+    "inputs": {
+     "n_girders": 4,
+     "precast": true,
+     "sec_A": 1.0219999999999998,
+     "sec_I": 0.8565544933028928
+    },
+    "applicable_to_this_bridge": true,
+    "applicability": "True"
+   }
+  },
+  {
+   "t": 299.031,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "girder.single.A",
+    "value": 1.022,
+    "unit": "m^2",
+    "evidence": [
+     "MR-02"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "girder.single.A",
+    "decision_id": "dec:girder.single.A"
+   }
+  },
+  {
+   "t": 302.823,
+   "tool": "execute_formula",
+   "args": {
+    "node_id": "MR-02",
+    "slot": "girder.single.I"
+   },
+   "result": {
+    "value": 0.8565544933028928,
+    "inputs": {
+     "A_single": 1.022,
+     "n_girders": 4,
+     "precast": true,
+     "sec_A": 1.0219999999999998,
+     "sec_I": 0.8565544933028928
+    },
+    "applicable_to_this_bridge": true,
+    "applicability": "True"
+   }
+  },
+  {
+   "t": 311.721,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "girder.single.I",
+    "value": 0.8565544933,
+    "unit": "m^4",
+    "evidence": [
+     "MR-02"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "girder.single.I",
+    "decision_id": "dec:girder.single.I"
+   }
+  },
+  {
+   "t": 319.26,
+   "tool": "execute_formula",
+   "args": {
+    "node_id": "MR-02",
+    "slot": "girder.A"
+   },
+   "result": {
+    "value": 4.088,
+    "inputs": {
+     "A_single": 1.022,
+     "I_single": 0.8565544933,
+     "n_girders": 4,
+     "precast": true,
+     "sec_A": 1.0219999999999998,
+     "sec_I": 0.8565544933028928
+    },
+    "applicable_to_this_bridge": true,
+    "applicability": "True"
+   }
+  },
+  {
+   "t": 474.615,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "girder.A",
+    "value": 4.088,
+    "unit": "m^2",
+    "evidence": [
+     "MR-02",
+     "dec:girder.single.A"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "girder.A",
+    "decision_id": "dec:girder.A"
+   }
+  },
+  {
+   "t": 481.683,
+   "tool": "execute_formula",
+   "args": {
+    "node_id": "MR-02",
+    "slot": "girder.I"
+   },
+   "result": {
+    "value": 3.4262179732,
+    "inputs": {
+     "A_single": 1.022,
+     "I_single": 0.8565544933,
+     "n_girders": 4,
+     "precast": true,
+     "sec_A": 1.0219999999999998,
+     "sec_I": 0.8565544933028928
+    },
+    "applicable_to_this_bridge": true,
+    "applicability": "True"
+   }
+  },
+  {
+   "t": 494.893,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "girder.I",
+    "value": 3.4262179732,
+    "unit": "m^4",
+    "evidence": [
+     "MR-02",
+     "dec:girder.single.I"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "girder.I",
+    "decision_id": "dec:girder.I"
+   }
+  },
+  {
+   "t": 500.403,
+   "tool": "execute_formula",
+   "args": {
+    "node_id": "JTG3362-3.1.5",
+    "slot": "girder.Ec"
+   },
+   "result": {
+    "value": 34500.0,
+    "inputs": {
+     "grade": "C50"
+    },
+    "applicable_to_this_bridge": true,
+    "applicability": "grade in EC_TABLE and not has_override"
+   }
+  },
+  {
+   "t": 505.234,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "girder.Ec",
+    "value": 34500.0,
+    "unit": "MPa",
+    "evidence": [
+     "JTG3362-3.1.5"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "girder.Ec",
+    "decision_id": "dec:girder.Ec"
+   }
+  },
+  {
+   "t": 511.913,
+   "tool": "execute_formula",
+   "args": {
+    "node_id": "JTGD60-4.2.1",
+    "slot": "girder.gamma"
+   },
+   "result": {
+    "value": 26.0,
+    "inputs": {},
+    "applicable_to_this_bridge": true,
+    "applicability": "material == 'prestressed_concrete' and not has_override"
+   }
+  },
+  {
+   "t": 523.623,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "girder.gamma",
+    "value": 26.0,
+    "unit": "kN/m^3",
+    "evidence": [
+     "JTGD60-4.2.1"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "girder.gamma",
+    "decision_id": "dec:girder.gamma"
+   }
+  },
+  {
+   "t": 536.693,
+   "tool": "execute_formula",
+   "args": {
+    "node_id": "MR-07",
+    "slot": "girder.w"
+   },
+   "result": {
+    "value": 106.288,
+    "inputs": {
+     "A": 4.088,
+     "gamma": 26.0
+    },
+    "applicable_to_this_bridge": true,
+    "applicability": "True"
+   }
+  },
+  {
+   "t": 545.003,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "girder.w",
+    "value": 106.288,
+    "unit": "kN/m",
+    "evidence": [
+     "MR-07",
+     "dec:g irder.gamma"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": false,
+    "slot": "girder.w",
+    "category": "code_parameter",
+    "expected_unit": "kN/m",
+    "candidate_evidence": [
+     {
+      "id": "MR-07",
+      "title": "恒载与质量",
+      "applicability": "True",
+      "text": "恒载只计主梁自重 w = γA；质量取 m = w/g，采用一致质量矩阵。",
+      "formula": {
+       "girder.w": "gamma * A",
+       "girder.m": "w / 9.81"
+      }
+     }
+    ],
+    "valid_evidence": {
+     "primary_applicable": [
+      "MR-07"
+     ],
+     "supporting": [
+      "MR-02",
+      "JTGD60-4.2.1"
+     ],
+     "input_paths": [
+      "INPUT:girder.type",
+      "INPUT:girder.count_per_span",
+      "INPUT:girder.concrete",
+      "INPUT:girder.material",
+      "INPUT:girder.section"
+     ],
+     "instance_nodes": [
+      "inst:girder"
+     ],
+     "rule": "至少引用一条主依据（题目给定覆盖值时引用 MR-00 与对应 INPUT 路径）；其余为可选辅助依据，须写成此处列出的形式"
+    },
+    "formula_result": 106.288,
+    "formula_source": "MR-07",
+    "formula_inputs": {
+     "A": 4.088,
+     "gamma": 26.0
+    },
+    "hint": "若公式结果与你对描述的理解不符，先核对 formula_inputs 中取自实例层的数据；实例层写错时用 write_instance 修正，不要照搬公式结果",
+    "violations": [
+     {
+      "check": "evidence",
+      "constraint": "I2",
+      "message": "依据在图谱中不存在或写法无法识别：['dec:g irder.gamma']"
+     }
+    ],
+    "failed_checks": [
+     "evidence"
+    ]
+   }
+  },
+  {
+   "t": 555.504,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "girder.w",
+    "value": 106.288,
+    "unit": "kN/m",
+    "evidence": [
+     "MR-07",
+     "dec:g irder.gamma"
+    ],
+    "rationale": "",
+    "attempt": 2
+   },
+   "result": {
+    "accepted": false,
+    "slot": "girder.w",
+    "category": "code_parameter",
+    "expected_unit": "kN/m",
+    "candidate_evidence": [
+     {
+      "id": "MR-07",
+      "title": "恒载与质量",
+      "applicability": "True",
+      "text": "恒载只计主梁自重 w = γA；质量取 m = w/g，采用一致质量矩阵。",
+      "formula": {
+       "girder.w": "gamma * A",
+       "girder.m": "w / 9.81"
+      }
+     }
+    ],
+    "valid_evidence": {
+     "primary_applicable": [
+      "MR-07"
+     ],
+     "supporting": [
+      "MR-02",
+      "JTGD60-4.2.1"
+     ],
+     "input_paths": [
+      "INPUT:girder.type",
+      "INPUT:girder.count_per_span",
+      "INPUT:girder.concrete",
+      "INPUT:girder.material",
+      "INPUT:girder.section"
+     ],
+     "instance_nodes": [
+      "inst:girder"
+     ],
+     "rule": "至少引用一条主依据（题目给定覆盖值时引用 MR-00 与对应 INPUT 路径）；其余为可选辅助依据，须写成此处列出的形式"
+    },
+    "formula_result": 106.288,
+    "formula_source": "MR-07",
+    "formula_inputs": {
+     "A": 4.088,
+     "gamma": 26.0
+    },
+    "hint": "若公式结果与你对描述的理解不符，先核对 formula_inputs 中取自实例层的数据；实例层写错时用 write_instance 修正，不要照搬公式结果",
+    "violations": [
+     {
+      "check": "evidence",
+      "constraint": "I2",
+      "message": "依据在图谱中不存在或写法无法识别：['dec:g irder.gamma']"
+     }
+    ],
+    "failed_checks": [
+     "evidence"
+    ]
+   }
+  },
+  {
+   "t": 562.784,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "girder.w",
+    "value": 106.288,
+    "unit": "kN/m",
+    "evidence": [
+     "MR-07",
+     "dec:g irder.gamma",
+     "dec:g irder.A"
+    ],
+    "rationale": "",
+    "attempt": 3
+   },
+   "result": {
+    "accepted": false,
+    "slot": "girder.w",
+    "category": "code_parameter",
+    "expected_unit": "kN/m",
+    "candidate_evidence": [
+     {
+      "id": "MR-07",
+      "title": "恒载与质量",
+      "applicability": "True",
+      "text": "恒载只计主梁自重 w = γA；质量取 m = w/g，采用一致质量矩阵。",
+      "formula": {
+       "girder.w": "gamma * A",
+       "girder.m": "w / 9.81"
+      }
+     }
+    ],
+    "valid_evidence": {
+     "primary_applicable": [
+      "MR-07"
+     ],
+     "supporting": [
+      "MR-02",
+      "JTGD60-4.2.1"
+     ],
+     "input_paths": [
+      "INPUT:girder.type",
+      "INPUT:girder.count_per_span",
+      "INPUT:girder.concrete",
+      "INPUT:girder.material",
+      "INPUT:girder.section"
+     ],
+     "instance_nodes": [
+      "inst:girder"
+     ],
+     "rule": "至少引用一条主依据（题目给定覆盖值时引用 MR-00 与对应 INPUT 路径）；其余为可选辅助依据，须写成此处列出的形式"
+    },
+    "formula_result": 106.288,
+    "formula_source": "MR-07",
+    "formula_inputs": {
+     "A": 4.088,
+     "gamma": 26.0
+    },
+    "hint": "若公式结果与你对描述的理解不符，先核对 formula_inputs 中取自实例层的数据；实例层写错时用 write_instance 修正，不要照搬公式结果",
+    "violations": [
+     {
+      "check": "evidence",
+      "constraint": "I2",
+      "message": "依据在图谱中不存在或写法无法识别：['dec:g irder.gamma', 'dec:g irder.A']"
+     }
+    ],
+    "failed_checks": [
+     "evidence"
+    ]
+   }
+  },
+  {
+   "t": 567.754,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "girder.w",
+    "value": 106.288,
+    "unit": "kN/m",
+    "evidence": [
+     "MR-07",
+     "MR-02",
+     "JTGD60-4.2.1"
+    ],
+    "rationale": "",
+    "attempt": 4
+   },
+   "result": {
+    "accepted": true,
+    "slot": "girder.w",
+    "decision_id": "dec:girder.w"
+   }
+  },
+  {
+   "t": 573.333,
+   "tool": "execute_formula",
+   "args": {
+    "node_id": "MR-07",
+    "slot": "girder.m"
+   },
+   "result": {
+    "value": 10.834658511722731,
+    "inputs": {
+     "A": 4.088,
+     "gamma": 26.0,
+     "w": 106.288
+    },
+    "applicable_to_this_bridge": true,
+    "applicability": "True"
+   }
+  },
+  {
+   "t": 584.214,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "girder.m",
+    "value": 10.8346585117,
+    "unit": "t/m",
+    "evidence": [
+     "MR-07",
+     "MR-02",
+     "JTGD60-4.2.1"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": false,
+    "slot": "girder.m",
+    "category": "modeling_rule",
+    "expected_unit": "t/m",
+    "candidate_evidence": [
+     {
+      "id": "MR-07",
+      "title": "恒载与质量",
+      "applicability": "True",
+      "text": "恒载只计主梁自重 w = γA；质量取 m = w/g，采用一致质量矩阵。",
+      "formula": {
+       "girder.w": "gamma * A",
+       "girder.m": "w / 9.81"
+      }
+     }
+    ],
+    "valid_evidence": {
+     "primary_applicable": [
+      "MR-07"
+     ],
+     "supporting": [],
+     "input_paths": [
+      "INPUT:girder.type",
+      "INPUT:girder.count_per_span",
+      "INPUT:girder.concrete",
+      "INPUT:girder.material",
+      "INPUT:girder.section"
+     ],
+     "instance_nodes": [
+      "inst:girder"
+     ],
+     "rule": "至少引用一条主依据（题目给定覆盖值时引用 MR-00 与对应 INPUT 路径）；其余为可选辅助依据，须写成此处列出的形式"
+    },
+    "formula_result": 10.834658511722731,
+    "formula_source": "MR-07",
+    "formula_inputs": {
+     "A": 4.088,
+     "gamma": 26.0,
+     "w": 106.288
+    },
+    "hint": "若公式结果与你对描述的理解不符，先核对 formula_inputs 中取自实例层的数据；实例层写错时用 write_instance 修正，不要照搬公式结果",
+    "violations": [
+     {
+      "check": "applicability",
+      "constraint": "MR-02",
+      "message": "MR-02 既不给出也不支撑 girder.m 这一决策"
+     },
+     {
+      "check": "applicability",
+      "constraint": "JTGD60-4.2.1",
+      "message": "JTGD60-4.2.1 既不给出也不支撑 girder.m 这一决策"
+     }
+    ],
+    "failed_checks": [
+     "applicability"
+    ]
+   }
+  },
+  {
+   "t": 601.705,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "girder.m",
+    "value": 10.8346585117,
+    "unit": "t/m",
+    "evidence": [
+     "MR-07"
+    ],
+    "rationale": "",
+    "attempt": 2
+   },
+   "result": {
+    "accepted": true,
+    "slot": "girder.m",
+    "decision_id": "dec:girder.m"
+   }
+  },
+  {
+   "t": 608.455,
+   "tool": "execute_formula",
+   "args": {
+    "node_id": "MR-04",
+    "slot": "support.0.bearing"
+   },
+   "result": {
+    "value": {
+     "type": "spherical_sliding",
+     "count": 4
+    },
+    "inputs": {
+     "bearing_type": "spherical_sliding",
+     "count": 4
+    },
+    "applicable_to_this_bridge": true,
+    "applicability": "True"
+   }
+  },
+  {
+   "t": 614.505,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.0.bearing",
+    "value": {
+     "type": "spherical_sliding",
+     "count": 4
+    },
+    "unit": "-",
+    "evidence": [
+     "MR-04",
+     "inst:bearing:0"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.0.bearing",
+    "decision_id": "dec:support.0.bearing"
+   }
+  },
+  {
+   "t": 619.414,
+   "tool": "execute_formula",
+   "args": {
+    "node_id": "MR-08",
+    "slot": "support.0.dofs"
+   },
+   "result": {
+    "value": {
+     "vertical": "rigid",
+     "longitudinal": "free",
+     "rotation": "free"
+    },
+    "inputs": {
+     "fixed": false
+    },
+    "applicable_to_this_bridge": true,
+    "applicability": "family == 'spherical'"
+   }
+  },
+  {
+   "t": 624.255,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.0.dofs",
+    "value": {
+     "vertical": "rigid",
+     "longitudinal": "free",
+     "rotation": "free"
+    },
+    "unit": "-",
+    "evidence": [
+     "MR-08",
+     "inst:bearing:0"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.0.dofs",
+    "decision_id": "dec:support.0.dofs"
+   }
+  },
+  {
+   "t": 628.297,
+   "tool": "execute_formula",
+   "args": {
+    "node_id": "MR-04",
+    "slot": "support.1.bearing"
+   },
+   "result": {
+    "value": {
+     "type": "spherical_fixed",
+     "count": 4
+    },
+    "inputs": {
+     "bearing_type": "spherical_fixed",
+     "count": 4
+    },
+    "applicable_to_this_bridge": true,
+    "applicability": "True"
+   }
+  },
+  {
+   "t": 632.287,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.1.bearing",
+    "value": {
+     "type": "spherical_fixed",
+     "count": 4
+    },
+    "unit": "-",
+    "evidence": [
+     "MR-04",
+     "inst:bearing:1"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.1.bearing",
+    "decision_id": "dec:support.1.bearing"
+   }
+  },
+  {
+   "t": 639.665,
+   "tool": "execute_formula",
+   "args": {
+    "node_id": "MR-08",
+    "slot": "support.1.dofs"
+   },
+   "result": {
+    "value": {
+     "vertical": "rigid",
+     "longitudinal": "fixed",
+     "rotation": "free"
+    },
+    "inputs": {
+     "fixed": true
+    },
+    "applicable_to_this_bridge": true,
+    "applicability": "family == 'spherical'"
+   }
+  },
+  {
+   "t": 645.296,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.1.dofs",
+    "value": {
+     "vertical": "rigid",
+     "longitudinal": "fixed",
+     "rotation": "free"
+    },
+    "unit": "-",
+    "evidence": [
+     "MR-08",
+     "inst:bearing:1"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.1.dofs",
+    "decision_id": "dec:support.1.dofs"
+   }
+  },
+  {
+   "t": 733.617,
+   "tool": "execute_formula",
+   "args": {
+    "node_id": "JTGD60-4.3.1-lanes",
+    "slot": "lane.n_lanes"
+   },
+   "result": {
+    "value": 2,
+    "inputs": {
+     "W": 9,
+     "two_way": true
+    },
+    "applicable_to_this_bridge": true,
+    "applicability": "W >= 6.0 if two_way else True"
+   }
+  },
+  {
+   "t": 739.178,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "lane.n_lanes",
+    "value": 2,
+    "unit": "-",
+    "evidence": [
+     "JTGD60-4.3.1-lanes"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "lane.n_lanes",
+    "decision_id": "dec:lane.n_lanes"
+   }
+  },
+  {
+   "t": 746.277,
+   "tool": "execute_formula",
+   "args": {
+    "node_id": "JTGD60-4.3.1-xi",
+    "slot": "lane.xi"
+   },
+   "result": {
+    "value": 1.0,
+    "inputs": {
+     "n_lanes": 2
+    },
+    "applicable_to_this_bridge": true,
+    "applicability": "n_lanes in XI_TABLE"
+   }
+  },
+  {
+   "t": 752.957,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "lane.xi",
+    "value": 1.0,
+    "unit": "-",
+    "evidence": [
+     "JTGD60-4.3.1-xi",
+     "dec:lane.n_lanes"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "lane.xi",
+    "decision_id": "dec:lane.xi"
+   }
+  },
+  {
+   "t": 759.238,
+   "tool": "execute_formula",
+   "args": {
+    "node_id": "JTGD60-4.3.1-qk",
+    "slot": "lane.qk"
+   },
+   "result": {
+    "value": 10.5,
+    "inputs": {
+     "load_class": "I"
+    },
+    "applicable_to_this_bridge": true,
+    "applicability": "load_class in ('I', 'II')"
+   }
+  },
+  {
+   "t": 765.112,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "lane.qk",
+    "value": 10.5,
+    "unit": "kN/m",
+    "evidence": [
+     "JTGD60-4.3.1-qk"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "lane.qk",
+    "decision_id": "dec:lane.qk"
+   }
+  },
+  {
+   "t": 770.847,
+   "tool": "execute_formula",
+   "args": {
+    "node_id": "JTGD60-4.3.1-Pk",
+    "slot": "lane.Pk.1"
+   },
+   "result": {
+    "value": 340.0,
+    "inputs": {
+     "L0": 40,
+     "load_class": "I"
+    },
+    "applicable_to_this_bridge": true,
+    "applicability": "load_class in ('I', 'II') and L0 > 0"
+   }
+  },
+  {
+   "t": 797.99,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "lane.Pk.1",
+    "value": 340.0,
+    "unit": "kN",
+    "evidence": [
+     "JTGD60-4.3.1-Pk"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "lane.Pk.1",
+    "decision_id": "dec:lane.Pk.1"
+   }
+  },
+  {
+   "t": 803.874,
+   "tool": "run_modal_analysis",
+   "args": {},
+   "result": {
+    "ok": true,
+    "vertical_frequencies_Hz": [
+     3.242720417150247,
+     12.97096368365569,
+     29.185464557381692
+    ],
+    "fact": {
+     "f1": 3.242720417150247
+    }
+   }
+  },
+  {
+   "t": 811.568,
+   "tool": "execute_formula",
+   "args": {
+    "node_id": "JTGD60-4.3.2",
+    "slot": "lane.mu"
+   },
+   "result": {
+    "value": 0.1921721086165468,
+    "inputs": {
+     "f1": 3.242720417150247
+    },
+    "applicable_to_this_bridge": true,
+    "applicability": "has_f1"
+   }
+  },
+  {
+   "t": 818.898,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "lane.mu",
+    "value": 0.1921721086,
+    "unit": "-",
+    "evidence": [
+     "JTGD60-4.3.2",
+     "fact:f1"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "lane.mu",
+    "decision_id": "dec:lane.mu"
+   }
+  },
+  {
+   "t": 829.769,
+   "tool": "generate_model",
+   "args": {},
+   "result": {
+    "ok": true,
+    "script": "${PROJECT_ROOT}/runs_luna/C5/A06_r1/A06_model.py",
+    "results": {
+     "ok": true,
+     "vertical_frequencies_Hz": [
+      3.242720417150247,
+      12.97096368365569,
+      29.185464557381692
+     ],
+     "self_weight_support_reactions_kN": [
+      2125.7600000007656,
+      2125.7600000008424
+     ],
+     "self_weight_midspan_moments_kNm": [
+      21257.600000017457
+     ],
+     "self_weight_support_moments_kNm": [],
+     "lane_moments_by_section": [
+      {
+       "section": "span",
+       "index": 1,
+       "M_kNm": 13113.893194609454
+      }
+     ],
+     "lane_max_positive_moment_kNm": 13113.893194609454,
+     "lane_max_negative_moment_kNm": null
+    }
+   }
+  },
+  {
+   "t": 840.88,
+   "tool": "finish",
+   "args": {
+    "summary": "Generated and successfully checked the OpenSeesPy model for the 40 m simply supported, four-girder precast T-girder bridge. Integrated section properties per girder: A=1.022 m² and I=0.85655 m⁴; combined model values: A=4.088 m² and I=3.42622 m⁴. The model includes girder self-weight only, spherical sliding bearings at abutment 0 and fixed spherical bearings at abutment 1, and JTG D60 Class I two-lane loading. First vertical frequency is 3.243 Hz and impact factor is 0.19217. Checks passed. Self-weight reactions are 2125.76 kN per support line; midspan self-weight moment is 21257.60 kN·m; maximum positive lane-load moment is 13113.89 kN·m. Script: ${PROJECT_ROOT}/runs_luna/C5/A06_r1/A06_model.py"
+   },
+   "result": {
+    "ok": true
+   }
+  }
+ ]
+}

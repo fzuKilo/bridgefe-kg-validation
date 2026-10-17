@@ -1,0 +1,35 @@
+{
+ "metrics": {
+  "proposals": 0,
+  "slots_proposed": 0,
+  "first_proposal_violation_rate": null,
+  "violations_by_check": {},
+  "instance_rounds": 0,
+  "repair_rounds": 0,
+  "model_passed": false,
+  "elapsed_s": 179.78
+ },
+ "decisions": {},
+ "facts": {},
+ "instance": {},
+ "results": null,
+ "last_check": null,
+ "role_log": [
+  {
+   "role": "direct_script",
+   "usage": {
+    "turns": 1,
+    "prompt_tokens": 4285,
+    "output_tokens": 4183,
+    "cache_hit_tokens": 0,
+    "reasoning_tokens": 738,
+    "finish_reason": "stop",
+    "stream": true
+   },
+   "returncode": 1,
+   "stderr": "Domain::addSP_Constraint - cannot add as node already constrained in that dof by existing SP_Constraint\nSP_Constraint: 6\t Node: 1 DOF: 2 ref value: 0 current value: 0 initial value: 0\nWARNING: failed to add SP to domain\nTraceback (most recent call last):\n  File \"${PROJECT_ROOT}/runs_luna/C0/B05_r3/B05_direct.py\", line 113, in <module>\n    ops.fix(support_nodes[0], 1, 1, 0)\nopensees.OpenSeesError: See stderr output\n",
+   "elapsed_s": 179.8
+  }
+ ],
+ "log": []
+}

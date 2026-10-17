@@ -1,0 +1,35 @@
+{
+ "metrics": {
+  "proposals": 0,
+  "slots_proposed": 0,
+  "first_proposal_violation_rate": null,
+  "violations_by_check": {},
+  "instance_rounds": 0,
+  "repair_rounds": 0,
+  "model_passed": false,
+  "elapsed_s": 5.09
+ },
+ "decisions": {},
+ "facts": {},
+ "instance": {},
+ "results": null,
+ "defect": {
+  "defect_type": "out_of_scope",
+  "message": "The bridge uses \"Steel plate girders acting compositely with a 0.25 m cast-in-place deck slab ... steel girder depth 1.4 m, top flange 400 mm x 25 mm, bottom flange 500 mm x 30 mm, web 1345 mm x 16 mm, steel Q345\". The knowledge graph covers only concrete girder types (small_box, t_girder, cast_box) with concrete section schemas, and its material rules are limited to concrete grades (JTG 3362-2018 Table 3.1.5 for Ec). There are no rules, clauses or section types for steel plate girders, steel-composite sections, or steel grade Q345, so no girder.single.A/I, girder.A/I, girder.Ec or girder.gamma decision can be derived. The component lies outside the scope of the knowledge graph."
+ },
+ "last_check": null,
+ "role_log": [],
+ "log": [
+  {
+   "t": 5.089,
+   "tool": "report_input_defect",
+   "args": {
+    "defect_type": "out_of_scope",
+    "message": "The bridge uses \"Steel plate girders acting compositely with a 0.25 m cast-in-place deck slab ... steel girder depth 1.4 m, top flange 400 mm x 25 mm, bottom flange 500 mm x 30 mm, web 1345 mm x 16 mm, steel Q345\". The knowledge graph covers only concrete girder types (small_box, t_girder, cast_box) with concrete section schemas, and its material rules are limited to concrete grades (JTG 3362-2018 Table 3.1.5 for Ec). There are no rules, clauses or section types for steel plate girders, steel-composite sections, or steel grade Q345, so no girder.single.A/I, girder.A/I, girder.Ec or girder.gamma decision can be derived. The component lies outside the scope of the knowledge graph."
+   },
+   "result": {
+    "ok": true
+   }
+  }
+ ]
+}

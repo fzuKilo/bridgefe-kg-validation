@@ -1,0 +1,35 @@
+{
+ "metrics": {
+  "proposals": 0,
+  "slots_proposed": 0,
+  "first_proposal_violation_rate": null,
+  "violations_by_check": {},
+  "instance_rounds": 0,
+  "repair_rounds": 0,
+  "model_passed": false,
+  "elapsed_s": 5.34
+ },
+ "decisions": {},
+ "facts": {},
+ "instance": {},
+ "results": null,
+ "defect": {
+  "defect_type": "out_of_scope",
+  "message": "The bridge uses steel plate girders (\"Steel plate girders acting compositely with a 0.25 m cast-in-place deck slab... steel girder depth 1.4 m, top flange 400 mm x 25 mm, bottom flange 500 mm x 30 mm, web 1345 mm x 16 mm, steel Q345\"). The knowledge graph covers only concrete girder types — its section schemas are small_box, t_girder and cast_box (all prestressed/precast concrete), the section-property rule MR-02 refers to concrete sections with wet joints and diaphragms, and the governing modulus clause JTG3362-3.1.5 is the concrete elastic-modulus table (grade in EC_TABLE). No rule, clause or section geometry exists for a steel plate girder or for a steel-concrete composite section, so the main-girder A, I and Ec cannot be modeled as given. This component falls outside the scope of the knowledge graph."
+ },
+ "last_check": null,
+ "role_log": [],
+ "log": [
+  {
+   "t": 5.339,
+   "tool": "report_input_defect",
+   "args": {
+    "defect_type": "out_of_scope",
+    "message": "The bridge uses steel plate girders (\"Steel plate girders acting compositely with a 0.25 m cast-in-place deck slab... steel girder depth 1.4 m, top flange 400 mm x 25 mm, bottom flange 500 mm x 30 mm, web 1345 mm x 16 mm, steel Q345\"). The knowledge graph covers only concrete girder types — its section schemas are small_box, t_girder and cast_box (all prestressed/precast concrete), the section-property rule MR-02 refers to concrete sections with wet joints and diaphragms, and the governing modulus clause JTG3362-3.1.5 is the concrete elastic-modulus table (grade in EC_TABLE). No rule, clause or section geometry exists for a steel plate girder or for a steel-concrete composite section, so the main-girder A, I and Ec cannot be modeled as given. This component falls outside the scope of the knowledge graph."
+   },
+   "result": {
+    "ok": true
+   }
+  }
+ ]
+}

@@ -1,0 +1,290 @@
+{
+ "metrics": {
+  "proposals": 0,
+  "slots_proposed": 0,
+  "first_proposal_violation_rate": null,
+  "violations_by_check": {},
+  "instance_rounds": 0,
+  "repair_rounds": 0,
+  "model_passed": false,
+  "elapsed_s": 39.46
+ },
+ "decisions": {
+  "structure.idealization": {
+   "id": "dec:structure.idealization",
+   "slot": "structure.idealization",
+   "value": "spine_beam_2d",
+   "unit": null,
+   "evidence": []
+  },
+  "structure.system": {
+   "id": "dec:structure.system",
+   "slot": "structure.system",
+   "value": "simply_supported",
+   "unit": null,
+   "evidence": []
+  },
+  "girder.single.A": {
+   "id": "dec:girder.single.A",
+   "slot": "girder.single.A",
+   "value": 0.808,
+   "unit": null,
+   "evidence": []
+  },
+  "girder.single.I": {
+   "id": "dec:girder.single.I",
+   "slot": "girder.single.I",
+   "value": 0.159,
+   "unit": null,
+   "evidence": []
+  },
+  "girder.A": {
+   "id": "dec:girder.A",
+   "slot": "girder.A",
+   "value": 4.04,
+   "unit": null,
+   "evidence": []
+  },
+  "girder.I": {
+   "id": "dec:girder.I",
+   "slot": "girder.I",
+   "value": 0.795,
+   "unit": null,
+   "evidence": []
+  },
+  "girder.Ec": {
+   "id": "dec:girder.Ec",
+   "slot": "girder.Ec",
+   "value": 32500.0,
+   "unit": null,
+   "evidence": []
+  },
+  "girder.gamma": {
+   "id": "dec:girder.gamma",
+   "slot": "girder.gamma",
+   "value": 25.0,
+   "unit": null,
+   "evidence": []
+  },
+  "girder.w": {
+   "id": "dec:girder.w",
+   "slot": "girder.w",
+   "value": 20.2,
+   "unit": null,
+   "evidence": []
+  },
+  "girder.m": {
+   "id": "dec:girder.m",
+   "slot": "girder.m",
+   "value": 2.06,
+   "unit": null,
+   "evidence": []
+  },
+  "support.0.bearing": {
+   "id": "dec:support.0.bearing",
+   "slot": "support.0.bearing",
+   "value": {
+    "type": "plain_elastomeric",
+    "count": 10
+   },
+   "unit": null,
+   "evidence": []
+  },
+  "support.0.dofs": {
+   "id": "dec:support.0.dofs",
+   "slot": "support.0.dofs",
+   "value": {
+    "vertical": "spring",
+    "longitudinal": "spring",
+    "rotation": "free"
+   },
+   "unit": null,
+   "evidence": []
+  },
+  "support.0.S": {
+   "id": "dec:support.0.S",
+   "slot": "support.0.S",
+   "value": 10.096,
+   "unit": null,
+   "evidence": []
+  },
+  "support.0.Kv": {
+   "id": "dec:support.0.Kv",
+   "slot": "support.0.Kv",
+   "value": 56800.0,
+   "unit": null,
+   "evidence": []
+  },
+  "support.0.Kh": {
+   "id": "dec:support.0.Kh",
+   "slot": "support.0.Kh",
+   "value": 328.0,
+   "unit": null,
+   "evidence": []
+  },
+  "support.1.bearing": {
+   "id": "dec:support.1.bearing",
+   "slot": "support.1.bearing",
+   "value": {
+    "type": "plain_elastomeric",
+    "count": 10
+   },
+   "unit": null,
+   "evidence": []
+  },
+  "support.1.dofs": {
+   "id": "dec:support.1.dofs",
+   "slot": "support.1.dofs",
+   "value": {
+    "vertical": "spring",
+    "longitudinal": "spring",
+    "rotation": "free"
+   },
+   "unit": null,
+   "evidence": []
+  },
+  "support.1.S": {
+   "id": "dec:support.1.S",
+   "slot": "support.1.S",
+   "value": 10.096,
+   "unit": null,
+   "evidence": []
+  },
+  "support.1.Kv": {
+   "id": "dec:support.1.Kv",
+   "slot": "support.1.Kv",
+   "value": 56800.0,
+   "unit": null,
+   "evidence": []
+  },
+  "support.1.Kh": {
+   "id": "dec:support.1.Kh",
+   "slot": "support.1.Kh",
+   "value": 328.0,
+   "unit": null,
+   "evidence": []
+  },
+  "lane.n_lanes": {
+   "id": "dec:lane.n_lanes",
+   "slot": "lane.n_lanes",
+   "value": 4,
+   "unit": null,
+   "evidence": []
+  },
+  "lane.xi": {
+   "id": "dec:lane.xi",
+   "slot": "lane.xi",
+   "value": 0.67,
+   "unit": null,
+   "evidence": []
+  },
+  "lane.qk": {
+   "id": "dec:lane.qk",
+   "slot": "lane.qk",
+   "value": 5.906,
+   "unit": null,
+   "evidence": []
+  },
+  "lane.Pk.1": {
+   "id": "dec:lane.Pk.1",
+   "slot": "lane.Pk.1",
+   "value": 165.0,
+   "unit": null,
+   "evidence": []
+  }
+ },
+ "facts": {},
+ "instance": {
+  "supports": [
+   {
+    "index": 0,
+    "kind": "abutment",
+    "bearing": {
+     "family": "laminated_elastomeric",
+     "sliding": false,
+     "fixed": false,
+     "per_girder_end": 2,
+     "per_line": null,
+     "a_mm": 300,
+     "b_mm": 350,
+     "t1_mm": 8,
+     "n_layers": 4,
+     "Ge_MPa": null,
+     "model": null
+    },
+    "pier": null
+   },
+   {
+    "index": 1,
+    "kind": "abutment",
+    "bearing": {
+     "family": "laminated_elastomeric",
+     "sliding": false,
+     "fixed": false,
+     "per_girder_end": 2,
+     "per_line": null,
+     "a_mm": 300,
+     "b_mm": 350,
+     "t1_mm": 8,
+     "n_layers": 4,
+     "Ge_MPa": null,
+     "model": null
+    },
+    "pier": null
+   }
+  ],
+  "structure_type": "simply_supported",
+  "spans_m": [
+   25
+  ],
+  "deck": {
+   "deck_width_m": 16,
+   "carriageway_width_m": 15,
+   "traffic": "one_way",
+   "design_lanes": 4,
+   "load_class": "II"
+  },
+  "girder": {
+   "type": "small_box",
+   "count_per_span": 5,
+   "concrete": "C40",
+   "material": "prestressed_concrete",
+   "E_override_MPa": null,
+   "gamma_override_kNm3": null,
+   "section": {
+    "depth_m": 1.4,
+    "top_width_m": 2.4,
+    "top_slab_thickness_m": 0.18,
+    "flange_tip_thickness_m": 0.18,
+    "flange_haunch_thickness_increase_m": 0.062,
+    "flange_haunch_length_m": 0.201,
+    "bottom_width_m": 1.0,
+    "bottom_slab_thickness_m": 0.18,
+    "web_thickness_m": 0.2,
+    "web_outer_face_slope_horizontal_to_vertical": 3.5,
+    "upper_cell_chamfer_horizontal_m": 0.15,
+    "upper_cell_chamfer_vertical_m": 0.07
+   }
+  },
+  "dead_load": "girder_self_weight_only"
+ },
+ "results": null,
+ "last_check": null,
+ "role_log": [
+  {
+   "role": "direct_decisions",
+   "usage": {
+    "turns": 1,
+    "prompt_tokens": 4902,
+    "output_tokens": 1562,
+    "cache_hit_tokens": 2816,
+    "reasoning_tokens": 613,
+    "finish_reason": "stop",
+    "stream": true
+   },
+   "note": " execution: Traceback (most recent call last):\n  File \"${PROJECT_ROOT}/runs_luna/C1/A03_r1/A03_model.py\", line 156, in <module>\n    lm = lane(IR['lane']['mu'])\n         ^^^^^^^^^^^^^^^^^^^^^^\n  File \"${PROJECT_ROOT}/runs_luna/C1/A03_r1/A03_model.py\", line 105, in lane\n    amp = (1 + mu) * L['n_lanes'] * L['xi']\n           ~~^~~~\nTypeError: unsupported operand type(s) for +: 'int' and 'NoneType'\n",
+   "elapsed_s": 39.5
+  }
+ ],
+ "log": []
+}

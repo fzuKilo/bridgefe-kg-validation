@@ -1,0 +1,35 @@
+{
+ "metrics": {
+  "proposals": 0,
+  "slots_proposed": 0,
+  "first_proposal_violation_rate": null,
+  "violations_by_check": {},
+  "instance_rounds": 0,
+  "repair_rounds": 0,
+  "model_passed": false,
+  "elapsed_s": 70.14
+ },
+ "decisions": {},
+ "facts": {},
+ "instance": {},
+ "results": null,
+ "last_check": null,
+ "role_log": [
+  {
+   "role": "direct_script",
+   "usage": {
+    "turns": 1,
+    "prompt_tokens": 4290,
+    "output_tokens": 3655,
+    "cache_hit_tokens": 0,
+    "reasoning_tokens": 831,
+    "finish_reason": "stop",
+    "stream": true
+   },
+   "returncode": 1,
+   "stderr": "WARNING BandGenLinLapackSolver::solve() -factorization failed, matrix singular U(i,i) = 0, i= 295\nWARNING Linear::solveCurrentStep() -the LinearSOE failed in solve()\nStaticAnalysis::analyze() - the Algorithm failed at step: 0 with domain at load factor 1\nOpenSees > analyze failed, returned: -3 error flag\nTraceback (most recent call last):\n  File \"${PROJECT_ROOT}/runs_luna/C0/B09_r1/B09_direct.py\", line 117, in <module>\n    raise RuntimeError(\"Self-weight static analysis did not converge.\")\nRuntimeError: Self-weight static analysis did not converge.\n",
+   "elapsed_s": 70.1
+  }
+ ],
+ "log": []
+}

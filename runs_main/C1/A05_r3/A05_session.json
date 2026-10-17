@@ -1,0 +1,316 @@
+{
+ "metrics": {
+  "proposals": 0,
+  "slots_proposed": 0,
+  "first_proposal_violation_rate": null,
+  "violations_by_check": {},
+  "instance_rounds": 0,
+  "repair_rounds": 0,
+  "model_passed": true,
+  "elapsed_s": 3.25
+ },
+ "decisions": {
+  "structure.idealization": {
+   "id": "dec:structure.idealization",
+   "slot": "structure.idealization",
+   "value": "spine_beam_2d",
+   "unit": null,
+   "evidence": []
+  },
+  "structure.system": {
+   "id": "dec:structure.system",
+   "slot": "structure.system",
+   "value": "simply_supported",
+   "unit": null,
+   "evidence": []
+  },
+  "girder.single.A": {
+   "id": "dec:girder.single.A",
+   "slot": "girder.single.A",
+   "value": 0.6251,
+   "unit": null,
+   "evidence": []
+  },
+  "girder.single.I": {
+   "id": "dec:girder.single.I",
+   "slot": "girder.single.I",
+   "value": 0.13896,
+   "unit": null,
+   "evidence": []
+  },
+  "girder.A": {
+   "id": "dec:girder.A",
+   "slot": "girder.A",
+   "value": 2.5004,
+   "unit": null,
+   "evidence": []
+  },
+  "girder.I": {
+   "id": "dec:girder.I",
+   "slot": "girder.I",
+   "value": 0.55584,
+   "unit": null,
+   "evidence": []
+  },
+  "girder.Ec": {
+   "id": "dec:girder.Ec",
+   "slot": "girder.Ec",
+   "value": 32500.0,
+   "unit": null,
+   "evidence": []
+  },
+  "girder.gamma": {
+   "id": "dec:girder.gamma",
+   "slot": "girder.gamma",
+   "value": 26.0,
+   "unit": null,
+   "evidence": []
+  },
+  "girder.w": {
+   "id": "dec:girder.w",
+   "slot": "girder.w",
+   "value": 65.0104,
+   "unit": null,
+   "evidence": []
+  },
+  "girder.m": {
+   "id": "dec:girder.m",
+   "slot": "girder.m",
+   "value": 6.6287,
+   "unit": null,
+   "evidence": []
+  },
+  "support.0.bearing": {
+   "id": "dec:support.0.bearing",
+   "slot": "support.0.bearing",
+   "value": {
+    "type": "plain_elastomeric",
+    "count": 4
+   },
+   "unit": null,
+   "evidence": []
+  },
+  "support.0.dofs": {
+   "id": "dec:support.0.dofs",
+   "slot": "support.0.dofs",
+   "value": {
+    "vertical": "spring",
+    "longitudinal": "spring",
+    "rotation": "free"
+   },
+   "unit": null,
+   "evidence": []
+  },
+  "support.0.S": {
+   "id": "dec:support.0.S",
+   "slot": "support.0.S",
+   "value": 3.986,
+   "unit": null,
+   "evidence": []
+  },
+  "support.0.Kv": {
+   "id": "dec:support.0.Kv",
+   "slot": "support.0.Kv",
+   "value": 566000.0,
+   "unit": null,
+   "evidence": []
+  },
+  "support.0.Kh": {
+   "id": "dec:support.0.Kh",
+   "slot": "support.0.Kh",
+   "value": 3640.0,
+   "unit": null,
+   "evidence": []
+  },
+  "support.1.bearing": {
+   "id": "dec:support.1.bearing",
+   "slot": "support.1.bearing",
+   "value": {
+    "type": "plain_elastomeric",
+    "count": 4
+   },
+   "unit": null,
+   "evidence": []
+  },
+  "support.1.dofs": {
+   "id": "dec:support.1.dofs",
+   "slot": "support.1.dofs",
+   "value": {
+    "vertical": "spring",
+    "longitudinal": "spring",
+    "rotation": "free"
+   },
+   "unit": null,
+   "evidence": []
+  },
+  "support.1.S": {
+   "id": "dec:support.1.S",
+   "slot": "support.1.S",
+   "value": 3.986,
+   "unit": null,
+   "evidence": []
+  },
+  "support.1.Kv": {
+   "id": "dec:support.1.Kv",
+   "slot": "support.1.Kv",
+   "value": 566000.0,
+   "unit": null,
+   "evidence": []
+  },
+  "support.1.Kh": {
+   "id": "dec:support.1.Kh",
+   "slot": "support.1.Kh",
+   "value": 3640.0,
+   "unit": null,
+   "evidence": []
+  },
+  "lane.n_lanes": {
+   "id": "dec:lane.n_lanes",
+   "slot": "lane.n_lanes",
+   "value": 2,
+   "unit": null,
+   "evidence": []
+  },
+  "lane.xi": {
+   "id": "dec:lane.xi",
+   "slot": "lane.xi",
+   "value": 1.0,
+   "unit": null,
+   "evidence": []
+  },
+  "lane.qk": {
+   "id": "dec:lane.qk",
+   "slot": "lane.qk",
+   "value": 10.5,
+   "unit": null,
+   "evidence": []
+  },
+  "lane.Pk.1": {
+   "id": "dec:lane.Pk.1",
+   "slot": "lane.Pk.1",
+   "value": 240.0,
+   "unit": null,
+   "evidence": []
+  },
+  "lane.mu": {
+   "id": "dec:lane.mu",
+   "slot": "lane.mu",
+   "value": 0.0,
+   "unit": null,
+   "evidence": []
+  }
+ },
+ "facts": {},
+ "instance": {
+  "supports": [
+   {
+    "index": 0,
+    "kind": "abutment",
+    "bearing": {
+     "family": "laminated_elastomeric",
+     "sliding": false,
+     "fixed": true,
+     "per_girder_end": 1,
+     "per_line": null,
+     "a_mm": 250,
+     "b_mm": 300,
+     "t1_mm": 8,
+     "n_layers": 4,
+     "Ge_MPa": null,
+     "model": null
+    },
+    "pier": null
+   },
+   {
+    "index": 1,
+    "kind": "abutment",
+    "bearing": {
+     "family": "laminated_elastomeric",
+     "sliding": false,
+     "fixed": true,
+     "per_girder_end": 1,
+     "per_line": null,
+     "a_mm": 250,
+     "b_mm": 300,
+     "t1_mm": 8,
+     "n_layers": 4,
+     "Ge_MPa": null,
+     "model": null
+    },
+    "pier": null
+   }
+  ],
+  "structure_type": "simply_supported",
+  "spans_m": [
+   20
+  ],
+  "deck": {
+   "deck_width_m": 9,
+   "carriageway_width_m": 8,
+   "traffic": "one_way",
+   "design_lanes": 2,
+   "load_class": "I"
+  },
+  "girder": {
+   "type": "t_girder",
+   "count_per_span": 4,
+   "concrete": "C40",
+   "material": "prestressed_concrete",
+   "E_override_MPa": null,
+   "gamma_override_kNm3": null,
+   "section": {
+    "h_m": 1.35,
+    "flange_width_m": 1.8,
+    "flange_tip_thickness_m": 0.18,
+    "flange_root_thickness_m": 0.27,
+    "web_thickness_m": 0.2,
+    "bottom_bulb_width_m": 0.6,
+    "bottom_bulb_vertical_m": 0.2,
+    "bottom_transition_height_m": 0.2
+   }
+  },
+  "dead_load": "girder_self_weight_only"
+ },
+ "results": {
+  "ok": true,
+  "vertical_frequencies_Hz": [
+   6.0121850274616255,
+   19.24648777343574,
+   32.873325346240925
+  ],
+  "self_weight_support_reactions_kN": [
+   650.1039999998138,
+   650.1039999999393
+  ],
+  "self_weight_midspan_moments_kNm": [
+   3250.519999998636
+  ],
+  "self_weight_support_moments_kNm": [],
+  "lane_moments_by_section": [
+   {
+    "section": "span",
+    "index": 1,
+    "M_kNm": 3449.9999999988117
+   }
+  ],
+  "lane_max_positive_moment_kNm": 3449.9999999988117,
+  "lane_max_negative_moment_kNm": null
+ },
+ "last_check": null,
+ "role_log": [
+  {
+   "role": "direct_decisions",
+   "usage": {
+    "turns": 1,
+    "prompt_tokens": 1356,
+    "output_tokens": 917,
+    "cache_hit_tokens": 1152,
+    "reasoning_chars": 0,
+    "finish_reason": "stop"
+   },
+   "note": null,
+   "elapsed_s": 3.2
+  }
+ ],
+ "log": []
+}

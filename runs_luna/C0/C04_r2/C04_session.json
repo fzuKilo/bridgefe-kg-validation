@@ -1,0 +1,35 @@
+{
+ "metrics": {
+  "proposals": 0,
+  "slots_proposed": 0,
+  "first_proposal_violation_rate": null,
+  "violations_by_check": {},
+  "instance_rounds": 0,
+  "repair_rounds": 0,
+  "model_passed": false,
+  "elapsed_s": 86.02
+ },
+ "decisions": {},
+ "facts": {},
+ "instance": {},
+ "results": null,
+ "last_check": null,
+ "role_log": [
+  {
+   "role": "direct_script",
+   "usage": {
+    "turns": 1,
+    "prompt_tokens": 4350,
+    "output_tokens": 4502,
+    "cache_hit_tokens": 2816,
+    "reasoning_tokens": 670,
+    "finish_reason": "stop",
+    "stream": true
+   },
+   "returncode": 1,
+   "stderr": "WARNING - the 'fullGenLapack' eigen solver is VERY SLOW. Consider using the default eigen solver.MapOfTaggedObjects::addComponent - not adding as one with similar tag exists, tag: 3\nERROR could not add timeseries to domain.\nTraceback (most recent call last):\n  File \"${PROJECT_ROOT}/runs_luna/C0/C04_r2/C04_direct.py\", line 258, in <module>\n    ops.timeSeries(\"Linear\", 3)\nopensees.OpenSeesError: See stderr output\n",
+   "elapsed_s": 86.0
+  }
+ ],
+ "log": []
+}

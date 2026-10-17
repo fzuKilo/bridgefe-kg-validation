@@ -1,0 +1,731 @@
+{
+ "metrics": {
+  "proposals": 44,
+  "slots_proposed": 43,
+  "first_proposal_violation_rate": 0.0,
+  "violations_by_check": {},
+  "instance_rounds": 1,
+  "repair_rounds": 1,
+  "model_passed": true,
+  "elapsed_s": 28.67
+ },
+ "decisions": {
+  "structure.idealization": {
+   "id": "dec:structure.idealization",
+   "slot": "structure.idealization",
+   "value": "spine_beam_2d",
+   "unit": "-",
+   "evidence": [
+    "MR-01"
+   ]
+  },
+  "structure.system": {
+   "id": "dec:structure.system",
+   "slot": "structure.system",
+   "value": "continuous_on_piers",
+   "unit": "-",
+   "evidence": [
+    "MR-05"
+   ]
+  },
+  "girder.A": {
+   "id": "dec:girder.A",
+   "slot": "girder.A",
+   "value": 7.150000000000002,
+   "unit": "m^2",
+   "evidence": [
+    "MR-02"
+   ]
+  },
+  "girder.I": {
+   "id": "dec:girder.I",
+   "slot": "girder.I",
+   "value": 6.439325466200472,
+   "unit": "m^4",
+   "evidence": [
+    "MR-02"
+   ]
+  },
+  "girder.Ec": {
+   "id": "dec:girder.Ec",
+   "slot": "girder.Ec",
+   "value": 37000.0,
+   "unit": "MPa",
+   "evidence": [
+    "MR-00",
+    "INPUT:girder.E_override_MPa"
+   ]
+  },
+  "girder.gamma": {
+   "id": "dec:girder.gamma",
+   "slot": "girder.gamma",
+   "value": 26.0,
+   "unit": "kN/m^3",
+   "evidence": [
+    "JTGD60-4.2.1"
+   ]
+  },
+  "girder.w": {
+   "id": "dec:girder.w",
+   "slot": "girder.w",
+   "value": 185.90000000000006,
+   "unit": "kN/m",
+   "evidence": [
+    "MR-07"
+   ]
+  },
+  "girder.m": {
+   "id": "dec:girder.m",
+   "slot": "girder.m",
+   "value": 18.950050968399598,
+   "unit": "t/m",
+   "evidence": [
+    "MR-07"
+   ]
+  },
+  "lane.n_lanes": {
+   "id": "dec:lane.n_lanes",
+   "slot": "lane.n_lanes",
+   "value": 3,
+   "unit": "-",
+   "evidence": [
+    "JTGD60-4.3.1-lanes"
+   ]
+  },
+  "lane.xi": {
+   "id": "dec:lane.xi",
+   "slot": "lane.xi",
+   "value": 0.78,
+   "unit": "-",
+   "evidence": [
+    "JTGD60-4.3.1-xi"
+   ]
+  },
+  "lane.qk": {
+   "id": "dec:lane.qk",
+   "slot": "lane.qk",
+   "value": 10.5,
+   "unit": "kN/m",
+   "evidence": [
+    "JTGD60-4.3.1-qk"
+   ]
+  },
+  "lane.Pk.1": {
+   "id": "dec:lane.Pk.1",
+   "slot": "lane.Pk.1",
+   "value": 330.0,
+   "unit": "kN",
+   "evidence": [
+    "JTGD60-4.3.1-Pk"
+   ]
+  },
+  "lane.Pk.2": {
+   "id": "dec:lane.Pk.2",
+   "slot": "lane.Pk.2",
+   "value": 360.0,
+   "unit": "kN",
+   "evidence": [
+    "JTGD60-4.3.1-Pk"
+   ]
+  },
+  "lane.Pk.3": {
+   "id": "dec:lane.Pk.3",
+   "slot": "lane.Pk.3",
+   "value": 330.0,
+   "unit": "kN",
+   "evidence": [
+    "JTGD60-4.3.1-Pk"
+   ]
+  },
+  "support.0.bearing": {
+   "id": "dec:support.0.bearing",
+   "slot": "support.0.bearing",
+   "value": {
+    "type": "ptfe_sliding",
+    "count": 2
+   },
+   "unit": "-",
+   "evidence": [
+    "MR-04"
+   ]
+  },
+  "support.0.dofs": {
+   "id": "dec:support.0.dofs",
+   "slot": "support.0.dofs",
+   "value": {
+    "vertical": "spring",
+    "longitudinal": "free",
+    "rotation": "free"
+   },
+   "unit": "-",
+   "evidence": [
+    "MR-03"
+   ]
+  },
+  "support.0.S": {
+   "id": "dec:support.0.S",
+   "slot": "support.0.S",
+   "value": 10.101010101010102,
+   "unit": "-",
+   "evidence": [
+    "JTG3362-8.7-S"
+   ]
+  },
+  "support.0.Kv": {
+   "id": "dec:support.0.Kv",
+   "slot": "support.0.Kv",
+   "value": 3141566.856469665,
+   "unit": "kN/m",
+   "evidence": [
+    "JTG3362-8.7-Kv"
+   ]
+  },
+  "support.0.Kh": {
+   "id": "dec:support.0.Kh",
+   "slot": "support.0.Kh",
+   "value": 0.0,
+   "unit": "kN/m",
+   "evidence": [
+    "MR-03"
+   ]
+  },
+  "support.1.bearing": {
+   "id": "dec:support.1.bearing",
+   "slot": "support.1.bearing",
+   "value": {
+    "type": "plain_elastomeric",
+    "count": 2
+   },
+   "unit": "-",
+   "evidence": [
+    "MR-04"
+   ]
+  },
+  "support.1.dofs": {
+   "id": "dec:support.1.dofs",
+   "slot": "support.1.dofs",
+   "value": {
+    "vertical": "spring",
+    "longitudinal": "spring",
+    "rotation": "free"
+   },
+   "unit": "-",
+   "evidence": [
+    "MR-03"
+   ]
+  },
+  "support.1.S": {
+   "id": "dec:support.1.S",
+   "slot": "support.1.S",
+   "value": 14.685314685314689,
+   "unit": "-",
+   "evidence": [
+    "JTG3362-8.7-S"
+   ]
+  },
+  "support.1.Kv": {
+   "id": "dec:support.1.Kv",
+   "slot": "support.1.Kv",
+   "value": 8029085.514559617,
+   "unit": "kN/m",
+   "evidence": [
+    "JTG3362-8.7-Kv"
+   ]
+  },
+  "support.1.Kh": {
+   "id": "dec:support.1.Kh",
+   "slot": "support.1.Kh",
+   "value": 10909.090909090908,
+   "unit": "kN/m",
+   "evidence": [
+    "JTG3362-8.7-Kh"
+   ]
+  },
+  "support.2.bearing": {
+   "id": "dec:support.2.bearing",
+   "slot": "support.2.bearing",
+   "value": {
+    "type": "ptfe_sliding",
+    "count": 2
+   },
+   "unit": "-",
+   "evidence": [
+    "MR-04"
+   ]
+  },
+  "support.2.dofs": {
+   "id": "dec:support.2.dofs",
+   "slot": "support.2.dofs",
+   "value": {
+    "vertical": "spring",
+    "longitudinal": "free",
+    "rotation": "free"
+   },
+   "unit": "-",
+   "evidence": [
+    "MR-03"
+   ]
+  },
+  "support.2.S": {
+   "id": "dec:support.2.S",
+   "slot": "support.2.S",
+   "value": 13.541666666666666,
+   "unit": "-",
+   "evidence": [
+    "JTG3362-8.7-S"
+   ]
+  },
+  "support.2.Kv": {
+   "id": "dec:support.2.Kv",
+   "slot": "support.2.Kv",
+   "value": 7175048.987589811,
+   "unit": "kN/m",
+   "evidence": [
+    "JTG3362-8.7-Kv"
+   ]
+  },
+  "support.2.Kh": {
+   "id": "dec:support.2.Kh",
+   "slot": "support.2.Kh",
+   "value": 0.0,
+   "unit": "kN/m",
+   "evidence": [
+    "MR-03"
+   ]
+  },
+  "support.3.bearing": {
+   "id": "dec:support.3.bearing",
+   "slot": "support.3.bearing",
+   "value": {
+    "type": "ptfe_sliding",
+    "count": 2
+   },
+   "unit": "-",
+   "evidence": [
+    "MR-04"
+   ]
+  },
+  "support.3.dofs": {
+   "id": "dec:support.3.dofs",
+   "slot": "support.3.dofs",
+   "value": {
+    "vertical": "spring",
+    "longitudinal": "free",
+    "rotation": "free"
+   },
+   "unit": "-",
+   "evidence": [
+    "MR-03"
+   ]
+  },
+  "support.3.S": {
+   "id": "dec:support.3.S",
+   "slot": "support.3.S",
+   "value": 10.101010101010102,
+   "unit": "-",
+   "evidence": [
+    "JTG3362-8.7-S"
+   ]
+  },
+  "support.3.Kv": {
+   "id": "dec:support.3.Kv",
+   "slot": "support.3.Kv",
+   "value": 3141566.856469665,
+   "unit": "kN/m",
+   "evidence": [
+    "JTG3362-8.7-Kv"
+   ]
+  },
+  "support.3.Kh": {
+   "id": "dec:support.3.Kh",
+   "slot": "support.3.Kh",
+   "value": 0.0,
+   "unit": "kN/m",
+   "evidence": [
+    "MR-03"
+   ]
+  },
+  "pier.1.length": {
+   "id": "dec:pier.1.length",
+   "slot": "pier.1.length",
+   "value": 9.0,
+   "unit": "m",
+   "evidence": [
+    "MR-06"
+   ]
+  },
+  "pier.1.A": {
+   "id": "dec:pier.1.A",
+   "slot": "pier.1.A",
+   "value": 5.089380098815465,
+   "unit": "m^2",
+   "evidence": [
+    "MR-06"
+   ]
+  },
+  "pier.1.I": {
+   "id": "dec:pier.1.I",
+   "slot": "pier.1.I",
+   "value": 1.0305994700101317,
+   "unit": "m^4",
+   "evidence": [
+    "MR-06"
+   ]
+  },
+  "pier.1.Ec": {
+   "id": "dec:pier.1.Ec",
+   "slot": "pier.1.Ec",
+   "value": 32500.0,
+   "unit": "MPa",
+   "evidence": [
+    "JTG3362-3.1.5"
+   ]
+  },
+  "pier.2.length": {
+   "id": "dec:pier.2.length",
+   "slot": "pier.2.length",
+   "value": 15.0,
+   "unit": "m",
+   "evidence": [
+    "MR-06"
+   ]
+  },
+  "pier.2.A": {
+   "id": "dec:pier.2.A",
+   "slot": "pier.2.A",
+   "value": 5.089380098815465,
+   "unit": "m^2",
+   "evidence": [
+    "MR-06"
+   ]
+  },
+  "pier.2.I": {
+   "id": "dec:pier.2.I",
+   "slot": "pier.2.I",
+   "value": 1.0305994700101317,
+   "unit": "m^4",
+   "evidence": [
+    "MR-06"
+   ]
+  },
+  "pier.2.Ec": {
+   "id": "dec:pier.2.Ec",
+   "slot": "pier.2.Ec",
+   "value": 32500.0,
+   "unit": "MPa",
+   "evidence": [
+    "JTG3362-3.1.5"
+   ]
+  },
+  "lane.mu": {
+   "id": "dec:lane.mu",
+   "slot": "lane.mu",
+   "value": 0.18039906601755068,
+   "unit": "-",
+   "evidence": [
+    "JTGD60-4.3.2",
+    "fact:f1",
+    "LL-02"
+   ]
+  }
+ },
+ "facts": {
+  "f1": 3.0337070478394548
+ },
+ "instance": {
+  "supports": [
+   {
+    "index": 0,
+    "kind": "abutment",
+    "pier": null,
+    "bearing": {
+     "family": "laminated_elastomeric",
+     "sliding": true,
+     "fixed": false,
+     "per_girder_end": null,
+     "per_line": 2,
+     "a_mm": 400.0,
+     "b_mm": 500.0,
+     "n_layers": 5,
+     "t1_mm": 11.0,
+     "Ge_MPa": null
+    }
+   },
+   {
+    "index": 1,
+    "kind": "pier",
+    "pier": {
+     "height_m": 9.0,
+     "diameter_m": 1.8,
+     "n_columns": 2,
+     "concrete": "C40"
+    },
+    "bearing": {
+     "family": "laminated_elastomeric",
+     "sliding": false,
+     "fixed": true,
+     "per_girder_end": null,
+     "per_line": 2,
+     "a_mm": 600.0,
+     "b_mm": 700.0,
+     "n_layers": 7,
+     "t1_mm": 11.0,
+     "Ge_MPa": null
+    }
+   },
+   {
+    "index": 2,
+    "kind": "pier",
+    "pier": {
+     "height_m": 15.0,
+     "diameter_m": 1.8,
+     "n_columns": 2,
+     "concrete": "C40"
+    },
+    "bearing": {
+     "family": "laminated_elastomeric",
+     "sliding": true,
+     "fixed": false,
+     "per_girder_end": null,
+     "per_line": 2,
+     "a_mm": 550.0,
+     "b_mm": 650.0,
+     "n_layers": 6,
+     "t1_mm": 11.0,
+     "Ge_MPa": null
+    }
+   },
+   {
+    "index": 3,
+    "kind": "abutment",
+    "pier": null,
+    "bearing": {
+     "family": "laminated_elastomeric",
+     "sliding": true,
+     "fixed": false,
+     "per_girder_end": null,
+     "per_line": 2,
+     "a_mm": 400.0,
+     "b_mm": 500.0,
+     "n_layers": 5,
+     "t1_mm": 11.0,
+     "Ge_MPa": null
+    }
+   }
+  ],
+  "dead_load": "girder_self_weight_only",
+  "structure_type": "cast_in_place_continuous",
+  "spans_m": [
+   35.0,
+   50.0,
+   35.0
+  ],
+  "girder": {
+   "material": "prestressed_concrete",
+   "E_override_MPa": 37000.0,
+   "gamma_override_kNm3": null,
+   "concrete": "C50",
+   "type": "cast_box",
+   "section": {
+    "h": 2.5,
+    "B_top": 12.5,
+    "t_top": 0.25,
+    "B_bot": 6.5,
+    "t_bot": 0.25,
+    "t_web": 0.45,
+    "t_cant_root": 0.5,
+    "t_cant_tip": 0.2
+   },
+   "count_per_span": 1
+  },
+  "deck": {
+   "deck_width_m": 12.5,
+   "carriageway_width_m": 11.5,
+   "traffic": "one_way",
+   "design_lanes": 3,
+   "load_class": "I"
+  }
+ },
+ "results": {
+  "ok": true,
+  "vertical_frequencies_Hz": [
+   3.0337070478394548,
+   5.263268291356239,
+   5.945989181418488
+  ],
+  "self_weight_support_reactions_kN": [
+   2240.638358159793,
+   8920.691792348221,
+   8895.559847755156,
+   2251.11000174001
+  ],
+  "self_weight_midspan_moments_kNm": [
+   10745.233767794905,
+   22835.59629826032,
+   10928.487530451333
+  ],
+  "self_weight_support_moments_kNm": [
+   -35441.407464412514,
+   -35074.89993910487
+  ],
+  "lane_moments_by_section": [
+   {
+    "section": "span",
+    "index": 1,
+    "M_kNm": 10367.974012571834
+   },
+   {
+    "section": "span",
+    "index": 2,
+    "M_kNm": 13205.275432384366
+   },
+   {
+    "section": "span",
+    "index": 3,
+    "M_kNm": 10386.084446164024
+   },
+   {
+    "section": "support",
+    "index": 1,
+    "M_kNm": -10612.722224875704
+   },
+   {
+    "section": "support",
+    "index": 2,
+    "M_kNm": -10537.069540418775
+   }
+  ],
+  "lane_max_positive_moment_kNm": 13205.275432384366,
+  "lane_max_negative_moment_kNm": -10612.722224875704
+ },
+ "last_check": [],
+ "role_log": [],
+ "log": [
+  {
+   "t": 0.203,
+   "tool": "generate_model",
+   "args": {},
+   "result": {
+    "ok": false,
+    "stage": "model_checks",
+    "failed_checks": [
+     {
+      "constraint": "model_checks",
+      "text": "",
+      "message": "the model failed its checks",
+      "suspect_decisions": []
+     }
+    ],
+    "repair_round": 1
+   }
+  },
+  {
+   "t": 23.236,
+   "tool": "execute_formula",
+   "args": {
+    "node_id": "JTGD60-4.3.2",
+    "slot": "lane.mu"
+   },
+   "result": {
+    "value": 0.18039906601755068,
+    "inputs": {
+     "f1": 3.0337070478394548
+    },
+    "applicable_to_this_bridge": true,
+    "applicability": "has_f1"
+   }
+  },
+  {
+   "t": 24.691,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "lane.mu",
+    "value": 0.18039906601755068,
+    "unit": "-",
+    "evidence": [
+     "JTGD60-4.3.2",
+     "fact:f1",
+     "LL-02"
+    ],
+    "rationale": "Impact factor from JTG D60-2015 4.3.2 with fundamental frequency f1 = 3.034 Hz: mu = 0.1767*ln(f1) - 0.0157 = 0.1804. The previously accepted 0.25 was a placeholder inconsistent with the modal result (L2-2 failure).",
+    "attempt": 2
+   },
+   "result": {
+    "accepted": true,
+    "slot": "lane.mu",
+    "decision_id": "dec:lane.mu"
+   }
+  },
+  {
+   "t": 25.937,
+   "tool": "generate_model",
+   "args": {},
+   "result": {
+    "ok": true,
+    "script": "${PROJECT_ROOT}/runs_faults/F0/K5_r3/C05_model.py",
+    "results": {
+     "ok": true,
+     "vertical_frequencies_Hz": [
+      3.0337070478394548,
+      5.263268291356239,
+      5.945989181418488
+     ],
+     "self_weight_support_reactions_kN": [
+      2240.638358159793,
+      8920.691792348221,
+      8895.559847755156,
+      2251.11000174001
+     ],
+     "self_weight_midspan_moments_kNm": [
+      10745.233767794905,
+      22835.59629826032,
+      10928.487530451333
+     ],
+     "self_weight_support_moments_kNm": [
+      -35441.407464412514,
+      -35074.89993910487
+     ],
+     "lane_moments_by_section": [
+      {
+       "section": "span",
+       "index": 1,
+       "M_kNm": 10367.974012571834
+      },
+      {
+       "section": "span",
+       "index": 2,
+       "M_kNm": 13205.275432384366
+      },
+      {
+       "section": "span",
+       "index": 3,
+       "M_kNm": 10386.084446164024
+      },
+      {
+       "section": "support",
+       "index": 1,
+       "M_kNm": -10612.722224875704
+      },
+      {
+       "section": "support",
+       "index": 2,
+       "M_kNm": -10537.069540418775
+      }
+     ],
+     "lane_max_positive_moment_kNm": 13205.275432384366,
+     "lane_max_negative_moment_kNm": -10612.722224875704
+    }
+   }
+  },
+  {
+   "t": 28.67,
+   "tool": "finish",
+   "args": {
+    "summary": "Root cause of the failed model checks: the accepted lane.mu (impact factor) was a stale placeholder 0.25 that was inconsistent with the model's fundamental frequency, violating L2-2 (\"impact factor consistent with the model's first vertical frequency\"). All other structural decisions and instance data agreed with the description, so no other repair was needed.\n\nRepair: with f1 = 3.034 Hz (modal analysis), JTG D60-2015 4.3.2 gives mu = 0.1767*ln(f1) - 0.0157 = 0.1804. Re-proposed lane.mu = 0.1804 with evidence JTGD60-4.3.2 / fact:f1 / LL-02 (accepted), then regenerated the model.\n\nModel now passes: three-span cast-in-place continuous box girder (35+50+35 m), spine_beam_2d, continuous_on_piers, single-cell cast_box (A = 7.15 m², I = 6.439 m⁴, Ec = 37000 MPa, gamma = 26 kN/m³ → w = 185.9 kN/m, m = 18.95 t/m). Supports: abutments 0 and 3 PTFE sliding laminated elastomeric (free longitudinal), Pier 1 fixed plain elastomeric (shear spring), Pier 2 PTFE sliding; piers modelled as twin 1.8 m C40 columns (9 m and 15 m). Highway Class I, 3 design lanes, qk = 10.5 kN/m, xi = 0.78, Pk = 330/360/330 kN, mu = 0.1804.\n\nResults: first three vertical frequencies 3.034 / 5.263 / 5.946 Hz; self-weight reaction sum = 22,308 kN (= 185.9 × 120 m total girder weight); service lane max positive moment 13,205 kN·m, max negative moment −10,613 kN·m."
+   },
+   "result": {
+    "ok": true
+   }
+  }
+ ]
+}

@@ -1,0 +1,761 @@
+{
+ "metrics": {
+  "proposals": 39,
+  "slots_proposed": 37,
+  "first_proposal_violation_rate": 0.0,
+  "violations_by_check": {
+   "evidence": 1
+  },
+  "instance_rounds": 1,
+  "repair_rounds": 1,
+  "model_passed": true,
+  "elapsed_s": 8.73
+ },
+ "decisions": {
+  "structure.idealization": {
+   "id": "dec:structure.idealization",
+   "slot": "structure.idealization",
+   "value": "spine_beam_2d",
+   "unit": "-",
+   "evidence": [
+    "MR-01"
+   ]
+  },
+  "structure.system": {
+   "id": "dec:structure.system",
+   "slot": "structure.system",
+   "value": "continuous",
+   "unit": "-",
+   "evidence": [
+    "MR-05"
+   ]
+  },
+  "girder.single.A": {
+   "id": "dec:girder.single.A",
+   "slot": "girder.single.A",
+   "value": 1.060520857142857,
+   "unit": "m^2",
+   "evidence": [
+    "MR-02"
+   ]
+  },
+  "girder.single.I": {
+   "id": "dec:girder.single.I",
+   "slot": "girder.single.I",
+   "value": 0.25165870662960277,
+   "unit": "m^4",
+   "evidence": [
+    "MR-02"
+   ]
+  },
+  "girder.A": {
+   "id": "dec:girder.A",
+   "slot": "girder.A",
+   "value": 4.242083428571428,
+   "unit": "m^2",
+   "evidence": [
+    "MR-02"
+   ]
+  },
+  "girder.I": {
+   "id": "dec:girder.I",
+   "slot": "girder.I",
+   "value": 1.006634826518411,
+   "unit": "m^4",
+   "evidence": [
+    "MR-02"
+   ]
+  },
+  "girder.Ec": {
+   "id": "dec:girder.Ec",
+   "slot": "girder.Ec",
+   "value": 34500.0,
+   "unit": "MPa",
+   "evidence": [
+    "JTG3362-3.1.5"
+   ]
+  },
+  "girder.gamma": {
+   "id": "dec:girder.gamma",
+   "slot": "girder.gamma",
+   "value": 26.0,
+   "unit": "kN/m^3",
+   "evidence": [
+    "JTGD60-4.2.1"
+   ]
+  },
+  "girder.w": {
+   "id": "dec:girder.w",
+   "slot": "girder.w",
+   "value": 110.29416914285713,
+   "unit": "kN/m",
+   "evidence": [
+    "MR-07"
+   ]
+  },
+  "girder.m": {
+   "id": "dec:girder.m",
+   "slot": "girder.m",
+   "value": 11.243034571137322,
+   "unit": "t/m",
+   "evidence": [
+    "MR-07"
+   ]
+  },
+  "lane.n_lanes": {
+   "id": "dec:lane.n_lanes",
+   "slot": "lane.n_lanes",
+   "value": 3,
+   "unit": "-",
+   "evidence": [
+    "JTGD60-4.3.1-lanes"
+   ]
+  },
+  "lane.xi": {
+   "id": "dec:lane.xi",
+   "slot": "lane.xi",
+   "value": 0.78,
+   "unit": "-",
+   "evidence": [
+    "JTGD60-4.3.1-xi"
+   ]
+  },
+  "lane.qk": {
+   "id": "dec:lane.qk",
+   "slot": "lane.qk",
+   "value": 10.5,
+   "unit": "kN/m",
+   "evidence": [
+    "JTGD60-4.3.1-qk"
+   ]
+  },
+  "lane.Pk.1": {
+   "id": "dec:lane.Pk.1",
+   "slot": "lane.Pk.1",
+   "value": 300.0,
+   "unit": "kN",
+   "evidence": [
+    "JTGD60-4.3.1-Pk"
+   ]
+  },
+  "lane.Pk.2": {
+   "id": "dec:lane.Pk.2",
+   "slot": "lane.Pk.2",
+   "value": 310.0,
+   "unit": "kN",
+   "evidence": [
+    "JTGD60-4.3.1-Pk"
+   ]
+  },
+  "lane.Pk.3": {
+   "id": "dec:lane.Pk.3",
+   "slot": "lane.Pk.3",
+   "value": 300.0,
+   "unit": "kN",
+   "evidence": [
+    "JTGD60-4.3.1-Pk"
+   ]
+  },
+  "support.0.bearing": {
+   "id": "dec:support.0.bearing",
+   "slot": "support.0.bearing",
+   "value": {
+    "type": "ptfe_sliding",
+    "count": 8
+   },
+   "unit": "-",
+   "evidence": [
+    "MR-04"
+   ]
+  },
+  "support.0.dofs": {
+   "id": "dec:support.0.dofs",
+   "slot": "support.0.dofs",
+   "value": {
+    "vertical": "spring",
+    "longitudinal": "free",
+    "rotation": "free"
+   },
+   "unit": "-",
+   "evidence": [
+    "MR-03"
+   ]
+  },
+  "support.0.S": {
+   "id": "dec:support.0.S",
+   "slot": "support.0.S",
+   "value": 10.096153846153847,
+   "unit": "-",
+   "evidence": [
+    "JTG3362-8.7-S"
+   ]
+  },
+  "support.0.Kv": {
+   "id": "dec:support.0.Kv",
+   "slot": "support.0.Kv",
+   "value": 11330545.032716466,
+   "unit": "kN/m",
+   "evidence": [
+    "JTG3362-8.7-Kv"
+   ]
+  },
+  "support.0.Kh": {
+   "id": "dec:support.0.Kh",
+   "slot": "support.0.Kh",
+   "value": 0.0,
+   "unit": "kN/m",
+   "evidence": [
+    "MR-03"
+   ]
+  },
+  "support.1.bearing": {
+   "id": "dec:support.1.bearing",
+   "slot": "support.1.bearing",
+   "value": {
+    "type": "plain_elastomeric",
+    "count": 8
+   },
+   "unit": "-",
+   "evidence": [
+    "MR-04"
+   ]
+  },
+  "support.1.dofs": {
+   "id": "dec:support.1.dofs",
+   "slot": "support.1.dofs",
+   "value": {
+    "vertical": "spring",
+    "longitudinal": "spring",
+    "rotation": "free"
+   },
+   "unit": "-",
+   "evidence": [
+    "MR-03"
+   ]
+  },
+  "support.1.S": {
+   "id": "dec:support.1.S",
+   "slot": "support.1.S",
+   "value": 10.096153846153847,
+   "unit": "-",
+   "evidence": [
+    "JTG3362-8.7-S"
+   ]
+  },
+  "support.1.Kv": {
+   "id": "dec:support.1.Kv",
+   "slot": "support.1.Kv",
+   "value": 11330545.032716466,
+   "unit": "kN/m",
+   "evidence": [
+    "JTG3362-8.7-Kv"
+   ]
+  },
+  "support.1.Kh": {
+   "id": "dec:support.1.Kh",
+   "slot": "support.1.Kh",
+   "value": 26250.0,
+   "unit": "kN/m",
+   "evidence": [
+    "JTG3362-8.7-Kh"
+   ]
+  },
+  "support.2.bearing": {
+   "id": "dec:support.2.bearing",
+   "slot": "support.2.bearing",
+   "value": {
+    "type": "ptfe_sliding",
+    "count": 8
+   },
+   "unit": "-",
+   "evidence": [
+    "MR-04"
+   ]
+  },
+  "support.2.dofs": {
+   "id": "dec:support.2.dofs",
+   "slot": "support.2.dofs",
+   "value": {
+    "vertical": "spring",
+    "longitudinal": "free",
+    "rotation": "free"
+   },
+   "unit": "-",
+   "evidence": [
+    "MR-03"
+   ]
+  },
+  "support.2.S": {
+   "id": "dec:support.2.S",
+   "slot": "support.2.S",
+   "value": 10.096153846153847,
+   "unit": "-",
+   "evidence": [
+    "JTG3362-8.7-S"
+   ]
+  },
+  "support.2.Kv": {
+   "id": "dec:support.2.Kv",
+   "slot": "support.2.Kv",
+   "value": 11330545.032716466,
+   "unit": "kN/m",
+   "evidence": [
+    "JTG3362-8.7-Kv"
+   ]
+  },
+  "support.2.Kh": {
+   "id": "dec:support.2.Kh",
+   "slot": "support.2.Kh",
+   "value": 0.0,
+   "unit": "kN/m",
+   "evidence": [
+    "MR-03"
+   ]
+  },
+  "support.3.bearing": {
+   "id": "dec:support.3.bearing",
+   "slot": "support.3.bearing",
+   "value": {
+    "type": "ptfe_sliding",
+    "count": 8
+   },
+   "unit": "-",
+   "evidence": [
+    "MR-04"
+   ]
+  },
+  "support.3.dofs": {
+   "id": "dec:support.3.dofs",
+   "slot": "support.3.dofs",
+   "value": {
+    "vertical": "spring",
+    "longitudinal": "free",
+    "rotation": "free"
+   },
+   "unit": "-",
+   "evidence": [
+    "MR-03",
+    "inst:bearing:3",
+    "INPUT:supports[3].bearing.sliding"
+   ]
+  },
+  "support.3.S": {
+   "id": "dec:support.3.S",
+   "slot": "support.3.S",
+   "value": 10.096153846153847,
+   "unit": "-",
+   "evidence": [
+    "JTG3362-8.7-S"
+   ]
+  },
+  "support.3.Kv": {
+   "id": "dec:support.3.Kv",
+   "slot": "support.3.Kv",
+   "value": 11330545.032716466,
+   "unit": "kN/m",
+   "evidence": [
+    "JTG3362-8.7-Kv"
+   ]
+  },
+  "support.3.Kh": {
+   "id": "dec:support.3.Kh",
+   "slot": "support.3.Kh",
+   "value": 0.0,
+   "unit": "kN/m",
+   "evidence": [
+    "MR-03"
+   ]
+  },
+  "lane.mu": {
+   "id": "dec:lane.mu",
+   "slot": "lane.mu",
+   "value": 0.28787186344750126,
+   "unit": "-",
+   "evidence": [
+    "JTGD60-4.3.2"
+   ]
+  }
+ },
+ "facts": {
+  "f1": 5.573410420044705
+ },
+ "instance": {
+  "supports": [
+   {
+    "index": 0,
+    "kind": "abutment",
+    "pier": null,
+    "bearing": {
+     "family": "laminated_elastomeric",
+     "sliding": true,
+     "fixed": false,
+     "per_girder_end": 2,
+     "per_line": null,
+     "a_mm": 300.0,
+     "b_mm": 350.0,
+     "n_layers": 4,
+     "t1_mm": 8.0,
+     "Ge_MPa": null
+    }
+   },
+   {
+    "index": 1,
+    "kind": "pier",
+    "pier": null,
+    "bearing": {
+     "family": "laminated_elastomeric",
+     "sliding": false,
+     "fixed": true,
+     "per_girder_end": 2,
+     "per_line": null,
+     "a_mm": 300.0,
+     "b_mm": 350.0,
+     "n_layers": 4,
+     "t1_mm": 8.0,
+     "Ge_MPa": null
+    }
+   },
+   {
+    "index": 2,
+    "kind": "pier",
+    "pier": null,
+    "bearing": {
+     "family": "laminated_elastomeric",
+     "sliding": true,
+     "fixed": false,
+     "per_girder_end": 2,
+     "per_line": null,
+     "a_mm": 300.0,
+     "b_mm": 350.0,
+     "n_layers": 4,
+     "t1_mm": 8.0,
+     "Ge_MPa": null
+    }
+   },
+   {
+    "index": 3,
+    "kind": "abutment",
+    "pier": null,
+    "bearing": {
+     "family": "laminated_elastomeric",
+     "sliding": true,
+     "fixed": false,
+     "per_girder_end": 2,
+     "per_line": null,
+     "a_mm": 300.0,
+     "b_mm": 350.0,
+     "n_layers": 4,
+     "t1_mm": 8.0,
+     "Ge_MPa": null
+    }
+   }
+  ],
+  "dead_load": "girder_self_weight_only",
+  "structure_type": "precast_continuous",
+  "spans_m": [
+   20.0,
+   25.0,
+   20.0
+  ],
+  "girder": {
+   "material": "prestressed_concrete",
+   "E_override_MPa": null,
+   "gamma_override_kNm3": null,
+   "concrete": "C50",
+   "type": "small_box",
+   "section": {
+    "h": 1.4,
+    "b_top": 2.4,
+    "t_tip": 0.18,
+    "haunch_rise": 0.062,
+    "haunch_len": 0.201,
+    "b_bottom": 1.0,
+    "t_bottom": 0.18,
+    "t_top": 0.18,
+    "t_web": 0.2,
+    "web_slope": 3.5,
+    "chamfer_w": 0.15,
+    "chamfer_h": 0.07
+   },
+   "count_per_span": 4
+  },
+  "deck": {
+   "deck_width_m": 12.5,
+   "carriageway_width_m": 11.5,
+   "traffic": "one_way",
+   "design_lanes": 3,
+   "load_class": "I"
+  }
+ },
+ "results": {
+  "ok": true,
+  "vertical_frequencies_Hz": [
+   5.573410420044705,
+   8.425793776607811,
+   10.185842256711245
+  ],
+  "self_weight_support_reactions_kN": [
+   820.4904849351511,
+   2764.0700122076078,
+   2764.070012207497,
+   820.490484935159
+  ],
+  "self_weight_midspan_moments_kNm": [
+   2690.1963922090363,
+   2967.7078344188667,
+   2690.1963922093646
+  ],
+  "self_weight_support_moments_kNm": [
+   -5649.024129866544,
+   -5649.024129866462
+  ],
+  "lane_moments_by_section": [
+   {
+    "section": "span",
+    "index": 1,
+    "M_kNm": 5016.893109458984
+   },
+   {
+    "section": "span",
+    "index": 2,
+    "M_kNm": 5341.458120190774
+   },
+   {
+    "section": "span",
+    "index": 3,
+    "M_kNm": 5016.893109459526
+   },
+   {
+    "section": "support",
+    "index": 1,
+    "M_kNm": -3864.0328998871387
+   },
+   {
+    "section": "support",
+    "index": 2,
+    "M_kNm": -3864.032899886589
+   }
+  ],
+  "lane_max_positive_moment_kNm": 5341.458120190774,
+  "lane_max_negative_moment_kNm": -3864.0328998871387
+ },
+ "last_check": [],
+ "role_log": [],
+ "log": [
+  {
+   "t": 0.184,
+   "tool": "generate_model",
+   "args": {},
+   "result": {
+    "ok": false,
+    "stage": "model_checks",
+    "failed_checks": [
+     {
+      "constraint": "L2-1",
+      "text": "模型中每个构件的参数与其溯源决策一致，且按规则层 / 规范层公式复算成立",
+      "message": "support.3.dofs 在模型中取 {'vertical': 'spring', 'longitudinal': 'spring', 'rotation': 'free'}，按 MR-03 复算为 {'vertical': 'spring', 'longitudinal': 'free', 'rotation': 'free'}",
+      "suspect_decisions": [
+       {
+        "decision_id": "dec:support.3.dofs",
+        "slot": "support.3.dofs",
+        "value": {
+         "vertical": "spring",
+         "longitudinal": "spring",
+         "rotation": "free"
+        },
+        "evidence": [
+         "MR-03"
+        ]
+       }
+      ]
+     }
+    ],
+    "repair_round": 1
+   }
+  },
+  {
+   "t": 4.047,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.3.dofs",
+    "value": {
+     "vertical": "spring",
+     "longitudinal": "free",
+     "rotation": "free"
+    },
+    "unit": "-",
+    "evidence": [
+     "MR-03",
+     "inst:bearing:3",
+     "INPUT:supports[3].bearing.type"
+    ],
+    "rationale": "Abutment 3 carries PTFE sliding laminated elastomeric bearings (sliding=true), so per MR-03 the longitudinal DOF is free (Kh=0); vertical spring, rotation free.",
+    "attempt": 2
+   },
+   "result": {
+    "accepted": false,
+    "slot": "support.3.dofs",
+    "category": "modeling_rule",
+    "expected_unit": "-",
+    "candidate_evidence": [
+     {
+      "id": "MR-03",
+      "title": "板式橡胶支座的模拟",
+      "applicability": "family == 'laminated_elastomeric'",
+      "text": "板式橡胶支座以零长度弹簧模拟：竖向刚度 Kv；普通板式支座纵向取剪切刚度 Kh，四氟滑板支座纵向自由（Kh = 0）；转动自由。支座置于主梁轴线标高。",
+      "formula": {
+       "support.{k}.dofs": "{'vertical': 'spring', 'longitudinal': 'free' if sliding else 'spring', 'rotation': 'free'}",
+       "support.{k}.Kh": "0.0"
+      }
+     },
+     {
+      "id": "MR-08",
+      "title": "球形支座的模拟",
+      "applicability": "family == 'spherical'",
+      "text": "球形支座按竖向刚性支承模拟，转动自由；固定型（GD）及横桥向单向活动型（DX）纵向约束，纵向活动型纵向自由。",
+      "formula": {
+       "support.{k}.dofs": "{'vertical': 'rigid', 'longitudinal': 'fixed' if fixed else 'free', 'rotation': 'free'}"
+      }
+     }
+    ],
+    "valid_evidence": {
+     "primary_applicable": [
+      "MR-03"
+     ],
+     "supporting": [],
+     "input_paths": [
+      "INPUT:supports[3].bearing.family",
+      "INPUT:supports[3].bearing.sliding",
+      "INPUT:supports[3].bearing.fixed",
+      "INPUT:supports[3].bearing.per_girder_end",
+      "INPUT:supports[3].bearing.a_mm",
+      "INPUT:supports[3].bearing.b_mm",
+      "INPUT:supports[3].bearing.n_layers",
+      "INPUT:supports[3].bearing.t1_mm",
+      "INPUT:girder.count_per_span"
+     ],
+     "instance_nodes": [
+      "inst:bearing:3"
+     ],
+     "rule": "至少引用一条主依据（题目给定覆盖值时引用 MR-00 与对应 INPUT 路径）；其余为可选辅助依据，须写成此处列出的形式"
+    },
+    "formula_result": {
+     "vertical": "spring",
+     "longitudinal": "free",
+     "rotation": "free"
+    },
+    "formula_source": "MR-03",
+    "formula_inputs": {
+     "sliding": true
+    },
+    "hint": "若公式结果与你对描述的理解不符，先核对 formula_inputs 中取自实例层的数据；实例层写错时用 write_instance 修正，不要照搬公式结果",
+    "violations": [
+     {
+      "check": "evidence",
+      "constraint": "I2",
+      "message": "依据在图谱中不存在或写法无法识别：['INPUT:supports[3].bearing.type']"
+     }
+    ],
+    "failed_checks": [
+     "evidence"
+    ]
+   }
+  },
+  {
+   "t": 5.311,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.3.dofs",
+    "value": {
+     "vertical": "spring",
+     "longitudinal": "free",
+     "rotation": "free"
+    },
+    "unit": "-",
+    "evidence": [
+     "MR-03",
+     "inst:bearing:3",
+     "INPUT:supports[3].bearing.sliding"
+    ],
+    "rationale": "Abutment 3 carries PTFE sliding laminated elastomeric bearings (sliding=true), so per MR-03 the longitudinal DOF is free (Kh=0); vertical spring, rotation free.",
+    "attempt": 3
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.3.dofs",
+    "decision_id": "dec:support.3.dofs"
+   }
+  },
+  {
+   "t": 6.404,
+   "tool": "generate_model",
+   "args": {},
+   "result": {
+    "ok": true,
+    "script": "${PROJECT_ROOT}/runs_faults/C5/T4_r1/B03_model.py",
+    "results": {
+     "ok": true,
+     "vertical_frequencies_Hz": [
+      5.573410420044705,
+      8.425793776607811,
+      10.185842256711245
+     ],
+     "self_weight_support_reactions_kN": [
+      820.4904849351511,
+      2764.0700122076078,
+      2764.070012207497,
+      820.490484935159
+     ],
+     "self_weight_midspan_moments_kNm": [
+      2690.1963922090363,
+      2967.7078344188667,
+      2690.1963922093646
+     ],
+     "self_weight_support_moments_kNm": [
+      -5649.024129866544,
+      -5649.024129866462
+     ],
+     "lane_moments_by_section": [
+      {
+       "section": "span",
+       "index": 1,
+       "M_kNm": 5016.893109458984
+      },
+      {
+       "section": "span",
+       "index": 2,
+       "M_kNm": 5341.458120190774
+      },
+      {
+       "section": "span",
+       "index": 3,
+       "M_kNm": 5016.893109459526
+      },
+      {
+       "section": "support",
+       "index": 1,
+       "M_kNm": -3864.0328998871387
+      },
+      {
+       "section": "support",
+       "index": 2,
+       "M_kNm": -3864.032899886589
+      }
+     ],
+     "lane_max_positive_moment_kNm": 5341.458120190774,
+     "lane_max_negative_moment_kNm": -3864.0328998871387
+    }
+   }
+  },
+  {
+   "t": 8.732,
+   "tool": "finish",
+   "args": {
+    "summary": "Root cause: the accepted decision support.3.dofs had longitudinal=\"spring\", but Abutment 3 carries PTFE sliding laminated elastomeric bearings (sliding=true). Per MR-03, a sliding (PTFE) bearing has a free longitudinal DOF (Kh=0). The value was revised to {\"vertical\":\"spring\",\"longitudinal\":\"free\",\"rotation\":\"free\"} (with evidence MR-03, inst:bearing:3, INPUT:supports[3].bearing.sliding). Since only a boundary condition typo was corrected (no structural stiffness/mass change), modal results were unaffected; the model was regenerated and passed all L1/L2/L3 checks.\n\nModel: 3-span continuous spine-beam (2D) unit, 20+25+20 m, 4 precast prestressed small-box girders per span (C50), self-weight of girders only. Supports: Abutment 0, Pier 2 (support 2), Abutment 3 — PTFE sliding elastomeric bearings (longitudinal free); Pier 1 (support 1) — plain laminated elastomeric bearings (longitudinal spring, Kh=26250). All vertical supports are springs (Kv≈1.133e7 kN/m), rotations free.\n\nKey results:\n- Vertical bending frequencies: 5.573, 8.426, 10.186 Hz (f1=5.573 Hz)\n- Self-weight reactions (kN): 820.5 / 2764.1 / 2764.1 / 820.5\n- Self-weight midspan moments ≈ 2690 / 2968 / 2690 kNm; support moments ≈ -5649 kNm\n- Lane (Class I) max positive moment 5341 kNm (midspan 2), max negative moment -3864 kNm (at supports)."
+   },
+   "result": {
+    "ok": true
+   }
+  }
+ ]
+}

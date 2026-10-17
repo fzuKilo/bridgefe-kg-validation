@@ -1,0 +1,201 @@
+{
+  "runs_main": {
+    "metadata_hits": {},
+    "metadata_values": {},
+    "cache": {
+      "C0": {
+        "runs": 90,
+        "input_tokens": 66063,
+        "cache_hit_tokens": 41208,
+        "cache_fraction_token_weighted": 0.6237682212433586
+      },
+      "C1": {
+        "runs": 90,
+        "input_tokens": 129693,
+        "cache_hit_tokens": 102144,
+        "cache_fraction_token_weighted": 0.7875829844324674
+      },
+      "C2": {
+        "runs": 90,
+        "input_tokens": 10766873,
+        "cache_hit_tokens": 10147196,
+        "cache_fraction_token_weighted": 0.9424459636516563
+      },
+      "C3": {
+        "runs": 90,
+        "input_tokens": 37432799,
+        "cache_hit_tokens": 33922174,
+        "cache_fraction_token_weighted": 0.9062152685937271
+      },
+      "C4": {
+        "runs": 90,
+        "input_tokens": 19411574,
+        "cache_hit_tokens": 18428032,
+        "cache_fraction_token_weighted": 0.9493321870756076
+      },
+      "C5": {
+        "runs": 90,
+        "input_tokens": 27193935,
+        "cache_hit_tokens": 26039806,
+        "cache_fraction_token_weighted": 0.9575593234300221
+      }
+    },
+    "errors": []
+  },
+  "runs_ablation_single": {
+    "metadata_hits": {},
+    "metadata_values": {},
+    "cache": {
+      "A1": {
+        "runs": 90,
+        "input_tokens": 27272173,
+        "cache_hit_tokens": 26164093,
+        "cache_fraction_token_weighted": 0.9593695742543141
+      },
+      "A1P": {
+        "runs": 90,
+        "input_tokens": 25977318,
+        "cache_hit_tokens": 24892157,
+        "cache_fraction_token_weighted": 0.9582265959865449
+      },
+      "A2": {
+        "runs": 90,
+        "input_tokens": 24610038,
+        "cache_hit_tokens": 23600891,
+        "cache_fraction_token_weighted": 0.9589944964733497
+      },
+      "A3": {
+        "runs": 90,
+        "input_tokens": 26962710,
+        "cache_hit_tokens": 25852285,
+        "cache_fraction_token_weighted": 0.9588162688394453
+      },
+      "A4": {
+        "runs": 90,
+        "input_tokens": 170003951,
+        "cache_hit_tokens": 168407293,
+        "cache_fraction_token_weighted": 0.9906081123961642
+      },
+      "C5": {
+        "runs": 90,
+        "input_tokens": 27193935,
+        "cache_hit_tokens": 26039806,
+        "cache_fraction_token_weighted": 0.9575593234300221
+      }
+    },
+    "errors": []
+  },
+  "runs_luna": {
+    "metadata_hits": {},
+    "metadata_values": {},
+    "cache": {
+      "C0": {
+        "runs": 90,
+        "input_tokens": 380318,
+        "cache_hit_tokens": 166400,
+        "cache_fraction_token_weighted": 0.4375285944919778
+      },
+      "C1": {
+        "runs": 90,
+        "input_tokens": 446127,
+        "cache_hit_tokens": 261632,
+        "cache_fraction_token_weighted": 0.586451839946921
+      },
+      "C2": {
+        "runs": 90,
+        "input_tokens": 53293095,
+        "cache_hit_tokens": 41422336,
+        "cache_fraction_token_weighted": 0.7772552147703188
+      },
+      "C3": {
+        "runs": 90,
+        "input_tokens": 115436226,
+        "cache_hit_tokens": 72979456,
+        "cache_fraction_token_weighted": 0.6322058380529523
+      },
+      "C4": {
+        "runs": 90,
+        "input_tokens": 116855848,
+        "cache_hit_tokens": 87047936,
+        "cache_fraction_token_weighted": 0.74491724196807
+      },
+      "C5": {
+        "runs": 90,
+        "input_tokens": 133980502,
+        "cache_hit_tokens": 100350464,
+        "cache_fraction_token_weighted": 0.7489930437788627
+      }
+    },
+    "errors": [
+      {
+        "line": 86,
+        "config": "C3",
+        "problem": "A01",
+        "rep": 1,
+        "error_tail": "${PROJECT_ROOT}/kgfem/agent/baselines.py\", line 181, in run_baseline\n    usage = backend.run(system_prompt(cfg), names, f'Bridge description:\\n\\n{description}', dispatch,\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"${PROJECT_ROOT}/kgfem/agent/backends.py\", line 227, in run\n    resp = self._chat(messages, tools)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"${PROJECT_ROOT}/kgfem/agent/backends.py\", line 313, in _chat\n    raise RuntimeError(f'OpenAI 接口错误 {e.code}：{detail}') from e\nRuntimeError: OpenAI 接口错误 503：{\"error\":{\"message\":\"model gpt-6-luna is unavailable for this API key\",\"type\":\"server_error\",\"code\":\"internal_server_error\"}}\n"
+      },
+      {
+        "line": 105,
+        "config": "C3",
+        "problem": "C02",
+        "rep": 1,
+        "error_tail": "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"${PROJECT_ROOT}/kgfem/agent/baselines.py\", line 179, in dispatch\n    return base(name, args)\n           ^^^^^^^^^^^^^^^^\n  File \"${PROJECT_ROOT}/kgfem/agent/backends.py\", line 154, in dispatch\n    out = getattr(session, name)(**args)\n          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"${PROJECT_ROOT}/kgfem/agent/session.py\", line 164, in compute_section_properties\n    return sections.properties(section_type, geometry)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"${PROJECT_ROOT}/kgfem/model/sections.py\", line 76, in properties\n    yc = Sy / A\n         ~~~^~~\nZeroDivisionError: float division by zero\n"
+      },
+      {
+        "line": 106,
+        "config": "C3",
+        "problem": "B10",
+        "rep": 1,
+        "error_tail": "${PROJECT_ROOT}/kgfem/agent/baselines.py\", line 181, in run_baseline\n    usage = backend.run(system_prompt(cfg), names, f'Bridge description:\\n\\n{description}', dispatch,\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"${PROJECT_ROOT}/kgfem/agent/backends.py\", line 227, in run\n    resp = self._chat(messages, tools)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"${PROJECT_ROOT}/kgfem/agent/backends.py\", line 313, in _chat\n    raise RuntimeError(f'OpenAI 接口错误 {e.code}：{detail}') from e\nRuntimeError: OpenAI 接口错误 503：{\"error\":{\"message\":\"model gpt-6-luna is unavailable for this API key\",\"type\":\"server_error\",\"code\":\"internal_server_error\"}}\n"
+      }
+    ]
+  },
+  "runs_faults": {
+    "metadata_hits": {},
+    "metadata_values": {},
+    "cache": {
+      "A5": {
+        "runs": 200,
+        "input_tokens": 34776609,
+        "cache_hit_tokens": 32865920,
+        "cache_fraction_token_weighted": 0.9450582142727026
+      },
+      "C5": {
+        "runs": 200,
+        "input_tokens": 15555909,
+        "cache_hit_tokens": 14610342,
+        "cache_fraction_token_weighted": 0.9392149311236007
+      },
+      "F0": {
+        "runs": 200,
+        "input_tokens": 66304274,
+        "cache_hit_tokens": 63820155,
+        "cache_fraction_token_weighted": 0.9625345569729035
+      }
+    },
+    "errors": []
+  },
+  "session_checks": [
+    {
+      "dataset": "runs_main",
+      "session_files_found": 540,
+      "missing": [],
+      "top_level_metadata_hits": {},
+      "metrics_mismatches": []
+    },
+    {
+      "dataset": "runs_ablation_single",
+      "session_files_found": 540,
+      "missing": [],
+      "top_level_metadata_hits": {},
+      "metrics_mismatches": []
+    },
+    {
+      "dataset": "runs_luna",
+      "session_files_found": 540,
+      "missing": [],
+      "top_level_metadata_hits": {},
+      "metrics_mismatches": []
+    }
+  ]
+}

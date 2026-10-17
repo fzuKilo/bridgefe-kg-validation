@@ -1,0 +1,35 @@
+{
+ "metrics": {
+  "proposals": 0,
+  "slots_proposed": 0,
+  "first_proposal_violation_rate": null,
+  "violations_by_check": {},
+  "instance_rounds": 0,
+  "repair_rounds": 0,
+  "model_passed": false,
+  "elapsed_s": 82.41
+ },
+ "decisions": {},
+ "facts": {},
+ "instance": {},
+ "results": null,
+ "last_check": null,
+ "role_log": [
+  {
+   "role": "direct_script",
+   "usage": {
+    "turns": 1,
+    "prompt_tokens": 4319,
+    "output_tokens": 3518,
+    "cache_hit_tokens": 2816,
+    "reasoning_tokens": 457,
+    "finish_reason": "stop",
+    "stream": true
+   },
+   "returncode": 1,
+   "stderr": "WARNING failed to read integers\nTraceback (most recent call last):\n  File \"${PROJECT_ROOT}/runs_luna/C0/C05_r2/C05_direct.py\", line 170, in <module>\n    x_nodes_global, support_nodes_global = build_model()\n                                           ^^^^^^^^^^^^^\n  File \"${PROJECT_ROOT}/runs_luna/C0/C05_r2/C05_direct.py\", line 89, in build_model\n    ops.element(\nopensees.OpenSeesError: See stderr output\n",
+   "elapsed_s": 82.4
+  }
+ ],
+ "log": []
+}

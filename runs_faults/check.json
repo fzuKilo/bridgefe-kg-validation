@@ -1,0 +1,476 @@
+[
+ {
+  "fault": "R1",
+  "category": "modeling_rule",
+  "problem": "B03",
+  "desc": "连续体系按简支建模",
+  "detected": true,
+  "stage": "model_checks",
+  "checks": [
+   "L2-1"
+  ],
+  "n_suspects": 1,
+  "suspects": [
+   "structure.system"
+  ],
+  "localized": true
+ },
+ {
+  "fault": "R2",
+  "category": "modeling_rule",
+  "problem": "B03",
+  "desc": "固定支座纵向放松",
+  "detected": true,
+  "stage": "execution",
+  "checks": [
+   "L1-2",
+   "L2-1"
+  ],
+  "n_suspects": 16,
+  "suspects": [
+   "support.0.Kh",
+   "support.0.Kv",
+   "support.0.bearing",
+   "support.0.dofs",
+   "support.1.Kh",
+   "support.1.Kv",
+   "support.1.bearing",
+   "support.1.dofs",
+   "support.2.Kh",
+   "support.2.Kv",
+   "support.2.bearing",
+   "support.2.dofs",
+   "support.3.Kh",
+   "support.3.Kv",
+   "support.3.bearing",
+   "support.3.dofs"
+  ],
+  "localized": true
+ },
+ {
+  "fault": "R3",
+  "category": "modeling_rule",
+  "problem": "C02",
+  "desc": "滑动支座纵向约束",
+  "detected": true,
+  "stage": "model_checks",
+  "checks": [
+   "L2-1"
+  ],
+  "n_suspects": 1,
+  "suspects": [
+   "support.0.dofs"
+  ],
+  "localized": true
+ },
+ {
+  "fault": "R4",
+  "category": "modeling_rule",
+  "problem": "A08",
+  "desc": "多片梁未合并（面积取单片）",
+  "detected": true,
+  "stage": "model_checks",
+  "checks": [
+   "L2-1",
+   "L3-2"
+  ],
+  "n_suspects": 3,
+  "suspects": [
+   "girder.A",
+   "girder.gamma",
+   "girder.w"
+  ],
+  "localized": true
+ },
+ {
+  "fault": "R5",
+  "category": "modeling_rule",
+  "problem": "C05",
+  "desc": "未模拟桥墩",
+  "detected": true,
+  "stage": "model_checks",
+  "checks": [
+   "L2-1"
+  ],
+  "n_suspects": 1,
+  "suspects": [
+   "structure.system"
+  ],
+  "localized": true
+ },
+ {
+  "fault": "K1",
+  "category": "code_parameter",
+  "problem": "A03",
+  "desc": "公路-II 级取了 I 级 qk",
+  "detected": true,
+  "stage": "model_checks",
+  "checks": [
+   "L2-1"
+  ],
+  "n_suspects": 1,
+  "suspects": [
+   "lane.qk"
+  ],
+  "localized": true
+ },
+ {
+  "fault": "K2",
+  "category": "code_parameter",
+  "problem": "A08",
+  "desc": "横向折减系数取错",
+  "detected": true,
+  "stage": "model_checks",
+  "checks": [
+   "L2-1"
+  ],
+  "n_suspects": 1,
+  "suspects": [
+   "lane.xi"
+  ],
+  "localized": true
+ },
+ {
+  "fault": "K3",
+  "category": "code_parameter",
+  "problem": "B03",
+  "desc": "弹性模量按 C40 取值",
+  "detected": true,
+  "stage": "model_checks",
+  "checks": [
+   "L2-1",
+   "L2-2"
+  ],
+  "n_suspects": 37,
+  "suspects": [
+   "girder.A",
+   "girder.Ec",
+   "girder.I",
+   "girder.gamma",
+   "girder.m",
+   "girder.single.A",
+   "girder.single.I",
+   "girder.w",
+   "lane.Pk.1",
+   "lane.Pk.2",
+   "lane.Pk.3",
+   "lane.mu",
+   "lane.n_lanes",
+   "lane.qk",
+   "lane.xi",
+   "structure.idealization",
+   "structure.system",
+   "support.0.Kh",
+   "support.0.Kv",
+   "support.0.S",
+   "support.0.bearing",
+   "support.0.dofs",
+   "support.1.Kh",
+   "support.1.Kv",
+   "support.1.S",
+   "support.1.bearing",
+   "support.1.dofs",
+   "support.2.Kh",
+   "support.2.Kv",
+   "support.2.S",
+   "support.2.bearing",
+   "support.2.dofs",
+   "support.3.Kh",
+   "support.3.Kv",
+   "support.3.S",
+   "support.3.bearing",
+   "support.3.dofs"
+  ],
+  "localized": true
+ },
+ {
+  "fault": "K4",
+  "category": "code_parameter",
+  "problem": "B06",
+  "desc": "Pk 按 50 m 跨径取值",
+  "detected": true,
+  "stage": "model_checks",
+  "checks": [
+   "L2-1"
+  ],
+  "n_suspects": 1,
+  "suspects": [
+   "lane.Pk.2"
+  ],
+  "localized": true
+ },
+ {
+  "fault": "K5",
+  "category": "code_parameter",
+  "problem": "C05",
+  "desc": "冲击系数与基频不符",
+  "detected": true,
+  "stage": "model_checks",
+  "checks": [
+   "L2-1",
+   "L2-2"
+  ],
+  "n_suspects": 43,
+  "suspects": [
+   "girder.A",
+   "girder.Ec",
+   "girder.I",
+   "girder.gamma",
+   "girder.m",
+   "girder.w",
+   "lane.Pk.1",
+   "lane.Pk.2",
+   "lane.Pk.3",
+   "lane.mu",
+   "lane.n_lanes",
+   "lane.qk",
+   "lane.xi",
+   "pier.1.A",
+   "pier.1.Ec",
+   "pier.1.I",
+   "pier.1.length",
+   "pier.2.A",
+   "pier.2.Ec",
+   "pier.2.I",
+   "pier.2.length",
+   "structure.idealization",
+   "structure.system",
+   "support.0.Kh",
+   "support.0.Kv",
+   "support.0.S",
+   "support.0.bearing",
+   "support.0.dofs",
+   "support.1.Kh",
+   "support.1.Kv",
+   "support.1.S",
+   "support.1.bearing",
+   "support.1.dofs",
+   "support.2.Kh",
+   "support.2.Kv",
+   "support.2.S",
+   "support.2.bearing",
+   "support.2.dofs",
+   "support.3.Kh",
+   "support.3.Kv",
+   "support.3.S",
+   "support.3.bearing",
+   "support.3.dofs"
+  ],
+  "localized": true
+ },
+ {
+  "fault": "T1",
+  "category": "topology",
+  "problem": "C02",
+  "desc": "固定支座设在错误的墩上",
+  "detected": true,
+  "stage": "model_checks",
+  "checks": [
+   "L2-1"
+  ],
+  "n_suspects": 2,
+  "suspects": [
+   "support.1.bearing",
+   "support.2.bearing"
+  ],
+  "localized": true
+ },
+ {
+  "fault": "T2",
+  "category": "topology",
+  "problem": "C02",
+  "desc": "两墩高度对调",
+  "detected": true,
+  "stage": "model_checks",
+  "checks": [
+   "L2-1"
+  ],
+  "n_suspects": 2,
+  "suspects": [
+   "pier.1.length",
+   "pier.2.length"
+  ],
+  "localized": true
+ },
+ {
+  "fault": "T3",
+  "category": "topology",
+  "problem": "C05",
+  "desc": "支承线 2 取了支承线 1 的竖向刚度",
+  "detected": true,
+  "stage": "model_checks",
+  "checks": [
+   "L2-1"
+  ],
+  "n_suspects": 1,
+  "suspects": [
+   "support.2.Kv"
+  ],
+  "localized": true
+ },
+ {
+  "fault": "T4",
+  "category": "topology",
+  "problem": "B03",
+  "desc": "桥台按固定支座约束，形成两条固定支承线",
+  "detected": true,
+  "stage": "model_checks",
+  "checks": [
+   "L2-1"
+  ],
+  "n_suspects": 1,
+  "suspects": [
+   "support.3.dofs"
+  ],
+  "localized": true
+ },
+ {
+  "fault": "T5",
+  "category": "topology",
+  "problem": "B06",
+  "desc": "桥台滑动支座定为固定支座",
+  "detected": true,
+  "stage": "model_checks",
+  "checks": [
+   "L2-1"
+  ],
+  "n_suspects": 1,
+  "suspects": [
+   "support.0.bearing"
+  ],
+  "localized": true
+ },
+ {
+  "fault": "I1",
+  "category": "input_interpretation",
+  "problem": "B06",
+  "desc": "每梁端支座数读成 2",
+  "detected": true,
+  "stage": "model_checks",
+  "checks": [
+   "L2-1"
+  ],
+  "n_suspects": 5,
+  "suspects": [
+   "support.0.bearing",
+   "support.1.bearing",
+   "support.2.bearing",
+   "support.3.bearing",
+   "support.4.bearing"
+  ],
+  "localized": null
+ },
+ {
+  "fault": "I2",
+  "category": "input_interpretation",
+  "problem": "A03",
+  "desc": "顶板厚 0.18 m 读成 0.20 m",
+  "detected": true,
+  "stage": "model_checks",
+  "checks": [
+   "L2-1"
+  ],
+  "n_suspects": 2,
+  "suspects": [
+   "girder.single.A",
+   "girder.single.I"
+  ],
+  "localized": null
+ },
+ {
+  "fault": "I3",
+  "category": "input_interpretation",
+  "problem": "C05",
+  "desc": "主跨 50 m 读成 45 m",
+  "detected": true,
+  "stage": "model_checks",
+  "checks": [
+   "L2-1",
+   "L2-2"
+  ],
+  "n_suspects": 43,
+  "suspects": [
+   "girder.A",
+   "girder.Ec",
+   "girder.I",
+   "girder.gamma",
+   "girder.m",
+   "girder.w",
+   "lane.Pk.1",
+   "lane.Pk.2",
+   "lane.Pk.3",
+   "lane.mu",
+   "lane.n_lanes",
+   "lane.qk",
+   "lane.xi",
+   "pier.1.A",
+   "pier.1.Ec",
+   "pier.1.I",
+   "pier.1.length",
+   "pier.2.A",
+   "pier.2.Ec",
+   "pier.2.I",
+   "pier.2.length",
+   "structure.idealization",
+   "structure.system",
+   "support.0.Kh",
+   "support.0.Kv",
+   "support.0.S",
+   "support.0.bearing",
+   "support.0.dofs",
+   "support.1.Kh",
+   "support.1.Kv",
+   "support.1.S",
+   "support.1.bearing",
+   "support.1.dofs",
+   "support.2.Kh",
+   "support.2.Kv",
+   "support.2.S",
+   "support.2.bearing",
+   "support.2.dofs",
+   "support.3.Kh",
+   "support.3.Kv",
+   "support.3.S",
+   "support.3.bearing",
+   "support.3.dofs"
+  ],
+  "localized": null
+ },
+ {
+  "fault": "I4",
+  "category": "input_interpretation",
+  "problem": "A08",
+  "desc": "主梁片数 3 读成 4",
+  "detected": true,
+  "stage": "model_checks",
+  "checks": [
+   "L2-1"
+  ],
+  "n_suspects": 4,
+  "suspects": [
+   "girder.A",
+   "girder.I",
+   "support.0.bearing",
+   "support.1.bearing"
+  ],
+  "localized": null
+ },
+ {
+  "fault": "I5",
+  "category": "input_interpretation",
+  "problem": "C02",
+  "desc": "橡胶层厚 11 mm 读成 8 mm",
+  "detected": true,
+  "stage": "model_checks",
+  "checks": [
+   "L2-1"
+  ],
+  "n_suspects": 3,
+  "suspects": [
+   "support.1.Kh",
+   "support.1.Kv",
+   "support.1.S"
+  ],
+  "localized": null
+ }
+]

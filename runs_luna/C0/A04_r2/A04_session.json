@@ -1,0 +1,35 @@
+{
+ "metrics": {
+  "proposals": 0,
+  "slots_proposed": 0,
+  "first_proposal_violation_rate": null,
+  "violations_by_check": {},
+  "instance_rounds": 0,
+  "repair_rounds": 0,
+  "model_passed": false,
+  "elapsed_s": 79.01
+ },
+ "decisions": {},
+ "facts": {},
+ "instance": {},
+ "results": null,
+ "last_check": null,
+ "role_log": [
+  {
+   "role": "direct_script",
+   "usage": {
+    "turns": 1,
+    "prompt_tokens": 4216,
+    "output_tokens": 2781,
+    "cache_hit_tokens": 0,
+    "reasoning_tokens": 646,
+    "finish_reason": "stop",
+    "stream": true
+   },
+   "returncode": 1,
+   "stderr": "WARNING - the 'fullGenLapack' eigen solver is VERY SLOW. Consider using the default eigen solver.WARNING No Analysis type has been specified \nTraceback (most recent call last):\n  File \"${PROJECT_ROOT}/runs_luna/C0/A04_r2/A04_direct.py\", line 171, in <module>\n    if ops.analyze(1) != 0:\n       ^^^^^^^^^^^^^^\nopensees.OpenSeesError: See stderr output\n",
+   "elapsed_s": 79.0
+  }
+ ],
+ "log": []
+}

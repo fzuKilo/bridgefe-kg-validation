@@ -1,0 +1,1888 @@
+{
+ "metrics": {
+  "proposals": 43,
+  "slots_proposed": 43,
+  "first_proposal_violation_rate": 0.0,
+  "violations_by_check": {},
+  "instance_rounds": 1,
+  "repair_rounds": 0,
+  "model_passed": true,
+  "elapsed_s": 531.12
+ },
+ "decisions": {
+  "structure.idealization": {
+   "id": "dec:structure.idealization",
+   "slot": "structure.idealization",
+   "value": "spine_beam_2d",
+   "unit": "-",
+   "evidence": [
+    "MR-01"
+   ]
+  },
+  "structure.system": {
+   "id": "dec:structure.system",
+   "slot": "structure.system",
+   "value": "continuous_on_piers",
+   "unit": "-",
+   "evidence": [
+    "MR-05"
+   ]
+  },
+  "girder.A": {
+   "id": "dec:girder.A",
+   "slot": "girder.A",
+   "value": 8.21,
+   "unit": "m^2",
+   "evidence": [
+    "MR-02"
+   ]
+  },
+  "girder.I": {
+   "id": "dec:girder.I",
+   "slot": "girder.I",
+   "value": 4.689832856678853,
+   "unit": "m^4",
+   "evidence": [
+    "MR-02"
+   ]
+  },
+  "girder.Ec": {
+   "id": "dec:girder.Ec",
+   "slot": "girder.Ec",
+   "value": 34500.0,
+   "unit": "MPa",
+   "evidence": [
+    "JTG3362-3.1.5"
+   ]
+  },
+  "girder.gamma": {
+   "id": "dec:girder.gamma",
+   "slot": "girder.gamma",
+   "value": 26.5,
+   "unit": "kN/m^3",
+   "evidence": [
+    "INPUT"
+   ]
+  },
+  "girder.w": {
+   "id": "dec:girder.w",
+   "slot": "girder.w",
+   "value": 217.565,
+   "unit": "kN/m",
+   "evidence": [
+    "MR-07"
+   ]
+  },
+  "girder.m": {
+   "id": "dec:girder.m",
+   "slot": "girder.m",
+   "value": 22.17737,
+   "unit": "t/m",
+   "evidence": [
+    "MR-07"
+   ]
+  },
+  "support.0.bearing": {
+   "id": "dec:support.0.bearing",
+   "slot": "support.0.bearing",
+   "value": {
+    "type": "ptfe_sliding",
+    "count": 2
+   },
+   "unit": "-",
+   "evidence": [
+    "INPUT",
+    "MR-04"
+   ]
+  },
+  "support.0.dofs": {
+   "id": "dec:support.0.dofs",
+   "slot": "support.0.dofs",
+   "value": {
+    "vertical": "spring",
+    "longitudinal": "free",
+    "rotation": "free"
+   },
+   "unit": "-",
+   "evidence": [
+    "MR-03"
+   ]
+  },
+  "support.0.S": {
+   "id": "dec:support.0.S",
+   "slot": "support.0.S",
+   "value": 10.714285714285714,
+   "unit": "-",
+   "evidence": [
+    "JTG3362-8.7-Ee"
+   ]
+  },
+  "support.0.Kv": {
+   "id": "dec:support.0.Kv",
+   "slot": "support.0.Kv",
+   "value": 2233016.0,
+   "unit": "kN/m",
+   "evidence": [
+    "JTG3362-8.7-Ee",
+    "JTG3362-8.7-Ge"
+   ]
+  },
+  "support.0.Kh": {
+   "id": "dec:support.0.Kh",
+   "slot": "support.0.Kh",
+   "value": 0.0,
+   "unit": "kN/m",
+   "evidence": [
+    "MR-03"
+   ]
+  },
+  "support.1.bearing": {
+   "id": "dec:support.1.bearing",
+   "slot": "support.1.bearing",
+   "value": {
+    "type": "ptfe_sliding",
+    "count": 2
+   },
+   "unit": "-",
+   "evidence": [
+    "INPUT",
+    "MR-04"
+   ]
+  },
+  "support.1.dofs": {
+   "id": "dec:support.1.dofs",
+   "slot": "support.1.dofs",
+   "value": {
+    "vertical": "spring",
+    "longitudinal": "free",
+    "rotation": "free"
+   },
+   "unit": "-",
+   "evidence": [
+    "MR-03"
+   ]
+  },
+  "support.1.S": {
+   "id": "dec:support.1.S",
+   "slot": "support.1.S",
+   "value": 11.818181818181818,
+   "unit": "-",
+   "evidence": [
+    "JTG3362-8.7-Ee"
+   ]
+  },
+  "support.1.Kv": {
+   "id": "dec:support.1.Kv",
+   "slot": "support.1.Kv",
+   "value": 2625000.0,
+   "unit": "kN/m",
+   "evidence": [
+    "JTG3362-8.7-Ee",
+    "JTG3362-8.7-Ge"
+   ]
+  },
+  "support.1.Kh": {
+   "id": "dec:support.1.Kh",
+   "slot": "support.1.Kh",
+   "value": 0.0,
+   "unit": "kN/m",
+   "evidence": [
+    "MR-03"
+   ]
+  },
+  "support.2.bearing": {
+   "id": "dec:support.2.bearing",
+   "slot": "support.2.bearing",
+   "value": {
+    "type": "plain_elastomeric",
+    "count": 2
+   },
+   "unit": "-",
+   "evidence": [
+    "INPUT",
+    "MR-04"
+   ]
+  },
+  "support.2.dofs": {
+   "id": "dec:support.2.dofs",
+   "slot": "support.2.dofs",
+   "value": {
+    "vertical": "spring",
+    "longitudinal": "spring",
+    "rotation": "free"
+   },
+   "unit": "-",
+   "evidence": [
+    "MR-03"
+   ]
+  },
+  "support.2.S": {
+   "id": "dec:support.2.S",
+   "slot": "support.2.S",
+   "value": 13.636363636363637,
+   "unit": "-",
+   "evidence": [
+    "JTG3362-8.7-Ee"
+   ]
+  },
+  "support.2.Kv": {
+   "id": "dec:support.2.Kv",
+   "slot": "support.2.Kv",
+   "value": 3272727.27,
+   "unit": "kN/m",
+   "evidence": [
+    "JTG3362-8.7-Ee",
+    "JTG3362-8.7-Ge"
+   ]
+  },
+  "support.2.Kh": {
+   "id": "dec:support.2.Kh",
+   "slot": "support.2.Kh",
+   "value": 37636.36,
+   "unit": "kN/m",
+   "evidence": [
+    "JTG3362-8.7-Ee",
+    "JTG3362-8.7-Ge"
+   ]
+  },
+  "support.3.bearing": {
+   "id": "dec:support.3.bearing",
+   "slot": "support.3.bearing",
+   "value": {
+    "type": "ptfe_sliding",
+    "count": 2
+   },
+   "unit": "-",
+   "evidence": [
+    "INPUT",
+    "MR-04"
+   ]
+  },
+  "support.3.dofs": {
+   "id": "dec:support.3.dofs",
+   "slot": "support.3.dofs",
+   "value": {
+    "vertical": "spring",
+    "longitudinal": "free",
+    "rotation": "free"
+   },
+   "unit": "-",
+   "evidence": [
+    "MR-03"
+   ]
+  },
+  "support.3.S": {
+   "id": "dec:support.3.S",
+   "slot": "support.3.S",
+   "value": 10.714285714285714,
+   "unit": "-",
+   "evidence": [
+    "JTG3362-8.7-Ee"
+   ]
+  },
+  "support.3.Kv": {
+   "id": "dec:support.3.Kv",
+   "slot": "support.3.Kv",
+   "value": 2233016.0,
+   "unit": "kN/m",
+   "evidence": [
+    "JTG3362-8.7-Ee",
+    "JTG3362-8.7-Ge"
+   ]
+  },
+  "support.3.Kh": {
+   "id": "dec:support.3.Kh",
+   "slot": "support.3.Kh",
+   "value": 0.0,
+   "unit": "kN/m",
+   "evidence": [
+    "MR-03"
+   ]
+  },
+  "pier.1.length": {
+   "id": "dec:pier.1.length",
+   "slot": "pier.1.length",
+   "value": 14.0,
+   "unit": "m",
+   "evidence": [
+    "INPUT"
+   ]
+  },
+  "pier.1.A": {
+   "id": "dec:pier.1.A",
+   "slot": "pier.1.A",
+   "value": 4.0212385966,
+   "unit": "m^2",
+   "evidence": [
+    "INPUT",
+    "MR-06"
+   ]
+  },
+  "pier.1.I": {
+   "id": "dec:pier.1.I",
+   "slot": "pier.1.I",
+   "value": 0.8042477193,
+   "unit": "m^4",
+   "evidence": [
+    "INPUT",
+    "MR-06"
+   ]
+  },
+  "pier.1.Ec": {
+   "id": "dec:pier.1.Ec",
+   "slot": "pier.1.Ec",
+   "value": 32500.0,
+   "unit": "MPa",
+   "evidence": [
+    "JTG3362-3.1.5"
+   ]
+  },
+  "pier.2.length": {
+   "id": "dec:pier.2.length",
+   "slot": "pier.2.length",
+   "value": 6.0,
+   "unit": "m",
+   "evidence": [
+    "INPUT"
+   ]
+  },
+  "pier.2.A": {
+   "id": "dec:pier.2.A",
+   "slot": "pier.2.A",
+   "value": 4.0212385966,
+   "unit": "m^2",
+   "evidence": [
+    "INPUT",
+    "MR-06"
+   ]
+  },
+  "pier.2.I": {
+   "id": "dec:pier.2.I",
+   "slot": "pier.2.I",
+   "value": 0.8042477193,
+   "unit": "m^4",
+   "evidence": [
+    "INPUT",
+    "MR-06"
+   ]
+  },
+  "pier.2.Ec": {
+   "id": "dec:pier.2.Ec",
+   "slot": "pier.2.Ec",
+   "value": 32500.0,
+   "unit": "MPa",
+   "evidence": [
+    "JTG3362-3.1.5"
+   ]
+  },
+  "lane.n_lanes": {
+   "id": "dec:lane.n_lanes",
+   "slot": "lane.n_lanes",
+   "value": 4,
+   "unit": "-",
+   "evidence": [
+    "JTGD60-4.3.1-lanes"
+   ]
+  },
+  "lane.xi": {
+   "id": "dec:lane.xi",
+   "slot": "lane.xi",
+   "value": 0.67,
+   "unit": "-",
+   "evidence": [
+    "JTGD60-4.3.1-xi"
+   ]
+  },
+  "lane.qk": {
+   "id": "dec:lane.qk",
+   "slot": "lane.qk",
+   "value": 10.5,
+   "unit": "kN/m",
+   "evidence": [
+    "JTGD60-4.3.1-lane"
+   ]
+  },
+  "lane.Pk.1": {
+   "id": "dec:lane.Pk.1",
+   "slot": "lane.Pk.1",
+   "value": 324.0,
+   "unit": "kN",
+   "evidence": [
+    "JTGD60-4.3.1-Pk"
+   ]
+  },
+  "lane.Pk.2": {
+   "id": "dec:lane.Pk.2",
+   "slot": "lane.Pk.2",
+   "value": 340.0,
+   "unit": "kN",
+   "evidence": [
+    "JTGD60-4.3.1-Pk"
+   ]
+  },
+  "lane.Pk.3": {
+   "id": "dec:lane.Pk.3",
+   "slot": "lane.Pk.3",
+   "value": 324.0,
+   "unit": "kN",
+   "evidence": [
+    "JTGD60-4.3.1-Pk"
+   ]
+  },
+  "lane.mu": {
+   "id": "dec:lane.mu",
+   "slot": "lane.mu",
+   "value": 0.1951,
+   "unit": "-",
+   "evidence": [
+    "JTGD60-4.3.2",
+    "LL-02"
+   ]
+  }
+ },
+ "facts": {
+  "f1": 3.296960483044123
+ },
+ "instance": {
+  "supports": [
+   {
+    "index": 0,
+    "kind": "abutment",
+    "bearing": {
+     "family": "laminated_elastomeric",
+     "sliding": true,
+     "fixed": false,
+     "per_girder_end": null,
+     "per_line": 2,
+     "a_mm": 400,
+     "b_mm": 500,
+     "t1_mm": 11,
+     "n_layers": 5,
+     "Ge_MPa": null,
+     "model": null
+    },
+    "pier": null
+   },
+   {
+    "index": 1,
+    "kind": "pier",
+    "bearing": {
+     "family": "laminated_elastomeric",
+     "sliding": true,
+     "fixed": false,
+     "per_girder_end": null,
+     "per_line": 2,
+     "a_mm": 550,
+     "b_mm": 650,
+     "t1_mm": 11,
+     "n_layers": 6,
+     "Ge_MPa": null,
+     "model": null
+    },
+    "pier": {
+     "height_m": 14,
+     "diameter_m": 1.6,
+     "n_columns": 2,
+     "concrete": "C40"
+    }
+   },
+   {
+    "index": 2,
+    "kind": "pier",
+    "bearing": {
+     "family": "laminated_elastomeric",
+     "sliding": false,
+     "fixed": true,
+     "per_girder_end": null,
+     "per_line": 2,
+     "a_mm": 600,
+     "b_mm": 700,
+     "t1_mm": 11,
+     "n_layers": 7,
+     "Ge_MPa": null,
+     "model": null
+    },
+    "pier": {
+     "height_m": 6,
+     "diameter_m": 1.6,
+     "n_columns": 2,
+     "concrete": "C40"
+    }
+   },
+   {
+    "index": 3,
+    "kind": "abutment",
+    "bearing": {
+     "family": "laminated_elastomeric",
+     "sliding": true,
+     "fixed": false,
+     "per_girder_end": null,
+     "per_line": 2,
+     "a_mm": 400,
+     "b_mm": 500,
+     "t1_mm": 11,
+     "n_layers": 5,
+     "Ge_MPa": null,
+     "model": null
+    },
+    "pier": null
+   }
+  ],
+  "structure_type": "cast_in_place_continuous",
+  "spans_m": [
+   32,
+   40,
+   32
+  ],
+  "deck": {
+   "deck_width_m": 16,
+   "carriageway_width_m": 15,
+   "traffic": "one_way",
+   "design_lanes": 4,
+   "load_class": "I"
+  },
+  "girder": {
+   "type": "cast_box",
+   "count_per_span": 1,
+   "concrete": "C50",
+   "material": "prestressed_concrete",
+   "E_override_MPa": null,
+   "gamma_override_kNm3": 26.5,
+   "section": {
+    "B_top": 16,
+    "B_bot": 9,
+    "h": 2,
+    "t_top": 0.25,
+    "t_bot": 0.22,
+    "t_web": 0.5,
+    "t_cant_root": 0.5,
+    "t_cant_tip": 0.2
+   }
+  },
+  "dead_load": "girder_self_weight_only"
+ },
+ "results": {
+  "ok": true,
+  "vertical_frequencies_Hz": [
+   3.296960483044123,
+   4.764173795545706,
+   5.379615702063202
+  ],
+  "self_weight_support_reactions_kN": [
+   2613.661616869158,
+   8677.804798217845,
+   8749.023949187209,
+   2586.2696357244567
+  ],
+  "self_weight_midspan_moments_kNm": [
+   13970.265869890121,
+   15318.620041474795,
+   13531.994171595245
+  ],
+  "self_weight_support_moments_kNm": [
+   -27756.108260237284,
+   -28632.65165679291
+  ],
+  "lane_moments_by_section": [
+   {
+    "section": "span",
+    "index": 1,
+    "M_kNm": 10439.834631328125
+   },
+   {
+    "section": "span",
+    "index": 2,
+    "M_kNm": 11253.258056394465
+   },
+   {
+    "section": "span",
+    "index": 3,
+    "M_kNm": 10391.364140329146
+   },
+   {
+    "section": "support",
+    "index": 1,
+    "M_kNm": -8476.951586877178
+   },
+   {
+    "section": "support",
+    "index": 2,
+    "M_kNm": -8659.629772534834
+   }
+  ],
+  "lane_max_positive_moment_kNm": 11253.258056394465,
+  "lane_max_negative_moment_kNm": -8659.629772534834
+ },
+ "last_check": [],
+ "role_log": [],
+ "log": [
+  {
+   "t": 32.301,
+   "tool": "write_instance",
+   "args": {
+    "structure_type": "cast_in_place_continuous",
+    "spans_m": [
+     32,
+     40,
+     32
+    ],
+    "deck": {
+     "deck_width_m": 16,
+     "carriageway_width_m": 15,
+     "traffic": "one_way",
+     "design_lanes": 4,
+     "load_class": "I"
+    },
+    "girder": {
+     "type": "cast_box",
+     "count_per_span": 1,
+     "concrete": "C50",
+     "material": "prestressed_concrete",
+     "E_override_MPa": null,
+     "gamma_override_kNm3": 26.5,
+     "section": {
+      "B_top": 16,
+      "B_bot": 9,
+      "h": 2,
+      "t_top": 0.25,
+      "t_bot": 0.22,
+      "t_web": 0.5,
+      "t_cant_root": 0.5,
+      "t_cant_tip": 0.2
+     }
+    },
+    "supports": [
+     {
+      "index": 0,
+      "kind": "abutment",
+      "bearing": {
+       "family": "laminated_elastomeric",
+       "sliding": true,
+       "fixed": false,
+       "per_girder_end": null,
+       "per_line": 2,
+       "a_mm": 400,
+       "b_mm": 500,
+       "t1_mm": 11,
+       "n_layers": 5,
+       "Ge_MPa": null,
+       "model": null
+      },
+      "pier": null
+     },
+     {
+      "index": 1,
+      "kind": "pier",
+      "bearing": {
+       "family": "laminated_elastomeric",
+       "sliding": true,
+       "fixed": false,
+       "per_girder_end": null,
+       "per_line": 2,
+       "a_mm": 550,
+       "b_mm": 650,
+       "t1_mm": 11,
+       "n_layers": 6,
+       "Ge_MPa": null,
+       "model": null
+      },
+      "pier": {
+       "height_m": 14,
+       "diameter_m": 1.6,
+       "n_columns": 2,
+       "concrete": "C40"
+      }
+     },
+     {
+      "index": 2,
+      "kind": "pier",
+      "bearing": {
+       "family": "laminated_elastomeric",
+       "sliding": false,
+       "fixed": true,
+       "per_girder_end": null,
+       "per_line": 2,
+       "a_mm": 600,
+       "b_mm": 700,
+       "t1_mm": 11,
+       "n_layers": 7,
+       "Ge_MPa": null,
+       "model": null
+      },
+      "pier": {
+       "height_m": 6,
+       "diameter_m": 1.6,
+       "n_columns": 2,
+       "concrete": "C40"
+      }
+     },
+     {
+      "index": 3,
+      "kind": "abutment",
+      "bearing": {
+       "family": "laminated_elastomeric",
+       "sliding": true,
+       "fixed": false,
+       "per_girder_end": null,
+       "per_line": 2,
+       "a_mm": 400,
+       "b_mm": 500,
+       "t1_mm": 11,
+       "n_layers": 5,
+       "Ge_MPa": null,
+       "model": null
+      },
+      "pier": null
+     }
+    ],
+    "dead_load": "girder_self_weight_only"
+   },
+   "result": {
+    "ok": true,
+    "issues": [],
+    "round": 1
+   }
+  },
+  {
+   "t": 53.042,
+   "tool": "search_knowledge",
+   "args": {
+    "query": "JTG D60-2015 Highway Class I lane load qk concentrated load Pk number of design lanes transverse reduction factor xi impact coefficient fundamental frequency continuous girder bridges; concrete C50 modulus; laminated elastomeric bearing stiffness vertical horizontal shear modulus; box girder gamma; model rules equivalent beam mass and girder self weight"
+   },
+   "result": {
+    "passages": [
+     {
+      "id": "example:S01",
+      "text": "Worked example S01.\n[Span arrangement] One continuous unit of six spans, 30 + 30 + 30 + 30 + 30 + 30 m (centre-to-centre of bearings), precast girders simply supported during erection and made continuous afterwards; deck width 12.5 m.\n[Section and material] Precast prestressed small box girders, 4 per span; middle-girder section at midspan: depth 1.6 m; top width 2.40 m; flange 0.18 m thick at the tip, thickening by 6.3 cm over a 19.2 cm long haunch next to the web; bottom slab 1.00 m wide and 0.18 m thick; top slab 0.18 m thick; webs 0.20 m thick (measured horizontally) with outer faces inclined at 1:4; 15 cm x 7 cm chamfers at the upper corners of the cell; girder concrete C50. Consider the self-weight of the main girders only (no wet joints, diaphragms, pavement or barriers).\n[Bearings and boundary] Abutment 0, Pier 1, Pier 2, Pier 4, Pier 5 and Abutment 6: PTFE sliding laminated elastomeric bearings, two under each girder end; effective plan size 300 mm x 400 mm, five internal rubber layers 8 mm thick. Pier 3: plain laminated elastomeric bearings (fixed), two under each girder end; effective plan size 300 mm x 400 mm, five internal rubber layers 8 mm thick.\n[Design standard] Highway Class I loading (JTG D60-2015); one-way traffic, carriageway width 11.5 m, three design lanes.\nDecisions:\n  structure.idealization = \"spine_beam_2d\" [-] (basis: MR-01)\n  structure.system = \"continuous\" [-] (basis: MR-05)\n  girder.single.A = 1.1389287499999998 [m^2] (basis: MR-02)\n  girder.single.I = 0.3549168491421879 [m^4] (basis: MR-02)\n  girder.A = 4.555714999999999 [m^2] (basis: MR-02)\n  girder.I = 1.4196673965687516 [m^4] (basis: MR-02)\n  girder.Ec = 34500.0 [MPa] (basis: JTG3362-3.1.5)\n  girder.gamma = 26.0 [kN/m^3] (basis: JTGD60-4.2.1)\n  girder.w = 118.44858999999998 [kN/m] (basis: MR-07)\n  girder.m = 12.074270132517837 [t/m] (basis: MR-07)\n  support.0.bearing = {\"type\": \"ptfe_sliding\", \"count\": 8} [-] (basis: INPUT, MR-04)\n  support.0.dofs = {\"vertical\": \"spring\", \"longitudinal\": \"free\", \"rotation\": \"free\"} [-] (basis: MR-03)\n  support.0.S = 10.714285714285714 [-] (basis: JTG3362-8.7-Ee)\n  support.0.Kv = 11357351.509250242 [kN/m] (basis: JTG3362-8.7-Ee, JTG3362-8.7-Ge)\n  support.0.Kh = 0.0 [kN/m] (basis: MR-03)\n  support.1.bearing = {\"type\": \"ptfe_sliding\", \"count\": 8} [-] (basis: INPUT, MR-04)\n  support.1.dofs = {\"vertical\": \"spring\", \"longitudinal\": \"free\", \"rotation\": \"free\"} [-] (basis: MR-03)\n  support.1.S = 10.714285714285714 [-] (basis: JTG3362-8.7-Ee)\n  support.1.Kv = 11357351.509250242 [kN/m] (basis: JTG3362-8.7-Ee, JTG3362-8.7-Ge)\n  support.1.Kh = 0.0 [kN/m] (basis: MR-03)\n  support.2.bearing = {\"type\": \"ptfe_sliding\", \"count\": 8} [-] (basis: INPUT, MR-04)\n  support.2.dofs = {\"vertical\": \"spring\", \"longitudinal\": \"free\", \"rotation\": \"free\"} [-] (basis: MR-03)\n  support.2.S = 10.714285714285714 [-] (basis: JTG3362-8.7-Ee)\n  support.2.Kv = 11357351.509250242 [kN/m] (basis: JTG3362-8.7-Ee, JTG3362-8.7-Ge)\n  support.2.Kh = 0.0 [kN/m] (basis: MR-03)\n  support.3.bearing = {\"type\": \"plain_elastomeric\", \"count\": 8} [-] (basis: INPUT, MR-04)\n  support.3.dofs = {\"vertical\": \"spring\", \"longitudinal\": \"spring\", \"rotation\": \"free\"} [-] (basis: MR-03)\n  support.3.S = 10.714285714285714 [-] (basis: JTG3362-8.7-Ee)\n  support.3.Kv = 11357351.509250242 [kN/m] (basis: JTG3362-8.7-Ee, JTG3362-8.7-Ge)\n  support.3.Kh = 24000.0 [kN/m] (basis: JTG3362-8.7-Ee, JTG3362-8.7-Ge)\n  support.4.bearing = {\"type\": \"ptfe_sliding\", \"count\": 8} [-] (basis: INPUT, MR-04)\n  support.4.dofs = {\"vertical\": \"spring\", \"longitudinal\": \"free\", \"rotation\": \"free\"} [-] (basis: MR-03)\n  support.4.S = 10.714285714285714 [-] (basis: JTG3362-8.7-Ee)\n  support.4.Kv = 11357351.509250242 [kN/m] (basis: JTG3362-8.7-Ee, JTG3362-8.7-Ge)\n  support.4.Kh = 0.0 [kN/m] (basis: MR-03)\n  support.5.bearing = {\"type\": \"ptfe_sliding\", \"count\": 8} [-] (basis: INPUT, MR-04)\n  support.5.dofs = {\"vertical\": \"spring\", \"longitudinal\": \"free\", \"rotation\": \"free\"} [-] (basis: MR-03)\n  support.5.S = 10.714285714285714 [-] (basis: JTG3362-8.7-Ee)\n  support.5.Kv = 11357351.509250242 [kN/m] (basis: JTG3362-8.7-Ee, JTG3362-8.7-Ge)\n  support.5.Kh = 0.0 [kN/m] (basis: MR-03)\n  support.6.bearing = {\"type\": \"ptfe_sliding\", \"count\": 8} [-] (basis: INPUT, MR-04)\n  support.6.dofs = {\"vertical\": \"spring\", \"longitudinal\": \"free\", \"rotation\": \"free\"} [-] (basis: MR-03)\n  support.6.S = 10.714285714285714 [-] (basis: JTG3362-8.7-Ee)\n  support.6.Kv = 11357351.509250242 [kN/m] (basis: JTG3362-8.7-Ee, JTG3362-8.7-Ge)\n  support.6.Kh = 0.0 [kN/m] (basis: MR-03)\n  lane.n_lanes = 3 [-] (basis: JTGD60-4.3.1-lanes)\n  lane.xi = 0.78 [-] (basis: JTGD60-4.3.1-xi)\n  lane.qk = 10.5 [kN/m] (basis: JTGD60-4.3.1-lane)\n  lane.Pk.1 = 320.0 [kN] (basis: JTGD60-4.3.1-lane)\n  lane.Pk.2 = 320.0 [kN] (basis: JTGD60-4.3.1-lane)\n  lane.Pk.3 = 320.0 [kN] (basis: JTGD60-4.3.1-lane)\n  lane.Pk.4 = 320.0 [kN] (basis: JTGD60-4.3.1-lane)\n  lane.Pk.5 = 320.0 [kN] (basis: JTGD60-4.3.1-lane)\n  lane.Pk.6 = 320.0 [kN] (basis: JTGD60-4.3.1-lane)\n  lane.mu = 0.20633564101724092 [-] (basis: JTGD60-4.3.2, LL-02)"
+     },
+     {
+      "id": "example:S02",
+      "text": "Worked example S02.\n[Span arrangement] One continuous unit of eight spans, 30 + 30 + 30 + 30 + 30 + 30 + 30 + 30 m (centre-to-centre of bearings), precast girders simply supported during erection and made continuous afterwards; deck width 12.5 m.\n[Section and material] Precast prestressed T girders, 5 per span; middle-girder section at midspan: depth 2 m; precast flange 1.80 m wide, 0.18 m thick over the outer 0.20 m and thickening linearly to 0.27 m at the web; web 0.20 m thick; bottom bulb 0.60 m wide with a 0.20 m vertical part and a 0.20 m high linear transition to the web; girder concrete C50. Consider the self-weight of the main girders only (no wet joints, diaphragms, pavement or barriers).\n[Bearings and boundary] Abutment 0, Pier 1, Pier 2, Pier 3, Pier 6, Pier 7 and Abutment 8: PTFE sliding laminated elastomeric bearings, one under each girder end; effective plan size 300 mm x 400 mm, five internal rubber layers 8 mm thick. Pier 4 and Pier 5: plain laminated elastomeric bearings (fixed), one under each girder end; effective plan size 300 mm x 400 mm, five internal rubber layers 8 mm thick.\n[Design standard] Highway Class I loading (JTG D60-2015); one-way traffic, carriageway width 11.5 m, three design lanes.\nDecisions:\n  structure.idealization = \"spine_beam_2d\" [-] (basis: MR-01)\n  structure.system = \"continuous\" [-] (basis: MR-05)\n  girder.single.A = 0.8620000000000001 [m^2] (basis: MR-02)\n  girder.single.I = 0.44499810458881117 [m^4] (basis: MR-02)\n  girder.A = 4.3100000000000005 [m^2] (basis: MR-02)\n  girder.I = 2.224990522944056 [m^4] (basis: MR-02)\n  girder.Ec = 34500.0 [MPa] (basis: JTG3362-3.1.5)\n  girder.gamma = 26.0 [kN/m^3] (basis: JTGD60-4.2.1)\n  girder.w = 112.06000000000002 [kN/m] (basis: MR-07)\n  girder.m = 11.423037716615699 [t/m] (basis: MR-07)\n  support.0.bearing = {\"type\": \"ptfe_sliding\", \"count\": 5} [-] (basis: INPUT, MR-04)\n  support.0.dofs = {\"vertical\": \"spring\", \"longitudinal\": \"free\", \"rotation\": \"free\"} [-] (basis: MR-03)\n  support.0.S = 10.714285714285714 [-] (basis: JTG3362-8.7-Ee)\n  support.0.Kv = 7098344.693281402 [kN/m] (basis: JTG3362-8.7-Ee, JTG3362-8.7-Ge)\n  support.0.Kh = 0.0 [kN/m] (basis: MR-03)\n  support.1.bearing = {\"type\": \"ptfe_sliding\", \"count\": 5} [-] (basis: INPUT, MR-04)\n  support.1.dofs = {\"vertical\": \"spring\", \"longitudinal\": \"free\", \"rotation\": \"free\"} [-] (basis: MR-03)\n  support.1.S = 10.714285714285714 [-] (basis: JTG3362-8.7-Ee)\n  support.1.Kv = 7098344.693281402 [kN/m] (basis: JTG3362-8.7-Ee, JTG3362-8.7-Ge)\n  support.1.Kh = 0.0 [kN/m] (basis: MR-03)\n  support.2.bearing = {\"type\": \"ptfe_sliding\", \"count\": 5} [-] (basis: INPUT, MR-04)\n  support.2.dofs = {\"vertical\": \"spring\", \"longitudinal\": \"free\", \"rotation\": \"free\"} [-] (basis: MR-03)\n  support.2.S = 10.714285714285714 [-] (basis: JTG3362-8.7-Ee)\n  support.2.Kv = 7098344.693281402 [kN/m] (basis: JTG3362-8.7-Ee, JTG3362-8.7-Ge)\n  support.2.Kh = 0.0 [kN/m] (basis: MR-03)\n  support.3.bearing = {\"type\": \"ptfe_sliding\", \"count\": 5} [-] (basis: INPUT, MR-04)\n  support.3.dofs = {\"vertical\": \"spring\", \"longitudinal\": \"free\", \"rotation\": \"free\"} [-] (basis: MR-03)\n  support.3.S = 10.714285714285714 [-] (basis: JTG3362-8.7-Ee)\n  support.3.Kv = 7098344.693281402 [kN/m] (basis: JTG3362-8.7-Ee, JTG3362-8.7-Ge)\n  support.3.Kh = 0.0 [kN/m] (basis: MR-03)\n  support.4.bearing = {\"type\": \"plain_elastomeric\", \"count\": 5} [-] (basis: INPUT, MR-04)\n  support.4.dofs = {\"vertical\": \"spring\", \"longitudinal\": \"spring\", \"rotation\": \"free\"} [-] (basis: MR-03)\n  support.4.S = 10.714285714285714 [-] (basis: JTG3362-8.7-Ee)\n  support.4.Kv = 7098344.693281402 [kN/m] (basis: JTG3362-8.7-Ee, JTG3362-8.7-Ge)\n  support.4.Kh = 15000.0 [kN/m] (basis: JTG3362-8.7-Ee, JTG3362-8.7-Ge)\n  support.5.bearing = {\"type\": \"plain_elastomeric\", \"count\": 5} [-] (basis: INPUT, MR-04)\n  support.5.dofs = {\"vertical\": \"spring\", \"longitudinal\": \"spring\", \"rotation\": \"free\"} [-] (basis: MR-03)\n  support.5.S = 10.714285714285714 [-] (basis: JTG3362-8.7-Ee)\n  support.5.Kv = 7098344.693281402 [kN/m] (basis: JTG3362-8.7-Ee, JTG3362-8.7-Ge)\n  support.5.Kh = 15000.0 [kN/m] (basis: JTG3362-8.7-Ee, JTG3362-8.7-Ge)\n  support.6.bearing = {\"type\": \"ptfe_sliding\", \"count\": 5} [-] (basis: INPUT, MR-04)\n  support.6.dofs = {\"vertical\": \"spring\", \"longitudinal\": \"free\", \"rotation\": \"free\"} [-] (basis: MR-03)\n  support.6.S = 10.714285714285714 [-] (basis: JTG3362-8.7-Ee)\n  support.6.Kv = 7098344.693281402 [kN/m] (basis: JTG3362-8.7-Ee, JTG3362-8.7-Ge)\n  support.6.Kh = 0.0 [kN/m] (basis: MR-03)\n  support.7.bearing = {\"type\": \"ptfe_sliding\", \"count\": 5} [-] (basis: INPUT, MR-04)\n  support.7.dofs = {\"vertical\": \"spring\", \"longitudinal\": \"free\", \"rotation\": \"free\"} [-] (basis: MR-03)\n  support.7.S = 10.714285714285714 [-] (basis: JTG3362-8.7-Ee)\n  support.7.Kv = 7098344.693281402 [kN/m] (basis: JTG3362-8.7-Ee, JTG3362-8.7-Ge)\n  support.7.Kh = 0.0 [kN/m] (basis: MR-03)\n  support.8.bearing = {\"type\": \"ptfe_sliding\", \"count\": 5} [-] (basis: INPUT, MR-04)\n  support.8.dofs = {\"vertical\": \"spring\", \"longitudinal\": \"free\", \"rotation\": \"free\"} [-] (basis: MR-03)\n  support.8.S = 10.714285714285714 [-] (basis: JTG3362-8.7-Ee)\n  support.8.Kv = 7098344.693281402 [kN/m] (basis: JTG3362-8.7-Ee, JTG3362-8.7-Ge)\n  support.8.Kh = 0.0 [kN/m] (basis: MR-03)\n  lane.n_lanes = 3 [-] (basis: JTGD60-4.3.1-lanes)\n  lane.xi = 0.78 [-] (basis: JTGD60-4.3.1-xi)\n  lane.qk = 10.5 [kN/m] (basis: JTGD60-4.3.1-lane)\n  lane.Pk.1 = 320.0 [kN] (basis: JTGD60-4.3.1-lane)\n  lane.Pk.2 = 320.0 [kN] (basis: JTGD60-4.3.1-lane)\n  lane.Pk.3 = 320.0 [kN] (basis: JTGD60-4.3.1-lane)\n  lane.Pk.4 = 320.0 [kN] (basis: JTGD60-4.3.1-lane)\n  lane.Pk.5 = 320.0 [kN] (basis: JTGD60-4.3.1-lane)\n  lane.Pk.6 = 320.0 [kN] (basis: JTGD60-4.3.1-lane)\n  lane.Pk.7 = 320.0 [kN] (basis: JTGD60-4.3.1-lane)\n  lane.Pk.8 = 320.0 [kN] (basis: JTGD60-4.3.1-lane)\n  lane.mu = 0.25084825753416534 [-] (basis: JTGD60-4.3.2, LL-02)"
+     },
+     {
+      "id": "JTGD60-4.3.1-Pk",
+      "text": "{\"id\": \"JTGD60-4.3.1-Pk\", \"clause\": \"JTG D60-2015 4.3.1\", \"title\": \"车道荷载集中荷载标准值\", \"applicability\": \"load_class in ('I', 'II') and L0 > 0\", \"formulas\": {\"lane.Pk.{j}\": \"(270 if L0 <= 5 else 360 if L0 >= 50 else 2 * (L0 + 130)) * (1.0 if load_class == 'I' else 0.75)\"}, \"title_en\": \"lane load: concentrated load Pk from span length\"}"
+     },
+     {
+      "id": "MR-07",
+      "text": "{\"id\": \"MR-07\", \"title\": \"恒载与质量\", \"text\": \"恒载只计主梁自重 w = γA；质量取 m = w/g，采用一致质量矩阵。\", \"applicability\": \"True\", \"formulas\": {\"girder.w\": \"gamma * A\", \"girder.m\": \"w / 9.81\"}, \"title_en\": \"dead load and mass: girder self-weight per metre w and mass per metre m\"}"
+     }
+    ]
+   }
+  },
+  {
+   "t": 61.692,
+   "tool": "declare_decisions",
+   "args": {
+    "slots": [
+     "structure.idealization",
+     "structure.system",
+     "girder.A",
+     "girder.I",
+     "girder.Ec",
+     "girder.gamma",
+     "girder.w",
+     "girder.m",
+     "support.0.bearing",
+     "support.0.dofs",
+     "support.0.S",
+     "support.0.Kv",
+     "support.0.Kh",
+     "support.1.bearing",
+     "support.1.dofs",
+     "support.1.S",
+     "support.1.Kv",
+     "support.1.Kh",
+     "support.2.bearing",
+     "support.2.dofs",
+     "support.2.S",
+     "support.2.Kv",
+     "support.2.Kh",
+     "support.3.bearing",
+     "support.3.dofs",
+     "support.3.S",
+     "support.3.Kv",
+     "support.3.Kh",
+     "pier.1.length",
+     "pier.1.A",
+     "pier.1.I",
+     "pier.1.Ec",
+     "pier.2.length",
+     "pier.2.A",
+     "pier.2.I",
+     "pier.2.Ec",
+     "lane.n_lanes",
+     "lane.xi",
+     "lane.qk",
+     "lane.Pk.1",
+     "lane.Pk.2",
+     "lane.Pk.3",
+     "lane.mu"
+    ],
+    "replace": true
+   },
+   "result": {
+    "complete": true,
+    "declared_so_far": 43,
+    "missing": [],
+    "not_required_ignored": [],
+    "note": "declarations accumulate across calls; declare the missing slots next",
+    "constraint": "C-13/T-templates"
+   }
+  },
+  {
+   "t": 70.372,
+   "tool": "search_knowledge",
+   "args": {
+    "query": "MR-01 spine_beam_2d MR-05 continuous_on_piers cast-in-place box section area inertia multiple web neutral axis girder effective modulus C50 JTG3362 C40 pier circular columns bearing elastomer compression shape factor stiffness shear modulus JTG3362 8.7 E_e xi lanes four lane qk impact frequency"
+   },
+   "result": {
+    "passages": [
+     {
+      "id": "example:S01",
+      "text": "Worked example S01.\n[Span arrangement] One continuous unit of six spans, 30 + 30 + 30 + 30 + 30 + 30 m (centre-to-centre of bearings), precast girders simply supported during erection and made continuous afterwards; deck width 12.5 m.\n[Section and material] Precast prestressed small box girders, 4 per span; middle-girder section at midspan: depth 1.6 m; top width 2.40 m; flange 0.18 m thick at the tip, thickening by 6.3 cm over a 19.2 cm long haunch next to the web; bottom slab 1.00 m wide and 0.18 m thick; top slab 0.18 m thick; webs 0.20 m thick (measured horizontally) with outer faces inclined at 1:4; 15 cm x 7 cm chamfers at the upper corners of the cell; girder concrete C50. Consider the self-weight of the main girders only (no wet joints, diaphragms, pavement or barriers).\n[Bearings and boundary] Abutment 0, Pier 1, Pier 2, Pier 4, Pier 5 and Abutment 6: PTFE sliding laminated elastomeric bearings, two under each girder end; effective plan size 300 mm x 400 mm, five internal rubber layers 8 mm thick. Pier 3: plain laminated elastomeric bearings (fixed), two under each girder end; effective plan size 300 mm x 400 mm, five internal rubber layers 8 mm thick.\n[Design standard] Highway Class I loading (JTG D60-2015); one-way traffic, carriageway width 11.5 m, three design lanes.\nDecisions:\n  structure.idealization = \"spine_beam_2d\" [-] (basis: MR-01)\n  structure.system = \"continuous\" [-] (basis: MR-05)\n  girder.single.A = 1.1389287499999998 [m^2] (basis: MR-02)\n  girder.single.I = 0.3549168491421879 [m^4] (basis: MR-02)\n  girder.A = 4.555714999999999 [m^2] (basis: MR-02)\n  girder.I = 1.4196673965687516 [m^4] (basis: MR-02)\n  girder.Ec = 34500.0 [MPa] (basis: JTG3362-3.1.5)\n  girder.gamma = 26.0 [kN/m^3] (basis: JTGD60-4.2.1)\n  girder.w = 118.44858999999998 [kN/m] (basis: MR-07)\n  girder.m = 12.074270132517837 [t/m] (basis: MR-07)\n  support.0.bearing = {\"type\": \"ptfe_sliding\", \"count\": 8} [-] (basis: INPUT, MR-04)\n  support.0.dofs = {\"vertical\": \"spring\", \"longitudinal\": \"free\", \"rotation\": \"free\"} [-] (basis: MR-03)\n  support.0.S = 10.714285714285714 [-] (basis: JTG3362-8.7-Ee)\n  support.0.Kv = 11357351.509250242 [kN/m] (basis: JTG3362-8.7-Ee, JTG3362-8.7-Ge)\n  support.0.Kh = 0.0 [kN/m] (basis: MR-03)\n  support.1.bearing = {\"type\": \"ptfe_sliding\", \"count\": 8} [-] (basis: INPUT, MR-04)\n  support.1.dofs = {\"vertical\": \"spring\", \"longitudinal\": \"free\", \"rotation\": \"free\"} [-] (basis: MR-03)\n  support.1.S = 10.714285714285714 [-] (basis: JTG3362-8.7-Ee)\n  support.1.Kv = 11357351.509250242 [kN/m] (basis: JTG3362-8.7-Ee, JTG3362-8.7-Ge)\n  support.1.Kh = 0.0 [kN/m] (basis: MR-03)\n  support.2.bearing = {\"type\": \"ptfe_sliding\", \"count\": 8} [-] (basis: INPUT, MR-04)\n  support.2.dofs = {\"vertical\": \"spring\", \"longitudinal\": \"free\", \"rotation\": \"free\"} [-] (basis: MR-03)\n  support.2.S = 10.714285714285714 [-] (basis: JTG3362-8.7-Ee)\n  support.2.Kv = 11357351.509250242 [kN/m] (basis: JTG3362-8.7-Ee, JTG3362-8.7-Ge)\n  support.2.Kh = 0.0 [kN/m] (basis: MR-03)\n  support.3.bearing = {\"type\": \"plain_elastomeric\", \"count\": 8} [-] (basis: INPUT, MR-04)\n  support.3.dofs = {\"vertical\": \"spring\", \"longitudinal\": \"spring\", \"rotation\": \"free\"} [-] (basis: MR-03)\n  support.3.S = 10.714285714285714 [-] (basis: JTG3362-8.7-Ee)\n  support.3.Kv = 11357351.509250242 [kN/m] (basis: JTG3362-8.7-Ee, JTG3362-8.7-Ge)\n  support.3.Kh = 24000.0 [kN/m] (basis: JTG3362-8.7-Ee, JTG3362-8.7-Ge)\n  support.4.bearing = {\"type\": \"ptfe_sliding\", \"count\": 8} [-] (basis: INPUT, MR-04)\n  support.4.dofs = {\"vertical\": \"spring\", \"longitudinal\": \"free\", \"rotation\": \"free\"} [-] (basis: MR-03)\n  support.4.S = 10.714285714285714 [-] (basis: JTG3362-8.7-Ee)\n  support.4.Kv = 11357351.509250242 [kN/m] (basis: JTG3362-8.7-Ee, JTG3362-8.7-Ge)\n  support.4.Kh = 0.0 [kN/m] (basis: MR-03)\n  support.5.bearing = {\"type\": \"ptfe_sliding\", \"count\": 8} [-] (basis: INPUT, MR-04)\n  support.5.dofs = {\"vertical\": \"spring\", \"longitudinal\": \"free\", \"rotation\": \"free\"} [-] (basis: MR-03)\n  support.5.S = 10.714285714285714 [-] (basis: JTG3362-8.7-Ee)\n  support.5.Kv = 11357351.509250242 [kN/m] (basis: JTG3362-8.7-Ee, JTG3362-8.7-Ge)\n  support.5.Kh = 0.0 [kN/m] (basis: MR-03)\n  support.6.bearing = {\"type\": \"ptfe_sliding\", \"count\": 8} [-] (basis: INPUT, MR-04)\n  support.6.dofs = {\"vertical\": \"spring\", \"longitudinal\": \"free\", \"rotation\": \"free\"} [-] (basis: MR-03)\n  support.6.S = 10.714285714285714 [-] (basis: JTG3362-8.7-Ee)\n  support.6.Kv = 11357351.509250242 [kN/m] (basis: JTG3362-8.7-Ee, JTG3362-8.7-Ge)\n  support.6.Kh = 0.0 [kN/m] (basis: MR-03)\n  lane.n_lanes = 3 [-] (basis: JTGD60-4.3.1-lanes)\n  lane.xi = 0.78 [-] (basis: JTGD60-4.3.1-xi)\n  lane.qk = 10.5 [kN/m] (basis: JTGD60-4.3.1-lane)\n  lane.Pk.1 = 320.0 [kN] (basis: JTGD60-4.3.1-lane)\n  lane.Pk.2 = 320.0 [kN] (basis: JTGD60-4.3.1-lane)\n  lane.Pk.3 = 320.0 [kN] (basis: JTGD60-4.3.1-lane)\n  lane.Pk.4 = 320.0 [kN] (basis: JTGD60-4.3.1-lane)\n  lane.Pk.5 = 320.0 [kN] (basis: JTGD60-4.3.1-lane)\n  lane.Pk.6 = 320.0 [kN] (basis: JTGD60-4.3.1-lane)\n  lane.mu = 0.20633564101724092 [-] (basis: JTGD60-4.3.2, LL-02)"
+     },
+     {
+      "id": "example:S02",
+      "text": "Worked example S02.\n[Span arrangement] One continuous unit of eight spans, 30 + 30 + 30 + 30 + 30 + 30 + 30 + 30 m (centre-to-centre of bearings), precast girders simply supported during erection and made continuous afterwards; deck width 12.5 m.\n[Section and material] Precast prestressed T girders, 5 per span; middle-girder section at midspan: depth 2 m; precast flange 1.80 m wide, 0.18 m thick over the outer 0.20 m and thickening linearly to 0.27 m at the web; web 0.20 m thick; bottom bulb 0.60 m wide with a 0.20 m vertical part and a 0.20 m high linear transition to the web; girder concrete C50. Consider the self-weight of the main girders only (no wet joints, diaphragms, pavement or barriers).\n[Bearings and boundary] Abutment 0, Pier 1, Pier 2, Pier 3, Pier 6, Pier 7 and Abutment 8: PTFE sliding laminated elastomeric bearings, one under each girder end; effective plan size 300 mm x 400 mm, five internal rubber layers 8 mm thick. Pier 4 and Pier 5: plain laminated elastomeric bearings (fixed), one under each girder end; effective plan size 300 mm x 400 mm, five internal rubber layers 8 mm thick.\n[Design standard] Highway Class I loading (JTG D60-2015); one-way traffic, carriageway width 11.5 m, three design lanes.\nDecisions:\n  structure.idealization = \"spine_beam_2d\" [-] (basis: MR-01)\n  structure.system = \"continuous\" [-] (basis: MR-05)\n  girder.single.A = 0.8620000000000001 [m^2] (basis: MR-02)\n  girder.single.I = 0.44499810458881117 [m^4] (basis: MR-02)\n  girder.A = 4.3100000000000005 [m^2] (basis: MR-02)\n  girder.I = 2.224990522944056 [m^4] (basis: MR-02)\n  girder.Ec = 34500.0 [MPa] (basis: JTG3362-3.1.5)\n  girder.gamma = 26.0 [kN/m^3] (basis: JTGD60-4.2.1)\n  girder.w = 112.06000000000002 [kN/m] (basis: MR-07)\n  girder.m = 11.423037716615699 [t/m] (basis: MR-07)\n  support.0.bearing = {\"type\": \"ptfe_sliding\", \"count\": 5} [-] (basis: INPUT, MR-04)\n  support.0.dofs = {\"vertical\": \"spring\", \"longitudinal\": \"free\", \"rotation\": \"free\"} [-] (basis: MR-03)\n  support.0.S = 10.714285714285714 [-] (basis: JTG3362-8.7-Ee)\n  support.0.Kv = 7098344.693281402 [kN/m] (basis: JTG3362-8.7-Ee, JTG3362-8.7-Ge)\n  support.0.Kh = 0.0 [kN/m] (basis: MR-03)\n  support.1.bearing = {\"type\": \"ptfe_sliding\", \"count\": 5} [-] (basis: INPUT, MR-04)\n  support.1.dofs = {\"vertical\": \"spring\", \"longitudinal\": \"free\", \"rotation\": \"free\"} [-] (basis: MR-03)\n  support.1.S = 10.714285714285714 [-] (basis: JTG3362-8.7-Ee)\n  support.1.Kv = 7098344.693281402 [kN/m] (basis: JTG3362-8.7-Ee, JTG3362-8.7-Ge)\n  support.1.Kh = 0.0 [kN/m] (basis: MR-03)\n  support.2.bearing = {\"type\": \"ptfe_sliding\", \"count\": 5} [-] (basis: INPUT, MR-04)\n  support.2.dofs = {\"vertical\": \"spring\", \"longitudinal\": \"free\", \"rotation\": \"free\"} [-] (basis: MR-03)\n  support.2.S = 10.714285714285714 [-] (basis: JTG3362-8.7-Ee)\n  support.2.Kv = 7098344.693281402 [kN/m] (basis: JTG3362-8.7-Ee, JTG3362-8.7-Ge)\n  support.2.Kh = 0.0 [kN/m] (basis: MR-03)\n  support.3.bearing = {\"type\": \"ptfe_sliding\", \"count\": 5} [-] (basis: INPUT, MR-04)\n  support.3.dofs = {\"vertical\": \"spring\", \"longitudinal\": \"free\", \"rotation\": \"free\"} [-] (basis: MR-03)\n  support.3.S = 10.714285714285714 [-] (basis: JTG3362-8.7-Ee)\n  support.3.Kv = 7098344.693281402 [kN/m] (basis: JTG3362-8.7-Ee, JTG3362-8.7-Ge)\n  support.3.Kh = 0.0 [kN/m] (basis: MR-03)\n  support.4.bearing = {\"type\": \"plain_elastomeric\", \"count\": 5} [-] (basis: INPUT, MR-04)\n  support.4.dofs = {\"vertical\": \"spring\", \"longitudinal\": \"spring\", \"rotation\": \"free\"} [-] (basis: MR-03)\n  support.4.S = 10.714285714285714 [-] (basis: JTG3362-8.7-Ee)\n  support.4.Kv = 7098344.693281402 [kN/m] (basis: JTG3362-8.7-Ee, JTG3362-8.7-Ge)\n  support.4.Kh = 15000.0 [kN/m] (basis: JTG3362-8.7-Ee, JTG3362-8.7-Ge)\n  support.5.bearing = {\"type\": \"plain_elastomeric\", \"count\": 5} [-] (basis: INPUT, MR-04)\n  support.5.dofs = {\"vertical\": \"spring\", \"longitudinal\": \"spring\", \"rotation\": \"free\"} [-] (basis: MR-03)\n  support.5.S = 10.714285714285714 [-] (basis: JTG3362-8.7-Ee)\n  support.5.Kv = 7098344.693281402 [kN/m] (basis: JTG3362-8.7-Ee, JTG3362-8.7-Ge)\n  support.5.Kh = 15000.0 [kN/m] (basis: JTG3362-8.7-Ee, JTG3362-8.7-Ge)\n  support.6.bearing = {\"type\": \"ptfe_sliding\", \"count\": 5} [-] (basis: INPUT, MR-04)\n  support.6.dofs = {\"vertical\": \"spring\", \"longitudinal\": \"free\", \"rotation\": \"free\"} [-] (basis: MR-03)\n  support.6.S = 10.714285714285714 [-] (basis: JTG3362-8.7-Ee)\n  support.6.Kv = 7098344.693281402 [kN/m] (basis: JTG3362-8.7-Ee, JTG3362-8.7-Ge)\n  support.6.Kh = 0.0 [kN/m] (basis: MR-03)\n  support.7.bearing = {\"type\": \"ptfe_sliding\", \"count\": 5} [-] (basis: INPUT, MR-04)\n  support.7.dofs = {\"vertical\": \"spring\", \"longitudinal\": \"free\", \"rotation\": \"free\"} [-] (basis: MR-03)\n  support.7.S = 10.714285714285714 [-] (basis: JTG3362-8.7-Ee)\n  support.7.Kv = 7098344.693281402 [kN/m] (basis: JTG3362-8.7-Ee, JTG3362-8.7-Ge)\n  support.7.Kh = 0.0 [kN/m] (basis: MR-03)\n  support.8.bearing = {\"type\": \"ptfe_sliding\", \"count\": 5} [-] (basis: INPUT, MR-04)\n  support.8.dofs = {\"vertical\": \"spring\", \"longitudinal\": \"free\", \"rotation\": \"free\"} [-] (basis: MR-03)\n  support.8.S = 10.714285714285714 [-] (basis: JTG3362-8.7-Ee)\n  support.8.Kv = 7098344.693281402 [kN/m] (basis: JTG3362-8.7-Ee, JTG3362-8.7-Ge)\n  support.8.Kh = 0.0 [kN/m] (basis: MR-03)\n  lane.n_lanes = 3 [-] (basis: JTGD60-4.3.1-lanes)\n  lane.xi = 0.78 [-] (basis: JTGD60-4.3.1-xi)\n  lane.qk = 10.5 [kN/m] (basis: JTGD60-4.3.1-lane)\n  lane.Pk.1 = 320.0 [kN] (basis: JTGD60-4.3.1-lane)\n  lane.Pk.2 = 320.0 [kN] (basis: JTGD60-4.3.1-lane)\n  lane.Pk.3 = 320.0 [kN] (basis: JTGD60-4.3.1-lane)\n  lane.Pk.4 = 320.0 [kN] (basis: JTGD60-4.3.1-lane)\n  lane.Pk.5 = 320.0 [kN] (basis: JTGD60-4.3.1-lane)\n  lane.Pk.6 = 320.0 [kN] (basis: JTGD60-4.3.1-lane)\n  lane.Pk.7 = 320.0 [kN] (basis: JTGD60-4.3.1-lane)\n  lane.Pk.8 = 320.0 [kN] (basis: JTGD60-4.3.1-lane)\n  lane.mu = 0.25084825753416534 [-] (basis: JTGD60-4.3.2, LL-02)"
+     },
+     {
+      "id": "MR-05",
+      "text": "{\"id\": \"MR-05\", \"title\": \"结构体系\", \"text\": \"单跨为简支体系；先简支后连续结构按成桥连续体系计算，不模拟施工阶段体系转换；含桥墩的现浇连续梁按支承于桥墩的连续梁计算。models_pier_columns 指实例中给出了墩柱几何、需模拟墩柱；(models_pier_columns is true only when pier column geometry is given; support lines merely named \\\"Pier\\\" without column data are bearings on rigid supports, so the system is \\\"continuous\\\") 中间支承线仅称为“桥墩”而描述未给墩柱数据时不模拟墩柱（墩顶按支座支承），体系为 continuous。\", \"applicability\": \"True\", \"formulas\": {\"structure.system\": \"'simply_supported' if n_spans == 1 else ('continuous_on_piers' if models_pier_columns else 'continuous')\"}, \"title_en\": \"structural system: simply supported, continuous, continuous on piers\"}"
+     },
+     {
+      "id": "JTG3362-8.7-Ge",
+      "text": "{\"id\": \"JTG3362-8.7-Ge\", \"clause\": \"JTG 3362-2018 8.7\", \"title\": \"橡胶剪变模量标准值\", \"applicability\": \"family == 'laminated_elastomeric' and not has_Ge_override\", \"formulas\": {}, \"value\": {\"Ge\": 1.0}, \"title_en\": \"shear modulus of rubber, standard value\"}"
+     }
+    ]
+   }
+  },
+  {
+   "t": 77.212,
+   "tool": "search_knowledge",
+   "args": {
+    "query": "MR-01 MR-03 MR-04 JTG D60 2015 4.3.1 four lanes transverse reduction coefficient xi 4 design lanes distributed load qk 10.5 C50 elastic modulus 3.1.5 C40 modulus circular pier inertia bearing vertical stiffness"
+   },
+   "result": {
+    "passages": [
+     {
+      "id": "example:S02",
+      "text": "Worked example S02.\n[Span arrangement] One continuous unit of eight spans, 30 + 30 + 30 + 30 + 30 + 30 + 30 + 30 m (centre-to-centre of bearings), precast girders simply supported during erection and made continuous afterwards; deck width 12.5 m.\n[Section and material] Precast prestressed T girders, 5 per span; middle-girder section at midspan: depth 2 m; precast flange 1.80 m wide, 0.18 m thick over the outer 0.20 m and thickening linearly to 0.27 m at the web; web 0.20 m thick; bottom bulb 0.60 m wide with a 0.20 m vertical part and a 0.20 m high linear transition to the web; girder concrete C50. Consider the self-weight of the main girders only (no wet joints, diaphragms, pavement or barriers).\n[Bearings and boundary] Abutment 0, Pier 1, Pier 2, Pier 3, Pier 6, Pier 7 and Abutment 8: PTFE sliding laminated elastomeric bearings, one under each girder end; effective plan size 300 mm x 400 mm, five internal rubber layers 8 mm thick. Pier 4 and Pier 5: plain laminated elastomeric bearings (fixed), one under each girder end; effective plan size 300 mm x 400 mm, five internal rubber layers 8 mm thick.\n[Design standard] Highway Class I loading (JTG D60-2015); one-way traffic, carriageway width 11.5 m, three design lanes.\nDecisions:\n  structure.idealization = \"spine_beam_2d\" [-] (basis: MR-01)\n  structure.system = \"continuous\" [-] (basis: MR-05)\n  girder.single.A = 0.8620000000000001 [m^2] (basis: MR-02)\n  girder.single.I = 0.44499810458881117 [m^4] (basis: MR-02)\n  girder.A = 4.3100000000000005 [m^2] (basis: MR-02)\n  girder.I = 2.224990522944056 [m^4] (basis: MR-02)\n  girder.Ec = 34500.0 [MPa] (basis: JTG3362-3.1.5)\n  girder.gamma = 26.0 [kN/m^3] (basis: JTGD60-4.2.1)\n  girder.w = 112.06000000000002 [kN/m] (basis: MR-07)\n  girder.m = 11.423037716615699 [t/m] (basis: MR-07)\n  support.0.bearing = {\"type\": \"ptfe_sliding\", \"count\": 5} [-] (basis: INPUT, MR-04)\n  support.0.dofs = {\"vertical\": \"spring\", \"longitudinal\": \"free\", \"rotation\": \"free\"} [-] (basis: MR-03)\n  support.0.S = 10.714285714285714 [-] (basis: JTG3362-8.7-Ee)\n  support.0.Kv = 7098344.693281402 [kN/m] (basis: JTG3362-8.7-Ee, JTG3362-8.7-Ge)\n  support.0.Kh = 0.0 [kN/m] (basis: MR-03)\n  support.1.bearing = {\"type\": \"ptfe_sliding\", \"count\": 5} [-] (basis: INPUT, MR-04)\n  support.1.dofs = {\"vertical\": \"spring\", \"longitudinal\": \"free\", \"rotation\": \"free\"} [-] (basis: MR-03)\n  support.1.S = 10.714285714285714 [-] (basis: JTG3362-8.7-Ee)\n  support.1.Kv = 7098344.693281402 [kN/m] (basis: JTG3362-8.7-Ee, JTG3362-8.7-Ge)\n  support.1.Kh = 0.0 [kN/m] (basis: MR-03)\n  support.2.bearing = {\"type\": \"ptfe_sliding\", \"count\": 5} [-] (basis: INPUT, MR-04)\n  support.2.dofs = {\"vertical\": \"spring\", \"longitudinal\": \"free\", \"rotation\": \"free\"} [-] (basis: MR-03)\n  support.2.S = 10.714285714285714 [-] (basis: JTG3362-8.7-Ee)\n  support.2.Kv = 7098344.693281402 [kN/m] (basis: JTG3362-8.7-Ee, JTG3362-8.7-Ge)\n  support.2.Kh = 0.0 [kN/m] (basis: MR-03)\n  support.3.bearing = {\"type\": \"ptfe_sliding\", \"count\": 5} [-] (basis: INPUT, MR-04)\n  support.3.dofs = {\"vertical\": \"spring\", \"longitudinal\": \"free\", \"rotation\": \"free\"} [-] (basis: MR-03)\n  support.3.S = 10.714285714285714 [-] (basis: JTG3362-8.7-Ee)\n  support.3.Kv = 7098344.693281402 [kN/m] (basis: JTG3362-8.7-Ee, JTG3362-8.7-Ge)\n  support.3.Kh = 0.0 [kN/m] (basis: MR-03)\n  support.4.bearing = {\"type\": \"plain_elastomeric\", \"count\": 5} [-] (basis: INPUT, MR-04)\n  support.4.dofs = {\"vertical\": \"spring\", \"longitudinal\": \"spring\", \"rotation\": \"free\"} [-] (basis: MR-03)\n  support.4.S = 10.714285714285714 [-] (basis: JTG3362-8.7-Ee)\n  support.4.Kv = 7098344.693281402 [kN/m] (basis: JTG3362-8.7-Ee, JTG3362-8.7-Ge)\n  support.4.Kh = 15000.0 [kN/m] (basis: JTG3362-8.7-Ee, JTG3362-8.7-Ge)\n  support.5.bearing = {\"type\": \"plain_elastomeric\", \"count\": 5} [-] (basis: INPUT, MR-04)\n  support.5.dofs = {\"vertical\": \"spring\", \"longitudinal\": \"spring\", \"rotation\": \"free\"} [-] (basis: MR-03)\n  support.5.S = 10.714285714285714 [-] (basis: JTG3362-8.7-Ee)\n  support.5.Kv = 7098344.693281402 [kN/m] (basis: JTG3362-8.7-Ee, JTG3362-8.7-Ge)\n  support.5.Kh = 15000.0 [kN/m] (basis: JTG3362-8.7-Ee, JTG3362-8.7-Ge)\n  support.6.bearing = {\"type\": \"ptfe_sliding\", \"count\": 5} [-] (basis: INPUT, MR-04)\n  support.6.dofs = {\"vertical\": \"spring\", \"longitudinal\": \"free\", \"rotation\": \"free\"} [-] (basis: MR-03)\n  support.6.S = 10.714285714285714 [-] (basis: JTG3362-8.7-Ee)\n  support.6.Kv = 7098344.693281402 [kN/m] (basis: JTG3362-8.7-Ee, JTG3362-8.7-Ge)\n  support.6.Kh = 0.0 [kN/m] (basis: MR-03)\n  support.7.bearing = {\"type\": \"ptfe_sliding\", \"count\": 5} [-] (basis: INPUT, MR-04)\n  support.7.dofs = {\"vertical\": \"spring\", \"longitudinal\": \"free\", \"rotation\": \"free\"} [-] (basis: MR-03)\n  support.7.S = 10.714285714285714 [-] (basis: JTG3362-8.7-Ee)\n  support.7.Kv = 7098344.693281402 [kN/m] (basis: JTG3362-8.7-Ee, JTG3362-8.7-Ge)\n  support.7.Kh = 0.0 [kN/m] (basis: MR-03)\n  support.8.bearing = {\"type\": \"ptfe_sliding\", \"count\": 5} [-] (basis: INPUT, MR-04)\n  support.8.dofs = {\"vertical\": \"spring\", \"longitudinal\": \"free\", \"rotation\": \"free\"} [-] (basis: MR-03)\n  support.8.S = 10.714285714285714 [-] (basis: JTG3362-8.7-Ee)\n  support.8.Kv = 7098344.693281402 [kN/m] (basis: JTG3362-8.7-Ee, JTG3362-8.7-Ge)\n  support.8.Kh = 0.0 [kN/m] (basis: MR-03)\n  lane.n_lanes = 3 [-] (basis: JTGD60-4.3.1-lanes)\n  lane.xi = 0.78 [-] (basis: JTGD60-4.3.1-xi)\n  lane.qk = 10.5 [kN/m] (basis: JTGD60-4.3.1-lane)\n  lane.Pk.1 = 320.0 [kN] (basis: JTGD60-4.3.1-lane)\n  lane.Pk.2 = 320.0 [kN] (basis: JTGD60-4.3.1-lane)\n  lane.Pk.3 = 320.0 [kN] (basis: JTGD60-4.3.1-lane)\n  lane.Pk.4 = 320.0 [kN] (basis: JTGD60-4.3.1-lane)\n  lane.Pk.5 = 320.0 [kN] (basis: JTGD60-4.3.1-lane)\n  lane.Pk.6 = 320.0 [kN] (basis: JTGD60-4.3.1-lane)\n  lane.Pk.7 = 320.0 [kN] (basis: JTGD60-4.3.1-lane)\n  lane.Pk.8 = 320.0 [kN] (basis: JTGD60-4.3.1-lane)\n  lane.mu = 0.25084825753416534 [-] (basis: JTGD60-4.3.2, LL-02)"
+     },
+     {
+      "id": "example:S01",
+      "text": "Worked example S01.\n[Span arrangement] One continuous unit of six spans, 30 + 30 + 30 + 30 + 30 + 30 m (centre-to-centre of bearings), precast girders simply supported during erection and made continuous afterwards; deck width 12.5 m.\n[Section and material] Precast prestressed small box girders, 4 per span; middle-girder section at midspan: depth 1.6 m; top width 2.40 m; flange 0.18 m thick at the tip, thickening by 6.3 cm over a 19.2 cm long haunch next to the web; bottom slab 1.00 m wide and 0.18 m thick; top slab 0.18 m thick; webs 0.20 m thick (measured horizontally) with outer faces inclined at 1:4; 15 cm x 7 cm chamfers at the upper corners of the cell; girder concrete C50. Consider the self-weight of the main girders only (no wet joints, diaphragms, pavement or barriers).\n[Bearings and boundary] Abutment 0, Pier 1, Pier 2, Pier 4, Pier 5 and Abutment 6: PTFE sliding laminated elastomeric bearings, two under each girder end; effective plan size 300 mm x 400 mm, five internal rubber layers 8 mm thick. Pier 3: plain laminated elastomeric bearings (fixed), two under each girder end; effective plan size 300 mm x 400 mm, five internal rubber layers 8 mm thick.\n[Design standard] Highway Class I loading (JTG D60-2015); one-way traffic, carriageway width 11.5 m, three design lanes.\nDecisions:\n  structure.idealization = \"spine_beam_2d\" [-] (basis: MR-01)\n  structure.system = \"continuous\" [-] (basis: MR-05)\n  girder.single.A = 1.1389287499999998 [m^2] (basis: MR-02)\n  girder.single.I = 0.3549168491421879 [m^4] (basis: MR-02)\n  girder.A = 4.555714999999999 [m^2] (basis: MR-02)\n  girder.I = 1.4196673965687516 [m^4] (basis: MR-02)\n  girder.Ec = 34500.0 [MPa] (basis: JTG3362-3.1.5)\n  girder.gamma = 26.0 [kN/m^3] (basis: JTGD60-4.2.1)\n  girder.w = 118.44858999999998 [kN/m] (basis: MR-07)\n  girder.m = 12.074270132517837 [t/m] (basis: MR-07)\n  support.0.bearing = {\"type\": \"ptfe_sliding\", \"count\": 8} [-] (basis: INPUT, MR-04)\n  support.0.dofs = {\"vertical\": \"spring\", \"longitudinal\": \"free\", \"rotation\": \"free\"} [-] (basis: MR-03)\n  support.0.S = 10.714285714285714 [-] (basis: JTG3362-8.7-Ee)\n  support.0.Kv = 11357351.509250242 [kN/m] (basis: JTG3362-8.7-Ee, JTG3362-8.7-Ge)\n  support.0.Kh = 0.0 [kN/m] (basis: MR-03)\n  support.1.bearing = {\"type\": \"ptfe_sliding\", \"count\": 8} [-] (basis: INPUT, MR-04)\n  support.1.dofs = {\"vertical\": \"spring\", \"longitudinal\": \"free\", \"rotation\": \"free\"} [-] (basis: MR-03)\n  support.1.S = 10.714285714285714 [-] (basis: JTG3362-8.7-Ee)\n  support.1.Kv = 11357351.509250242 [kN/m] (basis: JTG3362-8.7-Ee, JTG3362-8.7-Ge)\n  support.1.Kh = 0.0 [kN/m] (basis: MR-03)\n  support.2.bearing = {\"type\": \"ptfe_sliding\", \"count\": 8} [-] (basis: INPUT, MR-04)\n  support.2.dofs = {\"vertical\": \"spring\", \"longitudinal\": \"free\", \"rotation\": \"free\"} [-] (basis: MR-03)\n  support.2.S = 10.714285714285714 [-] (basis: JTG3362-8.7-Ee)\n  support.2.Kv = 11357351.509250242 [kN/m] (basis: JTG3362-8.7-Ee, JTG3362-8.7-Ge)\n  support.2.Kh = 0.0 [kN/m] (basis: MR-03)\n  support.3.bearing = {\"type\": \"plain_elastomeric\", \"count\": 8} [-] (basis: INPUT, MR-04)\n  support.3.dofs = {\"vertical\": \"spring\", \"longitudinal\": \"spring\", \"rotation\": \"free\"} [-] (basis: MR-03)\n  support.3.S = 10.714285714285714 [-] (basis: JTG3362-8.7-Ee)\n  support.3.Kv = 11357351.509250242 [kN/m] (basis: JTG3362-8.7-Ee, JTG3362-8.7-Ge)\n  support.3.Kh = 24000.0 [kN/m] (basis: JTG3362-8.7-Ee, JTG3362-8.7-Ge)\n  support.4.bearing = {\"type\": \"ptfe_sliding\", \"count\": 8} [-] (basis: INPUT, MR-04)\n  support.4.dofs = {\"vertical\": \"spring\", \"longitudinal\": \"free\", \"rotation\": \"free\"} [-] (basis: MR-03)\n  support.4.S = 10.714285714285714 [-] (basis: JTG3362-8.7-Ee)\n  support.4.Kv = 11357351.509250242 [kN/m] (basis: JTG3362-8.7-Ee, JTG3362-8.7-Ge)\n  support.4.Kh = 0.0 [kN/m] (basis: MR-03)\n  support.5.bearing = {\"type\": \"ptfe_sliding\", \"count\": 8} [-] (basis: INPUT, MR-04)\n  support.5.dofs = {\"vertical\": \"spring\", \"longitudinal\": \"free\", \"rotation\": \"free\"} [-] (basis: MR-03)\n  support.5.S = 10.714285714285714 [-] (basis: JTG3362-8.7-Ee)\n  support.5.Kv = 11357351.509250242 [kN/m] (basis: JTG3362-8.7-Ee, JTG3362-8.7-Ge)\n  support.5.Kh = 0.0 [kN/m] (basis: MR-03)\n  support.6.bearing = {\"type\": \"ptfe_sliding\", \"count\": 8} [-] (basis: INPUT, MR-04)\n  support.6.dofs = {\"vertical\": \"spring\", \"longitudinal\": \"free\", \"rotation\": \"free\"} [-] (basis: MR-03)\n  support.6.S = 10.714285714285714 [-] (basis: JTG3362-8.7-Ee)\n  support.6.Kv = 11357351.509250242 [kN/m] (basis: JTG3362-8.7-Ee, JTG3362-8.7-Ge)\n  support.6.Kh = 0.0 [kN/m] (basis: MR-03)\n  lane.n_lanes = 3 [-] (basis: JTGD60-4.3.1-lanes)\n  lane.xi = 0.78 [-] (basis: JTGD60-4.3.1-xi)\n  lane.qk = 10.5 [kN/m] (basis: JTGD60-4.3.1-lane)\n  lane.Pk.1 = 320.0 [kN] (basis: JTGD60-4.3.1-lane)\n  lane.Pk.2 = 320.0 [kN] (basis: JTGD60-4.3.1-lane)\n  lane.Pk.3 = 320.0 [kN] (basis: JTGD60-4.3.1-lane)\n  lane.Pk.4 = 320.0 [kN] (basis: JTGD60-4.3.1-lane)\n  lane.Pk.5 = 320.0 [kN] (basis: JTGD60-4.3.1-lane)\n  lane.Pk.6 = 320.0 [kN] (basis: JTGD60-4.3.1-lane)\n  lane.mu = 0.20633564101724092 [-] (basis: JTGD60-4.3.2, LL-02)"
+     },
+     {
+      "id": "JTGD60-4.3.1-xi",
+      "text": "{\"id\": \"JTGD60-4.3.1-xi\", \"clause\": \"JTG D60-2015 4.3.1 表 4.3.1-5\", \"title\": \"横向车道布载系数\", \"applicability\": \"n_lanes in XI_TABLE\", \"formulas\": {\"lane.xi\": \"XI_TABLE[n_lanes]\"}, \"tables\": {\"XI_TABLE\": {\"1\": 1.2, \"2\": 1.0, \"3\": 0.78, \"4\": 0.67, \"5\": 0.6, \"6\": 0.55, \"7\": 0.52, \"8\": 0.5}}, \"title_en\": \"transverse (multi-lane) reduction factor\"}"
+     },
+     {
+      "id": "JTGD60-4.3.1-lanes",
+      "text": "{\"id\": \"JTGD60-4.3.1-lanes\", \"clause\": \"JTG D60-2015 4.3.1 表 4.3.1-4\", \"title\": \"设计车道数\", \"applicability\": \"W >= 6.0 if two_way else True\", \"formulas\": {\"lane.n_lanes\": \"(2 if W < 14 else 4 if W < 21 else 6 if W < 28 else 8) if two_way else (1 if W < 7 else 2 if W < 10.5 else 3 if W < 14 else 4 if W < 17.5 else 5 if W < 21 else 6 if W < 24.5 else 7 if W < 28 else 8)\"}, \"title_en\": \"number of design lanes from carriageway width\"}"
+     }
+    ]
+   }
+  },
+  {
+   "t": 83.522,
+   "tool": "search_knowledge",
+   "args": {
+    "query": "MR-01 spine beam model MR-02 cast box section aggregation MR-03 bearing supports MR-04 bearing count 8.7 shape factor E_e Kv Kh formulas; JTG3362 3.1.5 concrete modulus C50 C40; JTGD60 4.3.1 qk"
+   },
+   "result": {
+    "passages": [
+     {
+      "id": "example:S01",
+      "text": "Worked example S01.\n[Span arrangement] One continuous unit of six spans, 30 + 30 + 30 + 30 + 30 + 30 m (centre-to-centre of bearings), precast girders simply supported during erection and made continuous afterwards; deck width 12.5 m.\n[Section and material] Precast prestressed small box girders, 4 per span; middle-girder section at midspan: depth 1.6 m; top width 2.40 m; flange 0.18 m thick at the tip, thickening by 6.3 cm over a 19.2 cm long haunch next to the web; bottom slab 1.00 m wide and 0.18 m thick; top slab 0.18 m thick; webs 0.20 m thick (measured horizontally) with outer faces inclined at 1:4; 15 cm x 7 cm chamfers at the upper corners of the cell; girder concrete C50. Consider the self-weight of the main girders only (no wet joints, diaphragms, pavement or barriers).\n[Bearings and boundary] Abutment 0, Pier 1, Pier 2, Pier 4, Pier 5 and Abutment 6: PTFE sliding laminated elastomeric bearings, two under each girder end; effective plan size 300 mm x 400 mm, five internal rubber layers 8 mm thick. Pier 3: plain laminated elastomeric bearings (fixed), two under each girder end; effective plan size 300 mm x 400 mm, five internal rubber layers 8 mm thick.\n[Design standard] Highway Class I loading (JTG D60-2015); one-way traffic, carriageway width 11.5 m, three design lanes.\nDecisions:\n  structure.idealization = \"spine_beam_2d\" [-] (basis: MR-01)\n  structure.system = \"continuous\" [-] (basis: MR-05)\n  girder.single.A = 1.1389287499999998 [m^2] (basis: MR-02)\n  girder.single.I = 0.3549168491421879 [m^4] (basis: MR-02)\n  girder.A = 4.555714999999999 [m^2] (basis: MR-02)\n  girder.I = 1.4196673965687516 [m^4] (basis: MR-02)\n  girder.Ec = 34500.0 [MPa] (basis: JTG3362-3.1.5)\n  girder.gamma = 26.0 [kN/m^3] (basis: JTGD60-4.2.1)\n  girder.w = 118.44858999999998 [kN/m] (basis: MR-07)\n  girder.m = 12.074270132517837 [t/m] (basis: MR-07)\n  support.0.bearing = {\"type\": \"ptfe_sliding\", \"count\": 8} [-] (basis: INPUT, MR-04)\n  support.0.dofs = {\"vertical\": \"spring\", \"longitudinal\": \"free\", \"rotation\": \"free\"} [-] (basis: MR-03)\n  support.0.S = 10.714285714285714 [-] (basis: JTG3362-8.7-Ee)\n  support.0.Kv = 11357351.509250242 [kN/m] (basis: JTG3362-8.7-Ee, JTG3362-8.7-Ge)\n  support.0.Kh = 0.0 [kN/m] (basis: MR-03)\n  support.1.bearing = {\"type\": \"ptfe_sliding\", \"count\": 8} [-] (basis: INPUT, MR-04)\n  support.1.dofs = {\"vertical\": \"spring\", \"longitudinal\": \"free\", \"rotation\": \"free\"} [-] (basis: MR-03)\n  support.1.S = 10.714285714285714 [-] (basis: JTG3362-8.7-Ee)\n  support.1.Kv = 11357351.509250242 [kN/m] (basis: JTG3362-8.7-Ee, JTG3362-8.7-Ge)\n  support.1.Kh = 0.0 [kN/m] (basis: MR-03)\n  support.2.bearing = {\"type\": \"ptfe_sliding\", \"count\": 8} [-] (basis: INPUT, MR-04)\n  support.2.dofs = {\"vertical\": \"spring\", \"longitudinal\": \"free\", \"rotation\": \"free\"} [-] (basis: MR-03)\n  support.2.S = 10.714285714285714 [-] (basis: JTG3362-8.7-Ee)\n  support.2.Kv = 11357351.509250242 [kN/m] (basis: JTG3362-8.7-Ee, JTG3362-8.7-Ge)\n  support.2.Kh = 0.0 [kN/m] (basis: MR-03)\n  support.3.bearing = {\"type\": \"plain_elastomeric\", \"count\": 8} [-] (basis: INPUT, MR-04)\n  support.3.dofs = {\"vertical\": \"spring\", \"longitudinal\": \"spring\", \"rotation\": \"free\"} [-] (basis: MR-03)\n  support.3.S = 10.714285714285714 [-] (basis: JTG3362-8.7-Ee)\n  support.3.Kv = 11357351.509250242 [kN/m] (basis: JTG3362-8.7-Ee, JTG3362-8.7-Ge)\n  support.3.Kh = 24000.0 [kN/m] (basis: JTG3362-8.7-Ee, JTG3362-8.7-Ge)\n  support.4.bearing = {\"type\": \"ptfe_sliding\", \"count\": 8} [-] (basis: INPUT, MR-04)\n  support.4.dofs = {\"vertical\": \"spring\", \"longitudinal\": \"free\", \"rotation\": \"free\"} [-] (basis: MR-03)\n  support.4.S = 10.714285714285714 [-] (basis: JTG3362-8.7-Ee)\n  support.4.Kv = 11357351.509250242 [kN/m] (basis: JTG3362-8.7-Ee, JTG3362-8.7-Ge)\n  support.4.Kh = 0.0 [kN/m] (basis: MR-03)\n  support.5.bearing = {\"type\": \"ptfe_sliding\", \"count\": 8} [-] (basis: INPUT, MR-04)\n  support.5.dofs = {\"vertical\": \"spring\", \"longitudinal\": \"free\", \"rotation\": \"free\"} [-] (basis: MR-03)\n  support.5.S = 10.714285714285714 [-] (basis: JTG3362-8.7-Ee)\n  support.5.Kv = 11357351.509250242 [kN/m] (basis: JTG3362-8.7-Ee, JTG3362-8.7-Ge)\n  support.5.Kh = 0.0 [kN/m] (basis: MR-03)\n  support.6.bearing = {\"type\": \"ptfe_sliding\", \"count\": 8} [-] (basis: INPUT, MR-04)\n  support.6.dofs = {\"vertical\": \"spring\", \"longitudinal\": \"free\", \"rotation\": \"free\"} [-] (basis: MR-03)\n  support.6.S = 10.714285714285714 [-] (basis: JTG3362-8.7-Ee)\n  support.6.Kv = 11357351.509250242 [kN/m] (basis: JTG3362-8.7-Ee, JTG3362-8.7-Ge)\n  support.6.Kh = 0.0 [kN/m] (basis: MR-03)\n  lane.n_lanes = 3 [-] (basis: JTGD60-4.3.1-lanes)\n  lane.xi = 0.78 [-] (basis: JTGD60-4.3.1-xi)\n  lane.qk = 10.5 [kN/m] (basis: JTGD60-4.3.1-lane)\n  lane.Pk.1 = 320.0 [kN] (basis: JTGD60-4.3.1-lane)\n  lane.Pk.2 = 320.0 [kN] (basis: JTGD60-4.3.1-lane)\n  lane.Pk.3 = 320.0 [kN] (basis: JTGD60-4.3.1-lane)\n  lane.Pk.4 = 320.0 [kN] (basis: JTGD60-4.3.1-lane)\n  lane.Pk.5 = 320.0 [kN] (basis: JTGD60-4.3.1-lane)\n  lane.Pk.6 = 320.0 [kN] (basis: JTGD60-4.3.1-lane)\n  lane.mu = 0.20633564101724092 [-] (basis: JTGD60-4.3.2, LL-02)"
+     },
+     {
+      "id": "example:S02",
+      "text": "Worked example S02.\n[Span arrangement] One continuous unit of eight spans, 30 + 30 + 30 + 30 + 30 + 30 + 30 + 30 m (centre-to-centre of bearings), precast girders simply supported during erection and made continuous afterwards; deck width 12.5 m.\n[Section and material] Precast prestressed T girders, 5 per span; middle-girder section at midspan: depth 2 m; precast flange 1.80 m wide, 0.18 m thick over the outer 0.20 m and thickening linearly to 0.27 m at the web; web 0.20 m thick; bottom bulb 0.60 m wide with a 0.20 m vertical part and a 0.20 m high linear transition to the web; girder concrete C50. Consider the self-weight of the main girders only (no wet joints, diaphragms, pavement or barriers).\n[Bearings and boundary] Abutment 0, Pier 1, Pier 2, Pier 3, Pier 6, Pier 7 and Abutment 8: PTFE sliding laminated elastomeric bearings, one under each girder end; effective plan size 300 mm x 400 mm, five internal rubber layers 8 mm thick. Pier 4 and Pier 5: plain laminated elastomeric bearings (fixed), one under each girder end; effective plan size 300 mm x 400 mm, five internal rubber layers 8 mm thick.\n[Design standard] Highway Class I loading (JTG D60-2015); one-way traffic, carriageway width 11.5 m, three design lanes.\nDecisions:\n  structure.idealization = \"spine_beam_2d\" [-] (basis: MR-01)\n  structure.system = \"continuous\" [-] (basis: MR-05)\n  girder.single.A = 0.8620000000000001 [m^2] (basis: MR-02)\n  girder.single.I = 0.44499810458881117 [m^4] (basis: MR-02)\n  girder.A = 4.3100000000000005 [m^2] (basis: MR-02)\n  girder.I = 2.224990522944056 [m^4] (basis: MR-02)\n  girder.Ec = 34500.0 [MPa] (basis: JTG3362-3.1.5)\n  girder.gamma = 26.0 [kN/m^3] (basis: JTGD60-4.2.1)\n  girder.w = 112.06000000000002 [kN/m] (basis: MR-07)\n  girder.m = 11.423037716615699 [t/m] (basis: MR-07)\n  support.0.bearing = {\"type\": \"ptfe_sliding\", \"count\": 5} [-] (basis: INPUT, MR-04)\n  support.0.dofs = {\"vertical\": \"spring\", \"longitudinal\": \"free\", \"rotation\": \"free\"} [-] (basis: MR-03)\n  support.0.S = 10.714285714285714 [-] (basis: JTG3362-8.7-Ee)\n  support.0.Kv = 7098344.693281402 [kN/m] (basis: JTG3362-8.7-Ee, JTG3362-8.7-Ge)\n  support.0.Kh = 0.0 [kN/m] (basis: MR-03)\n  support.1.bearing = {\"type\": \"ptfe_sliding\", \"count\": 5} [-] (basis: INPUT, MR-04)\n  support.1.dofs = {\"vertical\": \"spring\", \"longitudinal\": \"free\", \"rotation\": \"free\"} [-] (basis: MR-03)\n  support.1.S = 10.714285714285714 [-] (basis: JTG3362-8.7-Ee)\n  support.1.Kv = 7098344.693281402 [kN/m] (basis: JTG3362-8.7-Ee, JTG3362-8.7-Ge)\n  support.1.Kh = 0.0 [kN/m] (basis: MR-03)\n  support.2.bearing = {\"type\": \"ptfe_sliding\", \"count\": 5} [-] (basis: INPUT, MR-04)\n  support.2.dofs = {\"vertical\": \"spring\", \"longitudinal\": \"free\", \"rotation\": \"free\"} [-] (basis: MR-03)\n  support.2.S = 10.714285714285714 [-] (basis: JTG3362-8.7-Ee)\n  support.2.Kv = 7098344.693281402 [kN/m] (basis: JTG3362-8.7-Ee, JTG3362-8.7-Ge)\n  support.2.Kh = 0.0 [kN/m] (basis: MR-03)\n  support.3.bearing = {\"type\": \"ptfe_sliding\", \"count\": 5} [-] (basis: INPUT, MR-04)\n  support.3.dofs = {\"vertical\": \"spring\", \"longitudinal\": \"free\", \"rotation\": \"free\"} [-] (basis: MR-03)\n  support.3.S = 10.714285714285714 [-] (basis: JTG3362-8.7-Ee)\n  support.3.Kv = 7098344.693281402 [kN/m] (basis: JTG3362-8.7-Ee, JTG3362-8.7-Ge)\n  support.3.Kh = 0.0 [kN/m] (basis: MR-03)\n  support.4.bearing = {\"type\": \"plain_elastomeric\", \"count\": 5} [-] (basis: INPUT, MR-04)\n  support.4.dofs = {\"vertical\": \"spring\", \"longitudinal\": \"spring\", \"rotation\": \"free\"} [-] (basis: MR-03)\n  support.4.S = 10.714285714285714 [-] (basis: JTG3362-8.7-Ee)\n  support.4.Kv = 7098344.693281402 [kN/m] (basis: JTG3362-8.7-Ee, JTG3362-8.7-Ge)\n  support.4.Kh = 15000.0 [kN/m] (basis: JTG3362-8.7-Ee, JTG3362-8.7-Ge)\n  support.5.bearing = {\"type\": \"plain_elastomeric\", \"count\": 5} [-] (basis: INPUT, MR-04)\n  support.5.dofs = {\"vertical\": \"spring\", \"longitudinal\": \"spring\", \"rotation\": \"free\"} [-] (basis: MR-03)\n  support.5.S = 10.714285714285714 [-] (basis: JTG3362-8.7-Ee)\n  support.5.Kv = 7098344.693281402 [kN/m] (basis: JTG3362-8.7-Ee, JTG3362-8.7-Ge)\n  support.5.Kh = 15000.0 [kN/m] (basis: JTG3362-8.7-Ee, JTG3362-8.7-Ge)\n  support.6.bearing = {\"type\": \"ptfe_sliding\", \"count\": 5} [-] (basis: INPUT, MR-04)\n  support.6.dofs = {\"vertical\": \"spring\", \"longitudinal\": \"free\", \"rotation\": \"free\"} [-] (basis: MR-03)\n  support.6.S = 10.714285714285714 [-] (basis: JTG3362-8.7-Ee)\n  support.6.Kv = 7098344.693281402 [kN/m] (basis: JTG3362-8.7-Ee, JTG3362-8.7-Ge)\n  support.6.Kh = 0.0 [kN/m] (basis: MR-03)\n  support.7.bearing = {\"type\": \"ptfe_sliding\", \"count\": 5} [-] (basis: INPUT, MR-04)\n  support.7.dofs = {\"vertical\": \"spring\", \"longitudinal\": \"free\", \"rotation\": \"free\"} [-] (basis: MR-03)\n  support.7.S = 10.714285714285714 [-] (basis: JTG3362-8.7-Ee)\n  support.7.Kv = 7098344.693281402 [kN/m] (basis: JTG3362-8.7-Ee, JTG3362-8.7-Ge)\n  support.7.Kh = 0.0 [kN/m] (basis: MR-03)\n  support.8.bearing = {\"type\": \"ptfe_sliding\", \"count\": 5} [-] (basis: INPUT, MR-04)\n  support.8.dofs = {\"vertical\": \"spring\", \"longitudinal\": \"free\", \"rotation\": \"free\"} [-] (basis: MR-03)\n  support.8.S = 10.714285714285714 [-] (basis: JTG3362-8.7-Ee)\n  support.8.Kv = 7098344.693281402 [kN/m] (basis: JTG3362-8.7-Ee, JTG3362-8.7-Ge)\n  support.8.Kh = 0.0 [kN/m] (basis: MR-03)\n  lane.n_lanes = 3 [-] (basis: JTGD60-4.3.1-lanes)\n  lane.xi = 0.78 [-] (basis: JTGD60-4.3.1-xi)\n  lane.qk = 10.5 [kN/m] (basis: JTGD60-4.3.1-lane)\n  lane.Pk.1 = 320.0 [kN] (basis: JTGD60-4.3.1-lane)\n  lane.Pk.2 = 320.0 [kN] (basis: JTGD60-4.3.1-lane)\n  lane.Pk.3 = 320.0 [kN] (basis: JTGD60-4.3.1-lane)\n  lane.Pk.4 = 320.0 [kN] (basis: JTGD60-4.3.1-lane)\n  lane.Pk.5 = 320.0 [kN] (basis: JTGD60-4.3.1-lane)\n  lane.Pk.6 = 320.0 [kN] (basis: JTGD60-4.3.1-lane)\n  lane.Pk.7 = 320.0 [kN] (basis: JTGD60-4.3.1-lane)\n  lane.Pk.8 = 320.0 [kN] (basis: JTGD60-4.3.1-lane)\n  lane.mu = 0.25084825753416534 [-] (basis: JTGD60-4.3.2, LL-02)"
+     },
+     {
+      "id": "JTG3362-3.1.5",
+      "text": "{\"id\": \"JTG3362-3.1.5\", \"clause\": \"JTG 3362-2018 3.1.5 表 3.1.5\", \"title\": \"混凝土弹性模量\", \"applicability\": \"grade in EC_TABLE and not has_override\", \"formulas\": {\"girder.Ec\": \"EC_TABLE[grade]\", \"pier.{k}.Ec\": \"EC_TABLE[grade]\"}, \"tables\": {\"EC_TABLE\": {\"C25\": 28000.0, \"C30\": 30000.0, \"C35\": 31500.0, \"C40\": 32500.0, \"C45\": 33500.0, \"C50\": 34500.0, \"C55\": 35500.0, \"C60\": 36000.0, \"C65\": 36500.0, \"C70\": 37000.0, \"C75\": 37500.0, \"C80\": 38000.0}}, \"title_en\": \"elastic modulus of concrete by grade\"}"
+     },
+     {
+      "id": "JTGD60-4.3.1-xi",
+      "text": "{\"id\": \"JTGD60-4.3.1-xi\", \"clause\": \"JTG D60-2015 4.3.1 表 4.3.1-5\", \"title\": \"横向车道布载系数\", \"applicability\": \"n_lanes in XI_TABLE\", \"formulas\": {\"lane.xi\": \"XI_TABLE[n_lanes]\"}, \"tables\": {\"XI_TABLE\": {\"1\": 1.2, \"2\": 1.0, \"3\": 0.78, \"4\": 0.67, \"5\": 0.6, \"6\": 0.55, \"7\": 0.52, \"8\": 0.5}}, \"title_en\": \"transverse (multi-lane) reduction factor\"}"
+     }
+    ]
+   }
+  },
+  {
+   "t": 90.473,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "structure.idealization",
+    "value": "spine_beam_2d",
+    "unit": "-",
+    "evidence": [
+     "MR-01"
+    ],
+    "rationale": "Bridge modeled as a longitudinal spine beam.",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "structure.idealization",
+    "decision_id": "dec:structure.idealization"
+   }
+  },
+  {
+   "t": 98.723,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "structure.system",
+    "value": "continuous_on_piers",
+    "unit": "-",
+    "evidence": [
+     "MR-05"
+    ],
+    "rationale": "Three span cast-in-place continuous deck, with specified pier column geometry modeled.",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "structure.system",
+    "decision_id": "dec:structure.system"
+   }
+  },
+  {
+   "t": 104.183,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "girder.A",
+    "value": 8.21,
+    "unit": "m^2",
+    "evidence": [
+     "MR-02"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "girder.A",
+    "decision_id": "dec:girder.A"
+   }
+  },
+  {
+   "t": 111.551,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "girder.I",
+    "value": 4.689832856678853,
+    "unit": "m^4",
+    "evidence": [
+     "MR-02"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "girder.I",
+    "decision_id": "dec:girder.I"
+   }
+  },
+  {
+   "t": 116.371,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "girder.Ec",
+    "value": 34500.0,
+    "unit": "MPa",
+    "evidence": [
+     "JTG3362-3.1.5"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "girder.Ec",
+    "decision_id": "dec:girder.Ec"
+   }
+  },
+  {
+   "t": 121.912,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "girder.gamma",
+    "value": 26.5,
+    "unit": "kN/m^3",
+    "evidence": [
+     "INPUT"
+    ],
+    "rationale": "Uses the owner specified girder concrete unit weight.",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "girder.gamma",
+    "decision_id": "dec:girder.gamma"
+   }
+  },
+  {
+   "t": 221.932,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "girder.w",
+    "value": 217.565,
+    "unit": "kN/m",
+    "evidence": [
+     "MR-07"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "girder.w",
+    "decision_id": "dec:girder.w"
+   }
+  },
+  {
+   "t": 229.443,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "girder.m",
+    "value": 22.17737,
+    "unit": "t/m",
+    "evidence": [
+     "MR-07"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "girder.m",
+    "decision_id": "dec:girder.m"
+   }
+  },
+  {
+   "t": 235.492,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.0.bearing",
+    "value": {
+     "type": "ptfe_sliding",
+     "count": 2
+    },
+    "unit": "-",
+    "evidence": [
+     "INPUT",
+     "MR-04"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.0.bearing",
+    "decision_id": "dec:support.0.bearing"
+   }
+  },
+  {
+   "t": 244.463,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.0.dofs",
+    "value": {
+     "vertical": "spring",
+     "longitudinal": "free",
+     "rotation": "free"
+    },
+    "unit": "-",
+    "evidence": [
+     "MR-03"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.0.dofs",
+    "decision_id": "dec:support.0.dofs"
+   }
+  },
+  {
+   "t": 273.203,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.0.S",
+    "value": 10.714285714285714,
+    "unit": "-",
+    "evidence": [
+     "JTG3362-8.7-Ee"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.0.S",
+    "decision_id": "dec:support.0.S"
+   }
+  },
+  {
+   "t": 279.983,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.0.Kv",
+    "value": 2233016.0,
+    "unit": "kN/m",
+    "evidence": [
+     "JTG3362-8.7-Ee",
+     "JTG3362-8.7-Ge"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.0.Kv",
+    "decision_id": "dec:support.0.Kv"
+   }
+  },
+  {
+   "t": 284.783,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.0.Kh",
+    "value": 0.0,
+    "unit": "kN/m",
+    "evidence": [
+     "MR-03"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.0.Kh",
+    "decision_id": "dec:support.0.Kh"
+   }
+  },
+  {
+   "t": 292.873,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.1.bearing",
+    "value": {
+     "type": "ptfe_sliding",
+     "count": 2
+    },
+    "unit": "-",
+    "evidence": [
+     "INPUT",
+     "MR-04"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.1.bearing",
+    "decision_id": "dec:support.1.bearing"
+   }
+  },
+  {
+   "t": 297.322,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.1.dofs",
+    "value": {
+     "vertical": "spring",
+     "longitudinal": "free",
+     "rotation": "free"
+    },
+    "unit": "-",
+    "evidence": [
+     "MR-03"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.1.dofs",
+    "decision_id": "dec:support.1.dofs"
+   }
+  },
+  {
+   "t": 303.583,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.1.S",
+    "value": 11.818181818181818,
+    "unit": "-",
+    "evidence": [
+     "JTG3362-8.7-Ee"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.1.S",
+    "decision_id": "dec:support.1.S"
+   }
+  },
+  {
+   "t": 313.485,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.1.Kv",
+    "value": 2625000.0,
+    "unit": "kN/m",
+    "evidence": [
+     "JTG3362-8.7-Ee",
+     "JTG3362-8.7-Ge"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.1.Kv",
+    "decision_id": "dec:support.1.Kv"
+   }
+  },
+  {
+   "t": 319.134,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.1.Kh",
+    "value": 0.0,
+    "unit": "kN/m",
+    "evidence": [
+     "MR-03"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.1.Kh",
+    "decision_id": "dec:support.1.Kh"
+   }
+  },
+  {
+   "t": 324.643,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.2.bearing",
+    "value": {
+     "type": "plain_elastomeric",
+     "count": 2
+    },
+    "unit": "-",
+    "evidence": [
+     "INPUT",
+     "MR-04"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.2.bearing",
+    "decision_id": "dec:support.2.bearing"
+   }
+  },
+  {
+   "t": 329.264,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.2.dofs",
+    "value": {
+     "vertical": "spring",
+     "longitudinal": "spring",
+     "rotation": "free"
+    },
+    "unit": "-",
+    "evidence": [
+     "MR-03"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.2.dofs",
+    "decision_id": "dec:support.2.dofs"
+   }
+  },
+  {
+   "t": 336.014,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.2.S",
+    "value": 13.636363636363637,
+    "unit": "-",
+    "evidence": [
+     "JTG3362-8.7-Ee"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.2.S",
+    "decision_id": "dec:support.2.S"
+   }
+  },
+  {
+   "t": 342.234,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.2.Kv",
+    "value": 3272727.27,
+    "unit": "kN/m",
+    "evidence": [
+     "JTG3362-8.7-Ee",
+     "JTG3362-8.7-Ge"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.2.Kv",
+    "decision_id": "dec:support.2.Kv"
+   }
+  },
+  {
+   "t": 351.384,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.2.Kh",
+    "value": 37636.36,
+    "unit": "kN/m",
+    "evidence": [
+     "JTG3362-8.7-Ee",
+     "JTG3362-8.7-Ge"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.2.Kh",
+    "decision_id": "dec:support.2.Kh"
+   }
+  },
+  {
+   "t": 356.394,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.3.bearing",
+    "value": {
+     "type": "ptfe_sliding",
+     "count": 2
+    },
+    "unit": "-",
+    "evidence": [
+     "INPUT",
+     "MR-04"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.3.bearing",
+    "decision_id": "dec:support.3.bearing"
+   }
+  },
+  {
+   "t": 361.384,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.3.dofs",
+    "value": {
+     "vertical": "spring",
+     "longitudinal": "free",
+     "rotation": "free"
+    },
+    "unit": "-",
+    "evidence": [
+     "MR-03"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.3.dofs",
+    "decision_id": "dec:support.3.dofs"
+   }
+  },
+  {
+   "t": 365.924,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.3.S",
+    "value": 10.714285714285714,
+    "unit": "-",
+    "evidence": [
+     "JTG3362-8.7-Ee"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.3.S",
+    "decision_id": "dec:support.3.S"
+   }
+  },
+  {
+   "t": 371.625,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.3.Kv",
+    "value": 2233016.0,
+    "unit": "kN/m",
+    "evidence": [
+     "JTG3362-8.7-Ee",
+     "JTG3362-8.7-Ge"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.3.Kv",
+    "decision_id": "dec:support.3.Kv"
+   }
+  },
+  {
+   "t": 384.764,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.3.Kh",
+    "value": 0.0,
+    "unit": "kN/m",
+    "evidence": [
+     "MR-03"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.3.Kh",
+    "decision_id": "dec:support.3.Kh"
+   }
+  },
+  {
+   "t": 394.884,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "pier.1.length",
+    "value": 14.0,
+    "unit": "m",
+    "evidence": [
+     "INPUT"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "pier.1.length",
+    "decision_id": "dec:pier.1.length"
+   }
+  },
+  {
+   "t": 400.415,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "pier.1.A",
+    "value": 4.0212385966,
+    "unit": "m^2",
+    "evidence": [
+     "INPUT",
+     "MR-06"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "pier.1.A",
+    "decision_id": "dec:pier.1.A"
+   }
+  },
+  {
+   "t": 404.454,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "pier.1.I",
+    "value": 0.8042477193,
+    "unit": "m^4",
+    "evidence": [
+     "INPUT",
+     "MR-06"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "pier.1.I",
+    "decision_id": "dec:pier.1.I"
+   }
+  },
+  {
+   "t": 413.855,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "pier.1.Ec",
+    "value": 32500.0,
+    "unit": "MPa",
+    "evidence": [
+     "JTG3362-3.1.5"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "pier.1.Ec",
+    "decision_id": "dec:pier.1.Ec"
+   }
+  },
+  {
+   "t": 419.595,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "pier.2.length",
+    "value": 6.0,
+    "unit": "m",
+    "evidence": [
+     "INPUT"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "pier.2.length",
+    "decision_id": "dec:pier.2.length"
+   }
+  },
+  {
+   "t": 425.634,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "pier.2.A",
+    "value": 4.0212385966,
+    "unit": "m^2",
+    "evidence": [
+     "INPUT",
+     "MR-06"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "pier.2.A",
+    "decision_id": "dec:pier.2.A"
+   }
+  },
+  {
+   "t": 436.783,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "pier.2.I",
+    "value": 0.8042477193,
+    "unit": "m^4",
+    "evidence": [
+     "INPUT",
+     "MR-06"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "pier.2.I",
+    "decision_id": "dec:pier.2.I"
+   }
+  },
+  {
+   "t": 441.685,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "pier.2.Ec",
+    "value": 32500.0,
+    "unit": "MPa",
+    "evidence": [
+     "JTG3362-3.1.5"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "pier.2.Ec",
+    "decision_id": "dec:pier.2.Ec"
+   }
+  },
+  {
+   "t": 450.325,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "lane.n_lanes",
+    "value": 4,
+    "unit": "-",
+    "evidence": [
+     "JTGD60-4.3.1-lanes"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "lane.n_lanes",
+    "decision_id": "dec:lane.n_lanes"
+   }
+  },
+  {
+   "t": 457.925,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "lane.xi",
+    "value": 0.67,
+    "unit": "-",
+    "evidence": [
+     "JTGD60-4.3.1-xi"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "lane.xi",
+    "decision_id": "dec:lane.xi"
+   }
+  },
+  {
+   "t": 465.715,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "lane.qk",
+    "value": 10.5,
+    "unit": "kN/m",
+    "evidence": [
+     "JTGD60-4.3.1-lane"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "lane.qk",
+    "decision_id": "dec:lane.qk"
+   }
+  },
+  {
+   "t": 473.105,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "lane.Pk.1",
+    "value": 324.0,
+    "unit": "kN",
+    "evidence": [
+     "JTGD60-4.3.1-Pk"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "lane.Pk.1",
+    "decision_id": "dec:lane.Pk.1"
+   }
+  },
+  {
+   "t": 481.115,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "lane.Pk.2",
+    "value": 340.0,
+    "unit": "kN",
+    "evidence": [
+     "JTGD60-4.3.1-Pk"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "lane.Pk.2",
+    "decision_id": "dec:lane.Pk.2"
+   }
+  },
+  {
+   "t": 485.766,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "lane.Pk.3",
+    "value": 324.0,
+    "unit": "kN",
+    "evidence": [
+     "JTGD60-4.3.1-Pk"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "lane.Pk.3",
+    "decision_id": "dec:lane.Pk.3"
+   }
+  },
+  {
+   "t": 492.128,
+   "tool": "run_modal_analysis",
+   "args": {},
+   "result": {
+    "ok": true,
+    "vertical_frequencies_Hz": [
+     3.296960483044123,
+     4.764173795545706,
+     5.379615702063202
+    ],
+    "fact": {
+     "f1": 3.296960483044123
+    }
+   }
+  },
+  {
+   "t": 501.257,
+   "tool": "search_knowledge",
+   "args": {
+    "query": "JTG D60-2015 4.3.2 impact coefficient mu equation natural frequency f load impact LL-02"
+   },
+   "result": {
+    "passages": [
+     {
+      "id": "JTGD60-4.3.2",
+      "text": "{\"id\": \"JTGD60-4.3.2\", \"clause\": \"JTG D60-2015 4.3.2\", \"title\": \"汽车荷载冲击系数\", \"applicability\": \"has_f1\", \"formulas\": {\"lane.mu\": \"0.05 if f1 < 1.5 else 0.45 if f1 > 14 else 0.1767 * log(f1) - 0.0157\"}, \"title_en\": \"impact factor (dynamic amplification) of vehicle load from fundamental frequency\"}"
+     },
+     {
+      "id": "LL-02",
+      "text": "{\"id\": \"LL-02\", \"title\": \"冲击系数所用基频\", \"text\": \"冲击系数按 JTG D60-2015 第 4.3.2 条由结构基频计算，基频取有限元模态分析的一阶竖向弯曲频率。\", \"applicability\": \"has_f1\", \"formulas\": {}, \"title_en\": \"fundamental frequency used for the impact factor\"}"
+     },
+     {
+      "id": "JTGD60-4.3.1-Pk",
+      "text": "{\"id\": \"JTGD60-4.3.1-Pk\", \"clause\": \"JTG D60-2015 4.3.1\", \"title\": \"车道荷载集中荷载标准值\", \"applicability\": \"load_class in ('I', 'II') and L0 > 0\", \"formulas\": {\"lane.Pk.{j}\": \"(270 if L0 <= 5 else 360 if L0 >= 50 else 2 * (L0 + 130)) * (1.0 if load_class == 'I' else 0.75)\"}, \"title_en\": \"lane load: concentrated load Pk from span length\"}"
+     },
+     {
+      "id": "JTGD60-4.3.1-qk",
+      "text": "{\"id\": \"JTGD60-4.3.1-qk\", \"clause\": \"JTG D60-2015 4.3.1\", \"title\": \"车道荷载均布荷载标准值\", \"applicability\": \"load_class in ('I', 'II')\", \"formulas\": {\"lane.qk\": \"10.5 * (1.0 if load_class == 'I' else 0.75)\"}, \"title_en\": \"lane load: uniform load qk\"}"
+     }
+    ]
+   }
+  },
+  {
+   "t": 506.846,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "lane.mu",
+    "value": 0.1951,
+    "unit": "-",
+    "evidence": [
+     "JTGD60-4.3.2",
+     "LL-02"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "lane.mu",
+    "decision_id": "dec:lane.mu"
+   }
+  },
+  {
+   "t": 522.342,
+   "tool": "generate_model",
+   "args": {},
+   "result": {
+    "ok": true,
+    "script": "${PROJECT_ROOT}/runs_luna/C3/C03_r3/C03_model.py",
+    "results": {
+     "ok": true,
+     "vertical_frequencies_Hz": [
+      3.296960483044123,
+      4.764173795545706,
+      5.379615702063202
+     ],
+     "self_weight_support_reactions_kN": [
+      2613.661616869158,
+      8677.804798217845,
+      8749.023949187209,
+      2586.2696357244567
+     ],
+     "self_weight_midspan_moments_kNm": [
+      13970.265869890121,
+      15318.620041474795,
+      13531.994171595245
+     ],
+     "self_weight_support_moments_kNm": [
+      -27756.108260237284,
+      -28632.65165679291
+     ],
+     "lane_moments_by_section": [
+      {
+       "section": "span",
+       "index": 1,
+       "M_kNm": 10439.834631328125
+      },
+      {
+       "section": "span",
+       "index": 2,
+       "M_kNm": 11253.258056394465
+      },
+      {
+       "section": "span",
+       "index": 3,
+       "M_kNm": 10391.364140329146
+      },
+      {
+       "section": "support",
+       "index": 1,
+       "M_kNm": -8476.951586877178
+      },
+      {
+       "section": "support",
+       "index": 2,
+       "M_kNm": -8659.629772534834
+      }
+     ],
+     "lane_max_positive_moment_kNm": 11253.258056394465,
+     "lane_max_negative_moment_kNm": -8659.629772534834
+    }
+   }
+  },
+  {
+   "t": 531.116,
+   "tool": "finish",
+   "args": {
+    "summary": "Built and analyzed the 3-span (32+40+32 m) cast-in-place continuous box girder bridge with two modeled twin-column piers, specified bearings, owner girder unit weight and Highway Class I lane loading. OpenSeesPy completed successfully; f1 = 3.297 Hz. L1 topology, L2 code and L3 mechanics checks passed."
+   },
+   "result": {
+    "ok": true
+   }
+  }
+ ]
+}

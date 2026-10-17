@@ -1,0 +1,35 @@
+{
+ "metrics": {
+  "proposals": 0,
+  "slots_proposed": 0,
+  "first_proposal_violation_rate": null,
+  "violations_by_check": {},
+  "instance_rounds": 0,
+  "repair_rounds": 0,
+  "model_passed": false,
+  "elapsed_s": 8.13
+ },
+ "decisions": {},
+ "facts": {},
+ "instance": {},
+ "results": null,
+ "defect": {
+  "defect_type": "contradictory",
+  "message": "The span arrangement is internally contradictory and cannot be modeled as given. The description says \"One continuous unit of three spans, 25 + 30 + 30 + 25 m (centre-to-centre of bearings)\", but a three-span continuous unit has four support lines (three spans = three span lengths), and the supports are indeed enumerated as exactly four lines: \"Abutment 0, Pier 1 ... Pier 2 ... Abutment 3\". However, the span-length list gives FOUR values (25 + 30 + 30 + 25 m), which would require five support lines (four spans). The number of spans/bearings stated (three spans, supports 0-3) is thus inconsistent with the four span lengths listed, and it is impossible to determine which three lengths apply to the three spans without guessing."
+ },
+ "last_check": null,
+ "role_log": [],
+ "log": [
+  {
+   "t": 8.127,
+   "tool": "report_input_defect",
+   "args": {
+    "defect_type": "contradictory",
+    "message": "The span arrangement is internally contradictory and cannot be modeled as given. The description says \"One continuous unit of three spans, 25 + 30 + 30 + 25 m (centre-to-centre of bearings)\", but a three-span continuous unit has four support lines (three spans = three span lengths), and the supports are indeed enumerated as exactly four lines: \"Abutment 0, Pier 1 ... Pier 2 ... Abutment 3\". However, the span-length list gives FOUR values (25 + 30 + 30 + 25 m), which would require five support lines (four spans). The number of spans/bearings stated (three spans, supports 0-3) is thus inconsistent with the four span lengths listed, and it is impossible to determine which three lengths apply to the three spans without guessing."
+   },
+   "result": {
+    "ok": true
+   }
+  }
+ ]
+}

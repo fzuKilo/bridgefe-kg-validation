@@ -1,0 +1,35 @@
+{
+ "metrics": {
+  "proposals": 0,
+  "slots_proposed": 0,
+  "first_proposal_violation_rate": null,
+  "violations_by_check": {},
+  "instance_rounds": 0,
+  "repair_rounds": 0,
+  "model_passed": false,
+  "elapsed_s": 73.85
+ },
+ "decisions": {},
+ "facts": {},
+ "instance": {},
+ "results": null,
+ "last_check": null,
+ "role_log": [
+  {
+   "role": "direct_script",
+   "usage": {
+    "turns": 1,
+    "prompt_tokens": 4342,
+    "output_tokens": 3827,
+    "cache_hit_tokens": 2816,
+    "reasoning_tokens": 623,
+    "finish_reason": "stop",
+    "stream": true
+   },
+   "returncode": 1,
+   "stderr": "Domain::addSP_Constraint - cannot add as node already constrained in that dof by existing SP_Constraint\nSP_Constraint: 8\t Node: 1 DOF: 1 ref value: 0 current value: 0 initial value: 0\nWARNING: failed to add SP to domain\nTraceback (most recent call last):\n  File \"${PROJECT_ROOT}/runs_luna/C0/C09_r1/C09_direct.py\", line 153, in <module>\n    self_disp, support_reactions = solve_load(self_load, True)\n                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"${PROJECT_ROOT}/runs_luna/C0/C09_r1/C09_direct.py\", line 91, in solve_load\n    make_model()\n  File \"${PROJECT_ROOT}/runs_luna/C0/C09_r1/C09_direct.py\", line 81, in make_model\n    ops.fix(1, 1, 1, 0)\nopensees.OpenSeesError: See stderr output\n",
+   "elapsed_s": 73.9
+  }
+ ],
+ "log": []
+}

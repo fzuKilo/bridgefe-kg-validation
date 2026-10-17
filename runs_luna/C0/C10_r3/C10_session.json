@@ -1,0 +1,35 @@
+{
+ "metrics": {
+  "proposals": 0,
+  "slots_proposed": 0,
+  "first_proposal_violation_rate": null,
+  "violations_by_check": {},
+  "instance_rounds": 0,
+  "repair_rounds": 0,
+  "model_passed": false,
+  "elapsed_s": 157.75
+ },
+ "decisions": {},
+ "facts": {},
+ "instance": {},
+ "results": null,
+ "last_check": null,
+ "role_log": [
+  {
+   "role": "direct_script",
+   "usage": {
+    "turns": 1,
+    "prompt_tokens": 4334,
+    "output_tokens": 5716,
+    "cache_hit_tokens": 2816,
+    "reasoning_tokens": 776,
+    "finish_reason": "stop",
+    "stream": true
+   },
+   "returncode": 1,
+   "stderr": "WARNING no active load pattern - eleLoad\nTraceback (most recent call last):\n  File \"${PROJECT_ROOT}/runs_luna/C0/C10_r3/C10_direct.py\", line 125, in <module>\n    ops.eleLoad(\"-ele\", e, \"-type\", \"-beamUniform\", 0.0)\nopensees.OpenSeesError: See stderr output\n",
+   "elapsed_s": 157.7
+  }
+ ],
+ "log": []
+}

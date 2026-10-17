@@ -1,0 +1,3212 @@
+{
+ "metrics": {
+  "proposals": 67,
+  "slots_proposed": 67,
+  "first_proposal_violation_rate": 0.0,
+  "violations_by_check": {},
+  "instance_rounds": 2,
+  "repair_rounds": 0,
+  "model_passed": true,
+  "elapsed_s": 52.64
+ },
+ "decisions": {
+  "structure.idealization": {
+   "id": "dec:structure.idealization",
+   "slot": "structure.idealization",
+   "value": "spine_beam_2d",
+   "unit": "-",
+   "evidence": [
+    "MR-01"
+   ]
+  },
+  "structure.system": {
+   "id": "dec:structure.system",
+   "slot": "structure.system",
+   "value": "continuous",
+   "unit": "-",
+   "evidence": [
+    "MR-05"
+   ]
+  },
+  "girder.single.A": {
+   "id": "dec:girder.single.A",
+   "slot": "girder.single.A",
+   "value": 0.862,
+   "unit": "m^2",
+   "evidence": [
+    "MR-02"
+   ]
+  },
+  "girder.single.I": {
+   "id": "dec:girder.single.I",
+   "slot": "girder.single.I",
+   "value": 0.444998,
+   "unit": "m^4",
+   "evidence": [
+    "MR-02"
+   ]
+  },
+  "girder.A": {
+   "id": "dec:girder.A",
+   "slot": "girder.A",
+   "value": 4.31,
+   "unit": "m^2",
+   "evidence": [
+    "MR-02"
+   ]
+  },
+  "girder.I": {
+   "id": "dec:girder.I",
+   "slot": "girder.I",
+   "value": 2.2249905,
+   "unit": "m^4",
+   "evidence": [
+    "MR-02"
+   ]
+  },
+  "girder.Ec": {
+   "id": "dec:girder.Ec",
+   "slot": "girder.Ec",
+   "value": 34500.0,
+   "unit": "MPa",
+   "evidence": [
+    "JTG3362-3.1.5"
+   ]
+  },
+  "girder.gamma": {
+   "id": "dec:girder.gamma",
+   "slot": "girder.gamma",
+   "value": 26.0,
+   "unit": "kN/m^3",
+   "evidence": [
+    "JTGD60-4.2.1"
+   ]
+  },
+  "girder.w": {
+   "id": "dec:girder.w",
+   "slot": "girder.w",
+   "value": 112.06,
+   "unit": "kN/m",
+   "evidence": [
+    "MR-07"
+   ]
+  },
+  "girder.m": {
+   "id": "dec:girder.m",
+   "slot": "girder.m",
+   "value": 11.423,
+   "unit": "t/m",
+   "evidence": [
+    "MR-07"
+   ]
+  },
+  "support.0.bearing": {
+   "id": "dec:support.0.bearing",
+   "slot": "support.0.bearing",
+   "value": {
+    "type": "ptfe_sliding",
+    "count": 5
+   },
+   "unit": "-",
+   "evidence": [
+    "MR-04",
+    "INPUT:supports[0].bearing.per_girder_end",
+    "INPUT:girder.count_per_span"
+   ]
+  },
+  "support.0.dofs": {
+   "id": "dec:support.0.dofs",
+   "slot": "support.0.dofs",
+   "value": {
+    "vertical": "spring",
+    "longitudinal": "free",
+    "rotation": "free"
+   },
+   "unit": "-",
+   "evidence": [
+    "MR-03"
+   ]
+  },
+  "support.0.S": {
+   "id": "dec:support.0.S",
+   "slot": "support.0.S",
+   "value": 10.714286,
+   "unit": "-",
+   "evidence": [
+    "JTG3362-8.7-S"
+   ]
+  },
+  "support.0.Kv": {
+   "id": "dec:support.0.Kv",
+   "slot": "support.0.Kv",
+   "value": 7098344.693,
+   "unit": "kN/m",
+   "evidence": [
+    "JTG3362-8.7-Kv"
+   ]
+  },
+  "support.0.Kh": {
+   "id": "dec:support.0.Kh",
+   "slot": "support.0.Kh",
+   "value": 0.0,
+   "unit": "kN/m",
+   "evidence": [
+    "MR-03"
+   ]
+  },
+  "support.1.bearing": {
+   "id": "dec:support.1.bearing",
+   "slot": "support.1.bearing",
+   "value": {
+    "type": "ptfe_sliding",
+    "count": 5
+   },
+   "unit": "-",
+   "evidence": [
+    "MR-04",
+    "INPUT:supports[1].bearing.per_girder_end",
+    "INPUT:girder.count_per_span"
+   ]
+  },
+  "support.1.dofs": {
+   "id": "dec:support.1.dofs",
+   "slot": "support.1.dofs",
+   "value": {
+    "vertical": "spring",
+    "longitudinal": "free",
+    "rotation": "free"
+   },
+   "unit": "-",
+   "evidence": [
+    "MR-03"
+   ]
+  },
+  "support.1.S": {
+   "id": "dec:support.1.S",
+   "slot": "support.1.S",
+   "value": 10.714286,
+   "unit": "-",
+   "evidence": [
+    "JTG3362-8.7-S"
+   ]
+  },
+  "support.1.Kv": {
+   "id": "dec:support.1.Kv",
+   "slot": "support.1.Kv",
+   "value": 7098344.693,
+   "unit": "kN/m",
+   "evidence": [
+    "JTG3362-8.7-Kv"
+   ]
+  },
+  "support.1.Kh": {
+   "id": "dec:support.1.Kh",
+   "slot": "support.1.Kh",
+   "value": 0.0,
+   "unit": "kN/m",
+   "evidence": [
+    "MR-03"
+   ]
+  },
+  "support.2.bearing": {
+   "id": "dec:support.2.bearing",
+   "slot": "support.2.bearing",
+   "value": {
+    "type": "ptfe_sliding",
+    "count": 5
+   },
+   "unit": "-",
+   "evidence": [
+    "MR-04",
+    "INPUT:supports[2].bearing.per_girder_end",
+    "INPUT:girder.count_per_span"
+   ]
+  },
+  "support.2.dofs": {
+   "id": "dec:support.2.dofs",
+   "slot": "support.2.dofs",
+   "value": {
+    "vertical": "spring",
+    "longitudinal": "free",
+    "rotation": "free"
+   },
+   "unit": "-",
+   "evidence": [
+    "MR-03"
+   ]
+  },
+  "support.2.S": {
+   "id": "dec:support.2.S",
+   "slot": "support.2.S",
+   "value": 10.714286,
+   "unit": "-",
+   "evidence": [
+    "JTG3362-8.7-S"
+   ]
+  },
+  "support.2.Kv": {
+   "id": "dec:support.2.Kv",
+   "slot": "support.2.Kv",
+   "value": 7098344.693,
+   "unit": "kN/m",
+   "evidence": [
+    "JTG3362-8.7-Kv"
+   ]
+  },
+  "support.2.Kh": {
+   "id": "dec:support.2.Kh",
+   "slot": "support.2.Kh",
+   "value": 0.0,
+   "unit": "kN/m",
+   "evidence": [
+    "MR-03"
+   ]
+  },
+  "support.3.bearing": {
+   "id": "dec:support.3.bearing",
+   "slot": "support.3.bearing",
+   "value": {
+    "type": "ptfe_sliding",
+    "count": 5
+   },
+   "unit": "-",
+   "evidence": [
+    "MR-04",
+    "INPUT:supports[3].bearing.per_girder_end",
+    "INPUT:girder.count_per_span"
+   ]
+  },
+  "support.3.dofs": {
+   "id": "dec:support.3.dofs",
+   "slot": "support.3.dofs",
+   "value": {
+    "vertical": "spring",
+    "longitudinal": "free",
+    "rotation": "free"
+   },
+   "unit": "-",
+   "evidence": [
+    "MR-03"
+   ]
+  },
+  "support.3.S": {
+   "id": "dec:support.3.S",
+   "slot": "support.3.S",
+   "value": 10.714286,
+   "unit": "-",
+   "evidence": [
+    "JTG3362-8.7-S"
+   ]
+  },
+  "support.3.Kv": {
+   "id": "dec:support.3.Kv",
+   "slot": "support.3.Kv",
+   "value": 7098344.693,
+   "unit": "kN/m",
+   "evidence": [
+    "JTG3362-8.7-Kv"
+   ]
+  },
+  "support.3.Kh": {
+   "id": "dec:support.3.Kh",
+   "slot": "support.3.Kh",
+   "value": 0.0,
+   "unit": "kN/m",
+   "evidence": [
+    "MR-03"
+   ]
+  },
+  "support.4.bearing": {
+   "id": "dec:support.4.bearing",
+   "slot": "support.4.bearing",
+   "value": {
+    "type": "plain_elastomeric",
+    "count": 5
+   },
+   "unit": "-",
+   "evidence": [
+    "MR-04",
+    "INPUT:supports[4].bearing.per_girder_end",
+    "INPUT:girder.count_per_span"
+   ]
+  },
+  "support.4.dofs": {
+   "id": "dec:support.4.dofs",
+   "slot": "support.4.dofs",
+   "value": {
+    "vertical": "spring",
+    "longitudinal": "spring",
+    "rotation": "free"
+   },
+   "unit": "-",
+   "evidence": [
+    "MR-03"
+   ]
+  },
+  "support.4.S": {
+   "id": "dec:support.4.S",
+   "slot": "support.4.S",
+   "value": 10.714286,
+   "unit": "-",
+   "evidence": [
+    "JTG3362-8.7-S"
+   ]
+  },
+  "support.4.Kv": {
+   "id": "dec:support.4.Kv",
+   "slot": "support.4.Kv",
+   "value": 7098344.693,
+   "unit": "kN/m",
+   "evidence": [
+    "JTG3362-8.7-Kv"
+   ]
+  },
+  "support.4.Kh": {
+   "id": "dec:support.4.Kh",
+   "slot": "support.4.Kh",
+   "value": 15000.0,
+   "unit": "kN/m",
+   "evidence": [
+    "JTG3362-8.7-Kh"
+   ]
+  },
+  "support.5.bearing": {
+   "id": "dec:support.5.bearing",
+   "slot": "support.5.bearing",
+   "value": {
+    "type": "plain_elastomeric",
+    "count": 5
+   },
+   "unit": "-",
+   "evidence": [
+    "MR-04",
+    "INPUT:supports[5].bearing.per_girder_end",
+    "INPUT:girder.count_per_span"
+   ]
+  },
+  "support.5.dofs": {
+   "id": "dec:support.5.dofs",
+   "slot": "support.5.dofs",
+   "value": {
+    "vertical": "spring",
+    "longitudinal": "spring",
+    "rotation": "free"
+   },
+   "unit": "-",
+   "evidence": [
+    "MR-03"
+   ]
+  },
+  "support.5.S": {
+   "id": "dec:support.5.S",
+   "slot": "support.5.S",
+   "value": 10.714286,
+   "unit": "-",
+   "evidence": [
+    "JTG3362-8.7-S"
+   ]
+  },
+  "support.5.Kv": {
+   "id": "dec:support.5.Kv",
+   "slot": "support.5.Kv",
+   "value": 7098344.693,
+   "unit": "kN/m",
+   "evidence": [
+    "JTG3362-8.7-Kv"
+   ]
+  },
+  "support.5.Kh": {
+   "id": "dec:support.5.Kh",
+   "slot": "support.5.Kh",
+   "value": 15000.0,
+   "unit": "kN/m",
+   "evidence": [
+    "JTG3362-8.7-Kh"
+   ]
+  },
+  "support.6.bearing": {
+   "id": "dec:support.6.bearing",
+   "slot": "support.6.bearing",
+   "value": {
+    "type": "ptfe_sliding",
+    "count": 5
+   },
+   "unit": "-",
+   "evidence": [
+    "MR-04",
+    "INPUT:supports[6].bearing.per_girder_end",
+    "INPUT:girder.count_per_span"
+   ]
+  },
+  "support.6.dofs": {
+   "id": "dec:support.6.dofs",
+   "slot": "support.6.dofs",
+   "value": {
+    "vertical": "spring",
+    "longitudinal": "free",
+    "rotation": "free"
+   },
+   "unit": "-",
+   "evidence": [
+    "MR-03"
+   ]
+  },
+  "support.6.S": {
+   "id": "dec:support.6.S",
+   "slot": "support.6.S",
+   "value": 10.714286,
+   "unit": "-",
+   "evidence": [
+    "JTG3362-8.7-S"
+   ]
+  },
+  "support.6.Kv": {
+   "id": "dec:support.6.Kv",
+   "slot": "support.6.Kv",
+   "value": 7098344.693,
+   "unit": "kN/m",
+   "evidence": [
+    "JTG3362-8.7-Kv"
+   ]
+  },
+  "support.6.Kh": {
+   "id": "dec:support.6.Kh",
+   "slot": "support.6.Kh",
+   "value": 0.0,
+   "unit": "kN/m",
+   "evidence": [
+    "MR-03"
+   ]
+  },
+  "support.7.bearing": {
+   "id": "dec:support.7.bearing",
+   "slot": "support.7.bearing",
+   "value": {
+    "type": "ptfe_sliding",
+    "count": 5
+   },
+   "unit": "-",
+   "evidence": [
+    "MR-04",
+    "INPUT:supports[7].bearing.per_girder_end",
+    "INPUT:girder.count_per_span"
+   ]
+  },
+  "support.7.dofs": {
+   "id": "dec:support.7.dofs",
+   "slot": "support.7.dofs",
+   "value": {
+    "vertical": "spring",
+    "longitudinal": "free",
+    "rotation": "free"
+   },
+   "unit": "-",
+   "evidence": [
+    "MR-03"
+   ]
+  },
+  "support.7.S": {
+   "id": "dec:support.7.S",
+   "slot": "support.7.S",
+   "value": 10.714286,
+   "unit": "-",
+   "evidence": [
+    "JTG3362-8.7-S"
+   ]
+  },
+  "support.7.Kv": {
+   "id": "dec:support.7.Kv",
+   "slot": "support.7.Kv",
+   "value": 7098344.693,
+   "unit": "kN/m",
+   "evidence": [
+    "JTG3362-8.7-Kv"
+   ]
+  },
+  "support.7.Kh": {
+   "id": "dec:support.7.Kh",
+   "slot": "support.7.Kh",
+   "value": 0.0,
+   "unit": "kN/m",
+   "evidence": [
+    "MR-03"
+   ]
+  },
+  "support.8.bearing": {
+   "id": "dec:support.8.bearing",
+   "slot": "support.8.bearing",
+   "value": {
+    "type": "ptfe_sliding",
+    "count": 5
+   },
+   "unit": "-",
+   "evidence": [
+    "MR-04",
+    "INPUT:supports[8].bearing.per_girder_end",
+    "INPUT:girder.count_per_span"
+   ]
+  },
+  "support.8.dofs": {
+   "id": "dec:support.8.dofs",
+   "slot": "support.8.dofs",
+   "value": {
+    "vertical": "spring",
+    "longitudinal": "free",
+    "rotation": "free"
+   },
+   "unit": "-",
+   "evidence": [
+    "MR-03"
+   ]
+  },
+  "support.8.S": {
+   "id": "dec:support.8.S",
+   "slot": "support.8.S",
+   "value": 10.714286,
+   "unit": "-",
+   "evidence": [
+    "JTG3362-8.7-S"
+   ]
+  },
+  "support.8.Kv": {
+   "id": "dec:support.8.Kv",
+   "slot": "support.8.Kv",
+   "value": 7098344.693,
+   "unit": "kN/m",
+   "evidence": [
+    "JTG3362-8.7-Kv"
+   ]
+  },
+  "support.8.Kh": {
+   "id": "dec:support.8.Kh",
+   "slot": "support.8.Kh",
+   "value": 0.0,
+   "unit": "kN/m",
+   "evidence": [
+    "MR-03"
+   ]
+  },
+  "lane.n_lanes": {
+   "id": "dec:lane.n_lanes",
+   "slot": "lane.n_lanes",
+   "value": 3,
+   "unit": "-",
+   "evidence": [
+    "JTGD60-4.3.1-lanes",
+    "INPUT:deck.carriageway_width_m",
+    "INPUT:deck.design_lanes"
+   ]
+  },
+  "lane.xi": {
+   "id": "dec:lane.xi",
+   "slot": "lane.xi",
+   "value": 0.78,
+   "unit": "-",
+   "evidence": [
+    "JTGD60-4.3.1-xi"
+   ]
+  },
+  "lane.qk": {
+   "id": "dec:lane.qk",
+   "slot": "lane.qk",
+   "value": 10.5,
+   "unit": "kN/m",
+   "evidence": [
+    "JTGD60-4.3.1-qk"
+   ]
+  },
+  "lane.Pk.1": {
+   "id": "dec:lane.Pk.1",
+   "slot": "lane.Pk.1",
+   "value": 320.0,
+   "unit": "kN",
+   "evidence": [
+    "JTGD60-4.3.1-Pk",
+    "INPUT:spans_m[0]"
+   ]
+  },
+  "lane.Pk.2": {
+   "id": "dec:lane.Pk.2",
+   "slot": "lane.Pk.2",
+   "value": 320.0,
+   "unit": "kN",
+   "evidence": [
+    "JTGD60-4.3.1-Pk",
+    "INPUT:spans_m[1]"
+   ]
+  },
+  "lane.Pk.3": {
+   "id": "dec:lane.Pk.3",
+   "slot": "lane.Pk.3",
+   "value": 320.0,
+   "unit": "kN",
+   "evidence": [
+    "JTGD60-4.3.1-Pk",
+    "INPUT:spans_m[2]"
+   ]
+  },
+  "lane.Pk.4": {
+   "id": "dec:lane.Pk.4",
+   "slot": "lane.Pk.4",
+   "value": 320.0,
+   "unit": "kN",
+   "evidence": [
+    "JTGD60-4.3.1-Pk",
+    "INPUT:spans_m[3]"
+   ]
+  },
+  "lane.Pk.5": {
+   "id": "dec:lane.Pk.5",
+   "slot": "lane.Pk.5",
+   "value": 320.0,
+   "unit": "kN",
+   "evidence": [
+    "JTGD60-4.3.1-Pk",
+    "INPUT:spans_m[4]"
+   ]
+  },
+  "lane.Pk.6": {
+   "id": "dec:lane.Pk.6",
+   "slot": "lane.Pk.6",
+   "value": 320.0,
+   "unit": "kN",
+   "evidence": [
+    "JTGD60-4.3.1-Pk",
+    "INPUT:spans_m[5]"
+   ]
+  },
+  "lane.Pk.7": {
+   "id": "dec:lane.Pk.7",
+   "slot": "lane.Pk.7",
+   "value": 320.0,
+   "unit": "kN",
+   "evidence": [
+    "JTGD60-4.3.1-Pk",
+    "INPUT:spans_m[6]"
+   ]
+  },
+  "lane.Pk.8": {
+   "id": "dec:lane.Pk.8",
+   "slot": "lane.Pk.8",
+   "value": 320.0,
+   "unit": "kN",
+   "evidence": [
+    "JTGD60-4.3.1-Pk",
+    "INPUT:spans_m[7]"
+   ]
+  },
+  "lane.mu": {
+   "id": "dec:lane.mu",
+   "slot": "lane.mu",
+   "value": 0.250849,
+   "unit": "-",
+   "evidence": [
+    "JTGD60-4.3.2",
+    "fact:f1"
+   ]
+  }
+ },
+ "facts": {
+  "f1": 4.519858775291279
+ },
+ "instance": {
+  "supports": [
+   {
+    "index": 0,
+    "kind": "abutment",
+    "bearing": {
+     "a_mm": 300,
+     "b_mm": 400,
+     "family": "laminated_elastomeric",
+     "fixed": false,
+     "n_layers": 5,
+     "per_girder_end": 1,
+     "sliding": true,
+     "t1_mm": 8
+    },
+    "pier": null
+   },
+   {
+    "index": 1,
+    "kind": "pier",
+    "bearing": {
+     "a_mm": 300,
+     "b_mm": 400,
+     "family": "laminated_elastomeric",
+     "fixed": false,
+     "n_layers": 5,
+     "per_girder_end": 1,
+     "sliding": true,
+     "t1_mm": 8
+    },
+    "pier": null
+   },
+   {
+    "index": 2,
+    "kind": "pier",
+    "bearing": {
+     "a_mm": 300,
+     "b_mm": 400,
+     "family": "laminated_elastomeric",
+     "fixed": false,
+     "n_layers": 5,
+     "per_girder_end": 1,
+     "sliding": true,
+     "t1_mm": 8
+    },
+    "pier": null
+   },
+   {
+    "index": 3,
+    "kind": "pier",
+    "bearing": {
+     "a_mm": 300,
+     "b_mm": 400,
+     "family": "laminated_elastomeric",
+     "fixed": false,
+     "n_layers": 5,
+     "per_girder_end": 1,
+     "sliding": true,
+     "t1_mm": 8
+    },
+    "pier": null
+   },
+   {
+    "index": 4,
+    "kind": "pier",
+    "bearing": {
+     "a_mm": 300,
+     "b_mm": 400,
+     "family": "laminated_elastomeric",
+     "fixed": true,
+     "n_layers": 5,
+     "per_girder_end": 1,
+     "sliding": false,
+     "t1_mm": 8
+    },
+    "pier": null
+   },
+   {
+    "index": 5,
+    "kind": "pier",
+    "bearing": {
+     "a_mm": 300,
+     "b_mm": 400,
+     "family": "laminated_elastomeric",
+     "fixed": true,
+     "n_layers": 5,
+     "per_girder_end": 1,
+     "sliding": false,
+     "t1_mm": 8
+    },
+    "pier": null
+   },
+   {
+    "index": 6,
+    "kind": "pier",
+    "bearing": {
+     "a_mm": 300,
+     "b_mm": 400,
+     "family": "laminated_elastomeric",
+     "fixed": false,
+     "n_layers": 5,
+     "per_girder_end": 1,
+     "sliding": true,
+     "t1_mm": 8
+    },
+    "pier": null
+   },
+   {
+    "index": 7,
+    "kind": "pier",
+    "bearing": {
+     "a_mm": 300,
+     "b_mm": 400,
+     "family": "laminated_elastomeric",
+     "fixed": false,
+     "n_layers": 5,
+     "per_girder_end": 1,
+     "sliding": true,
+     "t1_mm": 8
+    },
+    "pier": null
+   },
+   {
+    "index": 8,
+    "kind": "abutment",
+    "bearing": {
+     "a_mm": 300,
+     "b_mm": 400,
+     "family": "laminated_elastomeric",
+     "fixed": false,
+     "n_layers": 5,
+     "per_girder_end": 1,
+     "sliding": true,
+     "t1_mm": 8
+    },
+    "pier": null
+   }
+  ],
+  "structure_type": "precast_continuous",
+  "spans_m": [
+   30,
+   30,
+   30,
+   30,
+   30,
+   30,
+   30,
+   30
+  ],
+  "deck": {
+   "deck_width_m": 12.5,
+   "carriageway_width_m": 11.5,
+   "traffic": "one_way",
+   "design_lanes": 3,
+   "load_class": "I"
+  },
+  "girder": {
+   "type": "t_girder",
+   "count_per_span": 5,
+   "concrete": "C50",
+   "material": "prestressed_concrete",
+   "E_override_MPa": null,
+   "gamma_override_kNm3": null,
+   "section": {
+    "b_bulb": 0.6,
+    "b_flange": 1.8,
+    "bulb_h": 0.2,
+    "bulb_trans": 0.2,
+    "flat_len": 0.2,
+    "h": 2.0,
+    "t_root": 0.27,
+    "t_tip": 0.18,
+    "t_web": 0.2
+   }
+  },
+  "dead_load": "girder_self_weight_only"
+ },
+ "results": {
+  "ok": true,
+  "vertical_frequencies_Hz": [
+   4.519858775291279,
+   4.703843100674293,
+   5.226234756683822
+  ],
+  "self_weight_support_reactions_kN": [
+   1327.7515093768454,
+   3807.0995205398626,
+   3245.17627683172,
+   3394.194961250719,
+   3345.9554640036486,
+   3394.1949612510252,
+   3245.1762768325466,
+   3807.0995205382897,
+   1327.7515093762368
+  ],
+  "self_weight_midspan_moments_kNm": [
+   7309.522640649335,
+   3394.5607300133415,
+   4409.7357799466035,
+   4161.479401131864,
+   4161.479401131782,
+   4409.735779949411,
+   3394.5607300136785,
+   7309.522640642659
+  ],
+  "self_weight_support_moments_kNm": [
+   -10594.454718714813,
+   -7829.923821259077,
+   -8564.10461884057,
+   -8326.436578896642,
+   -8564.104618842106,
+   -7829.923821261995,
+   -10594.45471870914
+  ],
+  "lane_moments_by_section": [
+   {
+    "section": "span",
+    "index": 1,
+    "M_kNm": 8355.781922587228
+   },
+   {
+    "section": "span",
+    "index": 2,
+    "M_kNm": 7063.946931371462
+   },
+   {
+    "section": "span",
+    "index": 3,
+    "M_kNm": 7149.770453713694
+   },
+   {
+    "section": "span",
+    "index": 4,
+    "M_kNm": 7111.8989927877055
+   },
+   {
+    "section": "span",
+    "index": 5,
+    "M_kNm": 7111.898992788694
+   },
+   {
+    "section": "span",
+    "index": 6,
+    "M_kNm": 7149.770453718508
+   },
+   {
+    "section": "span",
+    "index": 7,
+    "M_kNm": 7063.946931369364
+   },
+   {
+    "section": "span",
+    "index": 8,
+    "M_kNm": 8355.781922579406
+   },
+   {
+    "section": "support",
+    "index": 1,
+    "M_kNm": -6145.403404664067
+   },
+   {
+    "section": "support",
+    "index": 2,
+    "M_kNm": -5417.767079671353
+   },
+   {
+    "section": "support",
+    "index": 3,
+    "M_kNm": -5495.494337356045
+   },
+   {
+    "section": "support",
+    "index": 4,
+    "M_kNm": -5461.155452470695
+   },
+   {
+    "section": "support",
+    "index": 5,
+    "M_kNm": -5495.4943373581555
+   },
+   {
+    "section": "support",
+    "index": 6,
+    "M_kNm": -5417.767079670554
+   },
+   {
+    "section": "support",
+    "index": 7,
+    "M_kNm": -6145.403404660427
+   }
+  ],
+  "lane_max_positive_moment_kNm": 8355.781922587228,
+  "lane_max_negative_moment_kNm": -6145.403404664067
+ },
+ "last_check": [],
+ "role_log": [],
+ "log": [
+  {
+   "t": 3.676,
+   "tool": "write_instance",
+   "args": {
+    "structure_type": "precast_continuous",
+    "spans_m": [
+     30,
+     30,
+     30,
+     30,
+     30,
+     30,
+     30,
+     30
+    ],
+    "deck": {
+     "deck_width_m": 12.5,
+     "carriageway_width_m": 11.5,
+     "traffic": "one_way",
+     "design_lanes": 3,
+     "load_class": "I"
+    },
+    "girder": {
+     "type": "t_girder",
+     "count_per_span": 5,
+     "concrete": "C50",
+     "material": "prestressed_concrete",
+     "E_override_MPa": null,
+     "gamma_override_kNm3": null,
+     "section": {
+      "h": 2.0,
+      "b_flange": 1.8,
+      "t_tip": 0.18,
+      "t_root": 0.27,
+      "flat_len": 0.2,
+      "t_web": 0.2,
+      "b_bulb": 0.6,
+      "bulb_h": 0.2,
+      "bulb_trans": 0.2
+     }
+    },
+    "supports": [
+     {
+      "index": 0,
+      "kind": "abutment",
+      "bearing": {
+       "family": "laminated_elastomeric",
+       "sliding": true,
+       "fixed": false,
+       "per_girder_end": 5,
+       "a_mm": 300,
+       "b_mm": 400,
+       "t1_mm": 8,
+       "n_layers": 5
+      },
+      "pier": null
+     },
+     {
+      "index": 1,
+      "kind": "pier",
+      "bearing": {
+       "family": "laminated_elastomeric",
+       "sliding": true,
+       "fixed": false,
+       "per_girder_end": 5,
+       "a_mm": 300,
+       "b_mm": 400,
+       "t1_mm": 8,
+       "n_layers": 5
+      },
+      "pier": null
+     },
+     {
+      "index": 2,
+      "kind": "pier",
+      "bearing": {
+       "family": "laminated_elastomeric",
+       "sliding": true,
+       "fixed": false,
+       "per_girder_end": 5,
+       "a_mm": 300,
+       "b_mm": 400,
+       "t1_mm": 8,
+       "n_layers": 5
+      },
+      "pier": null
+     },
+     {
+      "index": 3,
+      "kind": "pier",
+      "bearing": {
+       "family": "laminated_elastomeric",
+       "sliding": true,
+       "fixed": false,
+       "per_girder_end": 5,
+       "a_mm": 300,
+       "b_mm": 400,
+       "t1_mm": 8,
+       "n_layers": 5
+      },
+      "pier": null
+     },
+     {
+      "index": 4,
+      "kind": "pier",
+      "bearing": {
+       "family": "laminated_elastomeric",
+       "sliding": false,
+       "fixed": true,
+       "per_girder_end": 5,
+       "a_mm": 300,
+       "b_mm": 400,
+       "t1_mm": 8,
+       "n_layers": 5
+      },
+      "pier": null
+     },
+     {
+      "index": 5,
+      "kind": "pier",
+      "bearing": {
+       "family": "laminated_elastomeric",
+       "sliding": false,
+       "fixed": true,
+       "per_girder_end": 5,
+       "a_mm": 300,
+       "b_mm": 400,
+       "t1_mm": 8,
+       "n_layers": 5
+      },
+      "pier": null
+     },
+     {
+      "index": 6,
+      "kind": "pier",
+      "bearing": {
+       "family": "laminated_elastomeric",
+       "sliding": true,
+       "fixed": false,
+       "per_girder_end": 5,
+       "a_mm": 300,
+       "b_mm": 400,
+       "t1_mm": 8,
+       "n_layers": 5
+      },
+      "pier": null
+     },
+     {
+      "index": 7,
+      "kind": "pier",
+      "bearing": {
+       "family": "laminated_elastomeric",
+       "sliding": true,
+       "fixed": false,
+       "per_girder_end": 5,
+       "a_mm": 300,
+       "b_mm": 400,
+       "t1_mm": 8,
+       "n_layers": 5
+      },
+      "pier": null
+     },
+     {
+      "index": 8,
+      "kind": "abutment",
+      "bearing": {
+       "family": "laminated_elastomeric",
+       "sliding": true,
+       "fixed": false,
+       "per_girder_end": 5,
+       "a_mm": 300,
+       "b_mm": 400,
+       "t1_mm": 8,
+       "n_layers": 5
+      },
+      "pier": null
+     }
+    ],
+    "dead_load": "girder_self_weight_only"
+   },
+   "result": {
+    "ok": false,
+    "issues": [
+     {
+      "constraint": "C-07",
+      "message": "支承线 0 每个梁端 5 个支座不合理（预制梁每端通常 1~2 个），请核对描述：per_girder_end 是每片梁每端的支座数，不是主梁片数"
+     },
+     {
+      "constraint": "C-07",
+      "message": "支承线 1 每个梁端 5 个支座不合理（预制梁每端通常 1~2 个），请核对描述：per_girder_end 是每片梁每端的支座数，不是主梁片数"
+     },
+     {
+      "constraint": "C-07",
+      "message": "支承线 2 每个梁端 5 个支座不合理（预制梁每端通常 1~2 个），请核对描述：per_girder_end 是每片梁每端的支座数，不是主梁片数"
+     },
+     {
+      "constraint": "C-07",
+      "message": "支承线 3 每个梁端 5 个支座不合理（预制梁每端通常 1~2 个），请核对描述：per_girder_end 是每片梁每端的支座数，不是主梁片数"
+     },
+     {
+      "constraint": "C-07",
+      "message": "支承线 4 每个梁端 5 个支座不合理（预制梁每端通常 1~2 个），请核对描述：per_girder_end 是每片梁每端的支座数，不是主梁片数"
+     },
+     {
+      "constraint": "C-07",
+      "message": "支承线 5 每个梁端 5 个支座不合理（预制梁每端通常 1~2 个），请核对描述：per_girder_end 是每片梁每端的支座数，不是主梁片数"
+     },
+     {
+      "constraint": "C-07",
+      "message": "支承线 6 每个梁端 5 个支座不合理（预制梁每端通常 1~2 个），请核对描述：per_girder_end 是每片梁每端的支座数，不是主梁片数"
+     },
+     {
+      "constraint": "C-07",
+      "message": "支承线 7 每个梁端 5 个支座不合理（预制梁每端通常 1~2 个），请核对描述：per_girder_end 是每片梁每端的支座数，不是主梁片数"
+     },
+     {
+      "constraint": "C-07",
+      "message": "支承线 8 每个梁端 5 个支座不合理（预制梁每端通常 1~2 个），请核对描述：per_girder_end 是每片梁每端的支座数，不是主梁片数"
+     }
+    ],
+    "round": 1
+   }
+  },
+  {
+   "t": 6.795,
+   "tool": "write_instance",
+   "args": {
+    "girder": {
+     "concrete": "C50",
+     "count_per_span": 5,
+     "E_override_MPa": null,
+     "gamma_override_kNm3": null,
+     "material": "prestressed_concrete",
+     "section": {
+      "b_bulb": 0.6,
+      "b_flange": 1.8,
+      "bulb_h": 0.2,
+      "bulb_trans": 0.2,
+      "flat_len": 0.2,
+      "h": 2.0,
+      "t_root": 0.27,
+      "t_tip": 0.18,
+      "t_web": 0.2
+     },
+     "type": "t_girder"
+    },
+    "supports": [
+     {
+      "bearing": {
+       "a_mm": 300,
+       "b_mm": 400,
+       "family": "laminated_elastomeric",
+       "fixed": false,
+       "n_layers": 5,
+       "per_girder_end": 1,
+       "sliding": true,
+       "t1_mm": 8
+      },
+      "index": 0,
+      "kind": "abutment",
+      "pier": null
+     },
+     {
+      "bearing": {
+       "a_mm": 300,
+       "b_mm": 400,
+       "family": "laminated_elastomeric",
+       "fixed": false,
+       "n_layers": 5,
+       "per_girder_end": 1,
+       "sliding": true,
+       "t1_mm": 8
+      },
+      "index": 1,
+      "kind": "pier",
+      "pier": null
+     },
+     {
+      "bearing": {
+       "a_mm": 300,
+       "b_mm": 400,
+       "family": "laminated_elastomeric",
+       "fixed": false,
+       "n_layers": 5,
+       "per_girder_end": 1,
+       "sliding": true,
+       "t1_mm": 8
+      },
+      "index": 2,
+      "kind": "pier",
+      "pier": null
+     },
+     {
+      "bearing": {
+       "a_mm": 300,
+       "b_mm": 400,
+       "family": "laminated_elastomeric",
+       "fixed": false,
+       "n_layers": 5,
+       "per_girder_end": 1,
+       "sliding": true,
+       "t1_mm": 8
+      },
+      "index": 3,
+      "kind": "pier",
+      "pier": null
+     },
+     {
+      "bearing": {
+       "a_mm": 300,
+       "b_mm": 400,
+       "family": "laminated_elastomeric",
+       "fixed": true,
+       "n_layers": 5,
+       "per_girder_end": 1,
+       "sliding": false,
+       "t1_mm": 8
+      },
+      "index": 4,
+      "kind": "pier",
+      "pier": null
+     },
+     {
+      "bearing": {
+       "a_mm": 300,
+       "b_mm": 400,
+       "family": "laminated_elastomeric",
+       "fixed": true,
+       "n_layers": 5,
+       "per_girder_end": 1,
+       "sliding": false,
+       "t1_mm": 8
+      },
+      "index": 5,
+      "kind": "pier",
+      "pier": null
+     },
+     {
+      "bearing": {
+       "a_mm": 300,
+       "b_mm": 400,
+       "family": "laminated_elastomeric",
+       "fixed": false,
+       "n_layers": 5,
+       "per_girder_end": 1,
+       "sliding": true,
+       "t1_mm": 8
+      },
+      "index": 6,
+      "kind": "pier",
+      "pier": null
+     },
+     {
+      "bearing": {
+       "a_mm": 300,
+       "b_mm": 400,
+       "family": "laminated_elastomeric",
+       "fixed": false,
+       "n_layers": 5,
+       "per_girder_end": 1,
+       "sliding": true,
+       "t1_mm": 8
+      },
+      "index": 7,
+      "kind": "pier",
+      "pier": null
+     },
+     {
+      "bearing": {
+       "a_mm": 300,
+       "b_mm": 400,
+       "family": "laminated_elastomeric",
+       "fixed": false,
+       "n_layers": 5,
+       "per_girder_end": 1,
+       "sliding": true,
+       "t1_mm": 8
+      },
+      "index": 8,
+      "kind": "abutment",
+      "pier": null
+     }
+    ]
+   },
+   "result": {
+    "ok": true,
+    "issues": [],
+    "round": 2
+   }
+  },
+  {
+   "t": 8.501,
+   "tool": "declare_decisions",
+   "args": {
+    "slots": [
+     "structure.idealization",
+     "structure.system",
+     "girder.A",
+     "girder.I",
+     "girder.Ec",
+     "girder.gamma",
+     "girder.w",
+     "girder.m",
+     "support.0.bearing",
+     "support.0.dofs",
+     "support.0.S",
+     "support.0.Kv",
+     "support.0.Kh",
+     "support.1.bearing",
+     "support.1.dofs",
+     "support.1.S",
+     "support.1.Kv",
+     "support.1.Kh",
+     "support.2.bearing",
+     "support.2.dofs",
+     "support.2.S",
+     "support.2.Kv",
+     "support.2.Kh",
+     "support.3.bearing",
+     "support.3.dofs",
+     "support.3.S",
+     "support.3.Kv",
+     "support.3.Kh",
+     "support.4.bearing",
+     "support.4.dofs",
+     "support.4.S",
+     "support.4.Kv",
+     "support.4.Kh",
+     "support.5.bearing",
+     "support.5.dofs",
+     "support.5.S",
+     "support.5.Kv",
+     "support.5.Kh",
+     "support.6.bearing",
+     "support.6.dofs",
+     "support.6.S",
+     "support.6.Kv",
+     "support.6.Kh",
+     "support.7.bearing",
+     "support.7.dofs",
+     "support.7.S",
+     "support.7.Kv",
+     "support.7.Kh",
+     "support.8.bearing",
+     "support.8.dofs",
+     "support.8.S",
+     "support.8.Kv",
+     "support.8.Kh",
+     "lane.n_lanes",
+     "lane.xi",
+     "lane.qk",
+     "lane.Pk.1",
+     "lane.Pk.2",
+     "lane.Pk.3",
+     "lane.Pk.4",
+     "lane.Pk.5",
+     "lane.Pk.6",
+     "lane.Pk.7",
+     "lane.Pk.8",
+     "lane.mu"
+    ],
+    "replace": false
+   },
+   "result": {
+    "complete": false,
+    "declared_so_far": 65,
+    "missing": [
+     "girder.single.A",
+     "girder.single.I"
+    ],
+    "not_required_ignored": [],
+    "note": "declarations accumulate across calls; declare the missing slots next",
+    "constraint": "C-13/T-templates"
+   }
+  },
+  {
+   "t": 9.214,
+   "tool": "declare_decisions",
+   "args": {
+    "slots": [
+     "girder.single.A",
+     "girder.single.I"
+    ],
+    "replace": false
+   },
+   "result": {
+    "complete": true,
+    "declared_so_far": 67,
+    "missing": [],
+    "not_required_ignored": [],
+    "note": "declarations accumulate across calls; declare the missing slots next",
+    "constraint": "C-13/T-templates"
+   }
+  },
+  {
+   "t": 10.555,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "structure.idealization",
+    "value": "spine_beam_2d",
+    "unit": "-",
+    "evidence": [
+     "MR-01"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "structure.idealization",
+    "decision_id": "dec:structure.idealization"
+   }
+  },
+  {
+   "t": 10.555,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "structure.system",
+    "value": "continuous",
+    "unit": "-",
+    "evidence": [
+     "MR-05"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "structure.system",
+    "decision_id": "dec:structure.system"
+   }
+  },
+  {
+   "t": 12.656,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "girder.single.A",
+    "value": 0.862,
+    "unit": "m^2",
+    "evidence": [
+     "MR-02"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "girder.single.A",
+    "decision_id": "dec:girder.single.A"
+   }
+  },
+  {
+   "t": 12.656,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "girder.single.I",
+    "value": 0.444998,
+    "unit": "m^4",
+    "evidence": [
+     "MR-02"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "girder.single.I",
+    "decision_id": "dec:girder.single.I"
+   }
+  },
+  {
+   "t": 12.656,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "girder.A",
+    "value": 4.31,
+    "unit": "m^2",
+    "evidence": [
+     "MR-02"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "girder.A",
+    "decision_id": "dec:girder.A"
+   }
+  },
+  {
+   "t": 12.656,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "girder.I",
+    "value": 2.2249905,
+    "unit": "m^4",
+    "evidence": [
+     "MR-02"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "girder.I",
+    "decision_id": "dec:girder.I"
+   }
+  },
+  {
+   "t": 13.834,
+   "tool": "execute_formula",
+   "args": {
+    "node_id": "JTG3362-3.1.5",
+    "slot": "girder.Ec"
+   },
+   "result": {
+    "value": 34500.0,
+    "inputs": {
+     "grade": "C50"
+    },
+    "applicable_to_this_bridge": true,
+    "applicability": "grade in EC_TABLE and not has_override"
+   }
+  },
+  {
+   "t": 13.834,
+   "tool": "execute_formula",
+   "args": {
+    "node_id": "JTGD60-4.2.1",
+    "slot": "girder.gamma"
+   },
+   "result": {
+    "value": 26.0,
+    "inputs": {},
+    "applicable_to_this_bridge": true,
+    "applicability": "material == 'prestressed_concrete' and not has_override"
+   }
+  },
+  {
+   "t": 15.006,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "girder.Ec",
+    "value": 34500.0,
+    "unit": "MPa",
+    "evidence": [
+     "JTG3362-3.1.5"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "girder.Ec",
+    "decision_id": "dec:girder.Ec"
+   }
+  },
+  {
+   "t": 15.006,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "girder.gamma",
+    "value": 26.0,
+    "unit": "kN/m^3",
+    "evidence": [
+     "JTGD60-4.2.1"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "girder.gamma",
+    "decision_id": "dec:girder.gamma"
+   }
+  },
+  {
+   "t": 15.606,
+   "tool": "execute_formula",
+   "args": {
+    "node_id": "MR-07",
+    "slot": "girder.w"
+   },
+   "result": {
+    "value": 112.05999999999999,
+    "inputs": {
+     "A": 4.31,
+     "gamma": 26.0
+    },
+    "applicable_to_this_bridge": true,
+    "applicability": "True"
+   }
+  },
+  {
+   "t": 17.666,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "girder.w",
+    "value": 112.06,
+    "unit": "kN/m",
+    "evidence": [
+     "MR-07"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "girder.w",
+    "decision_id": "dec:girder.w"
+   }
+  },
+  {
+   "t": 18.463,
+   "tool": "execute_formula",
+   "args": {
+    "node_id": "MR-07",
+    "slot": "girder.m"
+   },
+   "result": {
+    "value": 11.423037716615697,
+    "inputs": {
+     "A": 4.31,
+     "gamma": 26.0,
+     "w": 112.06
+    },
+    "applicable_to_this_bridge": true,
+    "applicability": "True"
+   }
+  },
+  {
+   "t": 19.765,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "girder.m",
+    "value": 11.423,
+    "unit": "t/m",
+    "evidence": [
+     "MR-07"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "girder.m",
+    "decision_id": "dec:girder.m"
+   }
+  },
+  {
+   "t": 24.235,
+   "tool": "execute_formula",
+   "args": {
+    "node_id": "JTG3362-8.7-S",
+    "slot": "support.0.S"
+   },
+   "result": {
+    "value": 10.714285714285714,
+    "inputs": {
+     "a": 0.3,
+     "b": 0.4,
+     "t1": 0.008
+    },
+    "applicable_to_this_bridge": true,
+    "applicability": "family == 'laminated_elastomeric'"
+   }
+  },
+  {
+   "t": 24.235,
+   "tool": "execute_formula",
+   "args": {
+    "node_id": "JTG3362-8.7-Kv",
+    "slot": "support.0.Kv"
+   },
+   "result": {
+    "value": 7098344.693281403,
+    "inputs": {
+     "Eb": 2000.0,
+     "Ge": 1.0,
+     "a": 0.3,
+     "b": 0.4,
+     "count": 5,
+     "t1": 0.008,
+     "te": 0.04
+    },
+    "applicable_to_this_bridge": true,
+    "applicability": "family == 'laminated_elastomeric'"
+   }
+  },
+  {
+   "t": 24.235,
+   "tool": "execute_formula",
+   "args": {
+    "node_id": "JTG3362-8.7-Kh",
+    "slot": "support.0.Kh"
+   },
+   "result": {
+    "value": 15000.000000000002,
+    "inputs": {
+     "Ge": 1.0,
+     "a": 0.3,
+     "b": 0.4,
+     "count": 5,
+     "te": 0.04
+    },
+    "applicable_to_this_bridge": false,
+    "applicability": "family == 'laminated_elastomeric' and not sliding"
+   }
+  },
+  {
+   "t": 26.207,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.0.bearing",
+    "value": {
+     "type": "ptfe_sliding",
+     "count": 5
+    },
+    "unit": "-",
+    "evidence": [
+     "MR-04",
+     "INPUT:supports[0].bearing.per_girder_end",
+     "INPUT:girder.count_per_span"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.0.bearing",
+    "decision_id": "dec:support.0.bearing"
+   }
+  },
+  {
+   "t": 26.208,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.0.dofs",
+    "value": {
+     "vertical": "spring",
+     "longitudinal": "free",
+     "rotation": "free"
+    },
+    "unit": "-",
+    "evidence": [
+     "MR-03"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.0.dofs",
+    "decision_id": "dec:support.0.dofs"
+   }
+  },
+  {
+   "t": 26.208,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.0.S",
+    "value": 10.714286,
+    "unit": "-",
+    "evidence": [
+     "JTG3362-8.7-S"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.0.S",
+    "decision_id": "dec:support.0.S"
+   }
+  },
+  {
+   "t": 26.209,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.0.Kv",
+    "value": 7098344.693,
+    "unit": "kN/m",
+    "evidence": [
+     "JTG3362-8.7-Kv"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.0.Kv",
+    "decision_id": "dec:support.0.Kv"
+   }
+  },
+  {
+   "t": 26.209,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.0.Kh",
+    "value": 0.0,
+    "unit": "kN/m",
+    "evidence": [
+     "MR-03"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.0.Kh",
+    "decision_id": "dec:support.0.Kh"
+   }
+  },
+  {
+   "t": 30.881,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.1.bearing",
+    "value": {
+     "type": "ptfe_sliding",
+     "count": 5
+    },
+    "unit": "-",
+    "evidence": [
+     "MR-04",
+     "INPUT:supports[1].bearing.per_girder_end",
+     "INPUT:girder.count_per_span"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.1.bearing",
+    "decision_id": "dec:support.1.bearing"
+   }
+  },
+  {
+   "t": 30.881,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.1.dofs",
+    "value": {
+     "vertical": "spring",
+     "longitudinal": "free",
+     "rotation": "free"
+    },
+    "unit": "-",
+    "evidence": [
+     "MR-03"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.1.dofs",
+    "decision_id": "dec:support.1.dofs"
+   }
+  },
+  {
+   "t": 30.881,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.1.S",
+    "value": 10.714286,
+    "unit": "-",
+    "evidence": [
+     "JTG3362-8.7-S"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.1.S",
+    "decision_id": "dec:support.1.S"
+   }
+  },
+  {
+   "t": 30.881,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.1.Kv",
+    "value": 7098344.693,
+    "unit": "kN/m",
+    "evidence": [
+     "JTG3362-8.7-Kv"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.1.Kv",
+    "decision_id": "dec:support.1.Kv"
+   }
+  },
+  {
+   "t": 30.882,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.1.Kh",
+    "value": 0.0,
+    "unit": "kN/m",
+    "evidence": [
+     "MR-03"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.1.Kh",
+    "decision_id": "dec:support.1.Kh"
+   }
+  },
+  {
+   "t": 30.882,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.2.bearing",
+    "value": {
+     "type": "ptfe_sliding",
+     "count": 5
+    },
+    "unit": "-",
+    "evidence": [
+     "MR-04",
+     "INPUT:supports[2].bearing.per_girder_end",
+     "INPUT:girder.count_per_span"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.2.bearing",
+    "decision_id": "dec:support.2.bearing"
+   }
+  },
+  {
+   "t": 30.882,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.2.dofs",
+    "value": {
+     "vertical": "spring",
+     "longitudinal": "free",
+     "rotation": "free"
+    },
+    "unit": "-",
+    "evidence": [
+     "MR-03"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.2.dofs",
+    "decision_id": "dec:support.2.dofs"
+   }
+  },
+  {
+   "t": 30.883,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.2.S",
+    "value": 10.714286,
+    "unit": "-",
+    "evidence": [
+     "JTG3362-8.7-S"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.2.S",
+    "decision_id": "dec:support.2.S"
+   }
+  },
+  {
+   "t": 30.883,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.2.Kv",
+    "value": 7098344.693,
+    "unit": "kN/m",
+    "evidence": [
+     "JTG3362-8.7-Kv"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.2.Kv",
+    "decision_id": "dec:support.2.Kv"
+   }
+  },
+  {
+   "t": 30.883,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.2.Kh",
+    "value": 0.0,
+    "unit": "kN/m",
+    "evidence": [
+     "MR-03"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.2.Kh",
+    "decision_id": "dec:support.2.Kh"
+   }
+  },
+  {
+   "t": 30.883,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.3.bearing",
+    "value": {
+     "type": "ptfe_sliding",
+     "count": 5
+    },
+    "unit": "-",
+    "evidence": [
+     "MR-04",
+     "INPUT:supports[3].bearing.per_girder_end",
+     "INPUT:girder.count_per_span"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.3.bearing",
+    "decision_id": "dec:support.3.bearing"
+   }
+  },
+  {
+   "t": 30.884,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.3.dofs",
+    "value": {
+     "vertical": "spring",
+     "longitudinal": "free",
+     "rotation": "free"
+    },
+    "unit": "-",
+    "evidence": [
+     "MR-03"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.3.dofs",
+    "decision_id": "dec:support.3.dofs"
+   }
+  },
+  {
+   "t": 30.884,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.3.S",
+    "value": 10.714286,
+    "unit": "-",
+    "evidence": [
+     "JTG3362-8.7-S"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.3.S",
+    "decision_id": "dec:support.3.S"
+   }
+  },
+  {
+   "t": 30.884,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.3.Kv",
+    "value": 7098344.693,
+    "unit": "kN/m",
+    "evidence": [
+     "JTG3362-8.7-Kv"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.3.Kv",
+    "decision_id": "dec:support.3.Kv"
+   }
+  },
+  {
+   "t": 30.884,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.3.Kh",
+    "value": 0.0,
+    "unit": "kN/m",
+    "evidence": [
+     "MR-03"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.3.Kh",
+    "decision_id": "dec:support.3.Kh"
+   }
+  },
+  {
+   "t": 34.286,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.4.bearing",
+    "value": {
+     "type": "plain_elastomeric",
+     "count": 5
+    },
+    "unit": "-",
+    "evidence": [
+     "MR-04",
+     "INPUT:supports[4].bearing.per_girder_end",
+     "INPUT:girder.count_per_span"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.4.bearing",
+    "decision_id": "dec:support.4.bearing"
+   }
+  },
+  {
+   "t": 34.287,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.4.dofs",
+    "value": {
+     "vertical": "spring",
+     "longitudinal": "spring",
+     "rotation": "free"
+    },
+    "unit": "-",
+    "evidence": [
+     "MR-03"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.4.dofs",
+    "decision_id": "dec:support.4.dofs"
+   }
+  },
+  {
+   "t": 34.287,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.4.S",
+    "value": 10.714286,
+    "unit": "-",
+    "evidence": [
+     "JTG3362-8.7-S"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.4.S",
+    "decision_id": "dec:support.4.S"
+   }
+  },
+  {
+   "t": 34.287,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.4.Kv",
+    "value": 7098344.693,
+    "unit": "kN/m",
+    "evidence": [
+     "JTG3362-8.7-Kv"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.4.Kv",
+    "decision_id": "dec:support.4.Kv"
+   }
+  },
+  {
+   "t": 34.289,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.4.Kh",
+    "value": 15000.0,
+    "unit": "kN/m",
+    "evidence": [
+     "JTG3362-8.7-Kh"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.4.Kh",
+    "decision_id": "dec:support.4.Kh"
+   }
+  },
+  {
+   "t": 34.29,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.5.bearing",
+    "value": {
+     "type": "plain_elastomeric",
+     "count": 5
+    },
+    "unit": "-",
+    "evidence": [
+     "MR-04",
+     "INPUT:supports[5].bearing.per_girder_end",
+     "INPUT:girder.count_per_span"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.5.bearing",
+    "decision_id": "dec:support.5.bearing"
+   }
+  },
+  {
+   "t": 34.292,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.5.dofs",
+    "value": {
+     "vertical": "spring",
+     "longitudinal": "spring",
+     "rotation": "free"
+    },
+    "unit": "-",
+    "evidence": [
+     "MR-03"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.5.dofs",
+    "decision_id": "dec:support.5.dofs"
+   }
+  },
+  {
+   "t": 34.293,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.5.S",
+    "value": 10.714286,
+    "unit": "-",
+    "evidence": [
+     "JTG3362-8.7-S"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.5.S",
+    "decision_id": "dec:support.5.S"
+   }
+  },
+  {
+   "t": 34.294,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.5.Kv",
+    "value": 7098344.693,
+    "unit": "kN/m",
+    "evidence": [
+     "JTG3362-8.7-Kv"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.5.Kv",
+    "decision_id": "dec:support.5.Kv"
+   }
+  },
+  {
+   "t": 34.294,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.5.Kh",
+    "value": 15000.0,
+    "unit": "kN/m",
+    "evidence": [
+     "JTG3362-8.7-Kh"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.5.Kh",
+    "decision_id": "dec:support.5.Kh"
+   }
+  },
+  {
+   "t": 38.857,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.6.bearing",
+    "value": {
+     "type": "ptfe_sliding",
+     "count": 5
+    },
+    "unit": "-",
+    "evidence": [
+     "MR-04",
+     "INPUT:supports[6].bearing.per_girder_end",
+     "INPUT:girder.count_per_span"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.6.bearing",
+    "decision_id": "dec:support.6.bearing"
+   }
+  },
+  {
+   "t": 38.857,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.6.dofs",
+    "value": {
+     "vertical": "spring",
+     "longitudinal": "free",
+     "rotation": "free"
+    },
+    "unit": "-",
+    "evidence": [
+     "MR-03"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.6.dofs",
+    "decision_id": "dec:support.6.dofs"
+   }
+  },
+  {
+   "t": 38.858,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.6.S",
+    "value": 10.714286,
+    "unit": "-",
+    "evidence": [
+     "JTG3362-8.7-S"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.6.S",
+    "decision_id": "dec:support.6.S"
+   }
+  },
+  {
+   "t": 38.859,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.6.Kv",
+    "value": 7098344.693,
+    "unit": "kN/m",
+    "evidence": [
+     "JTG3362-8.7-Kv"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.6.Kv",
+    "decision_id": "dec:support.6.Kv"
+   }
+  },
+  {
+   "t": 38.859,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.6.Kh",
+    "value": 0.0,
+    "unit": "kN/m",
+    "evidence": [
+     "MR-03"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.6.Kh",
+    "decision_id": "dec:support.6.Kh"
+   }
+  },
+  {
+   "t": 38.86,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.7.bearing",
+    "value": {
+     "type": "ptfe_sliding",
+     "count": 5
+    },
+    "unit": "-",
+    "evidence": [
+     "MR-04",
+     "INPUT:supports[7].bearing.per_girder_end",
+     "INPUT:girder.count_per_span"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.7.bearing",
+    "decision_id": "dec:support.7.bearing"
+   }
+  },
+  {
+   "t": 38.86,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.7.dofs",
+    "value": {
+     "vertical": "spring",
+     "longitudinal": "free",
+     "rotation": "free"
+    },
+    "unit": "-",
+    "evidence": [
+     "MR-03"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.7.dofs",
+    "decision_id": "dec:support.7.dofs"
+   }
+  },
+  {
+   "t": 38.861,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.7.S",
+    "value": 10.714286,
+    "unit": "-",
+    "evidence": [
+     "JTG3362-8.7-S"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.7.S",
+    "decision_id": "dec:support.7.S"
+   }
+  },
+  {
+   "t": 38.861,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.7.Kv",
+    "value": 7098344.693,
+    "unit": "kN/m",
+    "evidence": [
+     "JTG3362-8.7-Kv"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.7.Kv",
+    "decision_id": "dec:support.7.Kv"
+   }
+  },
+  {
+   "t": 38.861,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.7.Kh",
+    "value": 0.0,
+    "unit": "kN/m",
+    "evidence": [
+     "MR-03"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.7.Kh",
+    "decision_id": "dec:support.7.Kh"
+   }
+  },
+  {
+   "t": 38.862,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.8.bearing",
+    "value": {
+     "type": "ptfe_sliding",
+     "count": 5
+    },
+    "unit": "-",
+    "evidence": [
+     "MR-04",
+     "INPUT:supports[8].bearing.per_girder_end",
+     "INPUT:girder.count_per_span"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.8.bearing",
+    "decision_id": "dec:support.8.bearing"
+   }
+  },
+  {
+   "t": 38.862,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.8.dofs",
+    "value": {
+     "vertical": "spring",
+     "longitudinal": "free",
+     "rotation": "free"
+    },
+    "unit": "-",
+    "evidence": [
+     "MR-03"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.8.dofs",
+    "decision_id": "dec:support.8.dofs"
+   }
+  },
+  {
+   "t": 38.862,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.8.S",
+    "value": 10.714286,
+    "unit": "-",
+    "evidence": [
+     "JTG3362-8.7-S"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.8.S",
+    "decision_id": "dec:support.8.S"
+   }
+  },
+  {
+   "t": 38.863,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.8.Kv",
+    "value": 7098344.693,
+    "unit": "kN/m",
+    "evidence": [
+     "JTG3362-8.7-Kv"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.8.Kv",
+    "decision_id": "dec:support.8.Kv"
+   }
+  },
+  {
+   "t": 38.863,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "support.8.Kh",
+    "value": 0.0,
+    "unit": "kN/m",
+    "evidence": [
+     "MR-03"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "support.8.Kh",
+    "decision_id": "dec:support.8.Kh"
+   }
+  },
+  {
+   "t": 41.765,
+   "tool": "execute_formula",
+   "args": {
+    "node_id": "JTGD60-4.3.1-lanes",
+    "slot": "lane.n_lanes"
+   },
+   "result": {
+    "value": 3,
+    "inputs": {
+     "W": 11.5,
+     "two_way": false
+    },
+    "applicable_to_this_bridge": true,
+    "applicability": "W >= 6.0 if two_way else True"
+   }
+  },
+  {
+   "t": 41.765,
+   "tool": "execute_formula",
+   "args": {
+    "node_id": "JTGD60-4.3.1-qk",
+    "slot": "lane.qk"
+   },
+   "result": {
+    "value": 10.5,
+    "inputs": {
+     "load_class": "I"
+    },
+    "applicable_to_this_bridge": true,
+    "applicability": "load_class in ('I', 'II')"
+   }
+  },
+  {
+   "t": 41.765,
+   "tool": "execute_formula",
+   "args": {
+    "node_id": "JTGD60-4.3.1-Pk",
+    "slot": "lane.Pk.1"
+   },
+   "result": {
+    "value": 320.0,
+    "inputs": {
+     "L0": 30,
+     "load_class": "I"
+    },
+    "applicable_to_this_bridge": true,
+    "applicability": "load_class in ('I', 'II') and L0 > 0"
+   }
+  },
+  {
+   "t": 45.413,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "lane.n_lanes",
+    "value": 3,
+    "unit": "-",
+    "evidence": [
+     "JTGD60-4.3.1-lanes",
+     "INPUT:deck.carriageway_width_m",
+     "INPUT:deck.design_lanes"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "lane.n_lanes",
+    "decision_id": "dec:lane.n_lanes"
+   }
+  },
+  {
+   "t": 45.414,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "lane.xi",
+    "value": 0.78,
+    "unit": "-",
+    "evidence": [
+     "JTGD60-4.3.1-xi"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "lane.xi",
+    "decision_id": "dec:lane.xi"
+   }
+  },
+  {
+   "t": 45.414,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "lane.qk",
+    "value": 10.5,
+    "unit": "kN/m",
+    "evidence": [
+     "JTGD60-4.3.1-qk"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "lane.qk",
+    "decision_id": "dec:lane.qk"
+   }
+  },
+  {
+   "t": 45.415,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "lane.Pk.1",
+    "value": 320.0,
+    "unit": "kN",
+    "evidence": [
+     "JTGD60-4.3.1-Pk",
+     "INPUT:spans_m[0]"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "lane.Pk.1",
+    "decision_id": "dec:lane.Pk.1"
+   }
+  },
+  {
+   "t": 45.415,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "lane.Pk.2",
+    "value": 320.0,
+    "unit": "kN",
+    "evidence": [
+     "JTGD60-4.3.1-Pk",
+     "INPUT:spans_m[1]"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "lane.Pk.2",
+    "decision_id": "dec:lane.Pk.2"
+   }
+  },
+  {
+   "t": 45.416,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "lane.Pk.3",
+    "value": 320.0,
+    "unit": "kN",
+    "evidence": [
+     "JTGD60-4.3.1-Pk",
+     "INPUT:spans_m[2]"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "lane.Pk.3",
+    "decision_id": "dec:lane.Pk.3"
+   }
+  },
+  {
+   "t": 45.416,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "lane.Pk.4",
+    "value": 320.0,
+    "unit": "kN",
+    "evidence": [
+     "JTGD60-4.3.1-Pk",
+     "INPUT:spans_m[3]"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "lane.Pk.4",
+    "decision_id": "dec:lane.Pk.4"
+   }
+  },
+  {
+   "t": 45.416,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "lane.Pk.5",
+    "value": 320.0,
+    "unit": "kN",
+    "evidence": [
+     "JTGD60-4.3.1-Pk",
+     "INPUT:spans_m[4]"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "lane.Pk.5",
+    "decision_id": "dec:lane.Pk.5"
+   }
+  },
+  {
+   "t": 45.417,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "lane.Pk.6",
+    "value": 320.0,
+    "unit": "kN",
+    "evidence": [
+     "JTGD60-4.3.1-Pk",
+     "INPUT:spans_m[5]"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "lane.Pk.6",
+    "decision_id": "dec:lane.Pk.6"
+   }
+  },
+  {
+   "t": 45.417,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "lane.Pk.7",
+    "value": 320.0,
+    "unit": "kN",
+    "evidence": [
+     "JTGD60-4.3.1-Pk",
+     "INPUT:spans_m[6]"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "lane.Pk.7",
+    "decision_id": "dec:lane.Pk.7"
+   }
+  },
+  {
+   "t": 45.418,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "lane.Pk.8",
+    "value": 320.0,
+    "unit": "kN",
+    "evidence": [
+     "JTGD60-4.3.1-Pk",
+     "INPUT:spans_m[7]"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "lane.Pk.8",
+    "decision_id": "dec:lane.Pk.8"
+   }
+  },
+  {
+   "t": 46.369,
+   "tool": "run_modal_analysis",
+   "args": {},
+   "result": {
+    "ok": true,
+    "vertical_frequencies_Hz": [
+     4.519858775291279,
+     4.703843100674293,
+     5.226234756683822
+    ],
+    "fact": {
+     "f1": 4.519858775291279
+    }
+   }
+  },
+  {
+   "t": 47.62,
+   "tool": "execute_formula",
+   "args": {
+    "node_id": "JTGD60-4.3.2",
+    "slot": "lane.mu"
+   },
+   "result": {
+    "value": 0.2508485483397193,
+    "inputs": {
+     "f1": 4.519858775291279
+    },
+    "applicable_to_this_bridge": true,
+    "applicability": "has_f1"
+   }
+  },
+  {
+   "t": 48.565,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "lane.mu",
+    "value": 0.250849,
+    "unit": "-",
+    "evidence": [
+     "JTGD60-4.3.2",
+     "fact:f1"
+    ],
+    "rationale": "",
+    "attempt": 1
+   },
+   "result": {
+    "accepted": true,
+    "slot": "lane.mu",
+    "decision_id": "dec:lane.mu"
+   }
+  },
+  {
+   "t": 49.693,
+   "tool": "generate_model",
+   "args": {},
+   "result": {
+    "ok": true,
+    "script": "${PROJECT_ROOT}/runs_scale/C5/S02_r3/S02_model.py",
+    "results": {
+     "ok": true,
+     "vertical_frequencies_Hz": [
+      4.519858775291279,
+      4.703843100674293,
+      5.226234756683822
+     ],
+     "self_weight_support_reactions_kN": [
+      1327.7515093768454,
+      3807.0995205398626,
+      3245.17627683172,
+      3394.194961250719,
+      3345.9554640036486,
+      3394.1949612510252,
+      3245.1762768325466,
+      3807.0995205382897,
+      1327.7515093762368
+     ],
+     "self_weight_midspan_moments_kNm": [
+      7309.522640649335,
+      3394.5607300133415,
+      4409.7357799466035,
+      4161.479401131864,
+      4161.479401131782,
+      4409.735779949411,
+      3394.5607300136785,
+      7309.522640642659
+     ],
+     "self_weight_support_moments_kNm": [
+      -10594.454718714813,
+      -7829.923821259077,
+      -8564.10461884057,
+      -8326.436578896642,
+      -8564.104618842106,
+      -7829.923821261995,
+      -10594.45471870914
+     ],
+     "lane_moments_by_section": [
+      {
+       "section": "span",
+       "index": 1,
+       "M_kNm": 8355.781922587228
+      },
+      {
+       "section": "span",
+       "index": 2,
+       "M_kNm": 7063.946931371462
+      },
+      {
+       "section": "span",
+       "index": 3,
+       "M_kNm": 7149.770453713694
+      },
+      {
+       "section": "span",
+       "index": 4,
+       "M_kNm": 7111.8989927877055
+      },
+      {
+       "section": "span",
+       "index": 5,
+       "M_kNm": 7111.898992788694
+      },
+      {
+       "section": "span",
+       "index": 6,
+       "M_kNm": 7149.770453718508
+      },
+      {
+       "section": "span",
+       "index": 7,
+       "M_kNm": 7063.946931369364
+      },
+      {
+       "section": "span",
+       "index": 8,
+       "M_kNm": 8355.781922579406
+      },
+      {
+       "section": "support",
+       "index": 1,
+       "M_kNm": -6145.403404664067
+      },
+      {
+       "section": "support",
+       "index": 2,
+       "M_kNm": -5417.767079671353
+      },
+      {
+       "section": "support",
+       "index": 3,
+       "M_kNm": -5495.494337356045
+      },
+      {
+       "section": "support",
+       "index": 4,
+       "M_kNm": -5461.155452470695
+      },
+      {
+       "section": "support",
+       "index": 5,
+       "M_kNm": -5495.4943373581555
+      },
+      {
+       "section": "support",
+       "index": 6,
+       "M_kNm": -5417.767079670554
+      },
+      {
+       "section": "support",
+       "index": 7,
+       "M_kNm": -6145.403404660427
+      }
+     ],
+     "lane_max_positive_moment_kNm": 8355.781922587228,
+     "lane_max_negative_moment_kNm": -6145.403404664067
+    }
+   }
+  },
+  {
+   "t": 52.635,
+   "tool": "finish",
+   "args": {
+    "summary": "Built a 2D spine-beam OpenSeesPy model of an 8×30 m continuous precast T-girder unit (simply supported during erection, made continuous in service), 12.5 m deck, 5 girders per span.\n\nKey modeling decisions:\n- Idealization: spine_beam_2d (MR-01); system \"continuous\" (MR-05) — support lines named Pier 1–7 have no pier-column geometry, so they are modeled as bearings on rigid supports.\n- Girder section (T-girder, C50): single-girder A=0.862 m², I=0.445 m⁴; 5 girders combined → A=4.31 m², I=2.225 m⁴ (MR-02). Ec=34500 MPa (JTG 3362 3.1.5); γ=26 kN/m³ (JTG D60 4.2.1, prestressed concrete upper bound); w=112.06 kN/m, m=11.423 t/m (MR-07, girder self-weight only).\n- Bearings: 9 support lines, each with 5 bearings (1 per girder end). Abutments 0,8 and Piers 1,2,3,6,7 = PTFE sliding laminated elastomeric (longitudinal free, Kh=0); Piers 4,5 = plain laminated elastomeric fixed (longitudinal spring, Kh=15000 kN/m). All laminated: 300×400 mm, 5×8 mm layers, Ge=1.0 MPa (JTG 3362 8.7), S=10.714, Kv=7.098×10⁶ kN/m per line; rotation free (MR-03, MR-04).\n- Live load: JTG D60-2015 Class I, one-way, 3 design lanes (11.5 m carriageway) → ξ=0.78, qk=10.5 kN/m, Pk=320 kN per 30 m span. Modal f1=4.52 Hz → impact factor μ=0.2508 (JTG D60 4.3.2).\n\nResults: first three vertical frequencies 4.52/4.70/5.23 Hz; max self-weight reaction 3807 kN at interior piers 1 and 7; lane-load max positive moment 8356 kN·m, max negative 6145 kN·m. All L1/L2/L3 checks passed."
+   },
+   "result": {
+    "ok": true
+   }
+  }
+ ]
+}

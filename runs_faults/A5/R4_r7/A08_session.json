@@ -1,0 +1,581 @@
+{
+ "metrics": {
+  "proposals": 29,
+  "slots_proposed": 25,
+  "first_proposal_violation_rate": 0.0,
+  "violations_by_check": {},
+  "instance_rounds": 1,
+  "repair_rounds": 1,
+  "model_passed": true,
+  "elapsed_s": 25.6
+ },
+ "decisions": {
+  "structure.idealization": {
+   "id": "dec:structure.idealization",
+   "slot": "structure.idealization",
+   "value": "spine_beam_2d",
+   "unit": "-",
+   "evidence": [
+    "MR-01"
+   ]
+  },
+  "structure.system": {
+   "id": "dec:structure.system",
+   "slot": "structure.system",
+   "value": "simply_supported",
+   "unit": "-",
+   "evidence": [
+    "MR-05"
+   ]
+  },
+  "girder.single.A": {
+   "id": "dec:girder.single.A",
+   "slot": "girder.single.A",
+   "value": 1.1389287499999998,
+   "unit": "m^2",
+   "evidence": [
+    "MR-02"
+   ]
+  },
+  "girder.single.I": {
+   "id": "dec:girder.single.I",
+   "slot": "girder.single.I",
+   "value": 0.3549168491421879,
+   "unit": "m^4",
+   "evidence": [
+    "MR-02"
+   ]
+  },
+  "girder.A": {
+   "id": "dec:girder.A",
+   "slot": "girder.A",
+   "value": 3.41678625,
+   "unit": "m^2",
+   "evidence": [
+    "MR-02",
+    "INPUT:girder.count_per_span",
+    "dec:girder.single.A"
+   ]
+  },
+  "girder.I": {
+   "id": "dec:girder.I",
+   "slot": "girder.I",
+   "value": 1.0647505474265637,
+   "unit": "m^4",
+   "evidence": [
+    "MR-02",
+    "INPUT:girder.count_per_span",
+    "dec:girder.single.I"
+   ]
+  },
+  "girder.Ec": {
+   "id": "dec:girder.Ec",
+   "slot": "girder.Ec",
+   "value": 32500.0,
+   "unit": "MPa",
+   "evidence": [
+    "JTG3362-3.1.5"
+   ]
+  },
+  "girder.gamma": {
+   "id": "dec:girder.gamma",
+   "slot": "girder.gamma",
+   "value": 26.0,
+   "unit": "kN/m^3",
+   "evidence": [
+    "JTGD60-4.2.1"
+   ]
+  },
+  "girder.w": {
+   "id": "dec:girder.w",
+   "slot": "girder.w",
+   "value": 88.8364425,
+   "unit": "kN/m",
+   "evidence": [
+    "MR-07",
+    "dec:girder.A",
+    "dec:girder.gamma"
+   ]
+  },
+  "girder.m": {
+   "id": "dec:girder.m",
+   "slot": "girder.m",
+   "value": 9.055702599388377,
+   "unit": "t/m",
+   "evidence": [
+    "MR-07",
+    "dec:girder.w"
+   ]
+  },
+  "lane.n_lanes": {
+   "id": "dec:lane.n_lanes",
+   "slot": "lane.n_lanes",
+   "value": 2,
+   "unit": "-",
+   "evidence": [
+    "JTGD60-4.3.1-lanes"
+   ]
+  },
+  "lane.xi": {
+   "id": "dec:lane.xi",
+   "slot": "lane.xi",
+   "value": 1.0,
+   "unit": "-",
+   "evidence": [
+    "JTGD60-4.3.1-xi"
+   ]
+  },
+  "lane.qk": {
+   "id": "dec:lane.qk",
+   "slot": "lane.qk",
+   "value": 7.875,
+   "unit": "kN/m",
+   "evidence": [
+    "JTGD60-4.3.1-qk"
+   ]
+  },
+  "lane.Pk.1": {
+   "id": "dec:lane.Pk.1",
+   "slot": "lane.Pk.1",
+   "value": 240.0,
+   "unit": "kN",
+   "evidence": [
+    "JTGD60-4.3.1-Pk"
+   ]
+  },
+  "support.0.bearing": {
+   "id": "dec:support.0.bearing",
+   "slot": "support.0.bearing",
+   "value": {
+    "type": "plain_elastomeric",
+    "count": 6
+   },
+   "unit": "-",
+   "evidence": [
+    "MR-04"
+   ]
+  },
+  "support.0.dofs": {
+   "id": "dec:support.0.dofs",
+   "slot": "support.0.dofs",
+   "value": {
+    "vertical": "spring",
+    "longitudinal": "spring",
+    "rotation": "free"
+   },
+   "unit": "-",
+   "evidence": [
+    "MR-03"
+   ]
+  },
+  "support.0.S": {
+   "id": "dec:support.0.S",
+   "slot": "support.0.S",
+   "value": 10.714285714285714,
+   "unit": "-",
+   "evidence": [
+    "JTG3362-8.7-S"
+   ]
+  },
+  "support.0.Kv": {
+   "id": "dec:support.0.Kv",
+   "slot": "support.0.Kv",
+   "value": 8518013.631937683,
+   "unit": "kN/m",
+   "evidence": [
+    "JTG3362-8.7-Kv"
+   ]
+  },
+  "support.0.Kh": {
+   "id": "dec:support.0.Kh",
+   "slot": "support.0.Kh",
+   "value": 18000.0,
+   "unit": "kN/m",
+   "evidence": [
+    "JTG3362-8.7-Kh"
+   ]
+  },
+  "support.1.bearing": {
+   "id": "dec:support.1.bearing",
+   "slot": "support.1.bearing",
+   "value": {
+    "type": "plain_elastomeric",
+    "count": 6
+   },
+   "unit": "-",
+   "evidence": [
+    "MR-04"
+   ]
+  },
+  "support.1.dofs": {
+   "id": "dec:support.1.dofs",
+   "slot": "support.1.dofs",
+   "value": {
+    "vertical": "spring",
+    "longitudinal": "spring",
+    "rotation": "free"
+   },
+   "unit": "-",
+   "evidence": [
+    "MR-03"
+   ]
+  },
+  "support.1.S": {
+   "id": "dec:support.1.S",
+   "slot": "support.1.S",
+   "value": 10.714285714285714,
+   "unit": "-",
+   "evidence": [
+    "JTG3362-8.7-S"
+   ]
+  },
+  "support.1.Kv": {
+   "id": "dec:support.1.Kv",
+   "slot": "support.1.Kv",
+   "value": 8518013.631937683,
+   "unit": "kN/m",
+   "evidence": [
+    "JTG3362-8.7-Kv"
+   ]
+  },
+  "support.1.Kh": {
+   "id": "dec:support.1.Kh",
+   "slot": "support.1.Kh",
+   "value": 18000.0,
+   "unit": "kN/m",
+   "evidence": [
+    "JTG3362-8.7-Kh"
+   ]
+  },
+  "lane.mu": {
+   "id": "dec:lane.mu",
+   "slot": "lane.mu",
+   "value": 0.20062873542242143,
+   "unit": "-",
+   "evidence": [
+    "JTGD60-4.3.2"
+   ]
+  }
+ },
+ "facts": {
+  "f1": 3.4016863072693493
+ },
+ "instance": {
+  "supports": [
+   {
+    "index": 0,
+    "kind": "abutment",
+    "pier": null,
+    "bearing": {
+     "family": "laminated_elastomeric",
+     "sliding": false,
+     "fixed": true,
+     "per_girder_end": 2,
+     "per_line": null,
+     "a_mm": 300.0,
+     "b_mm": 400.0,
+     "n_layers": 5,
+     "t1_mm": 8.0,
+     "Ge_MPa": null
+    }
+   },
+   {
+    "index": 1,
+    "kind": "abutment",
+    "pier": null,
+    "bearing": {
+     "family": "laminated_elastomeric",
+     "sliding": false,
+     "fixed": true,
+     "per_girder_end": 2,
+     "per_line": null,
+     "a_mm": 300.0,
+     "b_mm": 400.0,
+     "n_layers": 5,
+     "t1_mm": 8.0,
+     "Ge_MPa": null
+    }
+   }
+  ],
+  "dead_load": "girder_self_weight_only",
+  "structure_type": "simply_supported",
+  "spans_m": [
+   30.0
+  ],
+  "girder": {
+   "material": "prestressed_concrete",
+   "E_override_MPa": null,
+   "gamma_override_kNm3": null,
+   "concrete": "C40",
+   "type": "small_box",
+   "section": {
+    "h": 1.6,
+    "b_top": 2.4,
+    "t_tip": 0.18,
+    "haunch_rise": 0.063,
+    "haunch_len": 0.192,
+    "b_bottom": 1.0,
+    "t_bottom": 0.18,
+    "t_top": 0.18,
+    "t_web": 0.2,
+    "web_slope": 4.0,
+    "chamfer_w": 0.15,
+    "chamfer_h": 0.07
+   },
+   "count_per_span": 3
+  },
+  "deck": {
+   "deck_width_m": 10.0,
+   "carriageway_width_m": 9.0,
+   "traffic": "two_way",
+   "design_lanes": 2,
+   "load_class": "II"
+  }
+ },
+ "results": {
+  "ok": true,
+  "vertical_frequencies_Hz": [
+   3.4016863072693493,
+   13.485496873383713,
+   29.875579223282575
+  ],
+  "self_weight_support_reactions_kN": [
+   1332.5466374995033,
+   1332.5466374996597
+  ],
+  "self_weight_midspan_moments_kNm": [
+   9994.09978124682
+  ],
+  "self_weight_support_moments_kNm": [],
+  "lane_moments_by_section": [
+   {
+    "section": "span",
+    "index": 1,
+    "M_kNm": 6449.627488095705
+   }
+  ],
+  "lane_max_positive_moment_kNm": 6449.627488095705,
+  "lane_max_negative_moment_kNm": null
+ },
+ "last_check": [],
+ "role_log": [],
+ "log": [
+  {
+   "t": 0.121,
+   "tool": "generate_model",
+   "args": {},
+   "result": {
+    "ok": false,
+    "stage": "model_checks",
+    "failed_checks": [
+     {
+      "constraint": "L2-1",
+      "text": "模型中每个构件的参数与其溯源决策一致，且按规则层 / 规范层公式复算成立",
+      "message": "model check failed",
+      "suspect_decisions": []
+     },
+     {
+      "constraint": "L2-1",
+      "text": "模型中每个构件的参数与其溯源决策一致，且按规则层 / 规范层公式复算成立",
+      "message": "model check failed",
+      "suspect_decisions": []
+     },
+     {
+      "constraint": "L3-2",
+      "text": "总自重等于重度 × 截面面积 × 桥长（工程量）",
+      "message": "model check failed",
+      "suspect_decisions": []
+     }
+    ],
+    "repair_round": 1
+   }
+  },
+  {
+   "t": 13.819,
+   "tool": "execute_formula",
+   "args": {
+    "node_id": "JTG3362-8.7-S",
+    "slot": "support.0.S"
+   },
+   "result": {
+    "value": 10.714285714285714,
+    "inputs": {
+     "a": 0.3,
+     "b": 0.4,
+     "t1": 0.008
+    },
+    "applicable_to_this_bridge": true,
+    "applicability": "family == 'laminated_elastomeric'"
+   }
+  },
+  {
+   "t": 13.819,
+   "tool": "execute_formula",
+   "args": {
+    "node_id": "JTG3362-8.7-Kv",
+    "slot": "support.0.Kv"
+   },
+   "result": {
+    "value": 8518013.631937683,
+    "inputs": {
+     "Eb": 2000.0,
+     "Ge": 1.0,
+     "a": 0.3,
+     "b": 0.4,
+     "count": 6,
+     "t1": 0.008,
+     "te": 0.04
+    },
+    "applicable_to_this_bridge": true,
+    "applicability": "family == 'laminated_elastomeric'"
+   }
+  },
+  {
+   "t": 13.82,
+   "tool": "execute_formula",
+   "args": {
+    "node_id": "JTG3362-8.7-Kh",
+    "slot": "support.0.Kh"
+   },
+   "result": {
+    "value": 18000.0,
+    "inputs": {
+     "Ge": 1.0,
+     "a": 0.3,
+     "b": 0.4,
+     "count": 6,
+     "te": 0.04
+    },
+    "applicable_to_this_bridge": true,
+    "applicability": "family == 'laminated_elastomeric' and not sliding"
+   }
+  },
+  {
+   "t": 17.77,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "girder.A",
+    "value": 3.41678625,
+    "unit": "m^2",
+    "evidence": [
+     "MR-02",
+     "INPUT:girder.count_per_span",
+     "dec:girder.single.A"
+    ],
+    "rationale": "MR-02: for precast girders the combined single-beam A = A_single × n_girders = 1.13892875 × 3 = 3.41678625 m². The previously accepted value used the single-girder area, inconsistent with girder.w = γ·A_combined.",
+    "attempt": 2
+   },
+   "result": {
+    "accepted": true,
+    "slot": "girder.A",
+    "decision_id": "dec:girder.A"
+   }
+  },
+  {
+   "t": 20.24,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "girder.w",
+    "value": 88.8364425,
+    "unit": "kN/m",
+    "evidence": [
+     "MR-07",
+     "dec:girder.A",
+     "dec:girder.gamma"
+    ],
+    "rationale": "MR-07: w = γ·A = 26.0 × 3.41678625 = 88.8364425 kN/m (combined 3-girder spine-beam section).",
+    "attempt": 2
+   },
+   "result": {
+    "accepted": true,
+    "slot": "girder.w",
+    "decision_id": "dec:girder.w"
+   }
+  },
+  {
+   "t": 20.24,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "girder.m",
+    "value": 9.055702599388377,
+    "unit": "t/m",
+    "evidence": [
+     "MR-07",
+     "dec:girder.w"
+    ],
+    "rationale": "MR-07: m = w/9.81 = 88.8364425/9.81 = 9.05570 t/m.",
+    "attempt": 2
+   },
+   "result": {
+    "accepted": true,
+    "slot": "girder.m",
+    "decision_id": "dec:girder.m"
+   }
+  },
+  {
+   "t": 21.688,
+   "tool": "propose_decision",
+   "args": {
+    "slot": "girder.I",
+    "value": 1.0647505474265637,
+    "unit": "m^4",
+    "evidence": [
+     "MR-02",
+     "INPUT:girder.count_per_span",
+     "dec:girder.single.I"
+    ],
+    "rationale": "MR-02: combined I = I_single × n_girders = 0.354916849 × 3 = 1.064750547 m⁴.",
+    "attempt": 2
+   },
+   "result": {
+    "accepted": true,
+    "slot": "girder.I",
+    "decision_id": "dec:girder.I"
+   }
+  },
+  {
+   "t": 21.75,
+   "tool": "generate_model",
+   "args": {},
+   "result": {
+    "ok": true,
+    "script": "${PROJECT_ROOT}/runs_faults/A5/R4_r7/A08_model.py",
+    "results": {
+     "ok": true,
+     "vertical_frequencies_Hz": [
+      3.4016863072693493,
+      13.485496873383713,
+      29.875579223282575
+     ],
+     "self_weight_support_reactions_kN": [
+      1332.5466374995033,
+      1332.5466374996597
+     ],
+     "self_weight_midspan_moments_kNm": [
+      9994.09978124682
+     ],
+     "self_weight_support_moments_kNm": [],
+     "lane_moments_by_section": [
+      {
+       "section": "span",
+       "index": 1,
+       "M_kNm": 6449.627488095705
+      }
+     ],
+     "lane_max_positive_moment_kNm": 6449.627488095705,
+     "lane_max_negative_moment_kNm": null
+    }
+   }
+  },
+  {
+   "t": 25.598,
+   "tool": "finish",
+   "args": {
+    "summary": "Model built and passed all L1/L2/L3 checks.\n\nBridge: single simply supported span, 30 m bearing-centre to bearing-centre, deck width 10 m, carriageway 9 m, two-way traffic, Highway Class II (JTG D60-2015), two design lanes. Structure idealized as a spine_beam_2d with a \"simply_supported\" system.\n\nGirders: 3 precast prestressed small-box girders per span (C40, prestressed concrete), combined into one spine beam per MR-02: single midspan section A = 1.13893 m², I = 0.35492 m⁴; combined girder.A = 3.41679 m² and girder.I = 1.06475 m⁴. γ = 26.0 kN/m³ (JTGD60-4.2.1), so w = 88.836 kN/m and m = 9.0557 t/m (MR-07). Ec = 32500 MPa.\n\nBearings/boundary: plain laminated elastomeric bearings at both abutments, 2 per girder end (6 per support line), 300×400 mm effective plan, 5 internal layers × 8 mm. Shape factor S = 10.714; from JTG 3362-2018 8.7: Kv = 8.518e6 kN/m, Kh = 18000 kN/m per support line; vertical/longitudinal springs with free rotation.\n\nLive load: Class II, two lanes, ξ = 1.0, qk = 7.875 kN/m, Pk = 240 kN, impact factor μ = 0.2006 from f1 = 3.402 Hz (JTGD60-4.3.2).\n\nKey results: first three vertical frequencies 3.40 / 13.49 / 29.88 Hz; total self weight 2665.1 kN (reactions 1332.5 kN per abutment); self-weight midspan moment 9994.1 kN·m; governing live-load moment 6449.6 kN·m at midspan.\n\nRepair made: the initially accepted girder.A was the SINGLE-girder area (1.1389 m²), inconsistent with MR-02 (which requires A_single × n_girders for the merged spine beam) and with girder.w = γ·A_combined. This made the L2-1 parameter recomputation and the L3-2 total-weight check (γ × A × L) fail. Correcting girder.A to 3.41679 m² (n=3) and re-affirming the dependent girder.I, girder.w and girder.m resolved both failures; the regenerated model passes."
+   },
+   "result": {
+    "ok": true
+   }
+  }
+ ]
+}

@@ -1,0 +1,690 @@
+{
+  "n_rows": 600,
+  "summary_run_weighted": {
+    "C5": {
+      "success": 0.95,
+      "generations": 2.02,
+      "time_s": 15.344000000000001,
+      "input_k": 77.77954500000001
+    },
+    "A5": {
+      "success": 0.995,
+      "generations": 2.175,
+      "time_s": 25.769499999999997,
+      "input_k": 173.883045
+    },
+    "F0": {
+      "success": 0.99,
+      "generations": 2.575,
+      "time_s": 41.735,
+      "input_k": 331.52137000000005
+    }
+  },
+  "comparisons": [
+    {
+      "subset": "all",
+      "other": "A5",
+      "metric": "success",
+      "n_bridges": 6,
+      "bridges": [
+        "A03",
+        "A08",
+        "B03",
+        "B06",
+        "C02",
+        "C05"
+      ],
+      "bridge_equal_mean_difference": -0.055555555555555546,
+      "bootstrap_percentile_95": [
+        -0.12222222222222219,
+        -0.005555555555555554
+      ],
+      "exact_signflip_p": 0.25,
+      "bridge_differences": [
+        -0.19999999999999996,
+        0.0,
+        0.0,
+        -0.033333333333333326,
+        0.0,
+        -0.09999999999999998
+      ],
+      "holm_p_8": 0.5
+    },
+    {
+      "subset": "all",
+      "other": "A5",
+      "metric": "generations",
+      "n_bridges": 6,
+      "bridges": [
+        "A03",
+        "A08",
+        "B03",
+        "B06",
+        "C02",
+        "C05"
+      ],
+      "bridge_equal_mean_difference": -0.16527777777777777,
+      "bootstrap_percentile_95": [
+        -0.24583333333333335,
+        -0.07916666666666668
+      ],
+      "exact_signflip_p": 0.0625,
+      "bridge_differences": [
+        -0.20000000000000018,
+        -0.2666666666666666,
+        -0.2749999999999999,
+        -0.20000000000000018,
+        0.0,
+        -0.04999999999999982
+      ],
+      "holm_p_8": 0.25
+    },
+    {
+      "subset": "all",
+      "other": "A5",
+      "metric": "time_s",
+      "n_bridges": 6,
+      "bridges": [
+        "A03",
+        "A08",
+        "B03",
+        "B06",
+        "C02",
+        "C05"
+      ],
+      "bridge_equal_mean_difference": -10.029583333333335,
+      "bootstrap_percentile_95": [
+        -13.479583333333332,
+        -5.884166666666668
+      ],
+      "exact_signflip_p": 0.03125,
+      "bridge_differences": [
+        -1.6350000000000016,
+        -14.190000000000007,
+        -13.952499999999999,
+        -14.739999999999995,
+        -6.595000000000004,
+        -9.065000000000001
+      ],
+      "holm_p_8": 0.25
+    },
+    {
+      "subset": "all",
+      "other": "A5",
+      "metric": "input_k",
+      "n_bridges": 6,
+      "bridges": [
+        "A03",
+        "A08",
+        "B03",
+        "B06",
+        "C02",
+        "C05"
+      ],
+      "bridge_equal_mean_difference": -93.23548749999999,
+      "bootstrap_percentile_95": [
+        -127.26501527777778,
+        -56.33165
+      ],
+      "exact_signflip_p": 0.03125,
+      "bridge_differences": [
+        -18.207450000000037,
+        -127.45876666666669,
+        -122.52657500000001,
+        -151.7080333333333,
+        -58.48065,
+        -81.03144999999998
+      ],
+      "holm_p_8": 0.25
+    },
+    {
+      "subset": "all",
+      "other": "F0",
+      "metric": "success",
+      "n_bridges": 6,
+      "bridges": [
+        "A03",
+        "A08",
+        "B03",
+        "B06",
+        "C02",
+        "C05"
+      ],
+      "bridge_equal_mean_difference": -0.05138888888888887,
+      "bootstrap_percentile_95": [
+        -0.11805555555555552,
+        0.0027777777777777866
+      ],
+      "exact_signflip_p": 0.25,
+      "bridge_differences": [
+        -0.19999999999999996,
+        0.0,
+        0.025000000000000022,
+        -0.033333333333333326,
+        0.0,
+        -0.09999999999999998
+      ],
+      "holm_p_8": 0.5
+    },
+    {
+      "subset": "all",
+      "other": "F0",
+      "metric": "generations",
+      "n_bridges": 6,
+      "bridges": [
+        "A03",
+        "A08",
+        "B03",
+        "B06",
+        "C02",
+        "C05"
+      ],
+      "bridge_equal_mean_difference": -0.5666666666666667,
+      "bootstrap_percentile_95": [
+        -0.7861111111111111,
+        -0.37499999999999983
+      ],
+      "exact_signflip_p": 0.03125,
+      "bridge_differences": [
+        -0.4500000000000002,
+        -1.0333333333333332,
+        -0.2999999999999998,
+        -0.5666666666666669,
+        -0.2999999999999998,
+        -0.75
+      ],
+      "holm_p_8": 0.25
+    },
+    {
+      "subset": "all",
+      "other": "F0",
+      "metric": "time_s",
+      "n_bridges": 6,
+      "bridges": [
+        "A03",
+        "A08",
+        "B03",
+        "B06",
+        "C02",
+        "C05"
+      ],
+      "bridge_equal_mean_difference": -26.266666666666666,
+      "bootstrap_percentile_95": [
+        -35.23083333333333,
+        -17.470555555555556
+      ],
+      "exact_signflip_p": 0.03125,
+      "bridge_differences": [
+        -13.355000000000008,
+        -40.42666666666666,
+        -13.012500000000001,
+        -35.44333333333333,
+        -16.987499999999997,
+        -38.375
+      ],
+      "holm_p_8": 0.25
+    },
+    {
+      "subset": "all",
+      "other": "F0",
+      "metric": "input_k",
+      "n_bridges": 6,
+      "bridges": [
+        "A03",
+        "A08",
+        "B03",
+        "B06",
+        "C02",
+        "C05"
+      ],
+      "bridge_equal_mean_difference": -251.54162499999998,
+      "bootstrap_percentile_95": [
+        -352.49279829861115,
+        -158.72228611111112
+      ],
+      "exact_signflip_p": 0.03125,
+      "bridge_differences": [
+        -127.80989999999998,
+        -402.06053333333335,
+        -116.928875,
+        -304.48216666666667,
+        -158.374,
+        -399.59427500000004
+      ],
+      "holm_p_8": 0.25
+    },
+    {
+      "subset": "decision",
+      "other": "A5",
+      "metric": "success",
+      "n_bridges": 6,
+      "bridges": [
+        "A03",
+        "A08",
+        "B03",
+        "B06",
+        "C02",
+        "C05"
+      ],
+      "bridge_equal_mean_difference": 0.0,
+      "bootstrap_percentile_95": [
+        0.0,
+        0.0
+      ],
+      "exact_signflip_p": 1.0,
+      "bridge_differences": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "subset": "decision",
+      "other": "A5",
+      "metric": "generations",
+      "n_bridges": 6,
+      "bridges": [
+        "A03",
+        "A08",
+        "B03",
+        "B06",
+        "C02",
+        "C05"
+      ],
+      "bridge_equal_mean_difference": -0.15972222222222224,
+      "bootstrap_percentile_95": [
+        -0.2749999999999999,
+        -0.05694444444444454
+      ],
+      "exact_signflip_p": 0.0625,
+      "bridge_differences": [
+        -0.10000000000000009,
+        -0.3999999999999999,
+        -0.2749999999999999,
+        -0.1499999999999999,
+        0.0,
+        -0.03333333333333366
+      ]
+    },
+    {
+      "subset": "decision",
+      "other": "A5",
+      "metric": "time_s",
+      "n_bridges": 6,
+      "bridges": [
+        "A03",
+        "A08",
+        "B03",
+        "B06",
+        "C02",
+        "C05"
+      ],
+      "bridge_equal_mean_difference": -12.276250000000003,
+      "bootstrap_percentile_95": [
+        -14.404305555555558,
+        -9.921388888888893
+      ],
+      "exact_signflip_p": 0.03125,
+      "bridge_differences": [
+        -12.46,
+        -16.43,
+        -13.952499999999999,
+        -12.825,
+        -7.266666666666669,
+        -10.723333333333342
+      ]
+    },
+    {
+      "subset": "decision",
+      "other": "A5",
+      "metric": "input_k",
+      "n_bridges": 6,
+      "bridges": [
+        "A03",
+        "A08",
+        "B03",
+        "B06",
+        "C02",
+        "C05"
+      ],
+      "bridge_equal_mean_difference": -100.65220138888891,
+      "bootstrap_percentile_95": [
+        -123.05892361111114,
+        -78.68678472222223
+      ],
+      "exact_signflip_p": 0.03125,
+      "bridge_differences": [
+        -84.1548,
+        -146.42890000000006,
+        -122.52657500000001,
+        -103.47640000000006,
+        -59.0564,
+        -88.27013333333335
+      ]
+    },
+    {
+      "subset": "decision",
+      "other": "F0",
+      "metric": "success",
+      "n_bridges": 6,
+      "bridges": [
+        "A03",
+        "A08",
+        "B03",
+        "B06",
+        "C02",
+        "C05"
+      ],
+      "bridge_equal_mean_difference": 0.00416666666666667,
+      "bootstrap_percentile_95": [
+        0.0,
+        0.012500000000000011
+      ],
+      "exact_signflip_p": 1.0,
+      "bridge_differences": [
+        0.0,
+        0.0,
+        0.025000000000000022,
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "subset": "decision",
+      "other": "F0",
+      "metric": "generations",
+      "n_bridges": 6,
+      "bridges": [
+        "A03",
+        "A08",
+        "B03",
+        "B06",
+        "C02",
+        "C05"
+      ],
+      "bridge_equal_mean_difference": -0.46388888888888885,
+      "bootstrap_percentile_95": [
+        -0.7666666666666667,
+        -0.20833333333333326
+      ],
+      "exact_signflip_p": 0.03125,
+      "bridge_differences": [
+        -0.7999999999999998,
+        -1.1,
+        -0.2999999999999998,
+        -0.25,
+        -0.1333333333333333,
+        -0.20000000000000018
+      ]
+    },
+    {
+      "subset": "decision",
+      "other": "F0",
+      "metric": "time_s",
+      "n_bridges": 6,
+      "bridges": [
+        "A03",
+        "A08",
+        "B03",
+        "B06",
+        "C02",
+        "C05"
+      ],
+      "bridge_equal_mean_difference": -20.244027777777777,
+      "bootstrap_percentile_95": [
+        -28.932222222222222,
+        -12.754489583333498
+      ],
+      "exact_signflip_p": 0.03125,
+      "bridge_differences": [
+        -28.999999999999996,
+        -38.715,
+        -13.012500000000001,
+        -17.789999999999996,
+        -9.163333333333334,
+        -13.78333333333333
+      ]
+    },
+    {
+      "subset": "decision",
+      "other": "F0",
+      "metric": "input_k",
+      "n_bridges": 6,
+      "bridges": [
+        "A03",
+        "A08",
+        "B03",
+        "B06",
+        "C02",
+        "C05"
+      ],
+      "bridge_equal_mean_difference": -175.6095263888889,
+      "bootstrap_percentile_95": [
+        -267.37265,
+        -104.72335277777778
+      ],
+      "exact_signflip_p": 0.03125,
+      "bridge_differences": [
+        -235.60930000000002,
+        -385.06125,
+        -116.928875,
+        -127.28550000000003,
+        -78.4246333333333,
+        -110.34760000000001
+      ]
+    },
+    {
+      "subset": "input",
+      "other": "A5",
+      "metric": "success",
+      "n_bridges": 5,
+      "bridges": [
+        "A03",
+        "A08",
+        "B06",
+        "C02",
+        "C05"
+      ],
+      "bridge_equal_mean_difference": -0.18,
+      "bootstrap_percentile_95": [
+        -0.34,
+        -0.019999999999999997
+      ],
+      "exact_signflip_p": 0.25,
+      "bridge_differences": [
+        -0.4,
+        0.0,
+        -0.09999999999999998,
+        0.0,
+        -0.4
+      ]
+    },
+    {
+      "subset": "input",
+      "other": "A5",
+      "metric": "generations",
+      "n_bridges": 5,
+      "bridges": [
+        "A03",
+        "A08",
+        "B06",
+        "C02",
+        "C05"
+      ],
+      "bridge_equal_mean_difference": -0.13999999999999985,
+      "bootstrap_percentile_95": [
+        -0.2599999999999998,
+        -0.019999999999999928
+      ],
+      "exact_signflip_p": 0.25,
+      "bridge_differences": [
+        -0.2999999999999998,
+        0.0,
+        -0.2999999999999998,
+        0.0,
+        -0.09999999999999964
+      ]
+    },
+    {
+      "subset": "input",
+      "other": "A5",
+      "metric": "time_s",
+      "n_bridges": 5,
+      "bridges": [
+        "A03",
+        "A08",
+        "B06",
+        "C02",
+        "C05"
+      ],
+      "bridge_equal_mean_difference": -5.552000000000001,
+      "bootstrap_percentile_95": [
+        -13.018000000000006,
+        2.753999999999999
+      ],
+      "exact_signflip_p": 0.3125,
+      "bridge_differences": [
+        9.189999999999998,
+        -9.71,
+        -18.570000000000007,
+        -4.580000000000002,
+        -4.089999999999996
+      ]
+    },
+    {
+      "subset": "input",
+      "other": "A5",
+      "metric": "input_k",
+      "n_bridges": 5,
+      "bridges": [
+        "A03",
+        "A08",
+        "B06",
+        "C02",
+        "C05"
+      ],
+      "bridge_equal_mean_difference": -81.20374000000001,
+      "bootstrap_percentile_95": [
+        -172.62894,
+        -0.6104400000000225
+      ],
+      "exact_signflip_p": 0.125,
+      "bridge_differences": [
+        47.73989999999995,
+        -89.51849999999999,
+        -248.17130000000003,
+        -56.75339999999997,
+        -59.31540000000001
+      ]
+    },
+    {
+      "subset": "input",
+      "other": "F0",
+      "metric": "success",
+      "n_bridges": 5,
+      "bridges": [
+        "A03",
+        "A08",
+        "B06",
+        "C02",
+        "C05"
+      ],
+      "bridge_equal_mean_difference": -0.18,
+      "bootstrap_percentile_95": [
+        -0.34,
+        -0.019999999999999997
+      ],
+      "exact_signflip_p": 0.25,
+      "bridge_differences": [
+        -0.4,
+        0.0,
+        -0.09999999999999998,
+        0.0,
+        -0.4
+      ]
+    },
+    {
+      "subset": "input",
+      "other": "F0",
+      "metric": "generations",
+      "n_bridges": 5,
+      "bridges": [
+        "A03",
+        "A08",
+        "B06",
+        "C02",
+        "C05"
+      ],
+      "bridge_equal_mean_difference": -1.0799999999999996,
+      "bootstrap_percentile_95": [
+        -1.7999999999999996,
+        -0.48
+      ],
+      "exact_signflip_p": 0.0625,
+      "bridge_differences": [
+        -0.10000000000000009,
+        -0.8999999999999999,
+        -1.1999999999999997,
+        -0.7999999999999998,
+        -2.3999999999999995
+      ]
+    },
+    {
+      "subset": "input",
+      "other": "F0",
+      "metric": "time_s",
+      "n_bridges": 5,
+      "bridges": [
+        "A03",
+        "A08",
+        "B06",
+        "C02",
+        "C05"
+      ],
+      "bridge_equal_mean_difference": -52.983999999999995,
+      "bootstrap_percentile_95": [
+        -87.31000000000002,
+        -20.868000000000006
+      ],
+      "exact_signflip_p": 0.125,
+      "bridge_differences": [
+        2.289999999999999,
+        -43.849999999999994,
+        -70.75000000000001,
+        -40.459999999999994,
+        -112.15
+      ]
+    },
+    {
+      "subset": "input",
+      "other": "F0",
+      "metric": "input_k",
+      "n_bridges": 5,
+      "bridges": [
+        "A03",
+        "A08",
+        "B06",
+        "C02",
+        "C05"
+      ],
+      "bridge_equal_mean_difference": -556.1003000000001,
+      "bootstrap_percentile_95": [
+        -934.8242200000001,
+        -230.99322
+      ],
+      "exact_signflip_p": 0.0625,
+      "bridge_differences": [
+        -20.010500000000036,
+        -436.05909999999994,
+        -658.8755000000001,
+        -398.2221,
+        -1267.3343000000002
+      ]
+    }
+  ],
+  "note": "Bridge-equal weighting; repeated runs averaged within error then bridge (balanced here). Signals are paired by bridge, not by random run number. Bootstrap is exploratory with only 6 bridges (5 for input errors); sign-flip inference assumes exchangeable paired differences. Generations include the initial failed generation."
+}

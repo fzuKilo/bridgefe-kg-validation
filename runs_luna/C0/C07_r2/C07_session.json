@@ -1,0 +1,35 @@
+{
+ "metrics": {
+  "proposals": 0,
+  "slots_proposed": 0,
+  "first_proposal_violation_rate": null,
+  "violations_by_check": {},
+  "instance_rounds": 0,
+  "repair_rounds": 0,
+  "model_passed": false,
+  "elapsed_s": 102.25
+ },
+ "decisions": {},
+ "facts": {},
+ "instance": {},
+ "results": null,
+ "last_check": null,
+ "role_log": [
+  {
+   "role": "direct_script",
+   "usage": {
+    "turns": 1,
+    "prompt_tokens": 4364,
+    "output_tokens": 4231,
+    "cache_hit_tokens": 2816,
+    "reasoning_tokens": 476,
+    "finish_reason": "stop",
+    "stream": true
+   },
+   "returncode": 1,
+   "stderr": "MapOfTaggedObjects::addComponent - not adding as one with similar tag exists, tag: 1\nERROR could not add timeseries to domain.\nTraceback (most recent call last):\n  File \"${PROJECT_ROOT}/runs_luna/C0/C07_r2/C07_direct.py\", line 233, in <module>\n    disp, _ = solve_static([(n, 0.0, -1.0, 0.0)])\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"${PROJECT_ROOT}/runs_luna/C0/C07_r2/C07_direct.py\", line 165, in solve_static\n    ops.timeSeries(\"Linear\", 1)\nopensees.OpenSeesError: See stderr output\n",
+   "elapsed_s": 102.3
+  }
+ ],
+ "log": []
+}

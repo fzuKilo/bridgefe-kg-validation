@@ -1,0 +1,35 @@
+{
+ "metrics": {
+  "proposals": 0,
+  "slots_proposed": 0,
+  "first_proposal_violation_rate": null,
+  "violations_by_check": {},
+  "instance_rounds": 0,
+  "repair_rounds": 0,
+  "model_passed": false,
+  "elapsed_s": 91.5
+ },
+ "decisions": {},
+ "facts": {},
+ "instance": {},
+ "results": null,
+ "last_check": null,
+ "role_log": [
+  {
+   "role": "direct_script",
+   "usage": {
+    "turns": 1,
+    "prompt_tokens": 4261,
+    "output_tokens": 4455,
+    "cache_hit_tokens": 2816,
+    "reasoning_tokens": 910,
+    "finish_reason": "stop",
+    "stream": true
+   },
+   "returncode": 1,
+   "stderr": "WARNING - the 'fullGenLapack' eigen solver is VERY SLOW. Consider using the default eigen solver.MapOfTaggedObjects::addComponent - not adding as one with similar tag exists, tag: 2\nERROR could not add timeseries to domain.\nTraceback (most recent call last):\n  File \"${PROJECT_ROOT}/runs_luna/C0/B08_r1/B08_direct.py\", line 257, in <module>\n    reactions, mids, supports = solve_live_pattern(\n                                ^^^^^^^^^^^^^^^^^^^\n  File \"${PROJECT_ROOT}/runs_luna/C0/B08_r1/B08_direct.py\", line 180, in solve_live_pattern\n    clear_analysis_and_build_pattern()\n  File \"${PROJECT_ROOT}/runs_luna/C0/B08_r1/B08_direct.py\", line 174, in clear_analysis_and_build_pattern\n    ops.timeSeries(\"Linear\", 2)\nopensees.OpenSeesError: See stderr output\n",
+   "elapsed_s": 91.5
+  }
+ ],
+ "log": []
+}

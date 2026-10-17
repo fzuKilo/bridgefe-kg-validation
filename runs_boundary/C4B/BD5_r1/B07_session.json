@@ -1,0 +1,35 @@
+{
+ "metrics": {
+  "proposals": 0,
+  "slots_proposed": 0,
+  "first_proposal_violation_rate": null,
+  "violations_by_check": {},
+  "instance_rounds": 0,
+  "repair_rounds": 0,
+  "model_passed": false,
+  "elapsed_s": 8.66
+ },
+ "decisions": {},
+ "facts": {},
+ "instance": {},
+ "results": null,
+ "defect": {
+  "defect_type": "out_of_scope",
+  "message": "The bridge's main girders are outside the scope of the knowledge graph. The description states \"Steel plate girders acting compositely with a 0.25 m cast-in-place deck slab, 3 per span; steel girder depth 1.4 m, top flange 400 mm x 25 mm, bottom flange 500 mm x 30 mm, web 1345 mm x 16 mm, steel Q345\". The knowledge graph only defines girder section types \"small_box\", \"t_girder\" and \"cast_box\", which are all concrete sections; compute_section_properties accepts only these three section types and cannot integrate a steel plate/composite section. There are no rules or clauses for steel members or steel grades (keyword searches \"steel plate girder\", \"Q345\", \"flange\", \"composite\" return no matches), and the material density rule JTGD60-4.2.1 applies only when material == 'prestressed_concrete'. Since the girder type (steel, composite) is not covered by the graph's rules and clauses, the bridge cannot be modeled as given; no values are invented."
+ },
+ "last_check": null,
+ "role_log": [],
+ "log": [
+  {
+   "t": 8.661,
+   "tool": "report_input_defect",
+   "args": {
+    "defect_type": "out_of_scope",
+    "message": "The bridge's main girders are outside the scope of the knowledge graph. The description states \"Steel plate girders acting compositely with a 0.25 m cast-in-place deck slab, 3 per span; steel girder depth 1.4 m, top flange 400 mm x 25 mm, bottom flange 500 mm x 30 mm, web 1345 mm x 16 mm, steel Q345\". The knowledge graph only defines girder section types \"small_box\", \"t_girder\" and \"cast_box\", which are all concrete sections; compute_section_properties accepts only these three section types and cannot integrate a steel plate/composite section. There are no rules or clauses for steel members or steel grades (keyword searches \"steel plate girder\", \"Q345\", \"flange\", \"composite\" return no matches), and the material density rule JTGD60-4.2.1 applies only when material == 'prestressed_concrete'. Since the girder type (steel, composite) is not covered by the graph's rules and clauses, the bridge cannot be modeled as given; no values are invented."
+   },
+   "result": {
+    "ok": true
+   }
+  }
+ ]
+}

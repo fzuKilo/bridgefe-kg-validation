@@ -1,0 +1,115 @@
+{
+ "metrics": {
+  "proposals": 0,
+  "slots_proposed": 0,
+  "first_proposal_violation_rate": null,
+  "violations_by_check": {},
+  "instance_rounds": 1,
+  "repair_rounds": 0,
+  "model_passed": false,
+  "elapsed_s": 12.9
+ },
+ "decisions": {},
+ "facts": {},
+ "instance": {
+  "structure_type": "precast_continuous",
+  "spans_m": [
+   25,
+   30,
+   30,
+   25
+  ],
+  "deck": {
+   "deck_width_m": 12.5,
+   "carriageway_width_m": 11.5,
+   "traffic": "one_way",
+   "design_lanes": 3,
+   "load_class": "I"
+  },
+  "girder": {
+   "type": "t_girder",
+   "count_per_span": 5,
+   "concrete": "C50",
+   "material": "prestressed_concrete",
+   "E_override_MPa": null,
+   "gamma_override_kNm3": null,
+   "section": {
+    "h": 2.0,
+    "b_flange": 1.8,
+    "t_tip": 0.18,
+    "t_root": 0.27,
+    "flat_len": 0.2,
+    "t_web": 0.2,
+    "b_bulb": 0.6,
+    "bulb_h": 0.2,
+    "bulb_trans": 0.2
+   }
+  },
+  "dead_load": "girder_self_weight_only"
+ },
+ "results": null,
+ "defect": {
+  "defect_type": "contradictory",
+  "message": "The span arrangement states \"One continuous unit of three spans, 25 + 30 + 30 + 25 m (centre-to-centre of bearings)\", i.e. it declares three spans but gives four bearing-centreline span lengths. The boundary description names \"Abutment 0, Pier 1, Pier 2 and Abutment 3\", which corresponds to four support lines and hence three spans, matching \"three spans\" but not the four listed lengths. It is therefore impossible to determine the actual span lengths (three of which would have to be chosen/omitted) and the number of spans/supports, so the model cannot be built as given."
+ },
+ "last_check": null,
+ "role_log": [],
+ "log": [
+  {
+   "t": 11.01,
+   "tool": "write_instance",
+   "args": {
+    "structure_type": "precast_continuous",
+    "spans_m": [
+     25,
+     30,
+     30,
+     25
+    ],
+    "deck": {
+     "deck_width_m": 12.5,
+     "carriageway_width_m": 11.5,
+     "traffic": "one_way",
+     "design_lanes": 3,
+     "load_class": "I"
+    },
+    "girder": {
+     "type": "t_girder",
+     "count_per_span": 5,
+     "concrete": "C50",
+     "material": "prestressed_concrete",
+     "E_override_MPa": null,
+     "gamma_override_kNm3": null,
+     "section": {
+      "h": 2.0,
+      "b_flange": 1.8,
+      "t_tip": 0.18,
+      "t_root": 0.27,
+      "flat_len": 0.2,
+      "t_web": 0.2,
+      "b_bulb": 0.6,
+      "bulb_h": 0.2,
+      "bulb_trans": 0.2
+     }
+    },
+    "dead_load": "girder_self_weight_only"
+   },
+   "result": {
+    "ok": true,
+    "issues": [],
+    "round": 1
+   }
+  },
+  {
+   "t": 12.904,
+   "tool": "report_input_defect",
+   "args": {
+    "defect_type": "contradictory",
+    "message": "The span arrangement states \"One continuous unit of three spans, 25 + 30 + 30 + 25 m (centre-to-centre of bearings)\", i.e. it declares three spans but gives four bearing-centreline span lengths. The boundary description names \"Abutment 0, Pier 1, Pier 2 and Abutment 3\", which corresponds to four support lines and hence three spans, matching \"three spans\" but not the four listed lengths. It is therefore impossible to determine the actual span lengths (three of which would have to be chosen/omitted) and the number of spans/supports, so the model cannot be built as given."
+   },
+   "result": {
+    "ok": true
+   }
+  }
+ ]
+}

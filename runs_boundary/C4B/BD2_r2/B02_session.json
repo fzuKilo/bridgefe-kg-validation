@@ -1,0 +1,35 @@
+{
+ "metrics": {
+  "proposals": 0,
+  "slots_proposed": 0,
+  "first_proposal_violation_rate": null,
+  "violations_by_check": {},
+  "instance_rounds": 0,
+  "repair_rounds": 0,
+  "model_passed": false,
+  "elapsed_s": 6.32
+ },
+ "decisions": {},
+ "facts": {},
+ "instance": {},
+ "results": null,
+ "defect": {
+  "defect_type": "contradictory",
+  "message": "The span arrangement contradicts itself: the description states \"One continuous unit of three spans, 25 + 30 + 30 + 25 m (centre-to-centre of bearings)\", which lists FOUR span lengths (25, 30, 30, 25 m) for what is declared to be THREE spans. The support lines given are \"Abutment 0, Pier 1 and Abutment 3 ... Pier 2\", i.e. four support lines (indices 0, 1, 2, 3), which define only three spans. Three spans require exactly three span lengths, and four span lengths require five support lines; the description supplies four of each, so the span counts and support indices cannot be reconciled. The model cannot be built as given without guessing whether a span length or a support line is missing/extra."
+ },
+ "last_check": null,
+ "role_log": [],
+ "log": [
+  {
+   "t": 6.315,
+   "tool": "report_input_defect",
+   "args": {
+    "defect_type": "contradictory",
+    "message": "The span arrangement contradicts itself: the description states \"One continuous unit of three spans, 25 + 30 + 30 + 25 m (centre-to-centre of bearings)\", which lists FOUR span lengths (25, 30, 30, 25 m) for what is declared to be THREE spans. The support lines given are \"Abutment 0, Pier 1 and Abutment 3 ... Pier 2\", i.e. four support lines (indices 0, 1, 2, 3), which define only three spans. Three spans require exactly three span lengths, and four span lengths require five support lines; the description supplies four of each, so the span counts and support indices cannot be reconciled. The model cannot be built as given without guessing whether a span length or a support line is missing/extra."
+   },
+   "result": {
+    "ok": true
+   }
+  }
+ ]
+}

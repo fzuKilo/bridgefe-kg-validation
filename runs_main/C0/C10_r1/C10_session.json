@@ -1,0 +1,34 @@
+{
+ "metrics": {
+  "proposals": 0,
+  "slots_proposed": 0,
+  "first_proposal_violation_rate": null,
+  "violations_by_check": {},
+  "instance_rounds": 0,
+  "repair_rounds": 0,
+  "model_passed": false,
+  "elapsed_s": 74.76
+ },
+ "decisions": {},
+ "facts": {},
+ "instance": {},
+ "results": null,
+ "last_check": null,
+ "role_log": [
+  {
+   "role": "direct_script",
+   "usage": {
+    "turns": 1,
+    "prompt_tokens": 794,
+    "output_tokens": 18792,
+    "cache_hit_tokens": 256,
+    "reasoning_chars": 0,
+    "finish_reason": "stop"
+   },
+   "returncode": 1,
+   "stderr": "MapOfTaggedObjects::addComponent - not adding as one with similar tag exists, tag: 2000\nERROR could not add uniaxialMaterial.\nTraceback (most recent call last):\n  File \"${PROJECT_ROOT}/runs_main/C0/C10_r1/C10_direct.py\", line 307, in <module>\n    ops.uniaxialMaterial('Elastic', mat_v, Kv)\nopensees.OpenSeesError: See stderr output\n",
+   "elapsed_s": 74.8
+  }
+ ],
+ "log": []
+}

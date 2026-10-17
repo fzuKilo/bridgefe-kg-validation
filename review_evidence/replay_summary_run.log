@@ -1,0 +1,29 @@
+{
+  "n": 90,
+  "D_correct": 84,
+  "historical_L_correct": 89,
+  "D_status_counts": {
+    "invalid_initial_instance": 5,
+    "model_passed": 85
+  },
+  "same_outcomes_on_unchanged_initial_instances": {
+    "n": 85,
+    "D_correct": 84,
+    "L_correct": 84
+  },
+  "problem_level_L_minus_D": {
+    "difference": 0.05555555555555556,
+    "bootstrap_ci95": [
+      0.01111111111111111,
+      0.12222222222222222
+    ],
+    "n_pairs": 30,
+    "nonzero_pairs": 4,
+    "exact_signed_rank_p": 0.125,
+    "interpretation": "Exploratory historical comparison; asymmetric input-repair permissions, not a causal test of per-decision LLM advantage."
+  },
+  "D_wall_seconds_mean": 0.214277832866517,
+  "D_wall_seconds_median": 0.18925602049785084,
+  "D_decision_LLM_calls": 0,
+  "resource_limit": "Archived usage aggregates whole LLM calls; cannot allocate extraction vs decision tokens exactly. Do not claim a precise token saving or latency ratio."
+}

@@ -1,0 +1,35 @@
+{
+ "metrics": {
+  "proposals": 0,
+  "slots_proposed": 0,
+  "first_proposal_violation_rate": null,
+  "violations_by_check": {},
+  "instance_rounds": 0,
+  "repair_rounds": 0,
+  "model_passed": false,
+  "elapsed_s": 79.18
+ },
+ "decisions": {},
+ "facts": {},
+ "instance": {},
+ "results": null,
+ "last_check": null,
+ "role_log": [
+  {
+   "role": "direct_script",
+   "usage": {
+    "turns": 1,
+    "prompt_tokens": 4350,
+    "output_tokens": 4124,
+    "cache_hit_tokens": 2816,
+    "reasoning_tokens": 815,
+    "finish_reason": "stop",
+    "stream": true
+   },
+   "returncode": 1,
+   "stderr": "WARNING BandGenLinLapackSolver::solve() -factorization failed, matrix singular U(i,i) = 0, i= 0\nWARNING - the 'fullGenLapack' eigen solver is VERY SLOW. Consider using the default eigen solver.MapOfTaggedObjects::addComponent - not adding as one with similar tag exists, tag: 1\nERROR could not add timeseries to domain.\nTraceback (most recent call last):\n  File \"${PROJECT_ROOT}/runs_luna/C0/C04_r1/C04_direct.py\", line 240, in <module>\n    lane_response(\"midspan\", span_i, span_length)\n  File \"${PROJECT_ROOT}/runs_luna/C0/C04_r1/C04_direct.py\", line 218, in lane_response\n    ordinates = influence(response_kind, span_index)\n                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"${PROJECT_ROOT}/runs_luna/C0/C04_r1/C04_direct.py\", line 211, in influence\n    response_for_unit_load(i, response_kind, span_index)\n  File \"${PROJECT_ROOT}/runs_luna/C0/C04_r1/C04_direct.py\", line 192, in response_for_unit_load\n    _, forces, _ = solve_loads(nodal_loads={node_id: -1.0})\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"${PROJECT_ROOT}/runs_luna/C0/C04_r1/C04_direct.py\", line 128, in solve_loads\n    ops.timeSeries(\"Linear\", 1)\nopensees.OpenSeesError: See stderr output\n",
+   "elapsed_s": 79.2
+  }
+ ],
+ "log": []
+}

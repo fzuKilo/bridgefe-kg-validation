@@ -1,0 +1,35 @@
+{
+ "metrics": {
+  "proposals": 0,
+  "slots_proposed": 0,
+  "first_proposal_violation_rate": null,
+  "violations_by_check": {},
+  "instance_rounds": 0,
+  "repair_rounds": 0,
+  "model_passed": false,
+  "elapsed_s": 92.29
+ },
+ "decisions": {},
+ "facts": {},
+ "instance": {},
+ "results": null,
+ "last_check": null,
+ "role_log": [
+  {
+   "role": "direct_script",
+   "usage": {
+    "turns": 1,
+    "prompt_tokens": 4319,
+    "output_tokens": 4962,
+    "cache_hit_tokens": 0,
+    "reasoning_tokens": 926,
+    "finish_reason": "stop",
+    "stream": true
+   },
+   "returncode": 1,
+   "stderr": "n at load factor 1\nOpenSees > analyze failed, returned: -3 error flag\nWARNING BandGenLinLapackSolver::solve() -factorization failed, matrix singular U(i,i) = 0, i= 180\nWARNING Linear::solveCurrentStep() -the LinearSOE failed in solve()\nStaticAnalysis::analyze() - the Algorithm failed at step: 0 with domain at load factor 1\nOpenSees > analyze failed, returned: -3 error flag\nWARNING BandGenLinLapackSolver::solve() -factorization failed, matrix singular U(i,i) = 0, i= 180\nWARNING Linear::solveCurrentStep() -the LinearSOE failed in solve()\nStaticAnalysis::analyze() - the Algorithm failed at step: 0 with domain at load factor 1\nOpenSees > analyze failed, returned: -3 error flag\nWARNING BandGenLinLapackSolver::solve() -factorization failed, matrix singular U(i,i) = 0, i= 180\nWARNING Linear::solveCurrentStep() -the LinearSOE failed in solve()\nStaticAnalysis::analyze() - the Algorithm failed at step: 0 with domain at load factor 1\nOpenSees > analyze failed, returned: -3 error flag\nTraceback (most recent call last):\n  File \"${PROJECT_ROOT}/runs_luna/C0/C02_r1/C02_direct.py\", line 373, in <module>\n    print(\"RESULT \" + json.dumps(result, separators=(\",\", \":\"), allow_nan=False))\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.12/3.12.13/Frameworks/Python.framework/Versions/3.12/lib/python3.12/json/__init__.py\", line 238, in dumps\n    **kw).encode(obj)\n          ^^^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.12/3.12.13/Frameworks/Python.framework/Versions/3.12/lib/python3.12/json/encoder.py\", line 200, in encode\n    chunks = self.iterencode(o, _one_shot=True)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/homebrew/Cellar/python@3.12/3.12.13/Frameworks/Python.framework/Versions/3.12/lib/python3.12/json/encoder.py\", line 258, in iterencode\n    return _iterencode(o, 0)\n           ^^^^^^^^^^^^^^^^^\nValueError: Out of range float values are not JSON compliant: -inf\n",
+   "elapsed_s": 92.3
+  }
+ ],
+ "log": []
+}

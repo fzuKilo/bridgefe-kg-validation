@@ -1,0 +1,35 @@
+{
+ "metrics": {
+  "proposals": 0,
+  "slots_proposed": 0,
+  "first_proposal_violation_rate": null,
+  "violations_by_check": {},
+  "instance_rounds": 0,
+  "repair_rounds": 0,
+  "model_passed": false,
+  "elapsed_s": 93.42
+ },
+ "decisions": {},
+ "facts": {},
+ "instance": {},
+ "results": null,
+ "last_check": null,
+ "role_log": [
+  {
+   "role": "direct_script",
+   "usage": {
+    "turns": 1,
+    "prompt_tokens": 4280,
+    "output_tokens": 4786,
+    "cache_hit_tokens": 0,
+    "reasoning_tokens": 843,
+    "finish_reason": "stop",
+    "stream": true
+   },
+   "returncode": 1,
+   "stderr": "Domain::addSP_Constraint - cannot add as node already constrained in that dof by existing SP_Constraint\nSP_Constraint: 5\t Node: 41 DOF: 2 ref value: 0 current value: 0 initial value: 0\nWARNING: failed to add SP to domain\nTraceback (most recent call last):\n  File \"${PROJECT_ROOT}/runs_luna/C0/B01_r2/B01_direct.py\", line 124, in <module>\n    ops.fix(pier2_node, 1, 1, 0)\nopensees.OpenSeesError: See stderr output\n",
+   "elapsed_s": 93.4
+  }
+ ],
+ "log": []
+}

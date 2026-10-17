@@ -1,0 +1,35 @@
+{
+ "metrics": {
+  "proposals": 0,
+  "slots_proposed": 0,
+  "first_proposal_violation_rate": null,
+  "violations_by_check": {},
+  "instance_rounds": 0,
+  "repair_rounds": 0,
+  "model_passed": false,
+  "elapsed_s": 74.07
+ },
+ "decisions": {},
+ "facts": {},
+ "instance": {},
+ "results": null,
+ "last_check": null,
+ "role_log": [
+  {
+   "role": "direct_script",
+   "usage": {
+    "turns": 1,
+    "prompt_tokens": 4249,
+    "output_tokens": 3820,
+    "cache_hit_tokens": 2816,
+    "reasoning_tokens": 427,
+    "finish_reason": "stop",
+    "stream": true
+   },
+   "returncode": 1,
+   "stderr": "WARNING BandGenLinLapackSolver::solve() -factorization failed, matrix singular U(i,i) = 0, i= 177\nWARNING Linear::solveCurrentStep() -the LinearSOE failed in solve()\nStaticAnalysis::analyze() - the Algorithm failed at step: 0 with domain at load factor 1\nOpenSees > analyze failed, returned: -3 error flag\nWARNING - the 'fullGenLapack' eigen solver is VERY SLOW. Consider using the default eigen solver.MapOfTaggedObjects::addComponent - not adding as one with similar tag exists, tag: 1\nERROR could not add timeseries to domain.\nTraceback (most recent call last):\n  File \"${PROJECT_ROOT}/runs_luna/C0/B02_r1/B02_direct.py\", line 236, in <module>\n    mids, supports = solve_vertical_loads({x: -1.0})\n                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"${PROJECT_ROOT}/runs_luna/C0/B02_r1/B02_direct.py\", line 200, in solve_vertical_loads\n    run_nodal_loads(nodal)\n  File \"${PROJECT_ROOT}/runs_luna/C0/B02_r1/B02_direct.py\", line 136, in run_nodal_loads\n    ops.timeSeries(\"Linear\", 1)\nopensees.OpenSeesError: See stderr output\n",
+   "elapsed_s": 74.1
+  }
+ ],
+ "log": []
+}

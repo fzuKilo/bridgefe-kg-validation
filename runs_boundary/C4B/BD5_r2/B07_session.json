@@ -1,0 +1,35 @@
+{
+ "metrics": {
+  "proposals": 0,
+  "slots_proposed": 0,
+  "first_proposal_violation_rate": null,
+  "violations_by_check": {},
+  "instance_rounds": 0,
+  "repair_rounds": 0,
+  "model_passed": false,
+  "elapsed_s": 4.51
+ },
+ "decisions": {},
+ "facts": {},
+ "instance": {},
+ "results": null,
+ "defect": {
+  "defect_type": "out_of_scope",
+  "message": "The description specifies \"Steel plate girders acting compositely with a 0.25 m cast-in-place deck slab, 3 per span; steel girder depth 1.4 m, top flange 400 mm x 25 mm, bottom flange 500 mm x 30 mm, web 1345 mm x 16 mm, steel Q345\". The knowledge graph's girder rules and section-integration schemas cover only concrete girder types (small_box, t_girder, cast_box) with material 'prestressed_concrete' — MR-02 computes A/I by integrating a concrete outer profile minus voids, and no rule, clause or section type covers a steel plate girder, structural steel Q345 material properties, or a steel-concrete composite section. This component therefore lies outside the scope of the knowledge graph and cannot be modeled as given."
+ },
+ "last_check": null,
+ "role_log": [],
+ "log": [
+  {
+   "t": 4.51,
+   "tool": "report_input_defect",
+   "args": {
+    "defect_type": "out_of_scope",
+    "message": "The description specifies \"Steel plate girders acting compositely with a 0.25 m cast-in-place deck slab, 3 per span; steel girder depth 1.4 m, top flange 400 mm x 25 mm, bottom flange 500 mm x 30 mm, web 1345 mm x 16 mm, steel Q345\". The knowledge graph's girder rules and section-integration schemas cover only concrete girder types (small_box, t_girder, cast_box) with material 'prestressed_concrete' — MR-02 computes A/I by integrating a concrete outer profile minus voids, and no rule, clause or section type covers a steel plate girder, structural steel Q345 material properties, or a steel-concrete composite section. This component therefore lies outside the scope of the knowledge graph and cannot be modeled as given."
+   },
+   "result": {
+    "ok": true
+   }
+  }
+ ]
+}

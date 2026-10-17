@@ -1,0 +1,178 @@
+{
+ "metrics": {
+  "proposals": 0,
+  "slots_proposed": 0,
+  "first_proposal_violation_rate": null,
+  "violations_by_check": {},
+  "instance_rounds": 1,
+  "repair_rounds": 0,
+  "model_passed": false,
+  "elapsed_s": 9.96
+ },
+ "decisions": {},
+ "facts": {},
+ "instance": {
+  "supports": [
+   {
+    "index": 0,
+    "kind": "abutment",
+    "bearing": {
+     "family": "laminated_elastomeric",
+     "sliding": false,
+     "fixed": false,
+     "per_girder_end": 1,
+     "per_line": null,
+     "t1_mm": 8,
+     "n_layers": 4
+    },
+    "pier": null
+   },
+   {
+    "index": 1,
+    "kind": "abutment",
+    "bearing": {
+     "family": "laminated_elastomeric",
+     "sliding": false,
+     "fixed": false,
+     "per_girder_end": 1,
+     "per_line": null,
+     "t1_mm": 8,
+     "n_layers": 4
+    },
+    "pier": null
+   }
+  ],
+  "structure_type": "simply_supported",
+  "spans_m": [
+   20
+  ],
+  "deck": {
+   "deck_width_m": 9,
+   "carriageway_width_m": 8,
+   "traffic": "one_way",
+   "design_lanes": 2,
+   "load_class": "I"
+  },
+  "girder": {
+   "type": "t_girder",
+   "count_per_span": 4,
+   "concrete": "C40",
+   "material": "prestressed_concrete",
+   "E_override_MPa": null,
+   "gamma_override_kNm3": null,
+   "section": {
+    "h": 1.35,
+    "b_flange": 1.8,
+    "t_tip": 0.18,
+    "t_root": 0.27,
+    "flat_len": 0.2,
+    "t_web": 0.2,
+    "b_bulb": 0.6,
+    "bulb_h": 0.2,
+    "bulb_trans": 0.2
+   }
+  },
+  "dead_load": "girder_self_weight_only"
+ },
+ "results": null,
+ "defect": {
+  "defect_type": "missing",
+  "message": "The bearing description is incomplete: it states only \"plain laminated elastomeric bearings, one under each girder end; four internal rubber layers 8 mm thick\" but gives no plan dimensions. The KG constraint C-02 requires each laminated elastomeric bearing to have both plan dimensions, and clauses JTG3362-8.7-S, -Kv and -Kh compute the shape factor S and the vertical/shear stiffnesses from a * b (S = a*b/(2*t1*(a+b)); Kv and Kh scale with a*b). With a_mm and b_mm missing and no default supplied by the knowledge graph, the bearing stiffnesses cannot be determined and the model cannot be built."
+ },
+ "last_check": null,
+ "role_log": [],
+ "log": [
+  {
+   "t": 2.497,
+   "tool": "write_instance",
+   "args": {
+    "structure_type": "simply_supported",
+    "spans_m": [
+     20
+    ],
+    "deck": {
+     "deck_width_m": 9,
+     "carriageway_width_m": 8,
+     "traffic": "one_way",
+     "design_lanes": 2,
+     "load_class": "I"
+    },
+    "girder": {
+     "type": "t_girder",
+     "count_per_span": 4,
+     "concrete": "C40",
+     "material": "prestressed_concrete",
+     "E_override_MPa": null,
+     "gamma_override_kNm3": null,
+     "section": {
+      "h": 1.35,
+      "b_flange": 1.8,
+      "t_tip": 0.18,
+      "t_root": 0.27,
+      "flat_len": 0.2,
+      "t_web": 0.2,
+      "b_bulb": 0.6,
+      "bulb_h": 0.2,
+      "bulb_trans": 0.2
+     }
+    },
+    "supports": [
+     {
+      "index": 0,
+      "kind": "abutment",
+      "bearing": {
+       "family": "laminated_elastomeric",
+       "sliding": false,
+       "fixed": false,
+       "per_girder_end": 1,
+       "per_line": null,
+       "t1_mm": 8,
+       "n_layers": 4
+      },
+      "pier": null
+     },
+     {
+      "index": 1,
+      "kind": "abutment",
+      "bearing": {
+       "family": "laminated_elastomeric",
+       "sliding": false,
+       "fixed": false,
+       "per_girder_end": 1,
+       "per_line": null,
+       "t1_mm": 8,
+       "n_layers": 4
+      },
+      "pier": null
+     }
+    ],
+    "dead_load": "girder_self_weight_only"
+   },
+   "result": {
+    "ok": false,
+    "issues": [
+     {
+      "constraint": "C-02",
+      "message": "支承线 0 板式橡胶支座缺少 ['a_mm', 'b_mm']"
+     },
+     {
+      "constraint": "C-02",
+      "message": "支承线 1 板式橡胶支座缺少 ['a_mm', 'b_mm']"
+     }
+    ],
+    "round": 1
+   }
+  },
+  {
+   "t": 9.954,
+   "tool": "report_input_defect",
+   "args": {
+    "defect_type": "missing",
+    "message": "The bearing description is incomplete: it states only \"plain laminated elastomeric bearings, one under each girder end; four internal rubber layers 8 mm thick\" but gives no plan dimensions. The KG constraint C-02 requires each laminated elastomeric bearing to have both plan dimensions, and clauses JTG3362-8.7-S, -Kv and -Kh compute the shape factor S and the vertical/shear stiffnesses from a * b (S = a*b/(2*t1*(a+b)); Kv and Kh scale with a*b). With a_mm and b_mm missing and no default supplied by the knowledge graph, the bearing stiffnesses cannot be determined and the model cannot be built."
+   },
+   "result": {
+    "ok": true
+   }
+  }
+ ]
+}

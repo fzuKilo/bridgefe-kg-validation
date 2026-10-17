@@ -1,0 +1,35 @@
+{
+ "metrics": {
+  "proposals": 0,
+  "slots_proposed": 0,
+  "first_proposal_violation_rate": null,
+  "violations_by_check": {},
+  "instance_rounds": 0,
+  "repair_rounds": 0,
+  "model_passed": false,
+  "elapsed_s": 5.85
+ },
+ "decisions": {},
+ "facts": {},
+ "instance": {},
+ "results": null,
+ "defect": {
+  "defect_type": "out_of_scope",
+  "message": "The girder is described as \"Steel plate girders acting compositely with a 0.25 m cast-in-place deck slab, ... steel Q345\", i.e. a composite steel-plate-girder section. The knowledge graph only covers concrete girders: the section-geometry schema offers only small_box / t_girder / cast_box, the modeling rule MR-02 computes A and I from a concrete cross-section (\"外轮廓减内孔\"), and the material rules (e.g. JTG3362-3.1.5, EC_TABLE) apply only to concrete grades. There is no rule, clause, section type or material model for steel plate girders or for a composite steel-girder/concrete-deck section, so the girder cannot be modelled within the scope of the KG."
+ },
+ "last_check": null,
+ "role_log": [],
+ "log": [
+  {
+   "t": 5.848,
+   "tool": "report_input_defect",
+   "args": {
+    "defect_type": "out_of_scope",
+    "message": "The girder is described as \"Steel plate girders acting compositely with a 0.25 m cast-in-place deck slab, ... steel Q345\", i.e. a composite steel-plate-girder section. The knowledge graph only covers concrete girders: the section-geometry schema offers only small_box / t_girder / cast_box, the modeling rule MR-02 computes A and I from a concrete cross-section (\"外轮廓减内孔\"), and the material rules (e.g. JTG3362-3.1.5, EC_TABLE) apply only to concrete grades. There is no rule, clause, section type or material model for steel plate girders or for a composite steel-girder/concrete-deck section, so the girder cannot be modelled within the scope of the KG."
+   },
+   "result": {
+    "ok": true
+   }
+  }
+ ]
+}

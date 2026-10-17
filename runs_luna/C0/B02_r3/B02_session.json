@@ -1,0 +1,35 @@
+{
+ "metrics": {
+  "proposals": 0,
+  "slots_proposed": 0,
+  "first_proposal_violation_rate": null,
+  "violations_by_check": {},
+  "instance_rounds": 0,
+  "repair_rounds": 0,
+  "model_passed": false,
+  "elapsed_s": 89.46
+ },
+ "decisions": {},
+ "facts": {},
+ "instance": {},
+ "results": null,
+ "last_check": null,
+ "role_log": [
+  {
+   "role": "direct_script",
+   "usage": {
+    "turns": 1,
+    "prompt_tokens": 4249,
+    "output_tokens": 4571,
+    "cache_hit_tokens": 2816,
+    "reasoning_tokens": 715,
+    "finish_reason": "stop",
+    "stream": true
+   },
+   "returncode": 1,
+   "stderr": "Traceback (most recent call last):\n  File \"${PROJECT_ROOT}/runs_luna/C0/B02_r3/B02_direct.py\", line 245, in <module>\n    \"impact_factor_1_plus_mu\": positive_impacts[positive_span],\n                               ^^^^^^^^^^^^^^^^\nNameError: name 'positive_impacts' is not defined. Did you mean: 'positive_impact'?\n",
+   "elapsed_s": 89.5
+  }
+ ],
+ "log": []
+}

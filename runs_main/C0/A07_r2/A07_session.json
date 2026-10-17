@@ -1,0 +1,34 @@
+{
+ "metrics": {
+  "proposals": 0,
+  "slots_proposed": 0,
+  "first_proposal_violation_rate": null,
+  "violations_by_check": {},
+  "instance_rounds": 0,
+  "repair_rounds": 0,
+  "model_passed": false,
+  "elapsed_s": 50.92
+ },
+ "decisions": {},
+ "facts": {},
+ "instance": {},
+ "results": null,
+ "last_check": null,
+ "role_log": [
+  {
+   "role": "direct_script",
+   "usage": {
+    "turns": 1,
+    "prompt_tokens": 710,
+    "output_tokens": 16737,
+    "cache_hit_tokens": 512,
+    "reasoning_chars": 0,
+    "finish_reason": "stop"
+   },
+   "returncode": 1,
+   "stderr": "Traceback (most recent call last):\n  File \"${PROJECT_ROOT}/runs_main/C0/A07_r2/A07_direct.py\", line 137, in <module>\n    I_fl_total = I_const + I_taper\n                 ^^^^^^^\nNameError: name 'I_const' is not defined\n",
+   "elapsed_s": 50.9
+  }
+ ],
+ "log": []
+}

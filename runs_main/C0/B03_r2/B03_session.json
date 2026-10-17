@@ -1,0 +1,34 @@
+{
+ "metrics": {
+  "proposals": 0,
+  "slots_proposed": 0,
+  "first_proposal_violation_rate": null,
+  "violations_by_check": {},
+  "instance_rounds": 0,
+  "repair_rounds": 0,
+  "model_passed": false,
+  "elapsed_s": 40.48
+ },
+ "decisions": {},
+ "facts": {},
+ "instance": {},
+ "results": null,
+ "last_check": null,
+ "role_log": [
+  {
+   "role": "direct_script",
+   "usage": {
+    "turns": 1,
+    "prompt_tokens": 743,
+    "output_tokens": 9988,
+    "cache_hit_tokens": 512,
+    "reasoning_chars": 0,
+    "finish_reason": "stop"
+   },
+   "returncode": 1,
+   "stderr": "WARNING ZeroLength::setDomain(): Element 200 has L= 1, which is greater than the tolerance\nWARNING ZeroLength::setDomain(): Element 201 has L= 1, which is greater than the tolerance\nWARNING ZeroLength::setDomain(): Element 202 has L= 1, which is greater than the tolerance\nWARNING ZeroLength::setDomain(): Element 203 has L= 1, which is greater than the tolerance\nTraceback (most recent call last):\n  File \"${PROJECT_ROOT}/runs_main/C0/B03_r2/B03_direct.py\", line 249, in <module>\n    r = reactions[3*sn_idx + 1]\n        ~~~~~~~~~^^^^^^^^^^^^^^\nTypeError: 'NoneType' object is not subscriptable\n",
+   "elapsed_s": 40.5
+  }
+ ],
+ "log": []
+}
