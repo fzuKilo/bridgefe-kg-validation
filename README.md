@@ -1,5 +1,9 @@
 # Executable knowledge validation for bridge FE modeling
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23433649.svg)](https://doi.org/10.5281/zenodo.23433649)
+
+Archived version: Zenodo DOI 10.5281/zenodo.23433649 (v0.2.1-review); all versions: 10.5281/zenodo.23433648.
+
 Research materials published on GitHub 2026-10-17: https://github.com/fzuKilo/bridgefe-kg-validation. Code: MIT; data and documentation: CC BY 4.0; design-code provision excerpts excluded (see LICENSES.md).
 
 Research prototype for straight planar linear-elastic girder bridges: natural-language instance extraction, executable KG, decision validation, deterministic OpenSeesPy generation and diagnostic feedback. Not engineering design certification.
