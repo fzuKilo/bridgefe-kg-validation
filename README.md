@@ -1,4 +1,4 @@
-# Executable knowledge validation for bridge FE modeling
+# Knowledge graph-constrained LLM agent for automated FE modeling of girder bridges: research materials
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23433649.svg)](https://doi.org/10.5281/zenodo.23433649)
 
