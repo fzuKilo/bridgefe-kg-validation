@@ -2,7 +2,7 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23433648.svg)](https://doi.org/10.5281/zenodo.23433648)
 
-Archived on Zenodo; DOI for all versions: 10.5281/zenodo.23433648 (resolves to the latest version). The version cited in the manuscript is v0.2.4-review; its version-specific DOI is listed on the Zenodo record.
+Archived on Zenodo; DOI for all versions: 10.5281/zenodo.23433648 (resolves to the latest version). The version cited in the manuscript is v0.2.5-review; its version-specific DOI is listed on the Zenodo record.
 
 Research materials published on GitHub 2026-10-17: https://github.com/fzuKilo/bridgefe-kg-validation. Code: MIT; data and documentation: CC BY 4.0; design-code provision excerpts excluded (see LICENSES.md).
 
@@ -72,3 +72,14 @@ Results are in `review_evidence/strict_revalidation/`: the evaluated validator r
 ## Run dates
 
 `review_evidence/run_timestamps.json` lists the file modification times (UTC+8) of all original session records. All experiments ran on 27-28 September 2026. These are file timestamps, not service-side request records.
+
+## Non-LLM rule baseline (R)
+
+`analysis/rule_parser.py` is a fixed-schema parser for the four-part structured description (English and Chinese), written from the published input format; it reads no reference answers and was frozen before evaluation (SHA-256 recorded in `analysis/run_rule_baseline.py`). `analysis/run_rule_baseline.py` parses each input, writes the instance, completes all decisions deterministically from the governing KG nodes (same selector as the deterministic replay), generates the model, and only then evaluates it against the reference:
+
+```
+python analysis/run_rule_baseline.py
+```
+
+Results (`analysis/rule_baseline_results.json`, sessions in `analysis/rule_baseline/`): 30/30 structured main problems, 3/3 long units, 3/3 structured Chinese inputs, 0/18 free-text inputs (all rejected as out of schema), 5/6 boundary inputs refused (schema mismatches), 6/6 unmodified problems correct without false alarms. No LLM calls.
+
